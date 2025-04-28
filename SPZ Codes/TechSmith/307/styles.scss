@@ -1,0 +1,261 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_307 {
+  .camtasiaHeroFix {
+    @include tablet() {
+      padding-top: 41px;
+      padding-bottom: 39px;
+    }
+
+    @include mobile() {
+      padding-top: 41px;
+      padding-bottom: 47px;
+    }
+
+    .section-pretitle {
+      font-size: 20px;
+      letter-spacing: unset;
+      margin-bottom: 15.5px;
+      line-height: 24px;
+    }
+
+    >.section-row {
+      @include mobile() {
+        padding: 0 5px;
+        gap: 56px;
+      }
+
+      .section-header {
+        .section-title {
+          line-height: 56px;
+          margin-bottom: 16px;
+
+          @include tablet() {
+            max-width: 600px;
+            line-height: 48px;
+          }
+
+          @include mobile() {
+            line-height: 48px;
+          }
+        }
+
+        .section-text {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+
+          @include tablet() {
+            max-width: 600px;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+
+    .section-ctas {
+      margin-top: 48.5px;
+
+      @include tablet() {
+        margin-top: 40px;
+      }
+
+      @include mobile() {
+        margin-top: 40.5px;
+      }
+    }
+  }
+
+  .section-logos-banner {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    padding-top: 59px;
+
+    @include tablet() {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include mobile() {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      .section-row {
+        padding: 0;
+      }
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 37.5px;
+
+      @include tablet() {
+        margin-bottom: 4px;
+      }
+
+      @include mobile() {
+        margin-bottom: 28px;
+      }
+
+      .section-text {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: var(--font-family-Font-2, Montserrat);
+        text-transform: uppercase;
+
+        @media (min-width: 961px) and (max-width: 1023px) {
+          padding-bottom: 20px;
+        }
+
+        @include mobile() {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .logos {
+      gap: 0;
+      justify-content: space-between;
+
+      @include mobile() {
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+        gap: 34px 40px;
+        align-self: stretch;
+      }
+
+      .logo-frame {
+        @include mobile() {
+          width: auto;
+          height: auto;
+        }
+
+        img {
+          opacity: 0.6;
+          max-height: unset;
+        }
+
+        &:first-child {
+          img {
+            width: 53px;
+
+            @include tablet() {
+              width: 32px;
+            }
+
+            @include mobile() {
+              width: 32px;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            @include tablet() {
+              width: 113px;
+            }
+
+            @include mobile() {
+              width: 113px;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            @include tablet() {
+              width: 84px;
+            }
+
+            @include mobile() {
+              width: 84px;
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          img {
+            width: 171px;
+
+            @include tablet() {
+              width: 103px;
+            }
+
+            @include mobile() {
+              width: 103px;
+            }
+          }
+        }
+
+        &:last-child {
+          img {
+            width: 149px;
+
+            @include tablet() {
+              width: 89px;
+            }
+
+            @include mobile() {
+              width: 89px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

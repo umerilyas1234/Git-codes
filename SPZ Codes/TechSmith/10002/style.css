@@ -1,0 +1,346 @@
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+.spz_t10002 .sticky_footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background: #FFF;
+    box-sizing: border-box;
+    -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    animation: slideDown 0.35s ease-in-out;
+}
+.spz_t10002.goUp .sticky_footer {
+    display: block;
+}
+
+.spz_t10002 .wpml-ls-legacy-list-horizontal {
+    padding-bottom: 107px;
+}
+
+.spz_t10002 .sticky_footer .close_icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+    z-index: 9;
+}
+.spz_t10002 .sticky_footer .close_icon svg {
+    pointer-events: none;
+}
+.spz_t10002 .sticky_footer .close_icon:is(:hover,:active) svg path {
+    stroke: #54565A;
+}
+.spz_t10002 .sticky_footer .close_icon:focus svg {
+    outline: none;
+}
+.spz_t10002 .sticky_footer .footer_content {
+    position: relative;
+    z-index: 1;
+    background-color: #fff !important;
+}
+.spz_t10002 .sticky_footer .footer_contentInner {
+    width: 100%;
+    max-width: 1372px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 26px 30px;
+}
+
+.spz_t10002 .sticky_footer .user_reviews {
+    display: flex;
+    align-items: center;
+}
+
+.spz_t10002 .sticky_footer .reviews_col {
+    display: flex;
+    align-items: center;
+}
+.spz_t10002 .sticky_footer .reviews_col.frame1 {
+    margin-right: 32px;
+}
+.spz_t10002 .sticky_footer .reviews_col.frame2 {
+    margin-left: 24px;
+}
+.spz_t10002 .sticky_footer .g2_logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+.spz_t10002 .sticky_footer .g2_logo img,
+.spz_t10002 .sticky_footer .capterra_logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.spz_t10002 .sticky_footer .capterra_logo {
+    width: 112px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.spz_t10002 .sticky_footer .star_review {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+.spz_t10002 .sticky_footer .vector_line {
+    position: absolute;
+    top: -2px;
+    left: -12px;
+}
+.spz_t10002 .sticky_footer .vector_line .svg_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spz_t10002 .sticky_footer .vector_line .tablet_svg,
+.spz_t10002 .sticky_footer .vector_line .mobile_svg {
+    display: none;
+}
+
+.spz_t10002 .sticky_footer .star_review img {
+    width: 100%;
+    max-width: 88px;
+}
+.spz_t10002 .sticky_footer .star_review a {
+    margin-top: 4px;
+}
+.spz_t10002 .sticky_footer .star_review p,
+.spz_t10002 .sticky_footer .star_review span {
+    font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #171718;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+.spz_t10002 .sticky_footer .star_review span{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateX(-1px);
+}
+
+.spz_t10002 .sticky_footer .cta_button {
+    display: flex;
+    font-family: 'proxima-nova';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 160px;
+    height: 48px;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    background-color: #99E500;
+    color: #1A1A1A;
+    border-radius: 32px;
+    border: 1px solid #99E500;
+}
+.spz_t10002 .sticky_footer .cta_button:is(:hover,:active) {
+    border-radius: 32px;
+    border: 1px solid #C7FA5E;
+    background: #C7FA5E;
+}
+.spz_t10002.goUp .section-sidebar-socials:not(.entry-share-sticky-mobile) {
+    bottom: 144px;
+}
+@media (min-width: 1023px) {
+    .spz_t10002 .blog-sidebar-wrapper div + div.content-type-sidebar-blog {
+        margin-bottom: 120px;
+    }
+}
+@media (min-width: 768px) {
+    .spz_t10002 .user_reviews .reviews_col.frame2, .spz_t10002 .user_reviews .reviews_col.frame1 {
+        display: flex!important;
+    }
+}
+@media (max-width: 1366.98px) {
+    .spz_t10002.goUp.post-template-post-redesign .button-scroll-top {
+        bottom: 110px;
+    }
+}
+@media (max-width: 1240px) {
+    .spz_t10002 .sticky_footer .footer_contentInner {
+        padding: 24px 30px;
+    }
+    .spz_t10002 .wpml-ls-legacy-list-horizontal {
+        padding-bottom: 103px;
+    }
+}
+@media (max-width: 1024px) {
+    .spz_t10002 .sticky_footer .reviews_col.frame1 {
+        margin-right: 15px;
+    }
+    .spz_t10002 .sticky_footer .reviews_col.frame2 {
+        margin-left: 15px;
+    }
+} 
+@media (max-width: 960.98px) {
+    .spz_t10002 .sticky_footer .footer_contentInner {
+        flex-direction: column;
+    }
+    .spz_t10002 .sticky_footer .close_icon {
+        top: 8px;
+        right: 8px;
+    }
+    .spz_t10002 .sticky_footer .reviews_col.frame1,
+    .spz_t10002 .sticky_footer .g2_logo {
+        margin-right: 8px;
+    }
+    .spz_t10002 .sticky_footer .reviews_col.frame2,
+    .spz_t10002 .sticky_footer .star_review{
+        margin-left: 8px;
+    }
+    .spz_t10002 .sticky_footer .vector_line {
+        left: -8px;
+    }
+    .spz_t10002 .sticky_footer .cta_wrapper {
+        padding-top: 16px;
+    }
+    .spz_t10002 .sticky_footer .capterra_logo {
+        margin-right: 7px;
+    }
+    .spz_t10002 .wpml-ls-legacy-list-horizontal {
+        padding-bottom: 151px;
+    }
+    .spz_t10002.goUp.post-template-post-redesign .button-scroll-top {
+        bottom: 154px;
+    }
+}
+@media (max-width: 767px) {
+    .spz_t10002 .sticky_footer .vector_line {
+        top: 4px;
+        left: -5px;
+    }
+    .spz_t10002 .sticky_footer .cta_wrapper{
+        padding-top: 0;
+    }
+    .spz_t10002 .sticky_footer .footer_contentInner {
+        padding: 22px 16px;
+        flex-direction: row;
+    }
+    /* .spz_t10002 .sticky_footer .reviews_col,
+    .spz_t10002 .sticky_footer .star_review {
+        flex-direction: column;
+    } */
+    .spz_t10002 .sticky_footer .star_review{
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 113px;
+    }
+    .spz_t10002 .sticky_footer .star_review a {
+        margin-top: 0;
+        transform: translateX(-1px);
+    }
+    .spz_t10002 .sticky_footer .close_icon{
+        top: 2px;
+        right: -4px;
+    }
+    .spz_t10002 .sticky_footer .close_icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .spz_t10002 .sticky_footer .user_reviews {
+        width: 100%;
+        max-width: 400px;
+        justify-content: space-between;
+    }
+    .spz_t10002 .footer_contentInner {
+        padding: 16px;
+    }
+    .spz_t10002 .wpml-ls-legacy-list-horizontal {
+        padding-bottom: 95px;
+    }
+    .spz_t10002 .sticky_footer .reviews_col.frame1,
+    .spz_t10002 .sticky_footer .reviews_col.frame2,
+    .spz_t10002 .sticky_footer .g2_logo,
+    .spz_t10002 .sticky_footer .star_review,
+    .spz_t10002 .sticky_footer .star_review p{
+        margin: 0;
+    }
+    .spz_t10002 .sticky_footer .star_review span{
+        display: block;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateX(2px) translateY(-2px);
+    }
+    .spz_t10002 .sticky_footer .star_review p{
+        transform: translateX(6px) translateY(-2px);
+    }
+    .spz_t10002 .sticky_footer .star_review p,
+    .spz_t10002 .sticky_footer .star_review span{
+        font-size: 13px;
+        line-height: 16px;
+    }
+    /* .spz_t10002 .sticky_footer .star_review a {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    } */
+    /* .spz_t10002 .sticky_footer .capterra_logo  {
+        margin: 5px 0px 4px 6px;
+    } */
+    .spz_t10002 .sticky_footer .frame2 .star_review {
+        margin-right: -3px;
+    }
+    .spz_t10002.goUp .section-sidebar-socials:not(.entry-share-sticky-mobile) {
+        bottom: 84px;
+    }
+    .spz_t10002.goUp.post-template-post-redesign .button-scroll-top {
+        bottom: 95px;
+    }
+    .spz_t10002 .user_reviews .reviews_col.frame2,
+    .spz_t10002 .user_reviews .reviews_col.frame1 {
+        display: none;
+    }
+    .spz_t10002 .sticky_footer .cta_button{
+        width: 128px;
+        height: 32px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+    }
+    .spz_t10002 .sticky_footer .reviews_col >a{
+        width: 84px;
+        margin-right: 8.5px;
+        display: flex;
+        align-items: center;
+    }
+    .spz_t10002 .sticky_footer .reviews_col >a img{
+        display: block;
+        margin: auto;
+    }
+    .spz_t10002 .sticky_footer .reviews_col .star_review{
+        width: 84px;
+        margin-left: 8.5px;
+    }
+}
+@media (max-width: 359.98px) {
+    .spz_t10002 .sticky_footer .star_review p {
+        font-size: 15px;
+    }
+}

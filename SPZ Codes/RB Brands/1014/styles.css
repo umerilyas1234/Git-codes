@@ -1,0 +1,33 @@
+.spz_t1014 .hero_sec > div > div > a {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 33px;
+  background: #4D9A25;
+  padding: 14.5px 38.5px;
+  gap: 0;
+}
+.spz_t1014 .hero_sec > div > div > a span {
+  margin-right: -4px;
+  transform: translateX(-2px);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 33px;
+}
+.spz_t1014 .hero_sec > div > div > a svg {
+  transform: translateX(7px) translateY(1px);
+  transition: all 0.2s ease-in-out;
+}
+.spz_t1014 .hero_sec > div > div > a:hover svg {
+  transform: translateX(10px) translateY(1px);
+}
+@media (max-width: 767px) {
+  .spz_t1014 .hero_sec > div > div > a {
+    padding-left: 32px;
+    padding-right: 32px;
+    min-width: 320px;
+    justify-content: center;
+  }
+  .spz_t1014 .hero_sec > div > div > a span {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */

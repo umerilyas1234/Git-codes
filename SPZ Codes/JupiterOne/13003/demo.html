@@ -1,0 +1,16 @@
+const bodyInterval = setInterval(function(){
+    if(document.querySelector('body') && !document.querySelector('.spz_t13003') && document.querySelector('#headerFormButton')){
+      clearInterval(bodyInterval);
+      document.querySelector('body').classList.add("spz_t13003", "TC")
+  
+      //hidden value 
+      const hiddenValueInterval = setInterval(function(){
+        if(document.querySelector('[name=spiralyze_testing_hidden_field]')){
+          clearInterval(hiddenValueInterval);
+          document.querySelector('[name=spiralyze_testing_hidden_field]').value="control_13003";
+        }
+        
+      },100);
+      
+    }
+  },10)

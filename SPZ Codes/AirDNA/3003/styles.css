@@ -1,0 +1,24 @@
+.spz_3003 main > section:first-child {
+  position: relative;
+}
+.spz_3003 main > section:first-child video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.spz_3003 main > section:first-child video + div {
+  position: relative;
+  z-index: 1;
+}
+.spz_3003 main > section:first-child video + div h1 {
+  color: #1F2020;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}/*# sourceMappingURL=styles.css.map */

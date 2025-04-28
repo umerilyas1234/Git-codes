@@ -1,0 +1,65 @@
+.spz_t4014 .hero_sec > div > div > a {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  border-radius: 8px;
+  color: #fff;
+  background: #FF6B00;
+  border-color: #FF6B00;
+  padding: 14.5px 38px;
+  min-width: 327px;
+  height: 68px;
+  gap: 0;
+  margin-top: 42px;
+}
+.spz_t4014 .hero_sec > div > div > a span {
+  margin-right: -4px;
+  transform: translateX(-1.5px);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.spz_t4014 .hero_sec > div > div > a svg {
+  transform: translateX(14.5px) translateY(1px);
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 767px) {
+  .spz_t4014 .hero_sec > div > div > a svg {
+    transform: translateX(13.5px) translateY(1px);
+  }
+}
+.spz_t4014 .hero_sec > div > div > a:hover svg {
+  transform: translateX(16.5px) translateY(1px);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_t4014 .hero_sec > div > div > a {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .spz_t4014 .hero_sec > div > div > a {
+    padding-left: 32px;
+    padding-right: 32px;
+    min-width: 301px;
+    height: 64px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .spz_t4014 .hero_sec > div > div > a span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.spz_t4014 .hero_sec > div > div > h2 {
+  padding-top: 42px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_t4014 .hero_sec > div > div > h2 {
+    padding-top: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .spz_t4014 .hero_sec > div > div > h2 {
+    padding-top: 24px;
+  }
+}/*# sourceMappingURL=styles.css.map */

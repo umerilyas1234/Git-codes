@@ -1,0 +1,381 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_t2005 {
+  &.v1 {
+    #logos-up {
+      .scroll-wrapper-blur {
+        display: none;
+      }
+
+      >.logo-scroll-component {
+        @include tablet(){
+          padding-top: 91px;
+        }
+        >.container-large {
+          position: relative;
+
+          .eyebrow {
+            @include mobile() {
+              padding: 0 18px;
+            }
+          }
+
+          @include tablet() {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          @include mobile() {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            bottom: 0;
+            width: 98px;
+            height: 110px;
+            background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+            z-index: 2;
+            display: none;
+
+            @include tablet() {
+              height: 96px;
+              display: block;
+            }
+
+            @include mobile() {
+              height: 80px;
+              display: block;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            bottom: 0;
+            width: 98px;
+            height: 110px;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+            z-index: 2;
+            display: none;
+
+            @include tablet() {
+              height: 96px;
+              display: block;
+            }
+
+            @include mobile() {
+              height: 80px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .logos_list {
+      padding-top: 32px;
+
+      @include tablet() {
+        animation: 30s slide infinite linear;
+        display: flex;
+        gap: 96px;
+      }
+
+      @include mobile() {
+        animation: 30s slide infinite linear;
+        display: flex;
+        gap: 56px;
+      }
+
+      ul {
+        margin: 0 -10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 0;
+        list-style: none;
+
+        li {
+          width: auto;
+          padding: 0 10px;
+        }
+
+        &:not(:first-child) {
+          display: none;
+
+          @include mobile() {
+            display: flex;
+          }
+        }
+
+        @include tablet() {
+          display: flex;
+          gap: 96px;
+
+          li {
+            padding: 0;
+          }
+        }
+
+        @include mobile() {
+          display: flex;
+          gap: 56px;
+
+          li {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .logo_data {
+      width: auto;
+
+      picture,
+      figure {
+        display: block;
+        width: auto;
+
+        img {
+          display: block;
+          width: auto;
+          max-width: fit-content;
+        }
+      }
+    }
+
+    @keyframes slide {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+    #logos-ar{
+      +div{
+        >.container-large{
+          @include tablet(){
+            padding-top: 112px;
+          }
+        }
+      }
+    }
+  }
+
+  // v2 css
+  #logos-ar {
+    +div {
+      +div {
+        >.container-large {
+          padding-bottom: 81.5px;
+        }
+      }
+    }
+  }
+
+  .integration {
+    padding: 80px 0;
+    background: #F6F6F3;
+
+    .container-large {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    +div {
+      >.container-large {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  .integration_head {
+    max-width: 720px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      color: #111;
+      text-align: center;
+      font-family: "Soehne Leicht";
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 47px;
+      padding-bottom: 16px;
+      margin: 0;
+
+      @include tablet() {
+        padding-bottom: 15px;
+      }
+
+      @include mobile() {
+        font-size: 36px;
+        line-height: 40px;
+        padding-bottom: 15px;
+      }
+    }
+
+    p {
+      color: #111;
+      text-align: center;
+      font-family: "Soehne Buch";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      margin: 0;
+    }
+  }
+
+  .btn_list {
+    margin-top: -46px;
+    position: relative;
+    z-index: 1;
+
+    ul {
+      margin: 0 -8px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style: none;
+      justify-content: center;
+
+      li {
+        width: auto;
+        padding: 0 8px;
+      }
+    }
+
+    @include tablet() {
+      margin-top: 28px;
+    }
+
+    @include mobile() {
+      margin-top: 27.5px;
+
+      ul {
+        margin: 0;
+        flex-wrap: wrap;
+
+        li {
+          width: 100%;
+          padding: 0;
+
+          &:not(:last-child) {
+            padding-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .custom_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    width: 157px;
+    height: 50px;
+    border: 2px solid #024DBD;
+    background: #024DBD;
+    color: #FFF;
+    text-align: center;
+    font-family: "Soehne Buch";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-image: linear-gradient(#0003, #0003);
+    }
+
+    &.outline {
+      background-color: transparent;
+      color: #024DBD;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    @include mobile() {
+      width: 100%;
+    }
+  }
+
+  .video_section {
+    margin-top: -40.5px;
+    position: relative;
+    z-index: 0;
+
+    video {
+      width: 100%;
+    }
+
+    @include tablet() {
+      margin-top: 32px;
+    }
+
+    @include mobile() {
+      margin-top: 32px;
+    }
+  }
+}

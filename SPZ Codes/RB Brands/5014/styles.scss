@@ -1,0 +1,141 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_t5014 {
+  &.home>div:nth-of-type(1) {
+    >p{
+      &:nth-of-type(1){
+        margin-bottom: 42px;
+        @include tablet(){
+          margin-bottom: 32px;
+        }
+        @include mobile(){
+          margin-bottom: 24px;
+        }
+      }
+    }
+    >div:nth-of-type(2) {
+      >a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        border-radius: 8px;
+        background: #4D9A25;
+        border-color: #4D9A25;
+        padding: 14.5px 24.5px;
+        min-width: 332px;
+        height: 66px;
+        gap: 0;
+        margin-bottom: 42px;
+
+        span {
+          margin-right: -4px;
+          transform: translateX(-2px);
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+        }
+
+        svg {
+          transform: translateX(16px);
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            transform: translateX(20px);
+          }
+        }
+
+        @include tablet() {
+          min-width: 340px;
+          height: 68px;
+          padding: 14.5px 36.5px;
+          margin-bottom: 32px;
+
+          svg {
+            transform: translateX(17px);
+          }
+
+          &:hover {
+            svg {
+              transform: translateX(21px);
+            }
+          }
+        }
+
+        @include mobile() {
+          min-width: 301px;
+          height: 64px;
+          padding: 14.5px 26.5px;
+          font-size: 20px;
+          line-height: 30px;
+          justify-content: center;
+          margin-bottom: 24px;
+
+          span {
+            font-size: 20px;
+          }
+
+          svg {
+            transform: translateX(10.5px);
+          }
+
+          &:hover {
+            svg {
+              transform: translateX(14.5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

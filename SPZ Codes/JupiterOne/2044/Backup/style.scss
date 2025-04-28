@@ -1,0 +1,268 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1319px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_t2044 {
+  .home-hero {
+    background: #f1f3f5;
+    padding-top: 100px;
+
+    @include tablet() {
+      padding-top: 97px;
+    }
+
+    @include mobile() {
+      padding-top: 51px;
+    }
+
+    >.container-large {
+      display: none;
+    }
+  }
+
+  .page-wrapper>.j1-header {
+    background: #f1f3f5;
+  }
+
+  .new_hero {
+    .container-large {
+      max-width: 1460px;
+
+      @include tablet() {
+        padding: 0;
+      }
+
+      @include mobile() {
+        padding: 0;
+      }
+    }
+  }
+
+  .hero_slider {
+    width: 100%;
+    padding-bottom: 35.5px;
+    pointer-events: none;
+
+    @include tablet() {
+      padding-bottom: 36px;
+      pointer-events: all;
+    }
+
+    @include mobile() {
+      padding-bottom: 36.5px;
+      pointer-events: all;
+    }
+
+    .splide__track {
+      padding-bottom: 20px;
+    }
+
+    .splide__arrows {
+      display: none;
+    }
+
+    .splide__list {
+      li {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .hero_detail {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 32px;
+
+    @include mobile() {
+      padding: 0 20px 32px;
+    }
+
+    h2 {
+      color: #041E42;
+      text-align: center;
+      font-family: Bitter;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 62.4px;
+      letter-spacing: -0.96px;
+      padding-bottom: 32px;
+      margin: 0;
+
+      @include tablet() {
+        font-size: 44px;
+        letter-spacing: -0.88px;
+        line-height: 57.2px;
+      }
+
+      @include mobile() {
+        font-size: 32px;
+        line-height: 41.6px;
+        letter-spacing: -0.64px;
+        padding-bottom: 23.5px;
+      }
+    }
+
+    p {
+      color: #041E42;
+      text-align: center;
+      font-family: Bitter;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25.2px;
+      letter-spacing: -0.36px;
+      margin-bottom: 0;
+
+      @include mobile() {
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: -0.32px;
+      }
+    }
+  }
+
+  .slider_data {
+    border-radius: 17px;
+    background: #FFF;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.04);
+    padding: 30px 0 0;
+
+    h3 {
+      color: #041E42;
+      font-family: Lato;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25.6px;
+      padding-bottom: 32px;
+      margin: 0;
+      padding-left: 20px;
+      max-width: 182px;
+
+      @include tablet-pro() {
+        max-width: 150px;
+        font-size: 17px;
+        line-height: 21.6px;
+      }
+
+      @include tablet() {
+        max-width: 150px;
+      }
+
+      @include mobile() {
+        max-width: 150px;
+      }
+
+      @media only screen and (min-width:480px) and (max-width:767px) {
+        max-width: 100% !important;
+      }
+    }
+
+    picture {
+      margin: 0;
+      width: 100%;
+      display: block;
+
+      img {
+        width: 100%;
+        display: block;
+        border-bottom-right-radius: 17px;
+      }
+    }
+  }
+
+  .hero_btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .custom_btn {
+    border-radius: 99px;
+    background: #03E7BB;
+    width: 192px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: #1B1C2B;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: var(--mint);
+    }
+  }
+
+  .client-logo-slider {
+    padding-top: 54px;
+
+    @include tablet() {
+      padding-top: 45px;
+    }
+
+    @include mobile() {
+      padding-top: 41px;
+    }
+  }
+
+  .company-logo-slider-left-shadow {
+    background-image: linear-gradient(90deg, #f1f3f5, #fff0);
+  }
+
+  .company-logo-slider-right-shadow {
+    background-image: linear-gradient(90deg, #0000, #f1f3f5);
+  }
+}

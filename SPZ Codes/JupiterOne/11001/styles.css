@@ -1,0 +1,155 @@
+.spz_11001 .blog-author-bio {
+  position: inherit;
+  top: inherit;
+  height: 100%;
+}
+.spz_11001 .sidebar-news-cta {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/jupiterone/11001/frame_1171275302.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  margin-top: 26px;
+  padding: 31px 24px;
+  max-width: 295px;
+  min-height: 532px;
+  position: sticky;
+  top: 120px;
+}
+.spz_11001 .sidebar_newsData strong {
+  display: block;
+  color: #64ffda;
+  font-family: "Lato";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.2px;
+  letter-spacing: 0.22px;
+  padding-bottom: 7px;
+}
+.spz_11001 .sidebar_newsData > p {
+  color: #fff;
+  font-family: "Bitter";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.2px;
+  letter-spacing: -0.36px;
+  padding-bottom: 6px;
+  margin: 0;
+  margin-right: -9px;
+  transform: translateX(-3px);
+}
+.spz_11001 .sidebar_newsData ul {
+  padding-bottom: 20px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.spz_11001 .sidebar_newsData ul li {
+  list-style: none;
+}
+.spz_11001 .sidebar_newsData ul li:not(:last-child) {
+  padding-bottom: 6px;
+}
+.spz_11001 .sidebar_newsData ul li p {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: -0.28px;
+  margin: 0;
+  position: relative;
+  padding-left: 21px;
+}
+.spz_11001 .sidebar_newsData ul li p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13px;
+  height: 15px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/jupiterone/10001/fa6-solidcheck.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.spz_11001 .sidebar-news-form-block {
+  position: relative;
+}
+.spz_11001 .sidebar-news-form-block form input {
+  margin: 0;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field {
+  margin: 0;
+  width: 100%;
+  max-width: 247px;
+  margin: auto;
+  height: auto;
+  padding: 13px 20px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field::-moz-placeholder {
+  color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field:focus {
+  border-color: #36fcd6;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #02427c inset;
+  -webkit-text-fill-color: #fff;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-email-field:-webkit-autofil:hover {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  border-color: #B4B3B9;
+  background-color: #f9f9f9;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-button {
+  width: 100%;
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 99px;
+  background: #64ffda;
+  color: #1b1c2b;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.32px;
+  transition: all 0.4s ease;
+}
+.spz_11001 .sidebar-news-form-block form .sidebar-news-button:hover {
+  background: #00bfa5;
+}
+.spz_11001 .sidebar-news-form-block .j1-header-form-error {
+  top: -32px;
+}
+.spz_11001 .sidebar-news-form-block .j1-header-form-error-arrow {
+  top: unset;
+  bottom: -5px;
+  transform: rotate(180deg);
+}
+.spz_11001 #email-form .blog-email-subscribe-form-text-field {
+  color: #041e42;
+}/*# sourceMappingURL=styles.css.map */

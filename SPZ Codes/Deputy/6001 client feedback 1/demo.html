@@ -1,0 +1,170 @@
+var css = `
+    .spz-3003 .spz-title-updated {
+        max-width: 440px;
+        font-size: 28px;
+        line-height: 120%;
+        color: #332A5D;
+        padding-bottom: 8px;
+    }
+
+    .spz-3003 .spz-subtitle-updated {
+        font-size: 18px;
+        line-height: 24px;
+        color: #6C6A72;
+    }
+`,
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+head.appendChild(style);
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+
+function waitForElement(cssSelector, callback) {
+    var stop,
+        elementCached,
+        timeout,
+        check = function () {
+            try {
+                elementCached = document.querySelector(cssSelector);
+
+                if (stop) return;
+
+                if (elementCached) {
+                    callback(elementCached);
+                    clearTimeout(timeout);
+                } else {
+                    window.requestAnimationFrame(check);
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+    window.requestAnimationFrame(check);
+
+    timeout = setTimeout(function () {
+        stop = true;
+    }, 5000);
+}
+
+waitForElement('.modals-container', () => {
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            // Check if the mutation involves the body element
+            if (mutation.target === document.body) {
+
+                // Add test name to hidden fields
+                let booknowModalInput = document.querySelector('.book-a-consultation__marketo-form input[name="spz_experiment1__c"]');
+                if (booknowModalInput && booknowModalInput.value !== '#6001_TrueControl') {
+                    booknowModalInput.value = "#6001_TrueControl"
+                }
+                let trynowModalInput = document.querySelector('.mktoForm input[name="spz_experiment1__c"]');
+                if (trynowModalInput && trynowModalInput.value !== '#6001_TrueControl') {
+                    trynowModalInput.value = "#6001_TrueControl"
+                }
+            }
+        });
+    });
+
+    // Configuration of the observer:
+    var config = { attributes: true, childList: true, subtree: true };
+    observer.observe(document.body, config);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var css = `
+    .spz-3003 .spz-title-updated {
+        max-width: 440px;
+        font-size: 28px;
+        line-height: 120%;
+        color: #332A5D;
+        padding-bottom: 8px;
+    }
+
+    .spz-3003 .spz-subtitle-updated {
+        font-size: 18px;
+        line-height: 24px;
+        color: #6C6A72;
+    }
+`,
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+head.appendChild(style);
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+
+function waitForElement(cssSelector, callback) {
+    var stop,
+        elementCached,
+        timeout,
+        check = function () {
+            try {
+                elementCached = document.querySelector(cssSelector);
+
+                if (stop) return;
+
+                if (elementCached) {
+                    callback(elementCached);
+                    clearTimeout(timeout);
+                } else {
+                    window.requestAnimationFrame(check);
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+    window.requestAnimationFrame(check);
+
+    timeout = setTimeout(function () {
+        stop = true;
+    }, 5000);
+}
+
+waitForElement('.modals-container', () => {
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            // Check if the mutation involves the body element
+            if (mutation.target === document.body) {
+
+                // Add test name to hidden fields
+                let booknowModalInput = document.querySelector('.book-a-consultation__marketo-form input[name="spz_experiment2__c"]');
+                if (booknowModalInput && booknowModalInput.value !== '#6001_TrueControl') {
+                    booknowModalInput.value = "#6001_TrueControl"
+                }
+                let trynowModalInput = document.querySelector('.mktoForm input[name="spz_experiment2__c"]');
+                if (trynowModalInput && trynowModalInput.value !== '#6001_TrueControl') {
+                    trynowModalInput.value = "#6001_TrueControl"
+                }
+                let TrialModalInput = document.querySelector('#signup-form input[name="spz_experiment2"]');
+                if(TrialModalInput && TrialModalInput.value !== '#6001_TrueControl'){
+                    TrialModalInput.value = "#6001_TrueControl"
+                }
+                let getStartInput = document.querySelector('#g-header-media-ctas-form input[name="spz_experiment2"]');
+                if(getStartInput && getStartInput.value !== '#6001_TrueControl'){
+                    getStartInput.value = "#6001_TrueControl"
+                }
+            }
+        });
+    });
+
+    // Configuration of the observer:
+    var config = { attributes: true, childList: true, subtree: true };
+    observer.observe(document.body, config);
+});

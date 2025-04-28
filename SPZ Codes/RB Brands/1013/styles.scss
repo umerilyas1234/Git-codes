@@ -1,0 +1,399 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_t1013 {
+  header{
+    >div{
+      &:first-child{
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+  }
+  .hero_sec {
+    background-image: none;
+    padding-top: 65px;
+    @include tablet(){
+      padding-top: 50px;
+    }
+    @include mobile(){
+      padding-top: 25px;
+      min-height: unset;
+    }
+    >div {
+      >div {
+        >h1 {
+          color: #000;
+          font-size: 56px;
+          font-weight: 700;
+          line-height: 78px;
+          padding-top: 8.5px;
+          @include mobile(){
+            font-size: 32px;
+            line-height: 48px;
+            padding-top: 16px;
+          }
+        }
+
+        >h2 {
+          display: none;
+        }
+
+        >figure {
+          display: block;
+          border-radius: 100px;
+          border: 5px solid #1167B1;
+          width: 148px;
+          height: 148px;
+          margin: 36px auto 0;
+          position: relative;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+          }
+
+          b {
+            position: absolute;
+            right: 4px;
+            bottom: 6px;
+            width: 26px;
+            height: 26px;
+            border-radius: 100px;
+            border: 5px solid #FFF;
+            background: #00BF08;
+            display: block;
+          }
+        }
+
+        >p {
+          &:nth-of-type(2) {
+            display: none;
+          }
+
+          &:nth-of-type(3) {
+            color: #000;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            font-style: normal;
+            max-width: 520px;
+            @include tablet(){
+              max-width: 685px;
+            }
+            @include mobile(){
+              max-width: 100%;
+              padding: 0 20px;
+            }
+          }
+
+          &:first-child {
+            background-color: transparent;
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            border-color: #1167B1;
+            padding-left: 14.5px;
+            padding-right: 15px;
+
+            img {
+              width: 21px;
+              height: 24px;
+              padding-right: 0;
+              transform: translateX(-3px);
+            }
+          }
+
+          &#disclosure-link-block {
+            color: #000;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+            margin-top: 0;
+            padding-top: 32px;
+            text-decoration: none;
+
+            a {
+              position: relative;
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                bottom: 3px;
+                left: 0;
+              }
+            }
+            @include mobile(){
+              font-size: 16px;
+              line-height: 24px;
+              padding-top: 23.5px;
+            }
+          }
+        }
+
+        >div {
+          &.hidden{
+            display: none;
+          }
+
+          &.my_tags {
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        >img {
+          padding-top: 19px;
+          max-width: 155.5px;
+          @include mobile(){
+            transform: translateY(-4px);
+          }
+        }
+
+        >a[aria-label="Phone Consultation"] {
+          margin-top: 13px;
+          min-width: 364px;
+          border-radius: 8px;
+          background: #4C9927;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 30px;
+          height: 62px;
+          justify-content: center;
+
+          img {
+            display: inline-block;
+            margin-right: 0;
+            transform: translateX(-4.5px);
+          }
+
+          @media only screen and (min-width:1920px) {
+            min-width: 452px;
+          }
+          @include mobile(){
+            min-width: 320px;
+            height: 48px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transform: translateY(-1px);
+          }
+        }
+
+        >span {
+          display: block;
+          text-align: center;
+          color: #000;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+          padding-top: 16.5px;
+          @include mobile(){
+            padding-top: 11.5px;
+          }
+        }
+      }
+    }
+    >.container{
+      @include tablet(){
+        padding: 0;
+      }
+      @include mobile(){
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .my_tags {
+    max-width: 575px;
+    margin: auto;
+    padding-top: 15.5px;
+    padding-bottom: 12.5px;
+  }
+
+  .tag_main {
+    width: max-content;
+    box-sizing: border-box;
+    padding: 0 4px 12px;
+    display: inline-block;
+    span {
+      display: inline-block;
+      width: max-content;
+      padding: 8px 16.2px;
+      border-radius: 8px;
+      background: #1167B1;
+      color: #FFF;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      @include mobile(){
+        font-size: 16px;
+        line-height: 24px;
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+    }
+    @include mobile{
+      padding-bottom: 6px;
+    }
+  }
+
+  main {
+    >div {
+      &:first-child {
+        margin-top: 79px;
+        @media only screen and (min-width:1920px){
+          margin-top: 169px;
+        }
+        @include tablet(){
+          margin-top: 74px;
+        }
+        @include mobile(){
+          margin-top: 51px;
+        }
+      }
+    }
+  }
+
+  .marquee-container {
+    overflow: hidden;
+    max-width: 575px;
+    margin: auto;
+    padding-top: 15.5px;
+    padding-bottom: 6.5px;
+    display: block;
+    &.mobile{
+      display: none;
+    }
+    @include tablet(){
+      max-width: 100%;
+    }
+    @include mobile(){
+      max-width: 100%;
+      padding-top: 16px;
+      padding-bottom: 8.5px;
+      &:not(.mobile){
+        display: none;
+      }
+      &.mobile{
+        display: block;
+        .marquee{
+          .marquee_bottom{
+            .marquee-content{
+              width: 506px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    .marquee-content{
+      &:nth-child(2){
+        display:none;
+        @include tablet(){
+          display: inline-block;
+        }
+        @include mobile(){
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
+  .marquee-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include tablet(){
+      display: inline-block;
+    }
+    @include mobile(){
+      display: inline-flex;
+      width: 411px;
+      justify-content: flex-start;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @include tablet() {
+    .marquee {
+      animation: marquee 20s linear infinite;
+    }
+  }
+  @include mobile() {
+    .marquee {
+      animation: marquee 20s linear infinite;
+    }
+  }
+
+}

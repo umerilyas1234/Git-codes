@@ -1,0 +1,115 @@
+.spz_1068 .modalQuestionswrapper {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/jupiterone/1068/desktop.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_1068 .modalQuestionswrapper {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/jupiterone/1068/tablet.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) {
+  .spz_1068 .modalQuestionswrapper {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/jupiterone/1068/mobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 55px 20px 32px;
+  }
+}
+.spz_1068 .modalQuestions {
+  position: relative;
+}
+.spz_1068 .modal_logo {
+  position: absolute;
+  left: 50%;
+  top: -28px;
+  width: 203px;
+  height: 56px;
+  margin: auto;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(101deg, #103F81 0%, #041E42 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .spz_1068 .modal_logo {
+    width: 174px;
+    height: 48px;
+    top: -29px;
+  }
+}
+.spz_1068 .modal_logo a {
+  display: block;
+}
+.spz_1068 .modal_logo a img {
+  display: block;
+}
+@media (max-width: 767px) {
+  .spz_1068 .modal_logo a img {
+    max-width: 136.4px;
+    margin: auto;
+  }
+}
+.spz_1068 .modal-container > h4 {
+  color: #00BFA5;
+  text-align: center;
+  font-family: Lato !important;
+  font-size: 16px;
+  font-weight: 500 !important;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+.spz_1068 .modal-container.steps1 .form-pagination {
+  padding-bottom: 28px;
+}
+@media (max-width: 767px) {
+  .spz_1068 .modal-container.steps1 .form-pagination {
+    padding-bottom: 24px;
+  }
+}
+.spz_1068 .modal-container.steps2 .form-pagination {
+  padding-bottom: 27px;
+}
+@media (max-width: 767px) {
+  .spz_1068 .modal-container.steps2 .form-pagination {
+    padding-bottom: 24px;
+  }
+}
+.spz_1068 .modal-container.steps2 .modal-get-form .hs-form .hs-form-field {
+  margin-bottom: 28px;
+}
+.spz_1068 .modal-container.steps3 h4 {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_1068 .modal-container.steps3 {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .spz_1068 .modal-container.steps3 {
+    padding-top: 32px;
+  }
+}
+.spz_1068 .steps1 .modal-form,
+.spz_1068 .steps2 .modal-form {
+  margin-top: -19px;
+}
+@media (max-width: 767px) {
+  .spz_1068 .steps1 .modal-form,
+  .spz_1068 .steps2 .modal-form {
+    margin-top: -23px;
+  }
+}
+.spz_1068 .steps1 .modal-get-form .hs-form .hs-form-field > label + .hs-field-desc,
+.spz_1068 .steps2 .modal-get-form .hs-form .hs-form-field > label + .hs-field-desc {
+  height: 0;
+}
+.spz_1068 .hs_demo___use_cases_of_interest {
+  margin-top: 11px;
+}/*# sourceMappingURL=styles.css.map */

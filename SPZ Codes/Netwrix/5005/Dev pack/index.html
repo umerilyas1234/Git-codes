@@ -1,0 +1,235 @@
+<!-- Add this code before ending "Head" tag -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+  rel="stylesheet">
+
+
+<!-- Insert below mentioned code in 3rd section before ".solution_page_top_wrapper_background" div. Please refer to the given screenshot: 'https://app.screencast.com/sfkJ2YfPY7d74'-->
+<!-- Hide or remove ".homepage_main_top, .product_top_buttons, section>.product_trusted_by, #productDTModal .product_dt_modal_footer, #productDTModal .product_dt_modal_header, #productDTModal .get_demo_arrow" elements.  -->
+<div class="main-bg-wrap product_top second_type">
+  <div class="spz-form-wrap">
+    <div class="content-section">
+      <div class="content-superheading">Netwrix Endpoint Protector</div>
+
+      <!-- Take ".product_top_box" div from 3rd section inside ".solution_page_top_wrapper_background" div and add it here. Please refer to the given screenshot: Take this "https://app.screencast.com/2HXiKSu6Edysi" and place it here "https://app.screencast.com/2HXiKSu6Edysi" -->
+
+      <div class="button-wrapper">
+        <a class="button-request-demo spz-5005-requst-demo-cta" href="#">REQUEST DEMO</a>
+        <div class="free-trial-wrapper">
+          <a class="button-free-trial spz-5005-free-trial-cta" href="#">FREE TRIAL</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <picture>
+        <source media="(max-width:767.98px)"
+          srcset="images/image.webp">
+        <source media="(max-width:1023.98px)"
+          srcset="images/tablet-hero2.png">
+        <img src="images/image_4.webp"
+          alt="endpoint_protector_ui_image" width="1522" height="1038">
+      </picture>
+    </div>
+  </div>
+  <div class="logo-section">
+    <img src="images/svg_3.svg"
+      alt="Samsung Electronics Icon" width="173" height="70">
+    <img src="images/svg.svg" alt="ING Icon" width="124"
+      height="70">
+    <img src="images/svg_1.svg" alt="Allianz SE Icon"
+      width="162" height="70">
+    <img src="images/svg_2.svg" alt="Western Union Icon"
+      width="132" height="70">
+    <img src="images/svg_4.svg" alt="eBay Icon"
+      width="133 " height="70">
+  </div>
+</div>
+
+<!-- Insert below code inside "#modalFormRequestContainer" after ".form_sent_succes_message". Refering the screenshot: "https://app.screencast.com/6Z6TQ45ukcr90"-->
+<div class="spz-form-wrap">
+  <div class="form-section">
+    <div class="the-form"></div>
+  </div>
+</div>
+<!-- Add form with id "#modal-custom-form" after ".the-form" element. Refering the screenshot: Take this "https://app.screencast.com/rGMTtY3R9CnLZ" and place it here "https://app.screencast.com/vuYl8eQj81Xow". It should look like this "https://app.screencast.com/vuYl8eQj81Xow" after adding the form. -->
+
+<!-- Take ".product_dt_modal_h_close" element and place it after ".product_dt_modal_c_form_container .form_request_container". Refering the screenshot: Take this "https://app.screencast.com/raXofA3Do6DmN" and place it here "https://app.screencast.com/PSmEG3wHHZRMN" -->
+
+<!-- Replace the "#productDTModal .cf-privacy-policy-notice" element with below mentioned element. Referrinbg the screenshot: "https://app.screencast.com/QwKf6ggc4a3xZ"-->
+<div class="cf-privacy-policy-notice">
+  *Your privacy is important to us.
+  <br> Check out our 
+  <a href="https://www.endpointprotector.com/legal/privacy-policy" target="_blank">Privacy Policy</a> 
+  for more information.
+</div>
+
+<!-- This code requires some JavaScript, which is provided below. -->
+<script>
+
+  document.querySelector('.spz-form-wrap .button-wrapper').addEventListener("click", function (e) {
+    if (e.target.closest('a') == document.querySelector('.spz-form-wrap .button-wrapper .button-request-demo')) {
+      e.preventDefault();
+      document.querySelector('.request_demo_button').click();
+    }
+    if (e.target.closest('a') == document.querySelector('.spz-form-wrap .button-wrapper .free-trial-wrapper .button-free-trial')) {
+      e.preventDefault();
+      document.querySelector('.free_trial_button').click()
+    }
+  })
+
+  let meta = document.querySelector('meta[name="viewport"]');
+  if (meta) {
+    meta.setAttribute("content", meta.getAttribute("content") + ", user-scalable=no");
+  }
+
+
+  // Adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
+  const template_formUniqueSelector = "#modal-custom-form"
+
+  //Find the class or ID of the control inputs and place it below e.g. "#some_input_id", ".some_input_unique_classname", "input[name='FirstName']" etc...
+  const template_inputsSelectors = ["#modal-custom-form #firstname", "#modal-custom-form #lastname", "#modal-custom-form #email", "#modal-custom-form #phone"]
+
+  //Add Form labels below
+  const template_labelValues = ["First Name", "Last Name", "Work Email", "Phone"]
+
+  const formLoaded = setInterval(() => {
+    if (document.querySelector(template_formUniqueSelector) && document.querySelectorAll(`${template_formUniqueSelector} input`).length > 0) {
+      clearInterval(formLoaded);
+      animateLabels(template_inputsSelectors, template_labelValues)
+    }
+  })
+
+  function addInputListener(input) {
+    input.placeholder = "";
+    input.addEventListener("focus", function () {
+      input.closest(".spz-input-wrap").classList.remove("has-value");
+      input.closest(".spz-input-wrap").classList.add("focused");
+      checkError();
+    });
+    input.addEventListener("blur", function () {
+      if (input.value.length > 0) {
+        input.closest(".spz-input-wrap").classList.remove("focused");
+        input.closest(".spz-input-wrap").classList.add("has-value");
+      } else {
+        input.closest(".spz-input-wrap").classList.remove("focused");
+      }
+      checkError();
+    });
+    if (input.value.length < 0) {
+      input.closest(".spz-input-wrap").classList.remove("has-value");
+    }
+  }
+  //Helper function to animate labels for inputs
+  function animateLabels(inputs, template_labelValues) {
+    inputs.forEach((item, index) => {
+      const parentDiv = findParent(item);
+      if (!parentDiv) return; // Skip if we can't find a suitable parent
+
+      let input = document.querySelector(item);
+
+      // Check if the input is wrapped in another div (e.g., for error states)
+      if (input.parentElement !== parentDiv) {
+        input = input.parentElement; // Use the wrapper as our insertion point
+      }
+
+      // Check if we've already added our custom label
+      if (parentDiv.querySelector('.label-spz')) return;
+
+      const existingLabel = parentDiv.querySelector('label:not(.label-spz)');
+      if (existingLabel) existingLabel.style.display = 'none';
+
+      const label = document.createElement('label');
+      label.innerText = template_labelValues[index];
+      label.classList.add('label-spz');
+      label.classList.add(`label-spz-${item.replace(/[^a-zA-Z0-9]/g, '')}`);
+      label.style.width = '';
+      parentDiv.classList.add('spz-input-wrap');
+
+      // Check if the input is a select and the first option has an empty value
+      if (input.tagName === 'SELECT' && input.options[0].value === '') {
+        parentDiv.classList.add('has-value');
+      } else if (input.value) {
+        parentDiv.classList.add('has-value');
+      }
+
+      label.addEventListener('click', function (e) {
+        const actualInput = parentDiv.querySelector('input, select, textarea');
+        if (actualInput) actualInput.focus();
+      });
+
+      parentDiv.insertBefore(label, input);
+
+      addInputListener(document.querySelector(item));
+      document.querySelector(item).setAttribute('placeholder', '');
+    });
+  }
+
+  function findParent(inputSelector) {
+    const input = document.querySelector(inputSelector);
+    if (!input) return null;
+
+    let currentElement = input;
+
+    while (currentElement && currentElement.tagName !== 'BODY') {
+      // Check if this element contains a label (including hidden ones)
+      const label = currentElement.querySelector('label');
+
+      // Check if this element contains the input or its wrapper
+      const containsInput = currentElement.contains(input);
+
+      // If we have both a label and the input, this is likely our target
+      if (label && containsInput) {
+        return currentElement;
+      }
+
+      currentElement = currentElement.parentElement;
+    }
+
+    // If no suitable parent is found, return the immediate parent
+    return input.parentElement;
+  }
+
+  window.addEventListener("click", function (e) {
+    if (e.target.matches('.spz-form-wrap .spz-5005-free-trial-cta')) {
+      document.querySelector('#productDTModal .get_demo_title').textContent = 'Get Your Free Trial';
+      document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').value = 'Get my free trial';
+      document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').textContent = 'Get my free trial';
+      document.querySelectorAll('.spz-form-wrap .the-form .spz-input-wrap').forEach(wrapper => {
+        const input = wrapper.querySelector('input');
+        if (input && input.value.length === 0) {
+          wrapper.classList.remove("has-value", "focused", "has-error");
+        }
+      });
+    } else if (e.target.matches('.homepage_main_top .request_demo_button') || e.target.matches('#menu_concept_list .product_epp_buttons_button_link_menu') || e.target.matches('.homepage_testimonials .product_call_to_action_wrapper .product_epp_buttons_button_demo') || e.target.matches('.homepage_testimonials .product_call_to_action_wrapper .product_epp_buttons_button_demo a') || e.target.matches('.spz-5005-requst-demo-cta') || e.target.matches('.spz-5005-free-trial-cta') || e.target.matches('.product_epp_buttons_button_link_menu')) {
+      updateStates();
+    }
+  });
+  function updateStates() {
+    document.querySelector('#productDTModal .get_demo_title').textContent = 'Request Demo';
+    document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').value = 'Request Demo';
+    document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').textContent = 'Request Demo';
+    setTimeout(() => {
+      document.querySelectorAll('.spz-form-wrap .the-form .spz-input-wrap').forEach(wrapper => {
+        const input = wrapper.querySelector('input');
+        if (input && input.value.length === 0) {
+          wrapper.classList.remove("has-value", "focused", "has-error");
+        }
+      });
+    }, 50);
+  }
+  function checkError() {
+    document.querySelectorAll('.spz-form-wrap .the-form .spz-input-wrap').forEach(wrapper => {
+      const input = wrapper.querySelector('input');
+      setTimeout(() => {
+        if (input && input.style.borderColor === 'rgb(249, 125, 125)') {
+          wrapper.classList.add("has-error");
+        } else {
+          wrapper.classList.remove("has-error");
+        }
+      }, 100);
+    });
+  }
+
+
+</script>

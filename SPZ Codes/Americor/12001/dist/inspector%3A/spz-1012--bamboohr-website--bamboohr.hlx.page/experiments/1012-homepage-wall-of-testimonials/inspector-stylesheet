@@ -1,0 +1,7 @@
+h1#one-easy-to-use-platform-for-everything-hr {}
+
+h1#one-easy-to-use-platform-for-everything-hr {}
+
+h1#one-easy-to-use-platform-for-everything-hr::first-line {
+    white-space: nowrap;
+}

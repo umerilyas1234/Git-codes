@@ -1,0 +1,488 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+
+
+:root {
+  --container-width: 520px;
+  --container-border-radius: 5px;
+  --container-box-shadow: 0px 12px 32px 0px rgba(14, 0, 143, 0.12);
+  --inputHeight: 54px;
+  --input-horizontal-gap: 16px;
+  --input-border-radius: 4px;
+  --input-border: 1px solid #CACACA;
+  --input-border-hover: 1px solid #CACACA;
+  --input-border-focus: 1px solid #1EC3E0;
+}
+
+.spz_5005 {
+  #productDTModal {
+    background: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/5005/bg_1.webp') no-repeat top left;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .product_dt_modal_footer,
+    .product_dt_modal_header,
+    .get_demo_arrow {
+      display: none;
+    }
+
+    .get_demo_title {
+      color: #041E42;
+      line-height: 40px;
+      margin-bottom: 23.5px;
+      font-size: 32px;
+
+      @include mobile() {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    .product_dt_modal_h_close {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      right: 15.5px;
+      top: 16px;
+
+      .modal_close_btn {
+        border-radius: 4px;
+        background: #B0B0B0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          background: #7B7B7B;
+        }
+
+        &:active {
+          background: #464646;
+        }
+      }
+
+      @include mobile() {
+        width: 24px;
+        height: 24px;
+        top: 12px;
+        right: 12px;
+      }
+    }
+
+    .product_dt_modal_content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+
+      .product_dt_modal_c_container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      @include tablet() {
+        height: auto;
+        min-height: 100vh;
+
+        .product_dt_modal_c_container {
+          min-height: unset;
+        }
+      }
+
+      @include mobile() {
+        height: auto;
+        min-height: 100vh;
+
+        .product_dt_modal_c_container {
+          padding-left: 15px;
+          padding-right: 15px;
+          min-height: unset;
+        }
+      }
+
+
+      .product_dt_modal_c_form_container {
+        max-width: 573px;
+        padding: 0;
+        margin: 0 auto;
+
+        .form_request_container {
+          border-radius: 16px;
+          box-shadow: 0px 14px 60px 0px rgba(39, 56, 59, 0.20);
+          padding: 48.5px 40px 48px;
+          position: relative;
+          min-height: unset;
+
+          @include mobile() {
+            padding: 32px 24px 39.5px;
+          }
+        }
+      }
+    }
+
+    .cf-privacy-policy-notice {
+      font-size: 12px;
+      line-height: 20px;
+      font-family: "Open Sans";
+      font-weight: 400;
+      color: #777;
+      margin-top: 16.5px;
+
+      a {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #1EC3E0;
+        text-decoration: underline;
+
+        &:hover {
+          color: #66BCFF;
+        }
+
+        &:active,
+        &:focus {
+          color: #0047BB;
+        }
+      }
+
+      br {
+        display: none;
+      }
+
+      @include mobile() {
+        margin-top: 12.5px;
+
+        br {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #modalFormRequestContainer {
+
+    /*Form layout styling*/
+    .spz-form-wrap form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 var(--input-horizontal-gap);
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+
+      >div {
+        &:last-child {
+          width: 100%;
+        }
+      }
+
+      .cf-button {
+        display: flex;
+        border-radius: 4px;
+        background: #1EC3E0;
+        height: 54px;
+        width: 211px;
+        padding: 16px 32px;
+        margin-top: 8px;
+        letter-spacing: unset;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+
+        &[value="Request Demo"] {
+          width: 187px;
+        }
+
+        &:hover {
+          background: #66BCFF;
+        }
+
+        &:focus,
+        &:active {
+          background: #0047BB;
+        }
+
+        @include mobile() {
+          width: 100%;
+          height: 48px;
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 14.5px;
+
+          &[value="Request Demo"] {
+            width: 100%;
+            height: 48px;
+          }
+        }
+      }
+    }
+
+    .cf-field:not(.spz-input-wrap) {
+      width: 100% !important;
+      margin-bottom: 0;
+
+      input {
+        margin-bottom: 20px;
+      }
+    }
+
+    .spz-form-wrap .spz-input-wrap {
+      max-width: calc(50% - (var(--input-horizontal-gap) / 2));
+      width: 100%;
+      position: relative;
+      margin-bottom: 16px;
+
+      @include mobile() {
+        margin-bottom: 8.5px;
+      }
+    }
+
+    @media(max-width: 575px) {
+      .spz-form-wrap .spz-input-wrap {
+        max-width: 100%;
+      }
+    }
+
+    /*Form layout styling end*/
+    /*Input styling*/
+    .spz-form-wrap input,
+    .spz-form-wrap select {
+      height: var(--inputHeight) !important;
+      border: var(--input-border) !important;
+      border-radius: var(--input-border-radius) !important;
+      caret-color: #1EC3E0;
+      color: #2B2B2B;
+      font-family: 'Open Sans' !important;
+      font-size: 16px;
+      font-weight: normal !important;
+      line-height: 24px;
+      padding: 16px 15.5px;
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px rgba(126, 126, 126, 0) inset !important;
+        -webkit-transition: background-color 5000s ease-in-out 0s !important;
+        transition: background-color 5000s ease-in-out 0s !important;
+        -webkit-text-fill-color: #2B2B2B !important;
+        z-index: 2;
+        position: relative;
+      }
+
+      @include mobile() {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .spz-form-wrap input:hover,
+    .spz-form-wrap select:hover {
+      border: var(--input-border-hover) !important;
+    }
+
+    .spz-form-wrap input:focus,
+    .spz-form-wrap select:focus {
+      border: var(--input-border-focus) !important;
+    }
+
+    /*Input styling end*/
+    /*Styling other elements*/
+    .spz-company-logo {
+      margin-bottom: 24px;
+    }
+
+    .spz-superheading {
+      color: #3620FF;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 3.36px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .spz-form-heading {
+      color: #000;
+      text-align: center;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 8px;
+    }
+
+    .spz-subheading {
+      color: #000;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 24px;
+    }
+
+    /*Styling other elements end*/
+    /* Styling for label animation*/
+
+    .spz-input-wrap label[class*="label-spz-"] {
+      position: absolute;
+      left: 17px;
+      line-height: var(--inputHeight);
+      top: 0;
+      transition: top 0.25s linear;
+      padding: 0;
+      color: #606060;
+      font-family: 'Open Sans' !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      pointer-events: none;
+
+      @include mobile() {
+        font-size: 14px;
+        left: 16px;
+      }
+    }
+
+    .spz-input-wrap.focused label[class*="label-spz-"],
+    .spz-input-wrap.has-value label[class*="label-spz-"] {
+      top: calc(-1 * (var(--inputHeight) / 7));
+      /*need to work on it to make it calculated automatically*/
+      background: #fff;
+      line-height: normal;
+      transition: top 0.15s linear;
+      padding: 0 3px;
+      left: 13.5px;
+      z-index: 3;
+    }
+
+    .spz-input-wrap.focused label[class*="label-spz-"] {
+      color: #1EC3E0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700 !important;
+    }
+
+    .spz-input-wrap.has-value label[class*="label-spz-"] {
+      color: #354556;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400 !important;
+    }
+
+    .spz-input-wrap.has-error {
+      margin-bottom: 35px!important;
+    }
+
+    .spz-input-wrap.has-error label[class*="label-spz-"] {
+      color: #DF0000;
+    }
+
+    .spz-input-wrap.has-value input {
+      border-color: rgba(30, 195, 224, 0.50) !important;
+    }
+
+    .spz-input-wrap.has-error input {
+      border-color: #DF0000 !important;
+    }
+
+    /* Styling for label animation end*/
+
+    .spz-input-wrap .mktoError {
+      bottom: unset;
+      top: var(--inputHeight);
+    }
+
+
+    .mktoFieldDescriptor.mktoFormCol {
+      margin-bottom: 0 !important;
+    }
+
+    div[class*="cf-error-container"] {
+      color: #DF0000;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      padding-left: 24px;
+      padding-right: 0;
+      background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1737103400/netwrix/5005/frame.svg');
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
+  }
+  .homepage_testimonials .product_call_to_action_wrapper .product_epp_buttons_button_demo{
+    cursor: pointer;
+  }
+}
+
+// TC css

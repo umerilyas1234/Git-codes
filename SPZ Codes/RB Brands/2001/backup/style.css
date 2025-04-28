@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.spz-2001 .hero-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 -4px;
+	display: none;
+}
+.spz-2001 .heading {
+	margin-bottom: 24px;
+}
+.spz-2001 .heading h1 {
+	color: #fff;
+	text-align: center;
+	font-family: Sarabun, sans-serif;
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 48px;
+	text-transform: capitalize;
+	margin-bottom: 4px;
+}
+.spz-2001 .heading p {
+	color: #fff;
+	text-align: center;
+	font-family: Sarabun, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+}
+.spz-2001 .step_box {
+	width: 100%;
+	margin-bottom: 24px;
+}
+.spz-2001 .step_box .step-1,
+.spz-2001 .step_box .step-2 {
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0px 20px 50px 0px rgba(32, 5, 113, 0.1);
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	max-width: 328px;
+	min-height: 276px;
+	margin: 0 auto;
+}
+.spz-2001 .step_box .step-1 {
+	padding-bottom: 28px;
+}
+.spz-2001 .step_box form .top-dots {
+	display: flex;
+	width: 100%;
+	padding: 12px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 26px;
+}
+.spz-2001 .step_box form .step_dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.spz-2001 .step_box form .step_dots .dots:first-child {
+	margin-right: 8px;
+}
+.spz-2001 .step_box form .step_dots .dots {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #1ea6f3;
+}
+.spz-2001 .step_box form .step_dots .step2-dots {
+	background-color: #f2f4fe;
+}
+.spz-2001 .step_box form .step-1 .form-heading {
+	margin-bottom: 27px;
+}
+.spz-2001 .step_box form .form-heading h3 {
+	color: #000;
+	text-align: center;
+	font-family: Sarabun, sans-serif;
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 30px;
+	transform: translate(0px, 3px);
+}
+.spz-2001 .step_box form .input-box {
+	width: 100%;
+	padding: 0px 10px;
+	margin-bottom: 25px;
+}
+.spz-2001 .step_box form .input-box input {
+	display: flex;
+	max-width: 100%;
+	width: 100%;
+	height: 56px;
+	padding: 17px 16px 14px 15px;
+	align-items: center;
+	flex-shrink: 0;
+	border-radius: 4px;
+	border: 1px solid #e2e1ea;
+	background: #fff;
+	outline: none !important;
+	margin: auto;
+}
+.spz-2001 .step_box form .input-box input::placeholder{
+	color: rgba(0, 0, 0, 0.50);
+	font-family: Sarabun, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.spz-2001 .step_box form .next-btn {
+	width: 100%;
+	padding: 0px 10px;
+}
+.spz-2001 .step_box form .next-btn a,
+.spz-2001 .step_box form .call-btn a {
+	display: flex;
+	max-width: 220px;
+	width: 100%;
+	padding: 12px 32px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	background: #1ea6f3;
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 auto 12px;
+	line-height: 24px;
+	transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+	transition-duration: .3s;
+}
+.spz-2001 .step_box form .next-btn svg{
+		transition: all .2s;
+}
+.spz-2001 .step_box form .next-btn a:hover span svg{
+	transform: translate(4px , 0px);
+}
+.spz-2001 .step_box form .next-btn a {
+	margin-bottom: 0;
+}
+.spz-2001 .step_box form .next-btn a:hover,
+.spz-2001 .step_box form .call-btn a:hover {
+	--tw-scale-x: .95;
+    --tw-scale-y: .95;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.spz-2001 .step_box form .next-btn a .next-text,
+.spz-2001 .step_box form .call-btn a svg {
+	margin-right: 8px;
+}
+
+.spz-2001 .step_box .step-2 {
+	display: none;
+}
+.spz-2001 input:-webkit-autofill,
+.spz-2001 input:-webkit-autofill:hover, 
+.spz-2001 input:-webkit-autofill:focus {
+  border: 1px solid #000;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.spz-2001 .error {
+	font-family: Sarabun;
+	color: #A73440;
+	display: none;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	position: relative;
+	left: 22px;
+  bottom: 2px;
+}
+.spz-2001 .step_box form .input-wrap {
+  padding: 0 6px;
+	position: relative;
+}
+.spz-2001 .input-box label {
+  color: #000;
+  font-family: Sarabun;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  background-color: #fff;
+  padding: 0 5px;
+  left: 18px;
+	pointer-events: none;
+	transition: all 0.5s;
+}
+.spz-2001 .input-wrap.active label,
+.spz-2001 .input-wrap.err.active label,
+.spz-2001 .input-wrap.err.active.typing label {
+	opacity: 1;
+	top: -8px;
+	transition: all 0.5s;
+}
+.spz-2001 .input-wrap.active.typing label {
+	color: #1EA6F3;
+}
+.spz-2001 .step_box form .input-wrap.active.typing input {
+	border-color: #1EA6F3;
+}
+.spz-2001 .input-wrap.active label {
+	color: #000;
+}
+.spz-2001 .step_box form .input-wrap.active input {
+	border-color: #E2E1EA;
+}
+.spz-2001 .input-wrap.err label {
+	color: #A73440;
+}
+.spz-2001 .step_box form .input-wrap.err input {
+	border-color: #A73440;
+}
+.spz-2001 .step_box form .input-wrap.err.typing + .error {
+    display: none !important;
+}
+
+
+/* Step 2 */
+.spz-2001 .step_box .step-2 {
+	padding-bottom: 28px;
+}
+.spz-2001 .step_box form .location-box .location {
+	display: flex;
+	padding: 8px 12px;
+	align-items: center;
+	border-radius: 4px;
+	border: 1px solid #1ea6f3;
+	background: #f2f4fe;
+	font-size: 14px;
+	line-height: 21px;
+}
+.spz-2001 .step_box form .location-box .location svg {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+.spz-2001 .step_box form .form-heading p {
+	color: #000;
+	text-align: center;
+	font-family: Sarabun, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 20px;
+}
+.spz-2001 .step_box form .form-heading p span {
+	margin-right: 4px;
+}
+.spz-2001 .step_box form .call-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.spz-2001 .step_box form .call-btn p {
+	color: #000;
+	text-align: center;
+	font-family: Sarabun, sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 15px;
+}
+.spz-2001 .step_box .step-2 .top-dots {
+	margin-bottom: 21px;
+}
+.spz-2001 .step_box .step-2 .location-box {
+	margin-bottom: 12px;
+	padding: 0px 10px;
+}
+.spz-2001 .step_box .step-2 .form-heading {
+	margin-bottom: 23px;
+	width: 100%;
+	padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+	header > section > div > div:last-child > div,
+	header > section > div > div:last-child > p:first-child,
+	header > section > div > div:last-child > h1,
+	header > section > div > div:last-child > p:nth-child(3),
+	header > section > div > div:last-child > a,
+	header > section > div > div:last-child > p:nth-child(6){
+		display: none;
+	}
+	.spz-2001 .hero-info{
+		display: block;
+	}
+}

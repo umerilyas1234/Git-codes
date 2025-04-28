@@ -1,0 +1,273 @@
+.spz_t5002.hidden {
+  overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+  .spz_t5002.hidden {
+    overflow: auto;
+  }
+}
+.spz_t5002 .spz-modal-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 48, 48, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  padding: 0 20px;
+  overflow: auto;
+}
+.spz_t5002 .spz-modal-wrap.v2 .modal-wrap {
+  max-width: 1062px;
+  padding: 23px 0 25px 48.5px;
+  background-position: 283px -109px;
+}
+.spz_t5002 .spz-modal-wrap.v2 .modal-wrap .modal-content ul li::before {
+  top: 2px;
+}
+.spz_t5002 .spz-modal-wrap.v2 .modal-wrap .modal-left {
+  width: 50%;
+}
+.spz_t5002 .spz-modal-wrap.v2 .modal-wrap .modal-right {
+  width: 50%;
+}
+.spz_t5002 .spz-modal-wrap.v2 .modal-wrap .modal-right img {
+  max-width: 468px;
+  transform: translateX(0.5px) translateY(25px);
+  border-bottom-right-radius: 20px;
+  margin-left: auto;
+}
+@media screen and (max-width: 1023px) {
+  .spz_t5002 .spz-modal-wrap {
+    display: none;
+  }
+}
+.spz_t5002 .modal-wrap {
+  max-width: 1119px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 22.5px 0 23.5px 48.5px;
+  position: relative;
+  border-radius: 20px;
+  background: #002E33;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1721727406/procurify/5002/background_pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 672px 617px;
+  background-position: 339px -144px;
+}
+.spz_t5002 .modal-wrap * {
+  background-color: transparent;
+}
+.spz_t5002 .spz-modal-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.spz_t5002 .spz-modal-wrap .modal-left {
+  width: 44%;
+  max-width: 560px;
+  z-index: 2;
+}
+.spz_t5002 .spz-modal-wrap .modal-right {
+  width: 56%;
+  position: relative;
+  z-index: 1;
+}
+.spz_t5002 .spz-modal-wrap .modal-right img {
+  max-width: 592px;
+  transform: translateX(31px) translateY(1px);
+}
+@media (min-width: 1024px) and (max-width: 1299px) {
+  .spz_t5002 .spz-modal-wrap .modal-right img {
+    max-width: 480px;
+    margin-left: auto;
+    transform: translateX(15px) translateY(1px);
+  }
+}
+.spz_t5002 .spz-modal-wrap .modal-ctas {
+  display: flex;
+}
+.spz_t5002 .spz-modal-wrap .close-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  line-height: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.spz_t5002 .spz-modal-wrap .close-modal img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.spz_t5002 .spz-modal-wrap .modal-ctas a {
+  padding: 5px 24.5px 5px 25px;
+  border-radius: 9999px;
+  background: #1369AA;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 48px;
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease 0ms;
+  position: relative;
+}
+.spz_t5002 .spz-modal-wrap .modal-ctas a svg {
+  opacity: 0;
+  width: 0;
+  transition: all 300ms ease 0ms;
+  transform: translateX(-1em);
+}
+.spz_t5002 .spz-modal-wrap .modal-ctas a:hover svg {
+  opacity: 1;
+  margin-left: 8px;
+  width: auto;
+  transform: none;
+}
+.spz_t5002 .modal-heading {
+  color: #FFF;
+  font-family: "Gilroy Medium";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+  padding-bottom: 15px;
+}
+.spz_t5002 .modal-content {
+  padding-bottom: 31px;
+}
+.spz_t5002 .modal-content ul {
+  padding-left: 28px;
+}
+.spz_t5002 .modal-content ul li {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+}
+.spz_t5002 .modal-content ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.spz_t5002 .modal-content ul li::before {
+  content: "";
+  position: absolute;
+  left: -27.5px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1721727405/procurify/5002/check_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.spz_t5002 .close-modals {
+  transition: all 0.4s ease;
+}
+.spz_t5002 .close-modals:hover {
+  opacity: 1;
+}
+.spz_t5002 .get_a_demoFormModal {
+  width: 100%;
+}
+.spz_t5002 .get_a_demoFormModal form {
+  width: 100%;
+}
+.spz_t5002 .form_outerModal {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+.spz_t5002 .form_inputModal {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.spz_t5002 .form_inputModal input {
+  border-radius: 100px !important;
+  border: 1px solid #BFCBCC;
+  background: #FFF;
+  color: #002E33 !important;
+  height: 48px;
+  width: 100% !important;
+  font-family: var(--ff-primary) !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px !important;
+  padding: 12px 155px 12px 19px !important;
+  transition: all 0.4s ease !important;
+}
+@media (max-width: 767px) {
+  .spz_t5002 .form_inputModal input {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+.spz_t5002 .form_inputModal input::-webkit-input-placeholder {
+  color: #728499 !important;
+}
+.spz_t5002 .form_inputModal input::-moz-placeholder {
+  color: #728499 !important;
+}
+.spz_t5002 .form_inputModal input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fff inset, 0px 0px 0px 0px rgb(255, 255, 255) !important;
+  -webkit-text-fill-color: #002E33 !important;
+}
+.spz_t5002 .form_inputModal input:active, .spz_t5002 .form_inputModal input:focus, .spz_t5002 .form_inputModal input:focus-visible {
+  border-color: #31936A !important;
+  outline: none !important;
+}
+.spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown) {
+  border-color: #728499 !important;
+}
+.spz_t5002 .form_inputModal input:not(:placeholder-shown) {
+  border-color: #728499 !important;
+}
+.spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown):active, .spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown):focus {
+  border-color: #31936A !important;
+}
+.spz_t5002 .form_inputModal input:not(:placeholder-shown):active, .spz_t5002 .form_inputModal input:not(:placeholder-shown):focus {
+  border-color: #31936A !important;
+}
+.spz_t5002 .form_buttonModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 145px;
+  z-index: 1;
+}
+.spz_t5002 .form_buttonModal button {
+  height: 48px;
+  width: 100%;
+  border-radius: 100px !important;
+  background: #31936A !important;
+  font-family: var(--ff-primary) !important;
+  text-align: center;
+  color: #FFF !important;
+  border: none !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  padding: 12px 15px !important;
+  transition: all 0.4s ease;
+}
+.spz_t5002 .form_buttonModal button:hover {
+  box-shadow: 0px 4px 8px -2px rgba(5, 83, 50, 0.3), 0px 2px 4px -2px rgba(49, 147, 106, 0.2);
+}/*# sourceMappingURL=styles.css.map */

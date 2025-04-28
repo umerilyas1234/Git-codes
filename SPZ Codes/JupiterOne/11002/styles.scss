@@ -1,0 +1,209 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.spz_11002{
+  .spz_get_demo{
+    padding: 50px;
+    border-radius: 24px;
+    background: linear-gradient(101deg, #103F81 0%, #041E42 100%), linear-gradient(0deg, #041E42 0%, #041E42 100%), #041E42;
+    margin-top: 43px;
+    margin-bottom: 40px;
+    @include mobile(){
+      padding: 40px 20px;
+      margin: 26px -5px;
+    }
+    h3{
+      color: #64FFDA;
+      font-family: Lato;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.4px;
+      letter-spacing: 0.24px;
+      text-align: center;
+      padding-bottom: 11px;
+      margin: 0;
+      @include mobile(){
+        padding-bottom: 12px;
+      }
+    }
+    h2{
+      color: #FFF;
+      font-family: Bitter;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 36.4px;
+      letter-spacing: -0.56px;
+      padding-bottom: 12px;
+      text-align: center;
+      margin: 0;
+      @include mobile(){
+        font-size: 24px;
+        line-height: 31.2px;
+        letter-spacing: -0.48px;
+        padding-bottom: 11px;
+      }
+    }
+    p{
+      color: #FFF;
+      text-align: center;
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 30px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .sidebar-news-form-block{
+      margin-bottom: 0;
+      position: relative;
+      max-width: 452px;
+      margin: auto;
+    }
+    .sidebar-news-form{
+      flex-direction: row;
+      @include mobile(){
+        flex-wrap: wrap;
+      }
+      input{
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 48px;
+        border-radius: 999px;
+        &[name="email"]{
+          width: 300px;
+          margin-right: 10px;
+          color: #FFF;
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: Lato;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 19.6px;
+          letter-spacing: -0.28px;
+          padding: 14px 20px;
+          caret-color: #FFF;
+          &::-webkit-input-placeholder {
+            color: #fff;
+            font-family: "Lato";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19.6px;
+            letter-spacing: -0.28px;
+          }
+          &::-moz-placeholder {
+            color: #fff;
+            font-family: "Lato";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19.6px;
+            letter-spacing: -0.28px;
+          }
+          &:focus {
+            border-color: #36fcd6;
+          }
+          &:-webkit-autofill{
+            -webkit-box-shadow: 0 0 0 30px #0b3167 inset;
+            -webkit-text-fill-color: #fff;
+            caret-color: #FFF;
+          }
+          &:-webkit-autofil:hover{
+            -webkit-box-shadow: 0 0 0 30px white inset;
+            border-color: #B4B3B9;
+            background-color: #f9f9f9;
+          }
+          @include mobile(){
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+            margin-right: 0;
+            text-align: center;
+          }
+        }
+      }
+      .sidebar-news-button{
+        width: 142px;
+        background: #03E7BB;
+        color: #1B1C2B;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -0.32px;
+        transition: all 0.4s ease;
+        &:hover{
+          background: #36FCD6;
+        }
+        @include mobile(){
+          width: 100%;
+        }
+      }
+    }
+  }
+  #j1-header-form .hs-form-field.is-focused input::-moz-placeholder, #j1-header-form .hs-form-field.is-filled input::-moz-placeholder {
+    opacity: 0 !important;
+  }
+  &.j1-modal-open{
+    height: 100%;
+    background-attachment: fixed!important;
+    * {
+      background-attachment: fixed!important;
+    }
+    .main-wrapper,
+    .page-wrapper{
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+  .j1-modal{
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    height: 100%;
+  }
+}

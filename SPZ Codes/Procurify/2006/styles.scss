@@ -1,0 +1,336 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1299px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.spz_t2006{
+  .customer_rate{
+    width: 100%;
+    padding: 64px 0 74.5px;
+    background-color: #FCFBF7;
+    *{
+      background-color: inherit;
+    }
+    @include tablet(){
+      padding: 38px 40px 55.5px;
+    }
+    @include mobile(){
+      padding: 40px 20px 52px;
+    }
+    &.v2{
+      padding: 84px 0 77.5px;
+      @include tablet(){
+        padding: 39px 40px 53.5px;
+      }
+      @include mobile(){
+        padding: 40px 20px 52px;
+      }
+      .coustomer_left{
+        padding-left: 0;
+        max-width: 608px;
+        @include tablet(){
+          width: 100%;
+          max-width: 100%;
+        }
+        @include mobile(){
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      .customer_right {
+        width: 50%;
+        max-width: 570px;
+        padding-left: 22.5px;
+        @include tablet(){
+          width: 100%;
+          max-width: 100%;
+          padding-left: 0;
+        }
+        @include mobile(){
+          width: 100%;
+          max-width: 100%;
+          padding-left: 0;
+        }
+      }
+      .g2_logos{
+        padding-bottom: 27.5px;
+        @include mobile(){
+          padding-bottom: 13.5px;
+        }
+      }
+      .customer_bottom {
+        transform: translateY(-1.5px);
+        @include tablet(){
+          transform: translateY(-1px);
+        }
+        @include mobile(){
+          transform: none;
+        }
+      }
+    }
+  }
+  .customer_inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .coustomer_left{
+    width: 50%;
+    max-width: 609.5px;
+    padding-left: 1.5px;
+    figure{
+      display: block;
+      width: 100%;
+      img{
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0px 5px 21.2px 4px rgba(106, 108, 112, 0.08);
+      }
+    }
+    @include tablet(){
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-bottom: 29px;
+    }
+    @include mobile(){
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-bottom: 29.5px;
+    }
+  }
+  .customer_right{
+    width: 50%;
+    max-width: 570px;
+    padding-left: 24.5px;
+    h2{
+      color: #002E33;
+      font-family: "Gilroy Medium";
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 44px;
+      letter-spacing: -0.72px;
+      padding-bottom: 25.5px;
+    }
+    @include tablet-pro(){
+      h2{
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: -0.6px;
+      }
+    }
+    @include tablet(){
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      h2{
+        text-align: center;
+      }
+    }
+    @include mobile(){
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      h2{
+        text-align: center;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: unset;
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+  .g2_logos{
+    width: 100%;
+    padding-bottom: 25.5px;
+    transform: translateY(0.5px);
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      li{
+        padding: 0 10px;
+        width: fit-content;
+      }
+    }
+    @include tablet-pro(){
+      ul{
+        margin: 0 -5px;
+        li {
+          padding: 0 5px;
+        }
+      }
+    }
+    @include tablet(){
+      padding-bottom: 26.5px;
+      transform: translateY(1px);
+      ul{
+        justify-content: center;
+      }
+    }
+    @include mobile(){
+      padding-bottom: 13px;
+      ul{
+        justify-content: center;
+        li{
+          padding: 0 10px 13px;
+        }
+      }
+    }
+  }
+  .g2_logoMain{
+    width: 78px;
+    span{
+      display: inline-block;
+      width: auto;
+      img{
+        width: auto;
+        display: inline-block;
+      }
+    }
+    @include tablet-pro(){
+      width: 77px;
+    }
+  }
+  .customer_bottom{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    @include tablet(){
+      max-width: 397px;
+      margin: auto;
+      flex-wrap: nowrap;
+    }
+  }
+  .demo_btn{
+    width: 156px;
+    height: 48px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    background: #002E33;
+    color: #FFF;
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border: 1.5px solid #002E33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:hover{
+      border-color: #002E33;
+      background: #31936A;
+    }
+    @include mobile(){
+      width: 100%;
+      max-width: 320px;
+      margin: auto;
+    }
+  }
+  .review{
+    margin-left: 19.5px;
+    display: flex;
+    align-items: center;
+    @include tablet(){
+      width: 221px;
+    }
+    @include mobile(){
+      padding-top: 20px;
+      margin-left: 0;
+      margin: auto;
+      width: 100%;
+      justify-content: center;
+      transform: translateX(-1px);
+    }
+    > img{
+      display: inline-block;
+      width: 49px;
+      height: 49px;
+    }
+    small{
+      padding-left: 15.5px;
+      @include tablet(){
+        width: fit-content;
+      }
+      figure{
+        display: block;
+        width: 108.4px;
+        height: 20px;
+        margin-bottom: 4px;
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+      span{
+        display: block;
+        width: 100%;
+        color: #002E33;
+        font-family: var(--ff-primary);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        @include tablet(){
+          max-width: 156px;
+        }
+      }
+    }
+  }
+}

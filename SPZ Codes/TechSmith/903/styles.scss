@@ -1,0 +1,140 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.spz_t903{
+  .entry-content {
+    > div{
+      &.custom-call-to-action {
+        .custom-call-to-action-image{
+          transform: translateX(-3px);
+          img{
+            &.visual_image{
+              width: 250px;
+              height: 250px;
+              margin-right: 11px;
+              margin-left: auto;
+              @include tablet(){
+                margin-right: auto;
+                margin-top: 8px;
+              }
+              @include mobile(){
+                margin-right: auto;
+                margin-top: -9px;
+                margin-bottom: 14px;
+                width: 240px;
+                height: 240px;
+              }
+            }
+          }
+          @include tablet(){
+            transform: translateX(-1px);
+          }
+          @include mobile(){
+            width: 230px;
+            height: 230px;
+            margin:24px auto 0;
+            transform: none;
+          }
+        }
+      }
+      &.tsc-blog-cta{
+        .wp-block-image{
+          figure{
+            margin-right: 11px;
+            img{
+              width: 250px;
+              height: 250px;
+            }
+            @include tablet(){
+              margin-right: auto;
+              margin-top: 8px;
+              img{
+                width: 580px;
+                height: 580px;
+              }
+            }
+            @include mobile(){
+              margin-right: auto;
+              margin-top: -9px;
+              margin-bottom: 14px;
+              img{
+                width: 240px;
+                height: 240px;
+              }
+            }
+          }
+        }
+      }
+      &.custom-call-to-action{
+        &.__bigger-image {
+          .custom-call-to-action-image {
+            margin-right: 11px;
+            img{
+              width: 250px;
+              height: 250px;
+              margin-left: auto;
+            }
+            @include tablet(){
+              margin-right: 20px;
+              margin-top: 8px;
+            }
+            @include mobile(){
+              margin-right: auto;
+              margin-bottom: 14px;
+              img{
+                width: 240px;
+                height: 240px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

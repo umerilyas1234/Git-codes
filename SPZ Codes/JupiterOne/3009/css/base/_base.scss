@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0px;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.clr {
+    clear: both;
+}
+
+label {
+    margin: 0px;
+}
+
+input,
+textarea,
+select {
+    border: 0px none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-family: $latoRegular;
+    font-weight: normal;
+}
+
+img {
+    outline: none;
+    max-width: 100%;
+    height: auto;
+    border: 0px none;
+}
+
+figure {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+input[type="submit"] {
+    // border-radius: 0px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 0px;
+    border: 0px none;
+    outline: none;
+    cursor: pointer;
+    font-family: $latoRegular;
+    font-weight: normal;
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+:focus {
+    outline: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0px;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+em {
+    font-style: normal;
+}
+
+body {
+    color: #000000;
+    background: #fff;
+    font-family: $latoRegular;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    @include transition_one();
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body.hidden {
+    overflow: hidden;
+}
+
+main {
+    min-height: 100vh;
+}
+.main_container {
+    width: 100%;
+    min-height: 100vh;
+    @include transition_one();
+}
+
+.auto_container {
+    position: relative;
+    margin: auto;
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 20px;
+}
+.wrapper {
+    width: 100%;
+    @include transition_one();
+}

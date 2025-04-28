@@ -1,0 +1,7 @@
+.spz_419 .cart-offers-wrapper .cart-offers .padding-bottom-32 h3.h1 {
+  font-size: 0;
+}
+.spz_419 .cart-offers-wrapper .cart-offers .padding-bottom-32 h3.h1::before {
+  font-size: 2rem;
+  content: "You Might Also Like";
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,246 @@
+.spz_8003.hidden {
+  overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+  .spz_8003.hidden {
+    overflow: auto;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .spz_8003 div#catalog .operations_img {
+    right: 0;
+    width: 53%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .spz_8003 .features-inner .et_pb_column_4_4:before {
+    right: 0;
+  }
+}
+.spz_8003 .spz-modal-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(21, 161, 175, 0.03) 49.54%, rgba(21, 161, 175, 0.1) 95.63%), rgba(3, 33, 58, 0.4);
+  backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1023px) {
+  .spz_8003 .spz-modal-wrap {
+    display: none;
+  }
+}
+.spz_8003 .spz-modal-wrap.contract_management .modal-wrap {
+  max-width: 1088px;
+}
+.spz_8003 .spz-modal-wrap.contract_management .modal-wrap .modal-right {
+  max-width: 646px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .spz_8003 .spz-modal-wrap.contract_management .modal-wrap {
+    padding: 47px 30px 48px;
+  }
+  .spz_8003 .spz-modal-wrap.contract_management .modal-wrap::before {
+    right: -2%;
+    width: 325px;
+    height: 300px;
+  }
+  .spz_8003 .spz-modal-wrap.contract_management .modal-wrap .modal-right {
+    max-width: 600px;
+  }
+  .spz_8003 .spz-modal-wrap.contract_management .modal-wrap .modal-right .modal-heading {
+    font-size: 37px;
+  }
+}
+.spz_8003 .spz-modal-wrap.generic .modal-wrap .modal-right::after {
+  content: "";
+  position: absolute;
+  right: 388px;
+  top: 23.5px;
+  width: 68px;
+  height: 52px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718891138/finquery/8003/bg-decoration-small.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.spz_8003 .spz-modal-wrap.saas_management .modal-wrap {
+  max-width: 980px;
+}
+.spz_8003 .spz-modal-wrap.saas_management .modal-wrap .modal-right {
+  max-width: 558px;
+}
+.spz_8003 .spz-modal-wrap.saas_management .modal-wrap .modal-right .modal-heading {
+  max-width: 525px;
+}
+.spz_8003 .spz-modal-wrap.leases .modal-wrap .modal-right {
+  max-width: 545px;
+}
+.spz_8003 .modal-wrap {
+  background: #fff;
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 47px 48px 48px;
+  position: relative;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718891171/finquery/8003/figure.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+  border-radius: 8px;
+  box-shadow: 0px 56px 80px 0px rgba(0, 0, 0, 0.04);
+}
+.spz_8003 .modal-wrap::after {
+  content: "";
+  position: absolute;
+  right: 120px;
+  bottom: 8px;
+  width: 68px;
+  height: 52px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718891138/finquery/8003/bg-decoration-small.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.spz_8003 .modal-wrap::before {
+  content: "";
+  position: absolute;
+  right: -180.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 440px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/finquery/8003/img.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
+  .spz_8003 .modal-wrap::before {
+    right: -2%;
+    width: 350px;
+    height: 321px;
+  }
+}
+.spz_8003 .spz-modal-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.spz_8003 .spz-modal-wrap .modal-left,
+.spz_8003 .spz-modal-wrap .modal-right {
+  width: 100%;
+  max-width: 560px;
+}
+.spz_8003 .spz-modal-wrap .modal-ctas {
+  display: flex;
+}
+.spz_8003 .spz-modal-wrap .close-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  line-height: 0;
+  z-index: 9;
+}
+.spz_8003 .spz-modal-wrap .close-modal img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.spz_8003 .spz-modal-wrap .modal-ctas a {
+  padding: 5px 24.5px 5px 25px;
+  border-radius: 9999px;
+  background: #1369AA;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 48px;
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease 0ms;
+  position: relative;
+}
+.spz_8003 .spz-modal-wrap .modal-ctas a svg {
+  opacity: 0;
+  width: 0;
+  transition: all 300ms ease 0ms;
+  transform: translateX(-1em);
+}
+.spz_8003 .spz-modal-wrap .modal-ctas a:hover svg {
+  opacity: 1;
+  margin-left: 8px;
+  width: auto;
+  transform: none;
+}
+.spz_8003 .modal-heading {
+  color: #0B3456;
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+  padding-bottom: 32.5px;
+  letter-spacing: 0.1px;
+}
+.spz_8003 .modal-heading strong {
+  display: contents;
+  color: #15A1AF;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.spz_8003 .modal-content {
+  padding-bottom: 32px;
+}
+.spz_8003 .modal-content ul {
+  padding-left: 28px;
+}
+.spz_8003 .modal-content ul li {
+  color: #53777C;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  position: relative;
+}
+.spz_8003 .modal-content ul li strong {
+  display: inline-block;
+  color: #0B3456;
+  font-weight: 700;
+}
+.spz_8003 .modal-content ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.spz_8003 .modal-content ul li::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -28px;
+  width: 20px;
+  height: 26px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718891119/finquery/8003/icon-20-bullet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.spz_8003 .close-modals {
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+.spz_8003 .close-modals:hover {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */

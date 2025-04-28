@@ -1,0 +1,123 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// 1010 improvements
+.spz_t1010 .accordion-section {
+  .container {
+    .content-part {
+      .accordion {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .accordion_images .image-container {
+    display: none;
+    background: #F3F4FA;
+    height: 100%;
+    border-radius: 4px;
+
+    video {
+      max-height: 700px;
+      object-fit: cover;
+    }
+
+  }
+}
+
+.spz_t1010 .accordion-section .accordion_images .image-container picture {
+  display: none;
+}
+
+.spz_t1010 .accordion-section .accordion_images .image-container video {
+  border-radius: 32px;
+  // background: #EBF2FE;
+}
+
+.spz_t1010 .accordion-section .accordion_images .image-container video {
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@include tablet() {
+  .spz_t1010 .accordion-section .content-part .accordion.active .img-wrap {
+    picture{
+      display: none;
+    }
+    video {
+      width: 100%;
+    }
+  }
+
+  .spz_t1010 .accordion-section .content-part .accordion .accor-paratexts .img-wrap video {
+    width: 100%;
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+@include mobile() {
+  .spz_t1010 .accordion-section .content-part .accordion.active .img-wrap {
+    picture{
+      display: none;
+    }
+    video {
+      width: 100%;
+    }
+  }
+
+  .spz_t1010 .accordion-section .content-part .accordion .accor-paratexts .img-wrap video {
+    width: 100%;
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+  }
+}

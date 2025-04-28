@@ -1,0 +1,58 @@
+:root {
+  --sticky-footer-container: 1024px; /*Define container max width*/
+  --left-section-width: 500px; /*left section max-width*/
+  --middle-section-width: 300px; /*Middle section max width*/
+  --right-section-width: 300px; /*Right section max width*/
+}
+.spz-sticky-footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 99999999;
+  background: #fff;
+  padding: 20px 0;
+  display: none;
+}
+.goUp .spz-sticky-footer {
+  display: block;
+}
+.spz-footer-container{
+    max-width: var(--sticky-footer-container);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-left{
+    max-width: var(--left-section-width);
+    width: 100%;
+}
+.middle-section{
+    max-width: var(--middle-section-width);
+    width: 100%;
+}
+.section-right{
+    max-width: var(--right-section-width);
+    width: 100%;
+}
+.close_wrapper .sticky_close {
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-right: 20px;
+}
+.close_wrapper .sticky_close:before{
+  content: '';
+  background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1714139322/assembly/6002/close_icon_2.svg');
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+.spz-sticky-footer .close_wrapper .sticky_close:is(:hover,:focus):before {
+  background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1714802101/assembly/6002/Closeicon.svg');
+}

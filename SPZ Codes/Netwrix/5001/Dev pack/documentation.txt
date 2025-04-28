@@ -1,0 +1,36 @@
+#########################################################################
+####################### SPIRALYZE DEV PACKAGE ###########################
+#########################################################################
+
+
+############################## DISCLAIMER ###############################
+# This guide outlines the code and implementation steps for running     #
+# #1001 via your A/B testing platform. Although we have thoroughly      #
+# tested and validated this implementation to ensure smooth execution,  #
+# we strongly recommend that your development team review and adapt the #                                                                  
+# code as needed to align with your site's specific requirements. The   #
+# code dynamically modifies the page during loading, and in some cases, #
+# rewriting parts of it may offer better integration with your existing #
+# codebase.                                                             #
+#########################################################################
+
+
+################################ DETAILS ################################
+# Client: Netwrix
+# Experiment: #5001 | Netwrix | Endpoint Pricing | Multi-step Form
+# Experiment Plan Link: https://app.asana.com/0/1206002187116436/1208247471238379/f
+# Design Link: https://www.figma.com/design/yXtKXHc28UutEyjhPON2E3/5001-%7C-Endpoint-Pricing-%7C-Multi-step-Form?node-id=1524-39&t
+# Devices: Responsive (Mobile and Desktop)
+#########################################################################
+
+
+############################ DOCUMENT CHANGES ###########################
+# Describe the document changes in index.html file
+
+In this experiment:
+
+############################### NOTES ###################################
+
+1. All assets used in this variation have been added to the provided assets folder.
+
+2. V1.js file is A/B test javascript code for your reference.

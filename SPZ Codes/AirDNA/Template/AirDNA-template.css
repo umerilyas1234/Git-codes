@@ -1,0 +1,35 @@
+/* How effect */
+a.hero-btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 161px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: #3D53B6;
+    padding: 16px 24px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+a.hero-btn div {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 2s ease-out;
+    background: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    /* Prevent the ripple from interfering with other events */
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+/* How effect end */

@@ -1,0 +1,150 @@
+.section-solutions {
+  width: 100%;
+  padding: 102px 0;
+  background: linear-gradient(180deg, #eff2f4 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.solution-inner {
+  width: 100%;
+}
+.solution-heading {
+  width: 100%;
+  padding-bottom: 40px;
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Bitter";
+    font-weight: 600;
+    color: #041e42;
+    line-height: 48px;
+    letter-spacing: -0.024em;
+    margin: 0;
+  }
+}
+.solutions-list {
+  width: 100%;
+  ul {
+    margin: 0 -42px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    li {
+      width: 33.33%;
+      padding: 0 42px;
+      margin: 0;
+    }
+  }
+}
+.solutions-data {
+  width: 100%;
+  figure {
+    display: block;
+    width: 100%;
+    margin: 0;
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      -o-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -webkit-border-radius: 12px;
+    }
+  }
+  h3 {
+    width: 100%;
+    font-family: "Bitter";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.02em;
+    color: #041e42;
+    margin: -30px 0 0;
+    padding-bottom: 16px;
+  }
+  p {
+    width: 100%;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+    color: #000;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .solutions-list {
+    ul {
+      margin: 0 -20px;
+      li {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-solutions {
+    padding: 115px 0;
+    .container-large {
+      max-width: 748px;
+    }
+  }
+  .solutions-data {
+    p {
+      letter-spacing: 0;
+    }
+  }
+  .solutions-list {
+    ul {
+      margin: 0;
+      li {
+        width: 100%;
+        padding: 0 0 6px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .solution-heading {
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-solutions {
+    padding: 50px 0;
+  }
+  .solutions-data {
+    p {
+      letter-spacing: 0;
+    }
+  }
+  .solutions-list {
+    ul {
+      margin: 0;
+      li {
+        width: 100%;
+        padding: 0 0 4px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .solution-heading {
+    padding-bottom: 8px;
+    h2 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+}

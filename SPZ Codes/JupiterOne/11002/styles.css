@@ -1,0 +1,170 @@
+.spz_11002 .spz_get_demo {
+  padding: 50px;
+  border-radius: 24px;
+  background: linear-gradient(101deg, #103F81 0%, #041E42 100%), linear-gradient(0deg, #041E42 0%, #041E42 100%), #041E42;
+  margin-top: 43px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo {
+    padding: 40px 20px;
+    margin: 26px -5px;
+  }
+}
+.spz_11002 .spz_get_demo h3 {
+  color: #64FFDA;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  padding-bottom: 11px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo h3 {
+    padding-bottom: 12px;
+  }
+}
+.spz_11002 .spz_get_demo h2 {
+  color: #FFF;
+  font-family: Bitter;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36.4px;
+  letter-spacing: -0.56px;
+  padding-bottom: 12px;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo h2 {
+    font-size: 24px;
+    line-height: 31.2px;
+    letter-spacing: -0.48px;
+    padding-bottom: 11px;
+  }
+}
+.spz_11002 .spz_get_demo p {
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-bottom: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form-block {
+  margin-bottom: 0;
+  position: relative;
+  max-width: 452px;
+  margin: auto;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form {
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo .sidebar-news-form {
+    flex-wrap: wrap;
+  }
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 48px;
+  border-radius: 999px;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email] {
+  width: 300px;
+  margin-right: 10px;
+  color: #FFF;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+  padding: 14px 20px;
+  caret-color: #FFF;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email]::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email]::-moz-placeholder {
+  color: #fff;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  letter-spacing: -0.28px;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email]:focus {
+  border-color: #36fcd6;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #0b3167 inset;
+  -webkit-text-fill-color: #fff;
+  caret-color: #FFF;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form input[name=email]:-webkit-autofil:hover {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  border-color: #B4B3B9;
+  background-color: #f9f9f9;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo .sidebar-news-form input[name=email] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+.spz_11002 .spz_get_demo .sidebar-news-form .sidebar-news-button {
+  width: 142px;
+  background: #03E7BB;
+  color: #1B1C2B;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.32px;
+  transition: all 0.4s ease;
+}
+.spz_11002 .spz_get_demo .sidebar-news-form .sidebar-news-button:hover {
+  background: #36FCD6;
+}
+@media (max-width: 767px) {
+  .spz_11002 .spz_get_demo .sidebar-news-form .sidebar-news-button {
+    width: 100%;
+  }
+}
+.spz_11002 #j1-header-form .hs-form-field.is-focused input::-moz-placeholder, .spz_11002 #j1-header-form .hs-form-field.is-filled input::-moz-placeholder {
+  opacity: 0 !important;
+}
+.spz_11002.j1-modal-open {
+  height: 100%;
+  background-attachment: fixed !important;
+}
+.spz_11002.j1-modal-open * {
+  background-attachment: fixed !important;
+}
+.spz_11002.j1-modal-open .main-wrapper,
+.spz_11002.j1-modal-open .page-wrapper {
+  overflow: hidden;
+  height: 100%;
+}
+.spz_11002 .j1-modal {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */

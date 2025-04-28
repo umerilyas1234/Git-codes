@@ -1,0 +1,115 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.spz_10001{
+  .category-menu-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: 874px){
+      .category-menu{
+        max-width: 560px;
+      }
+    }
+    @include mobile(){
+      .category-menu{
+        max-width: 360px;
+      }
+    }
+  }
+  .try_ctaOuter{
+    display: inline-block;
+    @include tablet(){
+      position: absolute;
+      right: 15px;
+      bottom: 26px;
+    }
+    @include mobile(){
+      position: absolute;
+      right: 16px;
+      bottom: 29px;
+    }
+  }
+  .try_cta{
+    border-radius: 99px;
+    background-color: #99E500;
+    padding: 7.5px 16px;
+    display: inline-block;
+    color:  #1A1A1A;
+    font-family: proxima-nova,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;  
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: #C7FA5E;
+    }
+  }
+  .category-navigation{
+    >.row{
+      >.column{
+        position: relative;
+      }
+    }
+  }
+  .category-menu-toggle{
+    &.is-visible{
+      & + .try_ctaOuter {
+        position: absolute;
+        right: 0.9375rem;
+        top: 13px;
+        z-index: 999;
+      }
+    }
+  }
+}

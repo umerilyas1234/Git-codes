@@ -1,0 +1,181 @@
+<!-- This code inserts a new hero section before the closing the "body" tag. Please refer to the given screenshot: 'https://app.screencast.com/nTK25fH0JshMd'-->
+<!-- Hide or remove "#footer_cont, #main-cont, header, #fl-main-content, .fl-builder-content" elements.  -->
+<div class="form_outer form-wrapper-2">
+  <div class="form_main">
+    <div class="modal-form-wrap">
+      <div class="form-section">
+        <div class="form_heading">
+          <h2>Get a demo</h2>
+        </div>
+        <div class="subheading">
+          <div class="rating">
+            <img src="images/frame_3.svg" alt="Gartner">
+            <strong>
+              <img src="images/stars.svg"
+                alt="Rating stars">
+              <span><b>4.4 </b> (142 reviews)<sup>*</sup></span>
+            </strong>
+          </div>
+        </div>
+      </div>
+      <div class="the-form">
+
+        
+      </div>
+      <div class="securityInfo">
+        We care about the security of your data.
+        <br class="visible-xs-inline">
+        <a href="/privacy.html" target="_blank" class="privacyLink">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="modal_caption">
+    <p>* Result is as of 10/16/2024. 4.4 rating is based on 142 reviews in the File Analysis Software
+      market.&nbsp;Gartner® and Peer Insights™ are trademarks of Gartner, Inc. and/or its affiliates. All rights
+      reserved. Gartner Peer Insights content consists of the opinions of individual end users based on their own
+      experiences, and should not be construed as statements of fact, nor do they represent the views of Gartner or its
+      affiliates. Gartner does not endorse any vendor, product or service depicted in this content nor makes any
+      warranties, expressed or implied, with respect to this content, about its accuracy or completeness, including any
+      warranties of merchantability or fitness for a particular purpose.</p>
+  </div>
+</div>
+
+<!-- add form after ".the-form" element. Refering the screenshot: "https://app.screencast.com/FiGaakKuBI1QU". It should look like this "https://app.screencast.com/NmCdyamLTqD0Y" after adding the form. -->
+
+
+<!-- This code requires some JavaScript, which is provided below. -->
+<script>
+
+  setTimeout(() => {
+
+    const formUniqueSelector = ".modal_form"
+
+    const inputsSelectors = [".modal_form #ModalForm_nwf_fname", ".modal_form #ModalForm_nwf_lname", ".modal_form #ModalForm_nwf_email", ".modal_form #ModalForm_account_type", ".modal_form #ModalForm_nwf_nsrv", ".modal_form #ModalForm_nwf_phone"]
+
+    const labelValues = ["First Name", "Last Name", "Business Email", "User Type", "Number of Employees", "Direct Phone"]
+
+    const formLoaded = setInterval(() => {
+      if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
+        clearInterval(formLoaded);
+        animateLabels(inputsSelectors, labelValues);
+      }
+    })
+
+    //Helper function to add input listeners like focus, blur and add class to parent div
+    function addInputListener(input) {
+      input.placeholder = "";
+      input.addEventListener("focus", function () {
+        input.closest(".modal-input-wrap").classList.remove("has-value");
+        input.closest(".modal-input-wrap").classList.add("focused");
+      });
+      input.addEventListener("blur", function () {
+        if (input.value.length > 0) {
+          input.closest(".modal-input-wrap").classList.remove("focused");
+          input.closest(".modal-input-wrap").classList.add("has-value");
+        } else {
+          input.closest(".modal-input-wrap").classList.remove("focused");
+        }
+      });
+      input.addEventListener("change", function () {
+        if (input.value.length > 0) {
+          input.closest(".modal-input-wrap").classList.remove("focused");
+          input.closest(".modal-input-wrap").classList.add("has-value");
+        } else {
+          input.closest(".modal-input-wrap").classList.remove("focused");
+        }
+      });
+      if (input.value.length > 0) {
+        input.closest(".modal-input-wrap").classList.remove("focused");
+        input.closest(".modal-input-wrap").classList.add("has-value");
+      } else {
+        input.closest(".modal-input-wrap").classList.remove("focused");
+      }
+    }
+
+    //Helper function to animate labels for inputs
+    function animateLabels(inputs, labelValues) {
+      inputs.map((item, index) => {
+        console.log("ahgjgdjhfgdhsak");
+        const parentDiv = findParent(inputs[index]);
+
+        const label = document.createElement("label");
+        const input = document.querySelector(inputs[index]);
+
+        label.innerText = labelValues[index];
+        label.classList.add(`label-modal`);
+
+        label.classList.add(`label-modal-${item.replace(".modal_form #", "")}`);
+        label.style.width = "";
+        parentDiv.classList.add("modal-input-wrap");
+
+        label.addEventListener("click", function (e) {
+          e.target.nextElementSibling.focus();
+        });
+        parentDiv.insertBefore(label, input);
+        addInputListener(input);
+        input.setAttribute('placeholder', '');
+        if (input.value.length > 0) {
+          parentDiv.classList.add("has-value");
+        }
+      });
+    }
+
+    //Helper function to find parent div of input or select element
+    function findParent(elementSelector) {
+      let element = document.querySelector(elementSelector);
+      let wrapper = element.closest("div");
+      if (
+        (wrapper.innerHTML.includes("<input") ||
+          wrapper.innerHTML.includes("<select"))
+      ) {
+        return wrapper;
+      } else if (
+        wrapper.parentElement.innerHTML.includes("<input")
+      ) {
+        return wrapper.parentElement;
+      } else {
+        console.log("something is wrong");
+      }
+    }
+
+
+    function addClass() {
+      document.querySelectorAll('.modal_form > div:not(.modelFormError)').forEach((item) => {
+        if (!item.classList.contains('modal-input-wrap')) {
+          item.classList.add('modal-input-wrap');
+          let input = item.querySelector('input');
+          let select = item.querySelector('select');
+          if ((input && input.value.length > 0) || (select && select.value !== "")) {
+            item.classList.add('has-value');
+          }
+        }
+      });
+    }
+
+    setTimeout(() => {
+      document.querySelector('.form_outer').style.display = 'flex';
+      document.querySelector('.form_outer #ModalForm_product').value = '';
+      document.querySelector('.form_outer #ModalForm_product').setAttribute('value', '');
+      animateLabels(inputsSelectors, labelValues);
+    }, 1000);
+
+    //obeserv the form error class 
+    const targetNode = document.querySelector('.modal_form');
+    const config = { attributes: true, childList: true, subtree: true };
+    const callback = (mutationList, observer) => {
+      addClass();
+      //button
+      if (document.querySelector('.modal_form .btn-red-fill').value == "Schedule Demo") {
+        document.querySelector('.modal_form .btn-red-fill').value = "Submit";
+      }
+      if (document.querySelector('html').classList.contains('is-clipped')) {
+        document.querySelector('html').classList.remove('is-clipped')
+      }
+
+    }
+    const observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
+
+  }, 500);
+
+</script>

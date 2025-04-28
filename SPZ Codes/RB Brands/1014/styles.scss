@@ -1,0 +1,95 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_t1014 {
+  .hero_sec {
+    >div {
+      >div {
+        >a {
+          font-size: 22px;
+          font-weight: 800;
+          line-height: 33px;
+          background: #4D9A25;
+          padding: 14.5px 38.5px;
+          gap: 0;
+          span{
+            margin-right: -4px;
+            transform: translateX(-2px);
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 33px;
+          }
+          svg{
+            transform: translateX(7px)translateY(1px);
+            transition: all 0.2s ease-in-out;
+          }
+          &:hover{
+            svg{
+              transform: translateX(10px)translateY(1px);
+            }
+          }
+          @include mobile(){
+            padding-left: 32px;
+            padding-right: 32px;
+            min-width: 320px;
+            justify-content: center;
+            span{
+              font-size: 20px;
+            }
+            // svg{
+            //   transform: translateX(8.5px) translateY(1.5px);
+            // }
+          }
+        }
+      }
+    }
+  }
+}

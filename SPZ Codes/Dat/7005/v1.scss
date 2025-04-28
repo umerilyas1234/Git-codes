@@ -1,0 +1,202 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_7005 {
+  .wistia_click_to_play {
+    display: none !important;
+  }
+
+  .elementor-27143 {
+    section {
+      .elementor-widget-wrap {
+        >section {
+          &:first-child {
+            .elementor-widget-container {
+              p {
+                &:last-child {
+                  @include mobile() {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        >section:nth-of-type(2) {
+          .elementor-widget-wrap {
+            padding-top: 0;
+            margin-top: 2px;
+            @include tablet() {
+              margin-top: 12px;
+            }
+
+            @include mobile() {
+              padding: 0;
+              margin-top: 8.5px;
+            }
+          }
+
+          .elementor-container {
+            @include tablet() {
+              .elementor-column {
+                width: 100% !important;
+
+                &:nth-of-type(2) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .my_form {
+    width: 100%;
+    transform: translateY(1.5px);
+
+    @include tablet() {
+      transform: translateY(-12.5px)translateX(-2px);
+    }
+
+    .form_outer {
+      width: 100%;
+      max-width: 396px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include tablet() {
+        width: 402px;
+        max-width: unset;
+      }
+
+      input {
+        display: flex;
+        padding: 11px 12px 11px 16px !important;
+        border-radius: 1000px 0px 0px 1000px !important;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background: #FFF;
+        color: #636466 !important;
+        font-family: "Sequel Sans" !important;
+        font-size: 16px !important;
+        font-weight: 310 !important;
+        line-height: 24px !important;
+        width: 254px !important;
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.10);
+          color: #0A0D10;
+        }
+
+        &:not(:placeholder-shown) {
+          color: #0A0D10;
+        }
+
+        @include tablet() {
+          width: 260px !important;
+        }
+
+        @include mobile() {
+          width: 100% !important;
+          border-radius: 1000px !important;
+          margin-bottom: 20px;
+        }
+      }
+
+      .custom_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 142px;
+        padding: 12px 20px;
+        border-radius: 0px 1000px 1000px 0px;
+        background: #0046DD;
+        border: 1px solid #0046DD;
+        color: #FFF;
+        text-align: center;
+        font-family: "Sequel Sans";
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: #0046DD;
+        }
+
+        @include mobile() {
+          width: 100%;
+          border-radius: 1000px;
+          height: 44px;
+        }
+      }
+    }
+
+  }
+
+  @include mobile() {
+    .elementor-27143 .elementor-element.elementor-element-820b537>.elementor-container {
+      min-height: 493px;
+    }
+  }
+}
