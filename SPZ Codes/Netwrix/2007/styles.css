@@ -161,10 +161,6 @@
   overflow: hidden;
 }
 
-.spz_t2007:not(.step-2-hide) .spz-form-wrap {
-  box-shadow: 0px 56px 80px 0px rgba(0, 0, 0, 0.12);
-}
-
 .spz_t2007 .spz-form-wrap::before,
 .spz_t2007 .spz-form-wrap::after {
   content: "";
@@ -960,9 +956,6 @@
   .spz_t2007 .step-inner-wrapper .steps-control label[for=checkbox_item_1],
   .spz_t2007 .step-inner-wrapper .steps-control label[for=checkbox_item_8] {
     padding: 16px 20px;
-  }
-  .spz_t2007 .step-inner-wrapper .steps-control:last-child {
-    max-width: 100%;
   }
   .spz_t2007.step-2-hide .form_outer {
     align-items: center;

@@ -49,10 +49,20 @@ $mobile: 767.98px;
   }
 }
 
-.spz_t10002{
+.spz_t10002 {
   .form-cont {
-    button.btn_filled_red{
-      display: none;
+    button {
+      &.btn_filled_red {
+        font-size: 0!important;
+        &::after {
+          content: 'Request Demo';
+          font-size: 1.6rem;
+        }
+      }
     }
+  }
+
+  .spz_modal {
+    display: none !important;
   }
 }

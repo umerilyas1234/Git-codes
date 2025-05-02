@@ -83,7 +83,7 @@
     max-width: 324px;
     margin: 0;
     padding-top: 0.5px;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 .spz-6009 .hero-buttons.head-cont .buttons-cont .button-section {
@@ -297,7 +297,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1099.98px) {
   .spz-6009 .hero-buttons.head-cont .buttons-cont {
     flex-wrap: wrap;
-    flex-direction: column-reverse;
+    flex-direction: column;
     max-width: 400px;
   }
   .spz-6009 .hero-buttons.head-cont .buttons-cont .button-section {

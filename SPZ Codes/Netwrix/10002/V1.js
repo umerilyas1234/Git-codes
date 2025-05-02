@@ -1,8 +1,24 @@
 function loadTestCode10002() {
   if (!document.querySelector("body").classList.contains("spz_t10002")) {
     document.querySelector("body").classList.add("spz_t10002");
-    var btn = document.querySelector('.form-cont .btn_filled_red');
-    btn.insertAdjacentHTML("afterend", `<a href="https://www.netwrix.com/one-to-one.html" class="btn btn-lg btn_filled_red spz_10002_v1">Request Demo</a>`);
+
+    var btn = document.querySelector(".form-cont button.btn_filled_red");
+    if(btn){
+      btn.classList.add("spz_10002_v1");
+    }
+
+    window.addEventListener('click', function (e) {
+      if (e.target.matches('.form-cont button.btn_filled_red')) {
+        e.preventDefault();
+        window.location.href = 'https://www.netwrix.com/one-to-one.html';
+      }
+    });
+
+    var button = document.querySelector(".form-cont [id^='app-']");
+    var buttonID = button.id;
+    const formId = `form-${buttonID}`;
+    const formContainer = document.querySelector(`#${formId}`).closest('.v-modal-mask');
+    formContainer.classList.add('spz_modal');
 
     //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
     //exptName should be #1001, #1002, #1003 etc.

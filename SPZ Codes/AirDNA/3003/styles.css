@@ -1,3 +1,93 @@
+.spz_3003 #header.normalHeader > div > ul > a,
+.spz_3003 #header.normalHeader > div > .MuiBox-root button,
+.spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span,
+.spz_3003 #header.normalHeader div[role=combobox]:has(svg[shape-rendering=geometricPrecision]) ~ svg,
+.spz_3003 #header.normalHeader button[aria-label="Open menu"] > svg {
+  color: #212121;
+}
+.spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span {
+  margin-right: -3px;
+  font-family: "aktiv-grotesk";
+}
+.spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) svg {
+  margin-right: -2px;
+}
+@media only screen and (min-width: 1120px) {
+  .spz_3003 #header.normalHeader > div > div:nth-of-type(3) {
+    transform: translateX(13.5px);
+  }
+  .spz_3003 #header.normalHeader > div > .MuiBox-root a[href*="https://app.airdna.co/data/us"] button {
+    background-color: #212121;
+    color: #fff;
+    border-color: #212121;
+    font-family: "aktiv-grotesk";
+    line-height: 24px;
+    height: 42px;
+    margin-right: -1.5px;
+    letter-spacing: 0.1px;
+    min-width: 142px;
+  }
+  .spz_3003 #header.normalHeader > div > .MuiBox-root a[href*="https://app.airdna.co/data/us"] button:hover {
+    background-color: transparent;
+    color: #212121;
+  }
+  .spz_3003 #header.normalHeader a[href*="https://app.airdna.co/data/login"] button {
+    font-family: "aktiv-grotesk";
+    margin-right: -0.5px;
+    letter-spacing: 0.1px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+  .spz_3003 #header.normalHeader a[href*="https://app.airdna.co/data/login"] button:hover {
+    color: #3F51B5;
+  }
+}
+@media only screen and (max-width: 1119px) {
+  .spz_3003 #header.normalHeader > div > .MuiBox-root a[href*="https://app.airdna.co/data/us"] button {
+    color: #fff;
+  }
+  .spz_3003 #header.normalHeader > div > .MuiBox-root a[href*="https://app.airdna.co/data/us"] button:hover {
+    color: rgb(63, 81, 181);
+  }
+  .spz_3003 #header.normalHeader > div > .MuiBox-root button {
+    color: rgb(63, 81, 181);
+  }
+  .spz_3003 #header.normalHeader > div > .MuiBox-root button:hover {
+    color: #fff;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_3003 #header.normalHeader > div > div:nth-of-type(2) {
+    padding-right: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .spz_3003 .header-logo-color {
+    max-width: 132px;
+  }
+}
+.spz_3003 .header-logo-color + img {
+  display: none;
+}
+.spz_3003 #header > div {
+  max-width: 1235px;
+  height: 82px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_3003 #header > div {
+    padding-left: 24px;
+    padding-right: 24px;
+    border: none;
+  }
+}
+@media (max-width: 767px) {
+  .spz_3003 #header > div {
+    padding-top: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: none;
+  }
+}
 .spz_3003 main > section:first-child {
   position: relative;
 }
@@ -15,10 +105,23 @@
 .spz_3003 main > section:first-child video + div {
   position: relative;
   z-index: 1;
+  padding-top: 138.5px;
 }
 .spz_3003 main > section:first-child video + div h1 {
   color: #1F2020;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
+  padding-bottom: 13.5px;
+}
+@media (max-width: 767px) {
+  .spz_3003 main > section:first-child video + div {
+    padding-top: 115px;
+    gap: 35px;
+  }
+  .spz_3003 main > section:first-child video + div h1 {
+    font-size: 28px;
+    line-height: 42px;
+    padding-bottom: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

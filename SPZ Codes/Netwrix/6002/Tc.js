@@ -1,9 +1,21 @@
 function runCode() {
-  if (!document.body.classList.contains('spz-6009')) {
-    document.body.classList.add('spz-6009');
+  if (!document.body.classList.contains('spz-6001')) {
+    document.body.classList.add('spz-6001');
+    // Get the current URL
+    var currentUrl = window.location.href.split('?')[0].split('#')[0];
+
+    //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
+    //exptName should be #1001, #1002, #1003 etc.
+    const expName = '6002';
+    //variantName should be _V1, _V2, _TC etc.
+    const variantName = `control_` + expName;
+
+    hiddenValue(expName, variantName);
 
     // Check if the URL matches one of the given URLs and execute the corresponding code
-    var newHero = `<div class="new-hero audit">
+    if (currentUrl === 'https://www.netwrix.com/auditor.html') {
+      document.querySelector('.spz-6001').classList.add('auditor');
+      var newHero = `<div class="new-hero audit">
               <div class="hero-container">
                   <div class="hero-flex">
                       <div class="hero-title-contain">
@@ -15,8 +27,8 @@ function runCode() {
                       </div>
                       <div class="hero-image-contain">
                           <picture>
-                            <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/image_4.webp">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/image_4.webp" alt="auditor_ui_image">
+                              <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webp">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webp" alt="auditor_ui_image">
                           </picture>	
                       </div>
                   </div>
@@ -34,26 +46,74 @@ function runCode() {
                   </div>
               </div>
       </div>`;
-
-    document.querySelector('.spz-6009 main .navbar').insertAdjacentHTML('afterend', newHero);
-
+      document.querySelector('.spz-6001 main .navbar').insertAdjacentHTML('afterend', newHero);
+    } else if (currentUrl === 'https://www.netwrix.com/endpoint-dlp-solution.html') {
+      var newHero = `<div class="new-hero endpointProtector-spz">
+                  <div class="hero-container">
+                      <div class="hero-flex">
+                          <div class="hero-title-contain">
+                              <div class="hero-product-name">Netwrix Endpoint Protector</div>
+                              <div class="hero-main-title">Protect sensitive data</div>
+                              <p>Endpoint Protector’s advanced multi-OS DLP is complete with granular device and USB control, content-aware protection, enforced encryption, and multiple deployment options.</p>
+                              <div class="hero-buttons head-cont"></div>
+                          </div>
+                          <div class="hero-image-contain">
+                             <picture>
+                              <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webp">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webpp" alt="auditor_ui_image">
+                            </picture>	
+                          </div>
+                      </div>
+                  </div>
+                  <div class="hero-organiza-container">
+                      <div class="hero-organiza-content">
+                          <p>Trusted by 13,500+ organizations</p>
+                          <ul>
+                              <li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Airbus.png"alt="Airbus"></li>
+                              <li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Virgin.png"alt="Virgin"></li>
+                              <li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Denso.png"alt="Denso"></li>
+                              <li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Allianz.png"alt="Allianz"></li>
+                              <li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Geneva-Foundation.png" alt="The Geneva Foundation"></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>`;
+      document.querySelector('.spz-6001 main .navbar').insertAdjacentHTML('afterend', newHero);
+    }
 
     document.querySelector('.hero-buttons.head-cont').insertAdjacentElement('beforeend', document.querySelector('.head-cont .buttons-cont'));
-    document.querySelectorAll('.spz-6009 .hero-buttons .nwx-btn').forEach((item) => {
-      item.classList.add('spz_6009_v1');
+    document.querySelectorAll('.spz-6001 .hero-buttons .nwx-btn').forEach((item) => {
+      item.classList.add('spz_6007_v1');
     });
-    document.querySelectorAll('.spz-6009 .hero-buttons button.nwx-btn').forEach((item) => {
+    document.querySelectorAll('.spz-6001 .hero-buttons button.nwx-btn').forEach((item) => {
+      item.classList.add('get-demo');
+    });
+
+    document.querySelector('.spz-6001 main .navbar').insertAdjacentHTML('afterend', `<div class="new-head-cont head-cont"></div>`);
+    const breadcrumbs = document.querySelector('.spz-6001 .head-cont .breadcrumbs');
+    document.querySelector('.spz-6001 .new-head-cont').insertAdjacentElement('beforeend', breadcrumbs);
+
+    // if(document.querySelector('.spz-6001 .hero-buttons .get-demo')){
+    //     document.querySelector('.spz-6001 .hero-buttons .get-demo').addEventListener('click', function () {
+    //     document.querySelector('.head-cont .nwx-blue-btn').click();
+    //     });
+    // }
+
+    if (document.querySelector('.spz-6001 .hero-buttons .product-tour')) {
+      document.querySelector('.spz-6001 .hero-buttons .product-tour').addEventListener('click', function () {
+        document.querySelector('.head-cont .nwx-red-btn').click();
+      });
+    }
+    document.querySelector('#footer_cont').insertAdjacentHTML('beforeend', `<div class="informationText"><p>* Result is as of 01/23/2025. 4.5 rating is based on 186 reviews in the Data Loss Prevention market. Gartner® and Peer Insights™ are trademarks of Gartner, Inc. and/or its affiliates. All rights reserved. Gartner Peer Insights content consists of the opinions of individual end users based on their own experiences, and should not be construed as statements of fact, nor do they represent the views of Gartner or its affiliates. Gartner does not endorse any vendor, product or service depicted in this content nor makes any warranties, expressed or implied, with respect to this content, about its accuracy or completeness, including any warranties of merchantability or fitness for a particular purpose.</p></div>`);
+
+    //6009
+    document.querySelectorAll('.spz-6001 .hero-buttons button.nwx-btn').forEach((item) => {
       item.classList.add('get-demo');
       item.textContent = 'Download Free Trial';
       if (window.location.href.includes('netwrix.com/enterprise-auditor')) {
         item.textContent = 'Request Free Trial';
       }
     });
-
-    document.querySelector('.spz-6009 main .navbar').insertAdjacentHTML('afterend', `<div class="new-head-cont head-cont"></div>`);
-    const breadcrumbs = document.querySelector('.spz-6009 .head-cont .breadcrumbs');
-    document.querySelector('.spz-6009 .new-head-cont').insertAdjacentElement('beforeend', breadcrumbs);
-
     document.addEventListener('click', function (e) {
       if (e.target.classList.contains('get-demo')) {
         setTimeout(() => {
@@ -61,13 +121,11 @@ function runCode() {
         }, 100);
       }
     });
-
-    if (document.querySelector('.spz-6009 .hero-buttons .product-tour')) {
-      document.querySelector('.spz-6009 .hero-buttons .product-tour').addEventListener('click', function () {
-        document.querySelector('.head-cont .nwx-red-btn').click();
+    if (document.querySelector('input#SPZ_Test')) {
+      document.querySelectorAll('input#SPZ_Test').forEach((input) => {
+        input.value = 'control_6002';
       });
     }
-
     var button = document.querySelector(".one-field-form-button-test [id^='app-']");
     var buttonID = button.id;
     const formId = `form-${buttonID}`;
@@ -77,12 +135,11 @@ function runCode() {
     function updateFormAndButton() {
       document.querySelector(`.spz_modal .form-title`).textContent = "Start using Netwrix Auditor";
       document.querySelector(`.spz_modal #ModalForm_leadType`).value = "Evaluation";
-      if(!window.location.href.includes('netwrix.com/enterprise-auditor')){
+      if (!window.location.href.includes('netwrix.com/enterprise-auditor')) {
         document.querySelector(`.spz_modal .modelFormSubmit`).value = 'Download Free Trial';
       } else if (window.location.href.includes('netwrix.com/enterprise-auditor')) {
         document.querySelector(`.spz_modal .modelFormSubmit`).value = 'Request Free Trial';
       }
-      document.querySelector(`.spz_modal form #SPZ_Test`).value = 'variant1_6009';
       console.log('updated states');
     }
     updateFormAndButton();
@@ -106,17 +163,8 @@ function runCode() {
       observer.observe(targetNode, { ...config, attributeOldValue: true });
     }
 
-
-    //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
-    //exptName should be #1001, #1002, #1003 etc.
-    const expName = '6009';
-    //variantName should be _V1, _V2, _TC etc.
-    const variantName = `variant1_` + expName;
-
-    hiddenValue(expName, variantName);
-
     /***********************************
-     ************************************
+    ************************************
     DO NOT TOUCH
     BEYOND THIS LINE
     ******************************
@@ -177,4 +225,4 @@ const checkCondition = setInterval(() => {
     clearInterval(checkCondition);
     runCode();
   }
-}, 500);
+}, 100);

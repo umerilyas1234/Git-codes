@@ -1,3 +1,10 @@
 .spz_t10002 .form-cont button.btn_filled_red {
-  display: none;
+  font-size: 0 !important;
+}
+.spz_t10002 .form-cont button.btn_filled_red::after {
+  content: "Request Demo";
+  font-size: 1.6rem;
+}
+.spz_t10002 .spz_modal {
+  display: none !important;
 }/*# sourceMappingURL=styles.css.map */

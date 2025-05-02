@@ -3,25 +3,39 @@ console.log('Time 1 > ' + new Date().getTime() / 1000);
 function spz3007Test() {
   if (!document.querySelector('body').classList.contains('spz_3003')) {
     document.querySelector('body').classList.add('spz_3003');
-    if(document.querySelector('img[alt="site logo white"]')){
-      document.querySelector('img[alt="site logo white"]').srcset = '//res.cloudinary.com/spiralyze/image/upload/v1738242081/airdna/3003/airdna_logo.svg';
-    }
-    if( document.querySelector('.spz_3003 main > section:first-child')){
+    if (document.querySelector('.spz_3003 main > section:first-child')) {
       document.querySelector('.spz_3003 main > section:first-child').insertAdjacentHTML('afterbegin', '<video src="//res.cloudinary.com/spiralyze/video/upload/v1745592795/airdna/3003/vid/3003_AirDNA.mp4" autoplay muted playsinline></video>');
     }
-    // Put your test code here
-    if (document.querySelector('.spz_3003 main > section')) {
-    }
-
 
     console.log('Time 2 > ' + new Date().getTime() / 1000);
+
+    // need to check condition on page scroll.
+    let headerTimeout;
+    window.addEventListener('scroll', function () {
+      this.clearTimeout(headerTimeout)
+      headerTimeout = setTimeout(() => {
+        if (document.querySelector('.spz_3003 a[aria-label="Go to homepage"] img')) {
+          console.log('header changed');
+          document.querySelector('.spz_3003 #header').classList.add('normalHeader');
+
+          if (document.querySelectorAll('.header-logo-color').length === 0) {
+            document.querySelector('.spz_3003 a[aria-label="Go to homepage"] img').insertAdjacentHTML('beforebegin', '<img class="header-logo-color" src="https://airdna-next.cdn.prismic.io/airdna-next/9a396ed9-3da8-49bd-9988-2ce5aed8c5aa_FooterLogo.svg?fit=max&w=384" alt="site logo">');
+          }
+        } else {
+          document.querySelector('.spz_3003 #header')?.classList.remove('normalHeader');
+          console.log('header not changed');
+        }
+      }, 10);
+    });
+    window.dispatchEvent(new Event('scroll'));
 
   }
 }
 
 function removeTest() {
   document.body.classList.remove('spz_3003');
-  document.querySelector('.hero_section')?.remove();
+  document.querySelector('.spz_3003 main > section:first-child video')?.remove();
+  document.querySelector('.header-logo-color')?.remove();
 }
 
 const selector3007 = 'main > section:first-child';

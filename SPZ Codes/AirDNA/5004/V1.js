@@ -26,7 +26,7 @@ function spz5004Test() {
                       <span></span>
                       Airbnb and Vrbo data <br> from <strong></strong> properties
                     </h3>
-                    <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Get property data</a>
+                    <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Get property data</a>
                   </div>
                   <div class="hero_right">
                     <picture>
@@ -108,7 +108,7 @@ function spz5004Test() {
                   <div class="graph_main" id="tab2">
                   </div>
                   <div class="cta_outer">
-                    <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Start for free</a>
+                    <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Start for free</a>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ function spz5004Test() {
                       </span>
                       <p>“Gave me the visibility to make researched decisions on properties. The amount of data I was able to retrieve allowed me to make more educational decisions. Would recommend to anyone looking into STR.”</p>
                       <small>
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1743436718/airdna/5004/avatar.svg" alt="Jay"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/5004/avatar-png.webp" alt="Jay"></span>
                         <strong>
                           <b>Jay</b>
                           Short Term Rental Host
@@ -154,7 +154,7 @@ function spz5004Test() {
                   <div class="graph_main" id="tab3">
                   </div>
                   <div class="cta_outer">
-                    <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Start for free</a>
+                    <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Start for free</a>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ function spz5004Test() {
                     <h3>Free AirDNA Account</h3>
                     <h2>Optimize investments & pricing with market data. Grow <br> revenue 20%. </h2>
                     <div class="cta_outer">
-                      <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Get property data</a>
+                      <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Get property data</a>
                     </div>
                   </div>
                   <div class="account_right">
@@ -212,7 +212,7 @@ function spz5004Test() {
                   <div class="graph_main" id="tab4">
                   </div>
                   <div class="cta_outer">
-                    <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Start for free</a>
+                    <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Start for free</a>
                   </div>
                 </div>
               </div>
@@ -227,7 +227,7 @@ function spz5004Test() {
                   <div class="graph_main" id="tab5">
                   </div>
                   <div class="cta_outer">
-                    <a href="https://app.airdna.co/data/us/airdna-110?tab=performance" class="custom_btn spz_5004_v1">Start for free</a>
+                    <a href="javascript:void(0);" class="custom_btn spz_5004_v1">Start for free</a>
                   </div>
                 </div>
               </div>
@@ -494,6 +494,9 @@ function spz5004Test() {
       }
       if(e.target.matches('.header img[alt="AirDNA"]')){ 
         window.location.href = 'https://www.airdna.co/';
+      }
+      if(e.target.matches('.custom_btn')){ 
+        document.querySelector('.header > div > a').click();
       }
     });
 

@@ -338,7 +338,7 @@ function loadTestCode() {
     }
     if (document.querySelector('input#SPZ_Test')) {
       document.querySelectorAll('input#SPZ_Test').forEach((input) => {
-        input.value = 'variation_6002';
+        input.value = 'variant_6002';
       });
     }
     var button = document.querySelector(".one-field-form-button-test [id^='app-']");

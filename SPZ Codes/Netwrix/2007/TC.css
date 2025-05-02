@@ -163,10 +163,10 @@
   overflow: hidden;
 }
 
-.spz_t2006:not(.step-2-hide) .spz-form-wrap {
+/* .spz_t2006:not(.step-2-hide) .spz-form-wrap {
   -webkit-box-shadow: 0px 56px 80px 0px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 56px 80px 0px rgba(0, 0, 0, 0.12);
-}
+} */
 
 .spz_t2006 .spz-form-wrap::before,
 .spz_t2006 .spz-form-wrap::after {
@@ -1044,9 +1044,9 @@
     padding: 16px 20px;
   }
 
-  .spz_t2006 .step-inner-wrapper .steps-control:last-child {
+  /* .spz_t2006 .step-inner-wrapper .steps-control:last-child {
     max-width: 100%;
-  }
+  } */
 
   .spz_t2006.step-2-hide .form_outer {
     -webkit-box-align: center;
