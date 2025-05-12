@@ -57,6 +57,7 @@ $mobile: 767.98px;
     @include tablet() {
       padding: 68px 0 80px;
     }
+
     @include mobile() {
       padding: 52px 0 64px;
     }
@@ -66,7 +67,8 @@ $mobile: 767.98px;
       width: 100%;
       margin: auto;
       padding: 0 20px;
-      @include mobile(){
+
+      @include mobile() {
         padding: 0 18px;
       }
     }
@@ -75,10 +77,11 @@ $mobile: 767.98px;
 
 
   .feedback_list {
-    @include tablet(){
+    @include tablet() {
       max-width: 692px;
       margin: auto;
     }
+
     >ul {
       margin: 0;
       padding-left: 0;
@@ -87,7 +90,8 @@ $mobile: 767.98px;
       >li {
         &:not(:last-child) {
           padding-bottom: 24px;
-          @include mobile(){
+
+          @include mobile() {
             padding-bottom: 20px;
           }
         }
@@ -97,6 +101,10 @@ $mobile: 767.98px;
             flex-direction: row-reverse;
 
             .feedback_left {
+              border-radius: 0 4px 4px 0px;
+              border: 1px solid #E4E4E4;
+              border-left: none;
+
               span {
                 img {
                   max-width: 197.5px;
@@ -120,8 +128,12 @@ $mobile: 767.98px;
                 }
               }
             }
+
             @include mobile() {
               .feedback_left {
+                border-radius: 4px 4px 0px 0px;
+                border: 1px solid #E4E4E4;
+                border-bottom: none;
                 span {
                   img {
                     max-width: 142.5px;
@@ -158,13 +170,16 @@ $mobile: 767.98px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include mobile(){
+
+    @include mobile() {
       width: 100%;
       border-right: 1px solid #E4E4E4;
+      border-bottom: none;
       border-radius: 4px 4px 0px 0;
       padding: 20px 0;
       max-height: 120px;
     }
+
     span {
       display: block;
 
@@ -176,7 +191,8 @@ $mobile: 767.98px;
         @include tablet() {
           transform: translateX(0px) translateY(0.5px);
         }
-        @include mobile(){
+
+        @include mobile() {
           max-width: 160px;
         }
       }
@@ -189,15 +205,18 @@ $mobile: 767.98px;
     background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/bg_img.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    @include tablet(){
+
+    @include tablet() {
       background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/bg_img_tablet_1.webp');
     }
-    @include mobile(){
+
+    @include mobile() {
       width: 100%;
       background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/bg_img_mobile_1.webp');
-      padding: 32px 24px 33px; 
-  
+      padding: 32px 24px 33px;
+
     }
+
     h2 {
       color: #FFF;
       font-family: Roboto;
@@ -207,7 +226,8 @@ $mobile: 767.98px;
       line-height: 32px;
       margin-top: 0;
       margin-bottom: 24px;
-      @include mobile(){
+
+      @include mobile() {
         font-size: 20px;
         line-height: 26px;
         margin-bottom: 20px;
@@ -231,7 +251,8 @@ $mobile: 767.98px;
       line-height: 22px;
       margin-top: 0;
       margin-bottom: 24px;
-      @include mobile(){
+
+      @include mobile() {
         margin-bottom: 20px;
       }
     }
@@ -271,6 +292,7 @@ $mobile: 767.98px;
         li {
           width: 50%;
           padding: 0 4px 8px;
+
           &:last-child {
             width: 100%;
             padding-bottom: 0;
@@ -288,6 +310,7 @@ $mobile: 767.98px;
     @include tablet() {
       padding: 12px 16px 11px;
     }
+
     @include mobile() {
       padding: 12.5px 16px 9.5px;
     }
@@ -299,7 +322,8 @@ $mobile: 767.98px;
       font-size: 24px;
       font-weight: 400;
       line-height: 32px;
-      @include mobile(){
+
+      @include mobile() {
         font-size: 20px;
         line-height: 26px;
         font-family: "Open Sans";
@@ -312,9 +336,11 @@ $mobile: 767.98px;
       font-size: 12px;
       font-weight: 400;
       line-height: 20px;
-      br{
+
+      br {
         display: none;
-        @include mobile(){
+
+        @include mobile() {
           display: inline-block;
         }
       }
@@ -374,9 +400,11 @@ $mobile: 767.98px;
         }
       }
     }
+
     @include mobile() {
       ul {
         margin: 0;
+
         li {
           width: 100%;
           padding: 0 0 20px;
@@ -445,9 +473,11 @@ $mobile: 767.98px;
     @include tablet() {
       padding: 31px;
     }
+
     @include mobile() {
       padding: 23px 24px 23px 23px;
-      span{
+
+      span {
         padding-bottom: 20px;
       }
     }

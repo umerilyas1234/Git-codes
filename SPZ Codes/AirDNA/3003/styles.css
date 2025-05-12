@@ -9,12 +9,39 @@
   margin-right: -3px;
   font-family: "aktiv-grotesk";
 }
+@media (max-width: 767px) {
+  .spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span {
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span {
+    margin-right: 0;
+  }
+}
 .spz_3003 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) svg {
   margin-right: -2px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_3003 #header.normalHeader > div > div:nth-of-type(2) > div > div > div {
+    padding-right: 29px;
+  }
+}
+@media (max-width: 767px) {
+  .spz_3003 #header.normalHeader > div > div:nth-of-type(2) > div > div > div {
+    padding-right: 40px;
+  }
+  .spz_3003 #header.normalHeader > div > div:nth-of-type(2) > div > div > svg {
+    margin-right: 10.5px;
+    margin-top: -1px;
+  }
 }
 @media only screen and (min-width: 1120px) {
   .spz_3003 #header.normalHeader > div > div:nth-of-type(3) {
     transform: translateX(13.5px);
+  }
+  .spz_3003 #header > div > ul > a:nth-of-type(1) > div, .spz_3003 #header > div > ul > a:nth-of-type(2) > div, .spz_3003 #header > div > ul > a:nth-of-type(3) > div, .spz_3003 #header > div > ul > a:nth-of-type(4) > div {
+    top: 59px;
   }
   .spz_3003 #header.normalHeader > div > .MuiBox-root a[href*="https://app.airdna.co/data/us"] button {
     background-color: #212121;
@@ -91,6 +118,12 @@
 .spz_3003 main > section:first-child {
   position: relative;
 }
+@media (max-width: 767px) {
+  .spz_3003 main > section:first-child {
+    overflow: hidden;
+    background: #B0D5D7;
+  }
+}
 .spz_3003 main > section:first-child video {
   position: absolute;
   top: 0;
@@ -101,6 +134,17 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.spz_3003 main > section:first-child video.mobile_vid {
+  display: none;
+}
+@media (max-width: 767px) {
+  .spz_3003 main > section:first-child video:not(.mobile_vid) {
+    display: none;
+  }
+  .spz_3003 main > section:first-child video.mobile_vid {
+    display: block;
+  }
 }
 .spz_3003 main > section:first-child video + div {
   position: relative;

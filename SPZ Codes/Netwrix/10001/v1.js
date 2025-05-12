@@ -212,130 +212,245 @@ const bodyInterval10001 = setInterval(function () {
 				</div>
 			</section>
 			
-\			<div class="solutionSlider section-slider-with-timer" id="solution">
-				<div class="slider_wrapper w-layout-blockcontainer section-slider-with-timer-container w-container">
-					<div class="solutionTitle _w-100">
-						<h4 class="section-eyebro-text">Pricing</h4>
-					</div>
-					<div class="product_list" id="tab1">
-						<ul>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/auditor_img.webp"
-												alt="Auditor">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="auditor.html">Auditor</a>
-										<p>Automate data access auditing and compliance reporting, on-premises and in the cloud. </p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+			<div class="explore_products">
+				<div class="container">
+					<div class="solutionSlider section-slider-with-timer">
+						<div class="slider_wrapper w-layout-blockcontainer section-slider-with-timer-container w-container">
+							<div class="solutionTitle _w-100">
+								<h4 class="section-eyebro-text">Explore the products that can help you secure your Active Directory</h4>
+							</div>
+							<div class="product_list" id="tab1">
+								<ul>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/ping-castle_img.webp"
+														alt="PingCastle">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/active-directory-risk-assessment.html">PingCastle</a>
+												<p>Identify and remediate risks in your AD and Entra ID.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/active-directory-risk-assessment.html" target="_blank" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img
-												src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/data-classification_img.webp"
-												alt="Data Classification">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="data_classification_software.html">Data Classification</a>
-										<p>Automate sensitive data discovery, tagging, and remediation.</p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+									</li>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/threat-manager_img.webp"
+														alt="Threat Manager">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/threat_detection_software.html">Threat Manager</a>
+												<p>Detect and respond to data security threats in real time.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/threat_detection_software.html" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img
-												src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/endpoint-protector_img.webp"
-												alt="Endpoint Protector">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="endpoint-dlp-solution.html">Endpoint Protector</a>
-										<p>Prevent sensitive data exfiltration on endpoints with content-aware protection.</p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+									</li>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/access-analyzer_img.webp"
+														alt="Access Analyzer">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/access-analyzer.html">Access Analyzer</a>
+												<p>Analyze object-level permissions and other vulnerabilities in AD.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/access-analyzer.html" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img
-												src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/enterprise-auditor_img.webp"
-												alt="Enterprise Auditor">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="enterprise-auditor.html">Enterprise Auditor</a>
-										<p>Assess, remediate, and govern data access rights, on-premises and in the cloud.</p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+									</li>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/recovery-for-active-directory_img.webp"
+														alt="Recovery for Active Directory">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/active_directory_recovery_software.html">Recovery for Active Directory</a>
+												<p>Roll back unwanted changes, restore AD, and minimize downtime.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/active_directory_recovery_software.html" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img
-												src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/threat-manager_img.webp"
-												alt="Threat Manager">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="threat_detection_software.html">Threat Manager</a>
-										<p>Detect and respond to data security threats in real time.</p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+									</li>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/directory-management_img.webp"
+														alt="Directory Management">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/directory-manager-solution.html">Directory Management</a>
+												<p>Automate and delegate directory group and user management.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/directory-manager-solution.html" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="products_data">
-									<div class="product_top">
-										<figure>
-											<img
-												src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/1secure_img.webp"
-												alt="1Secure">
-										</figure>
-									</div>
-									<div class="product_bottom">
-										<a href="saas-auditing.html">1Secure</a>
-										<p>SaaS-delivered data access auditing and compliance reporting.</p>
-										<div class="btn_list">
-											<a href="javascript:void(0);" class="custom_btn outline spz-3004-cta">Request Pricing</a>
+									</li>
+									<li>
+										<div class="products_data">
+											<div class="product_top">
+												<figure>
+													<img
+														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/threat-prevention_img.webp"
+														alt="Threat Prevention ">
+												</figure>
+											</div>
+											<div class="product_bottom">
+												<a href="https://www.netwrix.com/threat-prevention.html">Threat Prevention </a>
+												<p>Block undesired AD changes, authentication, and requests.</p>
+												<div class="btn_list">
+													<a href="https://www.netwrix.com/threat-prevention.html" class="custom_btn outline spz_10001_cta">Learn More</a>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
+			<div class="why_netwrix">
+				<div class="container">
+					<div class="why_netwrixInner">
+						<div class="why_netwrixTitle">
+							<h2>Why Netwrix?</h2>
+						</div>
+						<div class="why_netwrixList">
+							<ul>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<span><i><img
+														src="//res.cloudinary.com/spiralyze/image/upload/v1744300205/netwrix/10001/icon-patented-innovation.svg"
+														alt="Patented Innovation"></i></span>
+											<strong>Patented Innovation</strong>
+											<p>Leverage industry-leading, patented technologies for advanced threat detection
+												and attack blocking for your Active Directory and Entra ID environments.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<span><i><img
+														src="//res.cloudinary.com/spiralyze/image/upload/v1744300205/netwrix/10001/icon-complete-protection.svg"
+														alt="Complete Protection"></i></span>
+											<strong>Complete Protection</strong>
+											<p>The most comprehensive ITDR solution in the industry, providing continuous risk assessment, proactive
+												defence, real-time detection, and automated recovery.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<span><i><img
+														src="//res.cloudinary.com/spiralyze/image/upload/v1744300206/netwrix/10001/icon-flexible-and-scalable.svg"
+														alt="Flexible and Scalable"></i></span>
+											<strong>Flexible and Scalable</strong>
+											<p>Delivers seamless identity threat protection for large, complex IT environments while scaling
+												effortlessly to support mid-sized organizations without added complexity.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<div class="datasheet">
+				<div class="container">
+					<div class="datasheet_inner">
+						<div class="datasheet_detail">
+							<div class="datasheet_left">
+								<figure>
+									<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/datasheet-img.webp" alt="Datasheet">
+								</figure>
+							</div>
+							<div class="datasheet_right">
+								<strong>Datasheet</strong>
+								<h2>Netwrix Identity Threat Detection and Response Solutions</h2>
+								<p>Find out how Netwrix can help you detect, respond and recover from identity-based attacks.</p>
+								<a href="https://www.netwrix.com/download/Datasheets/Netwrix-Identity-Threat-Detection-and-Response-Solution-Datasheet.pdf" class="nwx-btn nwx-blue2-btn">Download Datasheet</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<div class="why_netwrix netwrix_help">
+				<div class="container">
+					<div class="why_netwrixInner">
+						<div class="why_netwrixTitle">
+							<h2>Netwrix helps organizations overcome <br>their<br> security, compliance and<br> operational challenges</h2>
+						</div>
+						<div class="why_netwrixList">
+							<ul>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-1.webp" width"104" height="40"
+														alt="Medical center clinic">
+											<p>Using Netwrix Auditor, Medical Center Clinic slashes IT workload by 40% and ensures HIPAA compliance.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-2.webp" width"128" height="40"
+														alt="Tesica services ltd">
+											<p>Netwrix Auditor helps Tesica Services investigate security incidents faster and reduce the risk of data exfiltration.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="why_netwrixData">
+										<div class="why_dataInner">
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-3.webp" width"183" height="40"
+														alt="First national bank and trust company">
+											<p>First National Bank and Trust of Beloit prepares for audits in just one hour instead of one week.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 			`);
 
 		document.querySelector('.hero-buttons').insertAdjacentElement('beforeend', document.querySelector('.head-cont.two-btn .form-cont'));
+		document.querySelector('.faq-cont').closest('.page-section').classList.add('netwrix_faq');
+		document.querySelector('.netwrix_help').insertAdjacentElement('afterend', document.querySelector('.netwrix_faq'));
 
 
 		// accordion Function
@@ -431,68 +546,17 @@ const bodyInterval10001 = setInterval(function () {
 				document.querySelector('header button.btn-red-outline').click()
 			})
 		})
+		document.querySelectorAll('.netwrix_faq .faq-item').forEach(faq => {
+			const heading = document.createElement('div');
+			heading.classList.add('faq_heading');
 
+			const icon = faq.querySelector('i.fa');
+			const title = faq.querySelector('.title');
 
-		//Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
-		//exptName should be #1001, #1002, #1003 etc.
-		const expName = '10001';
-		//variantName should be _V1, _V2, _TC etc.
-		const variantName = `variant_` + expName;
+			if (icon) heading.appendChild(icon);
+			if (title) heading.appendChild(title);
 
-		hiddenValue(expName, variantName);
-
-		/***********************************
-		************************************
-		DO NOT TOUCH
-		BEYOND THIS LINE
-		******************************
-		************************/
-		function hiddenValue(currentExperimentName, currentExperimentValue) {
-			function setCookie(name, value, days) {
-				var expires = "";
-				if (days) {
-					var date = new Date();
-					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-					expires = "; expires=" + date.toUTCString();
-				}
-				document.cookie = name + "=" + (value || "") + expires + "; path=/";
-			}
-
-			function getCookie(name) {
-				var nameEQ = name + "=";
-				var ca = document.cookie.split(';');
-				for (var i = 0; i < ca.length; i++) {
-					var c = ca[i];
-					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-				}
-				return null;
-			}
-
-			var ExistingExperimentName = getCookie('ExperimentName');
-			var ExistingExperimentValue = getCookie('ExperimentValue');
-
-			if (!ExistingExperimentName) {
-
-				setCookie('ExperimentName', currentExperimentName, 1);
-				setCookie('ExperimentValue', currentExperimentValue, 1);
-
-			} else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
-
-				setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
-				setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
-
-			} else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
-
-				var existingNames = ExistingExperimentName.split(',');
-				var existingValues = ExistingExperimentValue.split(',');
-
-				var index = existingNames.indexOf(currentExperimentName);
-				existingValues[index] = currentExperimentValue;
-
-				setCookie('ExperimentName', existingNames.join(','), 1);
-				setCookie('ExperimentValue', existingValues.join(','), 1);
-			}
-		}
+			faq.insertBefore(heading, faq.firstChild);
+		});
 	}
 }, 10);

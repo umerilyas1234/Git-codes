@@ -59,8 +59,8 @@ function runCode() {
                           </div>
                           <div class="hero-image-contain">
                              <picture>
-                              <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webp">
-                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1739961571/netwrix/6001/image_4.webpp" alt="auditor_ui_image">
+                              <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1729692826/netwrix/6001/image_vector.svg">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/image_4x.webp" alt="auditor_ui_image">
                             </picture>	
                           </div>
                       </div>
@@ -109,9 +109,8 @@ function runCode() {
     //6009
     document.querySelectorAll('.spz-6001 .hero-buttons button.nwx-btn').forEach((item) => {
       item.classList.add('get-demo');
-      item.textContent = 'Download Free Trial';
-      if (window.location.href.includes('netwrix.com/enterprise-auditor')) {
-        item.textContent = 'Request Free Trial';
+      if (currentUrl === 'netwrix.com/auditor') {
+        item.textContent = 'Download Free Trial';
       }
     });
     document.addEventListener('click', function (e) {
@@ -135,11 +134,9 @@ function runCode() {
     function updateFormAndButton() {
       document.querySelector(`.spz_modal .form-title`).textContent = "Start using Netwrix Auditor";
       document.querySelector(`.spz_modal #ModalForm_leadType`).value = "Evaluation";
-      if (!window.location.href.includes('netwrix.com/enterprise-auditor')) {
+      if (window.location.href.includes('netwrix.com/auditor')) {
         document.querySelector(`.spz_modal .modelFormSubmit`).value = 'Download Free Trial';
-      } else if (window.location.href.includes('netwrix.com/enterprise-auditor')) {
-        document.querySelector(`.spz_modal .modelFormSubmit`).value = 'Request Free Trial';
-      }
+      } 
       console.log('updated states');
     }
     updateFormAndButton();

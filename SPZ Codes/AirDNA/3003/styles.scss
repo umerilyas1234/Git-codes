@@ -67,10 +67,59 @@ $mobile: 767px;
     span {
       margin-right: -3px;
       font-family: "aktiv-grotesk";
+
+      @include mobile() {
+        margin-right: 0;
+      }
+
+      @include tablet() {
+        margin-right: 0;
+      }
     }
 
     svg {
       margin-right: -2px;
+    }
+  }
+
+  @include tablet() {
+    #header.normalHeader {
+      >div {
+        >div {
+          &:nth-of-type(2) {
+            >div {
+              >div {
+                >div {
+                  padding-right: 29px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile() {
+    #header.normalHeader {
+      >div {
+        >div {
+          &:nth-of-type(2) {
+            >div {
+              >div {
+                >div {
+                  padding-right: 40px;
+                }
+
+                >svg {
+                  margin-right: 10.5px;
+                  margin-top: -1px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -80,6 +129,19 @@ $mobile: 767px;
         &:nth-of-type(3) {
           transform: translateX(13.5px);
         }
+      }
+    }
+
+    #header>div>ul>a {
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        >div {
+          top: 59px;
+        }
+
       }
     }
 
@@ -177,6 +239,11 @@ $mobile: 767px;
       &:first-child {
         position: relative;
 
+        @include mobile() {
+          overflow: hidden;
+          background: #B0D5D7;
+        }
+
         video {
           position: absolute;
           top: 0;
@@ -187,6 +254,37 @@ $mobile: 767px;
           width: 100%;
           height: 100%;
           object-fit: cover;
+
+          &.mobile_vid {
+            display: none;
+          }
+
+          @include mobile() {
+            &:not(.mobile_vid) {
+              display: none;
+            }
+
+            &.mobile_vid {
+              display: block;
+            }
+
+            // top: unset;
+            // left: -183px;
+            // bottom: -245px;
+            // max-width: 606px;
+            // width: calc(100% + 245px);
+          }
+
+          // @media only screen and (min-width: 422px) and (max-width: 505px) {
+          //   left: -100px;
+          //   bottom: -245px;
+          //   max-width: 606px;
+          //   width: calc(100% + 245px);
+          // }
+
+          // @media only screen and (min-width: 506) and (max-width: 767px) {
+          //   max-width: 100%;
+          // }
 
           &+div {
             position: relative;

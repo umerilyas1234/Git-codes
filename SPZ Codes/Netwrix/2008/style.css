@@ -926,9 +926,6 @@
   .spz_t2008 .step-inner-wrapper .steps-control label[for=checkbox_item_8] {
     padding: 16px 20px;
   }
-  .spz_t2008 .step-inner-wrapper .steps-control:last-child {
-    max-width: 100%;
-  }
   .spz_t2008.step-2-hide .form_outer {
     align-items: center;
   }

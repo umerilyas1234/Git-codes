@@ -4,7 +4,10 @@ function spz3007Test() {
   if (!document.querySelector('body').classList.contains('spz_3003')) {
     document.querySelector('body').classList.add('spz_3003');
     if (document.querySelector('.spz_3003 main > section:first-child')) {
-      document.querySelector('.spz_3003 main > section:first-child').insertAdjacentHTML('afterbegin', '<video src="//res.cloudinary.com/spiralyze/video/upload/v1745592795/airdna/3003/vid/3003_AirDNA.mp4" autoplay muted playsinline></video>');
+      document.querySelector('.spz_3003 main > section:first-child').insertAdjacentHTML('afterbegin', `
+        <video src="//res.cloudinary.com/spiralyze/video/upload/v1747048644/airdna/3003/vid/Desktop_Bg.mp4" class="desktop_vid" id="myVideo" autoplay muted playsinline></video>
+        <video src="//res.cloudinary.com/spiralyze/video/upload/v1747048640/airdna/3003/vid/360_BG.mp4" class="mobile_vid" id="myVideo" autoplay muted playsinline></video>
+        `);
     }
 
     console.log('Time 2 > ' + new Date().getTime() / 1000);
@@ -32,9 +35,17 @@ function spz3007Test() {
   }
 }
 
+window.onpageshow = function (event) {
+  const video = document.querySelector('.spz_3003 main > section:first-child video');
+  if (video) {
+    video.play();
+  }
+};
+
 function removeTest() {
+  document.querySelector('.spz_3003 main > section:first-child video.desktop_vid')?.remove();
+  document.querySelector('.spz_3003 main > section:first-child video.mobile_vid')?.remove();
   document.body.classList.remove('spz_3003');
-  document.querySelector('.spz_3003 main > section:first-child video')?.remove();
   document.querySelector('.header-logo-color')?.remove();
 }
 
@@ -53,7 +64,7 @@ function waitForElement(selector3007, timeout = 10000) {
         clearInterval(interval);
         resolve(element);
       }
-    }, 100);
+    }, 50);
 
     setTimeout(() => {
       clearInterval(interval);
@@ -92,3 +103,5 @@ const config = {
   childList: true
 };
 observer.observe(document, config);
+
+

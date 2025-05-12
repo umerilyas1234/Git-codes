@@ -1,0 +1,695 @@
+/*
+Theme Name: Management
+Author: Anwar
+Description: Your description goes here
+Version: 1.0
+Template: hello-elementor
+
+This is the child theme for Hello Elementor theme, generated with Generate Child Theme plugin by catchthemes.
+
+(optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
+*/
+
+$desktop-lg: 1760px;
+$desktop: 1470px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.no-indent {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside;
+}
+
+/* Responsiveness */
+
+@media (min-width: 1680) {
+
+  /*     .elementor-1827 .elementor-element.elementor-element-1cee214 {
+      width: 460px !important;
+      padding-left: 100px !important;
+  } */
+  .elementor-element.elementor-element-1cee214.e-con-full.e-flex.e-con.e-child {
+    width: 480px;
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .home .container-padding-page {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .home-divider-services span.elementor-divider-separator {
+    border-radius: 3px;
+  }
+
+
+  /* 	#menu-item-1826 #sidebar-text {
+  padding-left: 100px;
+} */
+  /* 	.elementor-1052 .elementor-element.elementor-element-b1f97fc .elementskit-section-title-wraper .elementskit-section-title {
+  font-size: 18px !important;
+  font-weight: 600;
+} */
+
+  /* 	Mega menu */
+  .menu-item-21 .elementor-element.elementor-element-21828d3.e-con-full.e-flex.e-con.e-child {
+    padding-left: 10px !important;
+  }
+
+  .menu-item-21 .elementor-element.elementor-element-f2b4daf.e-con-full.e-flex.e-con.e-child {
+    padding-left: 10px !important;
+  }
+
+  .menu-item-21 .elementor-element.elementor-element-60389ee.e-con-full.e-flex.e-con.e-child {
+    padding-left: 10px !important;
+  }
+
+  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-783b2ca.e-con {
+    align-self: auto !important;
+  }
+
+  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-f786744 .elementor-divider-separator {
+    width: 29px !important;
+    margin-right: 5px !important;
+  }
+
+  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-27cdd2f .elementor-divider-separator {
+    width: 72px !important;
+    border-width: 2px !important;
+  }
+
+  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-3213913 {
+    width: 370px !important;
+  }
+
+  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-d15d065 {
+    width: 100% !important;
+  }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+
+  body .container-padding-page {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  h1 {
+    font-size: 40px !important;
+    line-height: 50px !important;
+  }
+
+  .home h1 span {
+    height: 50px !important;
+    width: 200px;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+  }
+
+  .page-id-658 h2 span,
+  .page-id-526 h2 span,
+  .page-id-781 h2 span,
+  .page-id-766 h2 span,
+  .page-id-879 h2 span {
+    font-size: 60px;
+    line-height: 66px;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+    margin-top: 5px;
+    display: inline-block;
+    font-family: "DM Serif Text",
+  }
+
+  .page-id-484 h2 span {
+    font-size: 44px;
+    font-weight: 400;
+    height: 55px !important;
+    width: 300;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+  }
+
+
+
+
+  .elementor-element.elementor-element-54c283b7.e-con-full.e-flex.e-con.e-child {
+    width: 101%;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+}
+
+
+@media (min-width: 1470px) {
+
+  body .container-padding-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+@include desktop(){
+
+  .page-id-658 h2 span,
+  .page-id-526 h2 span,
+  .page-id-781 h2 span,
+  .page-id-766 h2 span,
+  .page-id-879 h2 span {
+    display: inline-block!important;
+  }
+  .page-id-658 h2:has(span),
+  .page-id-526 h2:has(span),
+  .page-id-781 h2:has(span),
+  .page-id-766 h2:has(span),
+  .page-id-879 h2:has(span) {
+    font-size: 60px !important;
+    font-weight: 400;
+    line-height: 66px !important;
+  }
+  .right_section{
+    max-width: 65%;
+  }
+}
+
+#servies-corp-client {
+  cursor: pointer;
+}
+
+#servies-corp-client:hover {
+  cursor: pointer;
+}
+
+#servies-corp-leader {
+  cursor: pointer;
+}
+
+#servies-corp-leader:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width: 575px) {
+  .elementor-47 .elementor-element.elementor-element-ef2fbf6 .elementor-image-box-wrapper {
+    text-align: left;
+    display: flex;
+  }
+
+  .elementor-47 .elementor-element.elementor-element-f427146 .elementor-image-box-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .elementor-widget-icon-box.elementor-position-left .elementor-icon-box-icon,
+  .elementor-widget-icon-box.elementor-position-right .elementor-icon-box-icon {
+    margin-left: 20px;
+  }
+
+  .elementor-47 .elementor-element.elementor-element-892a545 .elementor-icon-box-wrapper {
+    text-align: right;
+    display: flex;
+    direction: rtl;
+    margin-right: 39px;
+    flex-direction: row;
+    width: 300px;
+  }
+
+  .page-id-879 h2 span {
+    font-size: 46px;
+    width: 250px;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+  }
+
+  .page-id-484 h2 span {
+    font-size: 46px;
+    width: 250px;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+  }
+
+}
+
+.elementor .elementor-element.elementor-widget-n-tabs:not(:has(>.elementor-widget-container))>.e-n-tabs>.e-n-tabs-heading .e-n-tab-title[aria-selected=true],
+.elementor .elementor-element.elementor-widget-n-tabs:not(:has(>.elementor-widget-container))>.e-n-tabs[data-touch-mode=true]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover,
+.elementor .elementor-element.elementor-widget-n-tabs>.elementor-widget-container>.e-n-tabs>.e-n-tabs-heading .e-n-tab-title[aria-selected=true],
+.elementor .elementor-element.elementor-widget-n-tabs>.elementor-widget-container>.e-n-tabs[data-touch-mode=true]>.e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover {
+  background-color: #FDC73D80;
+  background-image: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .home h1 span {
+    height: 50px !important;
+    width: 300px;
+    background-color: #FDC73D80;
+    border-radius: 0 0 26px 0;
+  }
+
+  #menu-responsive-menu .elementskit-submenu-indicator {
+    border: none !important;
+  }
+
+  /* Initial hidden state */
+  .elementskit-submenu-panel {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  /* Active/open state */
+  .elementskit-submenu-panel.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .elementskit-submenu-indicator {
+    transition: transform 0.3s ease;
+  }
+
+  .ekit-menu-dropdown-toggle.active .elementskit-submenu-indicator {
+    transform: rotate(180deg);
+  }
+
+
+
+  .home-box-flex .elementor-image-box-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+
+  .home-services-crop .elementor-image-box-wrapper {
+    display: flex;
+    flex-direction: row-reverse !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .home_button_last a {
+    width: 280px !important;
+    margin: auto;
+  }
+
+  #ekit-megamenu-responsive-menu {
+    overflow: unset !important;
+  }
+
+  #ekit-megamenu-primary-menu ul {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    overflow-y: unset;
+  }
+
+  #ekit-megamenu-primary-menu ul li {
+    background: #fff;
+  }
+
+  .header_main>.e-con-inner div:nth-child(2) {
+    order: 3;
+  }
+
+  /* 	#contact-us-btn{
+  width: 100% !important;
+} */
+  .home_select_lang select {
+    padding: 7px !important;
+    width: 55px;
+  }
+
+  .resp_nav {
+    gap: 10px;
+  }
+
+  .elementskit-menu-overlay {
+    background-color: transparent !important;
+  }
+
+  .resp_nav .elementskit-menu-hamburger {
+    border: none;
+    padding: 0;
+  }
+
+  .resp_nav .elementskit-menu-hamburger:before {
+    content: url(https://stagging.management-counterparts.ch/wp-content/uploads/2025/04/nav_icon.png);
+  }
+
+  .resp_nav .elementskit-menu-hamburger span {
+    display: none;
+  }
+
+  body button.elementskit-menu-close.elementskit-menu-toggler[type="button"]:hover,
+  body button.elementskit-menu-close.elementskit-menu-toggler[type="button"]:focus {
+    position: fixed;
+    right: 6px;
+    top: 15px;
+    background: #fde29d !important;
+    border-radius: 0px 0px 10px 0px;
+    border: none;
+  }
+
+  .mobile_main_header {
+    position: relative !important;
+    z-index: 999 !important;
+    overflow: unset !important;
+  }
+
+  #ekit-megamenu-responsive-menu {
+    position: fixed !important;
+    background: #fff !important;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: unset !important;
+    min-height: 100% !important;
+    max-width: 100% !important;
+    top: 105px;
+  }
+
+  #ekit-megamenu-responsive-menu+div {
+    position: relative;
+  }
+
+  #ekit-megamenu-responsive-menu+div button {
+    position: relative;
+  }
+
+  .ekit_menu_responsive_tablet>.elementskit-navbar-nav-default {
+    background: transparent !important;
+  }
+
+  #ekit-megamenu-responsive-menu>ul+.elementskit-nav-identity-panel {
+    position: absolute !important;
+    right: 5px;
+    top: -97px;
+
+  }
+
+  #ekit-megamenu-responsive-menu li a i {
+    position: relative;
+    z-index: 999;
+  }
+
+  .elementskit-megamenu-panel.elementskit-dropdown-open {
+    display: block !important;
+    position: relative;
+    z-index: 99;
+  }
+
+  #ekit-megamenu-responsive-menu .elementskit-nav-identity-panel button {
+    border: none !important;
+    border-radius: 0 0 10px 0 !important;
+    background-color: #fde29d;
+    display: none;
+  }
+
+  #ekit-megamenu-responsive-menu.active .elementskit-nav-identity-panel button {
+    display: block;
+  }
+
+  [type=button]:focus,
+  [type=button]:hover,
+  [type=submit]:focus,
+  [type=submit]:hover,
+  button:focus,
+  button:hover {
+    background: transparent !important;
+  }
+
+}
+
+/* custom css */
+
+.my_services>div:first-child {
+  gap: 0;
+}
+
+.my_services>div:first-child>div:nth-child(2) {
+  margin-top: 0;
+}
+
+.home_box1 h4 {
+  padding-right: 50px;
+}
+
+.home_box1 h4 a {
+  position: relative;
+}
+
+.home_box1 h4 a::after {
+  content: "";
+  position: absolute;
+  right: -65px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-image: url("https://stagging.management-counterparts.ch/wp-content/uploads/2025/04/Group-602-1.svg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include mobile() {
+    display: none;
+  }
+}
+
+.our_leadership p {
+  max-width: 400px;
+}
+
+.leadership_right p {
+  max-width: 375px;
+}
+
+.my_accordion {
+  gap: 0 !important;
+}
+
+.my_accordion>div:first-child figure {
+  display: flex;
+  align-items: center;
+}
+
+.my_accordion>div:first-child h3 {
+  margin: 0 !important;
+}
+
+.my_accordion>.e-child>.e-child {
+  padding-top: 60px;
+}
+
+.client_group>.e-con-inner>.e-child:nth-child(2)>.e-child:first-child {
+  gap: 0;
+}
+
+.client_group>.e-con-inner>.e-child:nth-child(2)>.e-child:first-child>.e-child:first-child {
+  padding-right: 50px;
+  margin-bottom: 15px;
+}
+
+.client_group.auto_container>.e-child:nth-child(2)>.e-child:first-child {
+  gap: 0;
+}
+
+.client_group.auto_container>.e-child:nth-child(2)>.e-child:first-child>.e-child:first-child {
+  padding-right: 50px;
+  margin-bottom: 15px;
+}
+
+html body .auto_container,
+html body.home .auto_container {
+  max-width: 1606px !important;
+  margin: auto !important;
+  padding: 0 20px !important;
+}
+
+html body .auto_container.my_management,
+html body.home .auto_container.my_management {
+  padding-top: 100px !important;
+  padding-bottom: 40px !important;
+}
+
+.home-divider-services>.elementor-divider {
+  padding: 0 !important;
+}
+
+.management_platform::before {
+  display: none;
+}
+
+.management_platform>.e-con-inner {
+  padding: 67px 86px !important;
+  background: #EAEFEF;
+  border-radius: 3px 3px 58px 3px;
+  position: relative;
+
+  @include mobile() {
+    padding: 20px !important;
+  }
+}
+
+.management_platform>.e-con-inner::before {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://stagging.management-counterparts.ch/wp-content/uploads/2025/02/Mask-group-1.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.management_paragraph {
+  max-width: 450px !important;
+}
+
+.meet_team figure {
+  margin-right: 19px !important;
+}
+
+.mr_0 p {
+  margin-bottom: 0 !important;
+}
+
+
+.custom_container {
+  max-width: 1566px !important;
+  margin: auto !important;
+}
+
+.d-none {
+  display: none;
+}
+
+#visit-btn {
+  @include mobile() {
+    max-width: 100%;
+  }
+}
+
+.page-id-526,
+.page-id-658,
+.page-id-781,
+.page-id-766 {
+  main {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      width: 500px;
+      height: 285px;
+      background-image: url('https://stagging.management-counterparts.ch/wp-content/uploads/2025/05/Mask-group-12.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include desktop(){
+        width: 350px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+.top_content {
+  max-width: 635px !important;
+}
+
+.services-links,
+.clients-menu {
+  ul {
+    li {
+      a {
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          color: rgb(84, 89, 95);
+        }
+      }
+    }
+  }
+}
+
+html body #content .right_section {
+  padding: 0 0 0 30px !important;
+}
+
+.right_sec {
+  max-width: 393px;
+
+  @include mobile() {
+    max-width: 100%;
+  }
+}

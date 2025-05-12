@@ -50,7 +50,7 @@ const bodyInterval1012 = setInterval(function () {
 									<ul>
 										<li>
 											<div class="feedback_midlleList_data">
-												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/medical-center-logo_img.webp" alt="medical center logo" width="104" height="40"></span>
+												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/medical-center-logo_img_1.webp" alt="medical center logo" width="104" height="40"></span>
 												<p>Using Netwrix Auditor, Medical Center Clinic slashes IT workload by 40% and ensures HIPAA compliance.</p>	
 											</div>
 										</li>

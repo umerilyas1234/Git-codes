@@ -33,7 +33,7 @@ function loadTestCode2007() {
   if (!document.querySelector("body").classList.contains("spz_t2007")) {
     document.querySelector("body").classList.add("spz_t2007");
     document.querySelector('.spz_t2007').insertAdjacentHTML('beforeend', `
-          <video autoplay muted loop playsinline id="video_play">
+          <video autoplay muted playsinline id="video_play">
             <source src="//res.cloudinary.com/spiralyze/video/upload/v1744020880/netwrix/2007/video/2007_Netwrix_1.mp4" type="video/mp4">
           </video>  
         `);
