@@ -84,6 +84,8 @@ img {
 }
 @media (max-width: 767.98px) {
   .spz_10001 .new-hero .form-cont .btn-row .btn_filled_red {
+    max-width: 324px;
+    margin: auto;
     width: 100%;
   }
 }
@@ -116,8 +118,9 @@ img {
 }
 @media (max-width: 767.98px) {
   .spz_10001 .new-hero .form-cont .btn-row .btn-wrap {
-    margin-left: 0;
     width: 100%;
+    max-width: 324px;
+    margin: auto;
   }
 }
 .spz_10001 .hero-container {
@@ -713,6 +716,8 @@ img {
     padding-top: 64px;
     padding-bottom: 65px;
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/section-products-mobile-bg.webp");
+    background-color: #00299D;
+    background-size: 100%;
   }
 }
 .spz_10001 .explore_products .container {
@@ -857,27 +862,33 @@ img {
     padding: 19px 21px 0;
   }
 }
-.spz_10001 .product_top figure {
+.spz_10001 .product_top picture {
   display: block;
   width: 100%;
   margin: 0;
+  position: relative;
 }
-.spz_10001 .product_top figure img {
+.spz_10001 .product_top picture::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(174deg, rgba(31, 67, 169, 0) 34.94%, rgba(31, 67, 169, 0.32) 100.28%);
+}
+.spz_10001 .product_top picture img {
   display: block;
   width: 100%;
   border-radius: 4px 4px 0px 0px;
   background: linear-gradient(174deg, rgba(31, 67, 169, 0) 34.94%, rgba(31, 67, 169, 0.32) 100.28%);
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
-  .spz_10001 .product_top figure img {
+  .spz_10001 .product_top picture img {
     height: 160px;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-}
-@media (max-width: 767.98px) {
-  .spz_10001 .product_top figure img {
-    margin-bottom: -24px;
   }
 }
 .spz_10001 .product_bottom {
@@ -1068,6 +1079,9 @@ img {
   .spz_10001 .why_netwrixList ul li:last-child {
     width: 100%;
   }
+  .spz_10001 .why_netwrixList ul li:last-child .why_netwrixData {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-card-tablet-2-bg.webp");
+  }
 }
 @media (max-width: 767.98px) {
   .spz_10001 .why_netwrixList ul {
@@ -1083,16 +1097,26 @@ img {
 }
 .spz_10001 .why_netwrixData {
   height: 100%;
-  border-radius: 8px;
   box-shadow: 0px 12px 56px 0px rgba(0, 0, 0, 0.08);
   position: relative;
-  background: linear-gradient(157.1deg, rgba(12, 222, 236, 0) 8.94%, #0C6CFD 39.4%, #0042EC 64.49%, #801EFC 91.07%);
   padding: 1px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-card-bg.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .spz_10001 .why_netwrixData {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-card-tablet-1-bg.webp");
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_10001 .why_netwrixData {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-card-mobile-2-bg.webp");
+  }
 }
 .spz_10001 .why_netwrixData .why_dataInner {
   height: 100%;
-  background-color: #fff;
-  border-radius: 7px;
+  border-radius: 8px;
   padding: 55px 32px 31px 31px;
 }
 @media (max-width: 767.98px) {
@@ -1226,6 +1250,11 @@ img {
   filter: drop-shadow(3.983px 0px 19.914px rgba(0, 0, 0, 0.1)) drop-shadow(0px 23.897px 55.759px rgba(0, 0, 0, 0.16));
   max-width: 100%;
 }
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .spz_10001 .datasheet_left figure {
+    left: -12px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .spz_10001 .datasheet_left {
     width: 100%;
@@ -1351,6 +1380,11 @@ img {
 .spz_10001 .netwrix_help .why_netwrixData {
   box-shadow: 0px 12px 56px 0px rgba(0, 0, 0, 0.06);
 }
+@media (max-width: 767.98px) {
+  .spz_10001 .netwrix_help .why_netwrixData {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-card-mobile-1-bg.webp");
+  }
+}
 .spz_10001 .netwrix_help .why_netwrixTitle {
   padding-bottom: 48px;
 }
@@ -1403,6 +1437,16 @@ img {
 @media (max-width: 1440px) {
   .spz_10001 .netwrix_faq .faq-cont {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/questions-bg.webp");
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .spz_10001 .netwrix_faq .faq-cont {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-tablet-bg.webp");
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_10001 .netwrix_faq .faq-cont {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/why-netwrix-mobile-bg.webp");
   }
 }
 .spz_10001 .netwrix_faq .faq-cont h1 {
@@ -1468,6 +1512,11 @@ img {
   }
   .spz_10001 .netwrix_faq .container > .row > .col-xs-22 .faq-item:first-child {
     padding-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_10001 .netwrix_faq .container > .row > .col-xs-22 .faq-item .title {
+    padding-right: 25px;
   }
 }
 .spz_10001 .netwrix_faq .container > .row > .col-xs-22 .faq-item.opened .fa-chevron-down {

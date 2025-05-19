@@ -62,7 +62,7 @@ const bodyInterval4006 = setInterval(function () {
     list = `
   <div class="list">
       <div><strong>Digital payments.</strong> Send and receive electronic payments directly from your account. Same-day. Auto-pay. Enterprise security.</div>
-      <div><strong>Flat transaction fees.</strong> Pay one flat rate of $0.49 per ACH transaction, no matter the transaction amount. </div>
+      <div><strong>Flat transaction fees.</strong> Pay one flat rate of $0.59 per ACH transaction, no matter the transaction amount. </div>
       <div><strong>Workflow integrations.</strong> Fully integrates with invoice intake, storage, and approvals. Plus 2-way sync with all major accounting software.</div>
       </div>
   `

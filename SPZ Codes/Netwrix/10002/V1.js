@@ -3,7 +3,7 @@ function loadTestCode10002() {
     document.querySelector("body").classList.add("spz_t10002");
 
     var btn = document.querySelector(".form-cont button.btn_filled_red");
-    if(btn){
+    if (btn) {
       btn.classList.add("spz_10002_v1");
     }
 
@@ -19,6 +19,13 @@ function loadTestCode10002() {
     const formId = `form-${buttonID}`;
     const formContainer = document.querySelector(`#${formId}`).closest('.v-modal-mask');
     formContainer.classList.add('spz_modal');
+
+    if (document.querySelector('input#SPZ_Test')) {
+      document.querySelectorAll('input#SPZ_Test').forEach((input) => {
+        input.value = 'variant_10002';
+      });
+    }
+
 
     //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
     //exptName should be #1001, #1002, #1003 etc.

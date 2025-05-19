@@ -145,17 +145,12 @@ $mobile: 767px;
     padding-right: 80px;
   }
 
-  h1 {
-    font-size: 40px !important;
-    line-height: 50px !important;
-  }
-
-  .home h1 span {
-    height: 50px !important;
-    width: 200px;
-    background-color: #FDC73D80;
-    border-radius: 0 0 26px 0;
-  }
+  // .home h1 span {
+  //   height: 50px !important;
+  //   width: 200px;
+  //   background-color: #FDC73D80;
+  //   border-radius: 0 0 26px 0;
+  // }
 
   .page-id-658 h2 span,
   .page-id-526 h2 span,
@@ -167,8 +162,8 @@ $mobile: 767px;
     background-color: #FDC73D80;
     border-radius: 0 0 26px 0;
     margin-top: 5px;
-    display: inline-block;
-    font-family: "DM Serif Text",
+    display: inline-block !important;
+    font-family: "DM Serif Text" !important,
   }
 
   .page-id-484 h2 span {
@@ -202,15 +197,17 @@ $mobile: 767px;
   }
 
 }
-@include desktop(){
+
+@include desktop() {
 
   .page-id-658 h2 span,
   .page-id-526 h2 span,
   .page-id-781 h2 span,
   .page-id-766 h2 span,
   .page-id-879 h2 span {
-    display: inline-block!important;
+    display: inline-block !important;
   }
+
   .page-id-658 h2:has(span),
   .page-id-526 h2:has(span),
   .page-id-781 h2:has(span),
@@ -220,7 +217,8 @@ $mobile: 767px;
     font-weight: 400;
     line-height: 66px !important;
   }
-  .right_section{
+
+  .right_section {
     max-width: 65%;
   }
 }
@@ -502,23 +500,23 @@ $mobile: 767px;
   position: relative;
 }
 
-.home_box1 h4 a::after {
-  content: "";
-  position: absolute;
-  right: -65px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 35px;
-  height: 35px;
-  background-image: url("https://stagging.management-counterparts.ch/wp-content/uploads/2025/04/Group-602-1.svg");
-  background-size: 35px;
-  background-repeat: no-repeat;
-  background-position: center center;
+// .home_box1 h4 a::after {
+//   content: "";
+//   position: absolute;
+//   right: -65px;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 35px;
+//   height: 35px;
+//   background-image: url("https://stagging.management-counterparts.ch/wp-content/uploads/2025/04/Group-602-1.svg");
+//   background-size: 35px;
+//   background-repeat: no-repeat;
+//   background-position: center center;
 
-  @include mobile() {
-    display: none;
-  }
-}
+//   @include mobile() {
+//     display: none;
+//   }
+// }
 
 .our_leadership p {
   max-width: 400px;
@@ -654,7 +652,8 @@ html body.home .auto_container.my_management {
       background-image: url('https://stagging.management-counterparts.ch/wp-content/uploads/2025/05/Mask-group-12.png');
       background-size: cover;
       background-repeat: no-repeat;
-      @include desktop(){
+
+      @include desktop() {
         width: 350px;
         height: 200px;
       }
@@ -691,5 +690,115 @@ html body #content .right_section {
 
   @include mobile() {
     max-width: 100%;
+  }
+}
+
+.sub_text {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #888888;
+  padding-top: 8px;
+  font-weight: 500;
+}
+
+.menu-item-1826 {
+  >.elementskit-megamenu-panel {
+    >div {
+      >div {
+        >div {
+          justify-content: center;
+
+          >div {
+            &:first-child {
+              display: none;
+            }
+
+            &:last-child {
+              max-width: 500px;
+
+              >div {
+                &:last-child {
+                  >div {
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                      >div {
+                        &:first-child {
+                          width: 45px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home {
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    h1 {
+      font-size: 60px;
+      line-height: 66px;
+
+      span {
+        font-size: 60px;
+        line-height: 66px;
+        background-color: rgba(253, 199, 61, 0.5019607843);
+        border-radius: 0 0 26px 0;
+        margin-top: 5px;
+        display: inline-block !important;
+        font-family: "DM Serif Text";
+      }
+    }
+  }
+}
+
+.read_more {
+  ul.no-indent {
+    list-style: none;
+    padding-left: 20px;
+
+    li {
+      position: relative;
+      list-style: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid #0883A0;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+html.translated-ltr {
+  * {
+    word-break: break-all;
+  }
+}
+
+.faq_toggle:has(details[open]) {
+  .e-n-accordion-item-title-header {
+    .e-n-accordion-item-title-text {
+      font-size: 0;
+
+      &::after {
+        content: 'Read less';
+        font-size: 16px;
+        transform: translateY(2px);
+        display: inline-block;
+      }
+    }
   }
 }

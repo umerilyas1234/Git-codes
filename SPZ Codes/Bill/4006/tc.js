@@ -1,8 +1,9 @@
+console.log('control');
 const bodyInterval4002 = setInterval(function(){
   if(document.querySelector('body') && !document.querySelector('.spz-4002')){
   clearInterval(bodyInterval4002)
   document.querySelector('body').classList.add("spz-4002")
-  localStorage.setItem('bdcAbTest11','4001-con');
+  localStorage.setItem('bdcAbTest11','4006-con');
   const loadJS =(url, implementationCode, location)=>{
       var scriptTag = document.createElement('script');
       scriptTag.src = url;
@@ -62,7 +63,7 @@ const bodyInterval4002 = setInterval(function(){
   list=`
   <div class="list">
       <div><strong>Digital payments.</strong> Send and receive electronic payments directly from your account. Same-day. Auto-pay. Enterprise security.</div>
-      <div><strong>Flat transaction fees.</strong> Pay one flat rate of $0.49 per ACH transaction, no matter the transaction amount. </div>
+      <div><strong>Flat transaction fees.</strong> Pay one flat rate of $0.59 per ACH transaction, no matter the transaction amount. </div>
       <div><strong>Workflow integrations.</strong> Fully integrates with invoice intake, storage, and approvals. Plus 2-way sync with all major accounting software.</div>
       </div>
   `

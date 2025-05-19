@@ -1,0 +1,33 @@
+.spz_1016 .getDemo_cta {
+  display: inline-block;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D22730;
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 16px;
+  height: 45px;
+  width: 100px;
+  margin-right: 8.5px;
+  transition: all 0.3s ease;
+}
+@media only screen and (min-width: 1600px) {
+  .spz_1016 .getDemo_cta {
+    height: 53px;
+  }
+}
+.spz_1016 .getDemo_cta.v2 {
+  width: 135px;
+}
+.spz_1016 .getDemo_cta:hover {
+  background: #E63B44;
+}
+.spz_1016 .getDemo_cta:active, .spz_1016 .getDemo_cta:focus {
+  background: #BE131C;
+}/*# sourceMappingURL=styles.css.map */

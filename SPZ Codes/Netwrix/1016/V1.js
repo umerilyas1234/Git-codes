@@ -129,11 +129,11 @@ const bodyInterval1008 = setInterval(function () {
         })
 
         //hidden field
-        if (formParent.querySelector('#SPZ_Test').value == "") {
-          formParent.querySelector('#SPZ_Test').value = "variant_1016"
-        } else {
-          formParent.querySelector('#SPZ_Test').value = formParent.querySelector('#SPZ_Test').value + ",variant_1016";
-        }
+        // if (formParent.querySelector('#SPZ_Test').value == "") {
+        //   formParent.querySelector('#SPZ_Test').value = "variant_1016"
+        // } else {
+        //   formParent.querySelector('#SPZ_Test').value = formParent.querySelector('#SPZ_Test').value + ",variant_1016";
+        // }
 
 
         //event listener

@@ -224,11 +224,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/ping-castle_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/ping-castle-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/ping-castle_img.webp"
 														alt="PingCastle">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/active-directory-risk-assessment.html">PingCastle</a>
@@ -242,11 +244,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/threat-manager_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/threat-manager-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/threat-manager_img.webp"
 														alt="Threat Manager">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/threat_detection_software.html">Threat Manager</a>
@@ -260,11 +264,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/enterprise-auditor_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/enterprise-auditor-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/access-analyzer_img.webp"
 														alt="Access Analyzer">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/access-analyzer.html">Access Analyzer</a>
@@ -278,11 +284,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/recovery-for-active-directory_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/recovery-for-active-directory-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/recovery-for-active-directory_img.webp"
 														alt="Recovery for Active Directory">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/active_directory_recovery_software.html">Recovery for Active Directory</a>
@@ -296,11 +304,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/group-id_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/group-id-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/directory-management_img.webp"
 														alt="Directory Management">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/directory-manager-solution.html">Directory Management</a>
@@ -314,11 +324,13 @@ const bodyInterval10001 = setInterval(function () {
 									<li>
 										<div class="products_data">
 											<div class="product_top">
-												<figure>
+												<picture>
+													<source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/threat-prevention_img_mobile.webp">	
+													<source media="(max-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/threat-prevention-tablet_img.webp">	
 													<img
 														src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/8002/threat-prevention_img.webp"
 														alt="Threat Prevention ">
-												</figure>
+												</picture>
 											</div>
 											<div class="product_bottom">
 												<a href="https://www.netwrix.com/threat-prevention.html">Threat Prevention </a>
