@@ -64,7 +64,7 @@ $mobile: 767px;
       margin: 0;
       border-radius: 16px;
       background: #FFF;
-      box-shadow: 0px 14px 60px 0px rgba(39, 56, 59, 0.20);
+      // box-shadow: 0px 14px 60px 0px rgba(39, 56, 59, 0.20);
       padding: 48px 32px;
 
       @include tablet-pro() {
@@ -640,6 +640,16 @@ $mobile: 767px;
 
         }
 
+        .spz-input-wrap:has(input:-webkit-autofill) label[class*="label-spz-"] {
+          top: calc(-1 * (var(--inputHeight) / 4 - 4px));
+          left: 14px;
+          background: #fff;
+          transition: top 0.15s linear;
+          padding: 0 3px;
+          font-size: 12px;
+          line-height: 20px;
+        }
+
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus,
@@ -652,6 +662,7 @@ $mobile: 767px;
           z-index: 2;
           position: relative;
         }
+
 
         .focused {
           .cf-input {
@@ -831,6 +842,11 @@ $mobile: 767px;
 
         .spz-input-wrap {
           margin-bottom: 8px;
+        }
+
+        .cf-field:has(.cf-error-container-phone:not(.hidden)),
+        .cf-field:has(.cf-error-container:not(.hidden)) {
+          margin-bottom: 30px;
         }
       }
     }

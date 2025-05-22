@@ -303,6 +303,9 @@ img {
   .hero-organiza-content ul li img {
     height: 72px;
   }
+  .hero-organiza-content ul li:last-child img {
+    opacity: 0.5;
+  }
 
   @media only screen and (min-width: 992px) and (max-width: 1099.98px) {
     .hero-buttons.head-cont .buttons-cont {
@@ -1394,7 +1397,7 @@ img {
 
     strong {
       display: block;
-      color: #54585C;
+      color: #354556;
       font-family: Roboto;
       font-size: 24px;
       font-weight: 400;

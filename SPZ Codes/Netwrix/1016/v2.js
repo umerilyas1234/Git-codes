@@ -1,7 +1,10 @@
 const bodyInterval1008 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_1016')) {
     clearInterval(bodyInterval1008)
-    document.querySelector('body').classList.add("spz_1008")
+    document.querySelector('body').classList.add("spz_1008")    
+    
+    // 1016 code
+    document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/products.html" class="getDemo_cta v2 spz_1016_v2">Get a Free Trial</a>`)
 
     function validateEmail(email) {
       var re =
@@ -28,14 +31,14 @@ const bodyInterval1008 = setInterval(function () {
             }
           }
         }
-        const checkExpanded = () => {
-          if (!formParent.classList.contains('expanded') && !formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper.hide')) {
-            // hide initial form
-            formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper').classList.add("hide")
-            formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_phone').closest('.input-wrapper').classList.add("hide")
-            formParent.querySelector('.form-wrapper-3 #ModalForm_message').closest('.input-wrapper').classList.add("hide")
-          }
-        }
+        // const checkExpanded = () => {
+        //   if (!formParent.classList.contains('expanded') && !formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper.hide')) {
+        //     // hide initial form
+        //     formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper').classList.add("hide")
+        //     formParent.querySelector('.form-wrapper-3 #ModalForm_nwf_phone').closest('.input-wrapper').classList.add("hide")
+        //     formParent.querySelector('.form-wrapper-3 #ModalForm_message').closest('.input-wrapper').classList.add("hide")
+        //   }
+        // }
         const inputParent = formParent.querySelectorAll('.form-wrapper-3 form > div:not(.modelFormError):not(.g-recaptcha)')
         for (let x = 0; x < inputParent.length; x++) {
           //add label
@@ -50,7 +53,7 @@ const bodyInterval1008 = setInterval(function () {
           }
         }
         addingClass()
-        checkExpanded()
+        // checkExpanded()
         // adding additional error
         formParent.querySelector('.modelFormError').insertAdjacentHTML("afterend", `
               <div class="modelFormError"></div>  
@@ -58,8 +61,8 @@ const bodyInterval1008 = setInterval(function () {
         // change label for phone and unit type
         formParent.querySelector('#ModalForm_nwf_phone').closest('.input-wrapper').querySelector('label').textContent = "Phone";
         formParent.querySelector('#ModalForm_nwf_email').closest('.input-wrapper').querySelector('label').textContent = "Work Email";
-        formParent.querySelector('#ModalForm_account_type').closest('.input-wrapper').querySelector('label').textContent = "Inquiry Type";
-        formParent.querySelector('#ModalForm_account_type option:first-child').textContent = "Inquiry Type"
+        // formParent.querySelector('#ModalForm_account_type').closest('.input-wrapper').querySelector('label').textContent = "Inquiry Type";
+        // formParent.querySelector('#ModalForm_account_type option:first-child').textContent = "Inquiry Type"
         //adding arrow
         for (let x = 0; x < formParent.querySelectorAll('.form-wrapper-3 .width50 select').length; x++) {
           formParent.querySelectorAll('.form-wrapper-3 .width50 select')[x].parentNode.insertAdjacentHTML('beforeend', '<div class="arrow"></div>')
@@ -75,62 +78,64 @@ const bodyInterval1008 = setInterval(function () {
 
         //button 
         formParent.querySelector('.form-wrapper-3 input.btn').value = "Submit";
-        formParent.querySelector('.form-wrapper-3 input.btn').classList.add('spz1008-cta-submit', 'hide')
-        formParent.querySelector('.form-wrapper-3 input.btn').disabled = true
+        formParent.querySelector('.form-wrapper-3 input.btn').classList.add('spz1008-cta-submit')
 
-        formParent.querySelector('.form-wrapper-3 input.btn').insertAdjacentHTML("beforebegin", `
-              <span class="btn spz1008-cta-fake-submit">Submit</span>  
-            `)
+        // formParent.querySelector('.form-wrapper-3 input.btn').classList.add('spz1008-cta-submit', 'hide')
+        // formParent.querySelector('.form-wrapper-3 input.btn').disabled = true
 
-        formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').addEventListener("click", function () {
+        // formParent.querySelector('.form-wrapper-3 input.btn').insertAdjacentHTML("beforebegin", `
+        //       <span class="btn spz1008-cta-fake-submit">Submit</span>  
+        //     `)
+
+        // formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').addEventListener("click", function () {
 
 
-          if (formParent.querySelector('#ModalForm_nwf_fname').value != "") {
-            formParent.querySelector('#ModalForm_nwf_fname').closest(".input-wrapper").classList.remove("error")
-          } else {
-            formParent.querySelector('#ModalForm_nwf_fname').closest(".input-wrapper").classList.add("error")
-          }
-          if (formParent.querySelector('#ModalForm_nwf_lname').value != "") {
-            formParent.querySelector('#ModalForm_nwf_lname').closest(".input-wrapper").classList.remove("error")
-          } else {
-            formParent.querySelector('#ModalForm_nwf_lname').closest(".input-wrapper").classList.add("error")
-          }
-          if (validateEmail(formParent.querySelector('#ModalForm_nwf_email').value)) {
-            formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.remove("error")
-          } else {
-            formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.add("error")
-          }
-          if (formParent.querySelector('#ModalForm_account_type').value != "") {
-            formParent.querySelector('#ModalForm_account_type').closest(".input-wrapper").classList.remove("error")
-          } else {
-            formParent.querySelector('#ModalForm_account_type').closest(".input-wrapper").classList.add("error")
-          }
+        //   if (formParent.querySelector('#ModalForm_nwf_fname').value != "") {
+        //     formParent.querySelector('#ModalForm_nwf_fname').closest(".input-wrapper").classList.remove("error")
+        //   } else {
+        //     formParent.querySelector('#ModalForm_nwf_fname').closest(".input-wrapper").classList.add("error")
+        //   }
+        //   if (formParent.querySelector('#ModalForm_nwf_lname').value != "") {
+        //     formParent.querySelector('#ModalForm_nwf_lname').closest(".input-wrapper").classList.remove("error")
+        //   } else {
+        //     formParent.querySelector('#ModalForm_nwf_lname').closest(".input-wrapper").classList.add("error")
+        //   }
+        //   if (validateEmail(formParent.querySelector('#ModalForm_nwf_email').value)) {
+        //     formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.remove("error")
+        //   } else {
+        //     formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.add("error")
+        //   }
+        //   if (formParent.querySelector('#ModalForm_account_type').value != "") {
+        //     formParent.querySelector('#ModalForm_account_type').closest(".input-wrapper").classList.remove("error")
+        //   } else {
+        //     formParent.querySelector('#ModalForm_account_type').closest(".input-wrapper").classList.add("error")
+        //   }
 
-          //show hiding error
-          if (formParent.querySelector('.error')) {
-            formParent.querySelectorAll('.modelFormError')[1].classList.add('v-show')
-          } else {
-            formParent.querySelectorAll('.modelFormError')[1].classList.remove('v-show')
-          }
-          // error message
-          if (formParent.querySelector('#ModalForm_nwf_fname').value == "") {
-            formParent.querySelectorAll('.modelFormError')[1].textContent = `First Name cannot be blank.`
-          } else if (formParent.querySelector('#ModalForm_nwf_lname').value == "") {
-            formParent.querySelectorAll('.modelFormError')[1].textContent = `Last Name cannot be blank.`
-          } else if (!validateEmail(formParent.querySelector('#ModalForm_nwf_email').value)) {
-            formParent.querySelectorAll('.modelFormError')[1].textContent = `Valid email required.`
-          } else if (formParent.querySelector('#ModalForm_account_type').value == "") {
-            formParent.querySelectorAll('.modelFormError')[1].textContent = `Inquiry Type cannot be blank.`
-          }
+        //   //show hiding error
+        //   if (formParent.querySelector('.error')) {
+        //     formParent.querySelectorAll('.modelFormError')[1].classList.add('v-show')
+        //   } else {
+        //     formParent.querySelectorAll('.modelFormError')[1].classList.remove('v-show')
+        //   }
+        //   // error message
+        //   if (formParent.querySelector('#ModalForm_nwf_fname').value == "") {
+        //     formParent.querySelectorAll('.modelFormError')[1].textContent = `First Name cannot be blank.`
+        //   } else if (formParent.querySelector('#ModalForm_nwf_lname').value == "") {
+        //     formParent.querySelectorAll('.modelFormError')[1].textContent = `Last Name cannot be blank.`
+        //   } else if (!validateEmail(formParent.querySelector('#ModalForm_nwf_email').value)) {
+        //     formParent.querySelectorAll('.modelFormError')[1].textContent = `Valid email required.`
+        //   } else if (formParent.querySelector('#ModalForm_account_type').value == "") {
+        //     formParent.querySelectorAll('.modelFormError')[1].textContent = `Inquiry Type cannot be blank.`
+        //   }
 
-        })
+        // })
 
         //hidden field
-        if (formParent.querySelector('#SPZ_Test').value == "") {
-          formParent.querySelector('#SPZ_Test').value = "variant_1016"
-        } else {
-          formParent.querySelector('#SPZ_Test').value = formParent.querySelector('#SPZ_Test').value + ",variant_1016";
-        }
+        // if (formParent.querySelector('#SPZ_Test').value == "") {
+        //   formParent.querySelector('#SPZ_Test').value = "variant_1016"
+        // } else {
+        //   formParent.querySelector('#SPZ_Test').value = formParent.querySelector('#SPZ_Test').value + ",variant_1016";
+        // }
 
 
         //event listener
@@ -139,42 +144,42 @@ const bodyInterval1008 = setInterval(function () {
         //input even listerer
         const allInput = formParent.querySelectorAll('.form-wrapper-3 .width50 input,.form-wrapper-3 .width50 select,.form-wrapper-3 textarea');
         // custome listener for 4
-        formParent.querySelector('#ModalForm_nwf_email').addEventListener("blur", function (e) {
-          if (!validateEmail(e.target.value) && !formParent.classList.contains('expanded')) {
-            formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.add("error")
-            formParent.querySelectorAll('.modelFormError')[1].classList.add('v-show')
-            formParent.querySelectorAll('.modelFormError')[1].textContent = `Valid email required.`
-          }
-          /*  
-          else{
-            formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.remove("error")
-            if(formParent.querySelectorAll('.modelFormError')[1].textContent==`Valid email required.`) {
-              formParent.querySelectorAll('.modelFormError')[1].classList.remove('v-show')
-            }
-          }
-          */
-        })
-        formParent.querySelector('#ModalForm_nwf_email').addEventListener('keydown', function (event) {
-          if (!formParent.classList.contains('expanded')) {
-            if (event.key === 'Enter' || event.keyCode === 13) {
-              formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
-            }
-          }
-        });
-        formParent.querySelector('#ModalForm_nwf_fname').addEventListener('keydown', function (event) {
-          if (!formParent.classList.contains('expanded')) {
-            if (event.key === 'Enter' || event.keyCode === 13) {
-              formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
-            }
-          }
-        });
-        formParent.querySelector('#ModalForm_nwf_lname').addEventListener('keydown', function (event) {
-          if (!formParent.classList.contains('expanded')) {
-            if (event.key === 'Enter' || event.keyCode === 13) {
-              formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
-            }
-          }
-        });
+        // formParent.querySelector('#ModalForm_nwf_email').addEventListener("blur", function (e) {
+        //   if (!validateEmail(e.target.value) && !formParent.classList.contains('expanded')) {
+        //     formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.add("error")
+        //     formParent.querySelectorAll('.modelFormError')[1].classList.add('v-show')
+        //     formParent.querySelectorAll('.modelFormError')[1].textContent = `Valid email required.`
+        //   }
+        //   /*  
+        //   else{
+        //     formParent.querySelector('#ModalForm_nwf_email').closest(".input-wrapper").classList.remove("error")
+        //     if(formParent.querySelectorAll('.modelFormError')[1].textContent==`Valid email required.`) {
+        //       formParent.querySelectorAll('.modelFormError')[1].classList.remove('v-show')
+        //     }
+        //   }
+        //   */
+        // })
+        // formParent.querySelector('#ModalForm_nwf_email').addEventListener('keydown', function (event) {
+        //   if (!formParent.classList.contains('expanded')) {
+        //     if (event.key === 'Enter' || event.keyCode === 13) {
+        //       formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
+        //     }
+        //   }
+        // });
+        // formParent.querySelector('#ModalForm_nwf_fname').addEventListener('keydown', function (event) {
+        //   if (!formParent.classList.contains('expanded')) {
+        //     if (event.key === 'Enter' || event.keyCode === 13) {
+        //       formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
+        //     }
+        //   }
+        // });
+        // formParent.querySelector('#ModalForm_nwf_lname').addEventListener('keydown', function (event) {
+        //   if (!formParent.classList.contains('expanded')) {
+        //     if (event.key === 'Enter' || event.keyCode === 13) {
+        //       formParent.querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').click()
+        //     }
+        //   }
+        // });
 
         const labelChange = (e) => {
           if (e.value == '' || e.value == null) {
@@ -184,41 +189,41 @@ const bodyInterval1008 = setInterval(function () {
           }
         }
 
-        const check4Input = (target) => {
-          if (
-            target.closest('.v-modal-container').querySelector('#ModalForm_nwf_fname').value != "" &&
-            target.closest('.v-modal-container').querySelector('#ModalForm_nwf_lname').value != "" &&
-            validateEmail(target.closest('.v-modal-container').querySelector('#ModalForm_nwf_email').value) &&
-            target.closest('.v-modal-container').querySelector('#ModalForm_account_type').value != "" &&
-            target.closest('.v-modal-container').querySelector('.input-wrapper.hide')
-          ) {
-            target.closest('.v-modal-container').classList.add("expanded")
-            formParent.querySelector('.form-wrapper-3 input.btn').disabled = false
-            target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper').classList.remove("hide")
-            target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_nwf_phone').closest('.input-wrapper').classList.remove("hide")
-            target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_message').closest('.input-wrapper').classList.remove("hide")
-            target.closest('.v-modal-container').querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').classList.add("hide")
-            target.closest('.v-modal-container').querySelector('.form-wrapper-3 input.btn').classList.remove("hide")
-            for (let x = 0; x < target.closest('.v-modal-container').querySelectorAll('.input-wrapper').length; x++) {
-              target.closest('.v-modal-container').querySelectorAll('.input-wrapper')[x].classList.remove("error")
-            }
-            target.closest('.v-modal-container').querySelectorAll('.modelFormError')[0].classList.add("hide")
-            target.closest('.v-modal-container').querySelectorAll('.modelFormError')[1].classList.remove("v-show")
-          }
-        }
+        // const check4Input = (target) => {
+        //   if (
+        //     target.closest('.v-modal-container').querySelector('#ModalForm_nwf_fname').value != "" &&
+        //     target.closest('.v-modal-container').querySelector('#ModalForm_nwf_lname').value != "" &&
+        //     validateEmail(target.closest('.v-modal-container').querySelector('#ModalForm_nwf_email').value) &&
+        //     target.closest('.v-modal-container').querySelector('#ModalForm_account_type').value != "" &&
+        //     target.closest('.v-modal-container').querySelector('.input-wrapper.hide')
+        //   ) {
+        //     target.closest('.v-modal-container').classList.add("expanded")
+        //     formParent.querySelector('.form-wrapper-3 input.btn').disabled = false
+        //     target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_nwf_nsrv').closest('.input-wrapper').classList.remove("hide")
+        //     target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_nwf_phone').closest('.input-wrapper').classList.remove("hide")
+        //     target.closest('.v-modal-container').querySelector('.form-wrapper-3 #ModalForm_message').closest('.input-wrapper').classList.remove("hide")
+        //     target.closest('.v-modal-container').querySelector('.form-wrapper-3 .spz1008-cta-fake-submit').classList.add("hide")
+        //     target.closest('.v-modal-container').querySelector('.form-wrapper-3 input.btn').classList.remove("hide")
+        //     for (let x = 0; x < target.closest('.v-modal-container').querySelectorAll('.input-wrapper').length; x++) {
+        //       target.closest('.v-modal-container').querySelectorAll('.input-wrapper')[x].classList.remove("error")
+        //     }
+        //     target.closest('.v-modal-container').querySelectorAll('.modelFormError')[0].classList.add("hide")
+        //     target.closest('.v-modal-container').querySelectorAll('.modelFormError')[1].classList.remove("v-show")
+        //   }
+        // }
         allInput.forEach(function (e) {
           e.addEventListener('blur', () => {
             labelChange(e);
           }, true);
           e.addEventListener('change', () => {
             labelChange(e);
-            check4Input(e);
+            // check4Input(e);
           }, true);
           e.addEventListener('keyup', () => {
-            check4Input(e);
+            // check4Input(e);
           }, true);
           labelChange(e);
-          check4Input(e);
+          // check4Input(e);
         })
         //button click check label
         const targetNode3 = formParent.querySelector('.form-wrapper-3 input.btn');
@@ -268,7 +273,7 @@ const bodyInterval1008 = setInterval(function () {
         const config = { attributes: true, childList: true, subtree: true };
         const callback = (mutationList, observer) => {
           addingClass()
-          checkExpanded()
+          // checkExpanded()
           //button         
           /*
           // error email
@@ -314,9 +319,6 @@ const bodyInterval1008 = setInterval(function () {
       }
     }
 
-    // 1016 code
-    document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/products.html" class="getDemo_cta v2 spz_1016_v2">Get a Free Trial</a>`)
-
     let runTestTimeout;
     //body observer because the form previously removed
     const targetNode2 = document.querySelector('body');
@@ -334,8 +336,6 @@ const bodyInterval1008 = setInterval(function () {
     }
     const observer2 = new MutationObserver(callback2);
     observer2.observe(targetNode2, config2);
-
-
 
     //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
     //exptName should be #1001, #1002, #1003 etc.

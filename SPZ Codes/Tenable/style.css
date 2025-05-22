@@ -62,38 +62,41 @@ This is the child theme for Hello Elementor theme, generated with Generate Child
     width: 72px !important;
     border-width: 2px !important;
   }
-  .menu-item-21 .elementor-1052 .elementor-element.elementor-element-3213913 {
-    width: 370px !important;
-  }
   .menu-item-21 .elementor-1052 .elementor-element.elementor-element-d15d065 {
     width: 100% !important;
   }
 }
-@media (min-width: 1440px) and (max-width: 1920px) {
-  body .container-padding-page {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+.page-id-658 h2 span,
+.page-id-526 h2 span,
+.page-id-781 h2 span,
+.page-id-766 h2 span,
+.page-id-879 h2 span,
+.page-id-484 h2 span {
+  font-size: 60px;
+  line-height: 66px;
+  height: auto !important;
+  background-color: rgba(253, 199, 61, 0.5019607843);
+  border-radius: 0 0 26px 0;
+  margin-top: 5px;
+  display: inline-block !important;
+  font-family: "DM Serif Text" !important;
+}
+@media (max-width: 767px) {
   .page-id-658 h2 span,
   .page-id-526 h2 span,
   .page-id-781 h2 span,
   .page-id-766 h2 span,
-  .page-id-879 h2 span {
-    font-size: 60px;
-    line-height: 66px;
-    background-color: rgba(253, 199, 61, 0.5019607843);
-    border-radius: 0 0 26px 0;
-    margin-top: 5px;
-    display: inline-block !important;
-    font-family: "DM Serif Text" !important;
-  }
+  .page-id-879 h2 span,
   .page-id-484 h2 span {
-    font-size: 44px;
-    font-weight: 400;
-    height: 55px !important;
-    width: 300;
-    background-color: rgba(253, 199, 61, 0.5019607843);
-    border-radius: 0 0 26px 0;
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  body .container-padding-page {
+    padding-left: 80px;
+    padding-right: 80px;
   }
   .elementor-element.elementor-element-54c283b7.e-con-full.e-flex.e-con.e-child {
     width: 101%;
@@ -166,18 +169,6 @@ This is the child theme for Hello Elementor theme, generated with Generate Child
     flex-direction: row;
     width: 300px;
   }
-  .page-id-879 h2 span {
-    font-size: 46px;
-    width: 250px;
-    background-color: rgba(253, 199, 61, 0.5019607843);
-    border-radius: 0 0 26px 0;
-  }
-  .page-id-484 h2 span {
-    font-size: 46px;
-    width: 250px;
-    background-color: rgba(253, 199, 61, 0.5019607843);
-    border-radius: 0 0 26px 0;
-  }
 }
 .elementor .elementor-element.elementor-widget-n-tabs:not(:has(> .elementor-widget-container)) > .e-n-tabs > .e-n-tabs-heading .e-n-tab-title[aria-selected=true],
 .elementor .elementor-element.elementor-widget-n-tabs:not(:has(> .elementor-widget-container)) > .e-n-tabs[data-touch-mode=true] > .e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover,
@@ -189,8 +180,7 @@ This is the child theme for Hello Elementor theme, generated with Generate Child
 
 @media screen and (max-width: 767px) {
   .home h1 span {
-    height: 50px !important;
-    width: 300px;
+    display: inline-block !important;
     background-color: rgba(253, 199, 61, 0.5019607843);
     border-radius: 0 0 26px 0;
   }
@@ -584,6 +574,80 @@ html body #content .right_section {
   border: 2px solid #0883A0;
   border-radius: 2px;
 }
+.read_more ul.no-indent li ul.sub {
+  list-style: none;
+  padding-left: 20px;
+}
+.read_more ul.no-indent li ul.sub li {
+  position: relative;
+  list-style: none;
+}
+.read_more ul.no-indent li ul.sub li::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #0883A0;
+}
+
+.custom_listStyle ul.no-indent {
+  list-style: none;
+  padding-left: 20px;
+}
+.custom_listStyle ul.no-indent li {
+  position: relative;
+  list-style: none;
+}
+.custom_listStyle ul.no-indent li::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #9c2f78;
+  border-radius: 2px;
+}
+.custom_listStyle ul.no-indent li ul.sub {
+  list-style: none;
+  padding-left: 20px;
+}
+.custom_listStyle ul.no-indent li ul.sub li {
+  position: relative;
+  list-style: none;
+}
+.custom_listStyle ul.no-indent li ul.sub li::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #9c2f78;
+}
+
+.list_styleDisc ul.no-indent {
+  list-style: none;
+  padding-left: 20px;
+}
+.list_styleDisc ul.no-indent li {
+  position: relative;
+  list-style: none;
+}
+.list_styleDisc ul.no-indent li::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #000;
+}
 
 html.translated-ltr * {
   word-break: break-all;
@@ -597,4 +661,101 @@ html.translated-ltr * {
   font-size: 16px;
   transform: translateY(2px);
   display: inline-block;
+}
+
+.mega_menuOne {
+  max-width: 1700px;
+}
+
+.img_outer {
+  position: relative;
+}
+
+.img_btnContainer {
+  position: absolute !important;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 100% !important;
+  max-width: 800px !important;
+  height: 100% !important;
+}
+@media (max-width: 767px) {
+  .img_btnContainer {
+    max-width: 360px !important;
+  }
+}
+
+.img_btn {
+  position: absolute !important;
+  width: 207px !important;
+  height: 126px !important;
+  transform: rotateZ(-15deg);
+}
+.img_btn a {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .img_btn {
+    width: 165px !important;
+    height: 167px !important;
+    transform: none;
+  }
+}
+
+.img_btn1 {
+  bottom: 65px;
+  left: 14px;
+}
+@media (max-width: 767px) {
+  .img_btn1 {
+    bottom: unset;
+    left: 12px;
+    top: 0;
+  }
+}
+
+.img_btn2 {
+  bottom: 157px;
+  left: 204px;
+}
+@media (max-width: 767px) {
+  .img_btn2 {
+    top: unset;
+    left: 12px;
+    right: unset;
+    bottom: 0;
+  }
+}
+
+.img_btn3 {
+  top: 105px;
+  right: 205px;
+}
+@media (max-width: 767px) {
+  .img_btn3 {
+    bottom: unset;
+    left: unset;
+    top: 0;
+    right: 12px;
+  }
+}
+
+.img_btn4 {
+  top: 12px;
+  right: 12px;
+}
+@media (max-width: 767px) {
+  .img_btn4 {
+    top: unset;
+    right: 12px;
+    bottom: 0;
+  }
+}
+
+.mega_subMenu h2 {
+  width: -moz-max-content;
+  width: max-content;
 }/*# sourceMappingURL=style.css.map */

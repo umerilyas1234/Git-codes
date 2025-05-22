@@ -70,12 +70,20 @@ function loadTestCode9001() {
 
       //DEV 3/6.  Adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. ".form-horizontal_123456" or ".form_123456"
       const formUniqueSelector = ".form-horizontal"
+      let inputsSelectors = [];
+      let labelValues = [];
 
-      //DEV 4/6. Find the class or ID of the control inputs and place it below e.g. "#some_input_id", ".some_input_unique_classname", "input[name='FirstName']" etc...
-      const inputsSelectors = ["#ModalForm_nwf_fname", "#ModalForm_nwf_lname", "#ModalForm_nwf_email", "#ModalForm_account_type", "#ModalForm_nwf_nsrv", "#ModalForm_nwf_phone"]
+      if (window.location.href.includes("password_policy_product_tour.html") || window.location.href.includes("netwrix-usercube-product-tour.html")) {
+        inputsSelectors = ["#ModalForm_nwf_fname", "#ModalForm_nwf_lname", "#ModalForm_nwf_email", "#ModalForm_account_type", "#ModalForm_nwf_nsrv", "#ModalForm_nwf_phone"]
 
-      //DEV 5/6. Add Form labels below
-      const labelValues = ["First Name", "Last Name", "Work Email", "Organization Type", "# of Employees", "Phone"]
+        //DEV 5/6. Add Form labels below
+        labelValues = ["First Name", "Last Name", "Work Email", "Organization Type", "# of Employees", "Phone"]
+      } else if (window.location.href.includes("product_online_demo.html") || window.location.href.includes("netwrix_data_classification_online_demo.html") || window.location.href.includes("data_access_governance_online_demo.html")) {
+        inputsSelectors = ["#ModalForm_nwf_fname", "#ModalForm_nwf_lname", "#ModalForm_nwf_email", "#ModalForm_nwf_phone"]
+
+        //DEV 5/6. Add Form labels below
+        labelValues = ["First Name", "Last Name", "Work Email", "Phone"]
+      }
 
       const formLoaded = setInterval(() => {
         if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {

@@ -1,0 +1,317 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_3003 {
+
+  #header.normalHeader>div>ul>a,
+  #header.normalHeader>div>.MuiBox-root button,
+  #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span,
+  #header.normalHeader div[role=combobox]:has(svg[shape-rendering=geometricPrecision])~svg,
+  #header.normalHeader button[aria-label="Open menu"]>svg {
+    color: #212121;
+  }
+
+  // #header.normalHeader>div>ul {
+  //   transform: translateX(4px);
+  // }
+
+  #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) {
+    span {
+      margin-right: -3px;
+      font-family: "aktiv-grotesk";
+
+      @include mobile() {
+        margin-right: 0;
+      }
+
+      @include tablet() {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      margin-right: -2px;
+    }
+  }
+
+  @include tablet() {
+    #header.normalHeader {
+      >div {
+        >div {
+          &:nth-of-type(2) {
+            >div {
+              >div {
+                >div {
+                  padding-right: 29px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile() {
+    #header.normalHeader {
+      >div {
+        >div {
+          &:nth-of-type(2) {
+            >div {
+              >div {
+                >div {
+                  padding-right: 40px;
+                }
+
+                >svg {
+                  margin-right: 10.5px;
+                  margin-top: -1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1120px) {
+    #header.normalHeader>div {
+      >div {
+        &:nth-of-type(3) {
+          transform: translateX(13.5px);
+        }
+      }
+    }
+
+    #header>div>ul>a {
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        >div {
+          top: 59px;
+        }
+
+      }
+    }
+
+    #header.normalHeader>div>.MuiBox-root a[href*="https://app.airdna.co/data/us"] button {
+      background-color: #212121;
+      color: #fff;
+      border-color: #212121;
+      font-family: "aktiv-grotesk";
+      line-height: 24px;
+      height: 42px;
+      margin-right: -1.5px;
+      letter-spacing: 0.1px;
+      min-width: 142px;
+
+      &:hover {
+        background-color: transparent;
+        color: #212121;
+      }
+    }
+
+    #header.normalHeader a[href*="https://app.airdna.co/data/login"] button {
+      font-family: "aktiv-grotesk";
+      margin-right: -0.5px;
+      letter-spacing: 0.1px;
+      padding-right: 9px;
+      padding-left: 9px;
+
+      &:hover {
+        color: #3F51B5;
+        // background: #212121;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1119px) {
+    #header.normalHeader>div>.MuiBox-root a[href*="https://app.airdna.co/data/us"] button {
+      color: #fff;
+    }
+
+    #header.normalHeader>div>.MuiBox-root a[href*="https://app.airdna.co/data/us"] button:hover {
+      color: rgb(63, 81, 181);
+    }
+
+    #header.normalHeader>div>.MuiBox-root button {
+      color: rgb(63, 81, 181);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  #header.normalHeader>div {
+    >div {
+      @include tablet() {
+        &:nth-of-type(2) {
+          padding-right: 11px;
+        }
+      }
+    }
+  }
+
+  .header-logo-color {
+    @include mobile() {
+      max-width: 132px;
+    }
+
+    +img {
+      display: none;
+    }
+  }
+
+  #header {
+    >div {
+      max-width: 1235px;
+      height: 82px;
+
+      @include tablet() {
+        padding-left: 24px;
+        padding-right: 24px;
+        border: none;
+      }
+
+      @include mobile() {
+        padding-top: 0px;
+        padding-left: 24px;
+        padding-right: 24px;
+        border: none;
+      }
+    }
+  }
+
+  main {
+    >section {
+      &:first-child {
+        position: relative;
+
+        @include mobile() {
+          overflow: hidden;
+          background: #B0D5D7;
+        }
+
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          // transform: translateY(100px);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          &.mobile_vid {
+            display: none;
+          }
+
+          @include mobile() {
+            &:not(.mobile_vid) {
+              display: none;
+            }
+
+            &.mobile_vid {
+              display: block;
+            }
+
+            // top: unset;
+            // left: -183px;
+            // bottom: -245px;
+            // max-width: 606px;
+            // width: calc(100% + 245px);
+          }
+
+          // @media only screen and (min-width: 422px) and (max-width: 505px) {
+          //   left: -100px;
+          //   bottom: -245px;
+          //   max-width: 606px;
+          //   width: calc(100% + 245px);
+          // }
+
+          // @media only screen and (min-width: 506) and (max-width: 767px) {
+          //   max-width: 100%;
+          // }
+
+          &+div {
+            position: relative;
+            z-index: 1;
+            padding-top: 138.5px;
+
+            h1 {
+              color: #1F2020;
+              font-size: 48px;
+              font-weight: 700;
+              line-height: 56px;
+              padding-bottom: 13.5px;
+            }
+
+            @include mobile() {
+              padding-top: 115px;
+              gap: 35px;
+
+              h1 {
+                font-size: 28px;
+                line-height: 42px;
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

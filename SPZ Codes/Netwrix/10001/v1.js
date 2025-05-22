@@ -30,7 +30,7 @@ const bodyInterval10001 = setInterval(function () {
 										<li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Virgin.png"alt="Virgin"></li>
 										<li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Denso.png"alt="Denso"></li>
 										<li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Allianz.png"alt="Allianz"></li>
-										<li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Geneva-Foundation.png" alt="The Geneva Foundation"></li>
+										<li><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/logo.webp" alt="The Geneva Foundation"></li>
 								</ul>
 						</div>
 				</div>
@@ -429,7 +429,7 @@ const bodyInterval10001 = setInterval(function () {
 								<li>
 									<div class="why_netwrixData">
 										<div class="why_dataInner">
-											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-1.webp" width"104" height="40"
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/medical-center-logo_img.webp" width"104" height="40"
 														alt="Medical center clinic">
 											<p>Using Netwrix Auditor, Medical Center Clinic slashes IT workload by 40% and ensures HIPAA compliance.</p>
 										</div>
@@ -438,7 +438,7 @@ const bodyInterval10001 = setInterval(function () {
 								<li>
 									<div class="why_netwrixData">
 										<div class="why_dataInner">
-											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-2.webp" width"128" height="40"
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/tesica-logo_img.webp" width"128" height="40"
 														alt="Tesica services ltd">
 											<p>Netwrix Auditor helps Tesica Services investigate security incidents faster and reduce the risk of data exfiltration.</p>
 										</div>
@@ -447,7 +447,7 @@ const bodyInterval10001 = setInterval(function () {
 								<li>
 									<div class="why_netwrixData">
 										<div class="why_dataInner">
-											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/reviews-logo-3.webp" width"183" height="40"
+											<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10001/firts-national-bank-logo_img.webp" width"183" height="40"
 														alt="First national bank and trust company">
 											<p>First National Bank and Trust of Beloit prepares for audits in just one hour instead of one week.</p>
 										</div>

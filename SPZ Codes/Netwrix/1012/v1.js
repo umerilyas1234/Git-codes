@@ -56,13 +56,13 @@ const bodyInterval1012 = setInterval(function () {
 										</li>
 										<li>
 											<div class="feedback_midlleList_data">
-												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/tesica-logo_img.webp" alt="tesica logo" width="128" height="40"></span>
+												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/tesica-logo_img_1.webp" alt="tesica logo" width="128" height="40"></span>
 												<p>Netwrix Auditor helps Tesica Services investigate security incidents faster and reduce the risk of data exfiltration.</p>
 											</div>
 										</li>
 										<li>
 											<div class="feedback_midlleList_data">
-												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/firts-national-bank-logo_img.webp" alt="firts national bank logo" width="183" height="40"></span>
+												<span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1012/firts-national-bank-logo_img_1.webp" alt="firts national bank logo" width="183" height="40"></span>
 												<p>First National Bank and Trust of Beloit prepares for audits in just one hour instead of one week.</p>
 											</div>
 										</li>

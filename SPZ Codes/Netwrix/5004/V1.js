@@ -2,6 +2,11 @@ function loadTestCode5001() {
   if (!document.querySelector("body").classList.contains("spz_t5004")) {
     document.querySelector("body").classList.add("spz_t5004");
 
+    let meta = document.querySelector('meta[name="viewport"]');
+    if (meta) {
+      meta.setAttribute("content", meta.getAttribute("content") + ", user-scalable=no");
+    }
+
     setTimeout(() => {
       const triageData = [
         //Question 1 start
