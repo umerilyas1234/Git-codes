@@ -411,7 +411,7 @@ const bodyInterval10001 = setInterval(function () {
 								<strong>Datasheet</strong>
 								<h2>Netwrix Identity Threat Detection and Response Solutions</h2>
 								<p>Find out how Netwrix can help you detect, respond and recover from identity-based attacks.</p>
-								<a href="https://www.netwrix.com/download/Datasheets/Netwrix-Identity-Threat-Detection-and-Response-Solution-Datasheet.pdf" class="nwx-btn nwx-blue2-btn">Download Datasheet</a>
+								<a href="https://www.netwrix.com/download/Datasheets/Netwrix-Identity-Threat-Detection-and-Response-Solution-Datasheet.pdf" target="_blank" class="nwx-btn nwx-blue2-btn">Download Datasheet</a>
 							</div>
 						</div>
 					</div>

@@ -204,8 +204,9 @@ img {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  -moz-backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   padding: 7px 15.422px 7px 15px;
   text-align: center;
   color: #FFF;
@@ -248,15 +249,6 @@ img {
   border-color: #DF0000;
   margin-top: 20px !important;
 }
-.spz_11002 .spz_wrapper:has(#errorBodyForm.v-show) > div:nth-child(2) input {
-  background: #BE131C;
-}
-.spz_11002 .spz_wrapper:has(#errorBodyForm.v-show) > div:nth-child(2) input:hover {
-  background: #E63B44;
-}
-.spz_11002 .spz_wrapper:has(#errorBodyForm.v-show) > div:nth-child(2) input:focus, .spz_11002 .spz_wrapper:has(#errorBodyForm.v-show) > div:nth-child(2) input:active {
-  background: #BE131C;
-}
 .spz_11002 .spz_wrapper #errorBodyForm {
   bottom: 50px !important;
 }
@@ -264,6 +256,20 @@ img {
   .spz_11002 .spz_wrapper #errorBodyForm {
     bottom: 108px !important;
   }
+}
+.spz_11002 .spz_wrapper.er_1 #errorBodyForm {
+  font-size: 0;
+}
+.spz_11002 .spz_wrapper.er_1 #errorBodyForm::after {
+  content: "Work Email cannot be blank.";
+  font-size: 14px;
+}
+.spz_11002 .spz_wrapper.er_2 #errorBodyForm {
+  font-size: 0;
+}
+.spz_11002 .spz_wrapper.er_2 #errorBodyForm::after {
+  content: "Enter your work e-mail.";
+  font-size: 14px;
 }
 .spz_11002 .spz_wrapper > div:first-child {
   width: 279px;
@@ -373,6 +379,10 @@ img {
   text-decoration-thickness: 6.5%;
   text-underline-offset: 1.5px;
   border: none;
+  transition: all 0.3s ease-in-out;
+}
+.spz_11002 .spz_wrapper + .additional-block .security-info a:hover {
+  color: #0090FF;
 }
 @media (max-width: 767.98px) {
   .spz_11002 .spz_wrapper + .additional-block .security-info a {
@@ -382,12 +392,12 @@ img {
 .spz_11002 .breadcrumbs {
   display: none;
 }
+.spz_11002 .wrapper > .content {
+  display: none;
+}
 .spz_11002 .guide_detail {
   padding: 80.5px 0 69px;
   background-color: #fff;
-}
-.spz_11002 .guide_detail + .content {
-  display: none;
 }
 .spz_11002 .guide_detail .auto_container {
   max-width: 840px;

@@ -569,7 +569,7 @@ $mobile: 767px;
           line-height: 20px;
           margin-top: 2px;
           z-index: 2;
-
+          padding-left: 23px;
           @include tablet-pro() {
             padding-right: 0;
           }
@@ -783,6 +783,9 @@ $mobile: 767px;
     }
 
     .product_dt_modal_content {
+      @media only screen and (max-height: 700px){
+        align-items: flex-start;
+      }
       .product_dt_modal_c_form_container {
         max-width: 548px !important;
 
@@ -856,6 +859,7 @@ $mobile: 767px;
     &:hover {
       svg {
         background-color: #7B7B7B;
+        fill: #7b7b7b;
         border-radius: 4px;
       }
     }
@@ -865,6 +869,36 @@ $mobile: 767px;
       svg {
         background-color: #464646;
         border-radius: 4px;
+      }
+    }
+  }
+
+  #productDTModal {
+    &.req_demoModal {
+      .question-superheading {
+        font-size: 0;
+
+        &::after {
+          content: 'Request Demo';
+          font-size: 32px;
+          @include mobile() {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &:not(.req_demoModal) {
+      .question-superheading {
+        font-size: 0;
+
+        &::after {
+          content: 'Get Your Free Trial';
+          font-size: 32px;
+          @include mobile() {
+            font-size: 24px;
+          }
+        }
       }
     }
   }

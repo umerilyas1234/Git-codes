@@ -82,11 +82,12 @@ const bodyInterval7004 = setInterval(function () {
       document.querySelector('.new-hero-section-wrapper .left').insertAdjacentElement('afterbegin', document.querySelector('#formjumplink .text-image-hero h1'));
       document.querySelector('.new-hero-section-wrapper .left').insertAdjacentHTML('afterbegin', `<div class="eyebrow text-color-orange align-center-mobile">BILL SPEND & EXPENSE</div>`);
       document.querySelector('.new-hero-section-wrapper .right picture').innerHTML = document.querySelector('#formjumplink .text-image-hero > div > div > img').outerHTML;
+      document.querySelector('.new-hero-section-wrapper .right picture img').setAttribute("alt", "spend&expense_product");
     } else if (window.location.href.includes("/product/virtual-cards")) {
       document.querySelector('.new-hero-section').classList.add("virtual-cards");
       document.querySelector('.new-hero-section-wrapper .left').insertAdjacentElement('afterbegin', document.querySelector('#formjumplink .text-size-medium'));
       document.querySelector('.new-hero-section-wrapper .left').insertAdjacentElement('afterbegin', document.querySelector('#formjumplink h1'));
-      document.querySelector('.new-hero-section-wrapper .left').insertAdjacentElement('afterbegin', document.querySelector('#formjumplink .eyebrow'));
+      document.querySelector('.new-hero-section-wrapper .left').insertAdjacentElement('afterbegin', document.querySelector('#formjumplink .text-weight-bold.text-color-orange'));
       document.querySelector('.new-hero-section-wrapper .right').innerHTML = `
         <picture>
           <source media="(max-width:767.98px)"
@@ -157,9 +158,9 @@ const bodyInterval7004 = setInterval(function () {
         // change position
         document.querySelector('#lastName').closest('.spz-input-wrapper').insertAdjacentElement('afterend', document.querySelector('#email').closest('.spz-input-wrapper'));
         document.querySelector('#email').closest('.spz-input-wrapper').insertAdjacentElement('afterend', document.querySelector('#name').closest('.spz-input-wrapper'));
+        document.querySelector('#numberOfEmployees').closest('.spz-input-wrapper').insertAdjacentElement('beforeBegin', document.querySelector('#signupType .spz-input-wrapper.signupType'));
         setTimeout(() => {
-          document.querySelector('#businessType').closest('.spz-input-wrapper').insertAdjacentElement('afterend', document.querySelector('#numberOfEmployees').closest('.spz-input-wrapper'));
-
+          document.querySelector('.spz-input-wrapper.signupType').insertAdjacentElement('afterend', document.querySelector('#numberOfEmployees').closest('.spz-input-wrapper'));
         }, 100);
         //  document.querySelector('.spz_7004 .popup-wrapper ').insertAdjacentElement("beforeend",document.querySelector('.spz_7004 .g-recaptcha'))
 
@@ -188,21 +189,21 @@ const bodyInterval7004 = setInterval(function () {
         }
 
         // adding Business Type
-        document.querySelector('.spz_7004 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("afterend", `
-          <div class="spz-input-wrapper business-type">
-            <select class="business-type" id="businessType" required></select>
-            <label for="businessType">Business Type</label> 
-            <div class="arrow"></div>
-          </div>
-        `)
-        for (let i = 0; i < document.querySelectorAll('.spz_7004 #signupType .form-option-field span').length; i++) {
-          document.querySelector('.spz_7004 #businessType').insertAdjacentHTML("beforeend", `
-            <option value="${document.querySelectorAll('.spz_7004 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz_7004 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
-          `)
-        }
-        document.querySelector('.spz_7004 #businessType').addEventListener("change", function () {
-          document.querySelectorAll('.spz_7004 #signupType .form-option-field')[document.querySelector('.spz_7004 #businessType').selectedIndex].querySelector('input').click()
-        })
+        // document.querySelector('.spz_7004 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("afterend", `
+        //   <div class="spz-input-wrapper business-type">
+        //     <select class="business-type" id="businessType" required></select>
+        //     <label for="businessType">Business Type</label> 
+        //     <div class="arrow"></div>
+        //   </div>
+        // `)
+        // for (let i = 0; i < document.querySelectorAll('.spz_7004 #signupType .form-option-field span').length; i++) {
+        //   document.querySelector('.spz_7004 #businessType').insertAdjacentHTML("beforeend", `
+        //     <option value="${document.querySelectorAll('.spz_7004 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz_7004 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
+        //   `)
+        // }
+        // document.querySelector('.spz_7004 #businessType').addEventListener("change", function () {
+        //   document.querySelectorAll('.spz_7004 #signupType .form-option-field')[document.querySelector('.spz_7004 #businessType').selectedIndex].querySelector('input').click()
+        // })
         //disclaimer 
         document.querySelector('.spz_7004 .button-disclaimer').innerHTML = `
           By continuing, you agree to BILL's <a href="/legal/terms-of-service" target="_blank" class="text-size-small no-wrap">Terms of Service</a> and&nbsp;<a href="/privacy" target="_blank" class="text-size-small no-wrap">Privacy Notice</a>.
@@ -230,9 +231,9 @@ const bodyInterval7004 = setInterval(function () {
           this.value = this.value.replace(/\D/g, '');
         });
         //remove unecessary select
-        for (let x = 0; x < document.querySelectorAll('.spz_7004 #accountingSoftwareContainer select').length; x++) {
-          document.querySelectorAll('.spz_7004 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
-        }
+        // for (let x = 0; x < document.querySelectorAll('.spz_7004 #accountingSoftwareContainer select').length; x++) {
+        //   document.querySelectorAll('.spz_7004 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
+        // }
         //browser detection
         let userAgent = navigator.userAgent;
         let browser;
@@ -257,7 +258,7 @@ const bodyInterval7004 = setInterval(function () {
         });
 
         // hide fields on start
-        const fieldsToHide = ['#Job-Title', '#phone', '#numberOfEmployees', '#businessType', "#accountingSoftware"];
+        const fieldsToHide = ['#Job-Title', '#phone', '#numberOfEmployees', '#signupType', "#accountingSoftware"];
         fieldsToHide.forEach(selector => {
           if (document.querySelector(selector)) {
             document.querySelector(selector).closest('.spz-input-wrapper').classList.add('hide');
@@ -276,7 +277,7 @@ const bodyInterval7004 = setInterval(function () {
             // Check if all required fields are filled and email is valid
             if (firstName !== '' && lastName !== '' && email !== '' && name !== '' && emailValid) {
               // Select the elements to unhide
-              const fieldsToShow = ['#Job-Title', '#phone', '#numberOfEmployees', '#businessType', '#accountingSoftware'];
+              const fieldsToShow = ['#Job-Title', '#phone', '#numberOfEmployees', '#signupType', '#accountingSoftware'];
 
               fieldsToShow.forEach(selector => {
                 if (document.querySelector(selector)) {

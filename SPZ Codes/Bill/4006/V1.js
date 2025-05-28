@@ -280,20 +280,21 @@ const bodyInterval4006 = setInterval(function () {
         }
         // change position
         document.querySelector('.spz-4006 .spz-input-wrapper.firstName').insertAdjacentElement('beforebegin', document.querySelector('.spz-4006 .spz-input-wrapper.email'))
+        document.querySelector('.spz-4006 .spz-input-wrapper.numberOfEmployees').insertAdjacentElement('afterend', document.querySelector('#form-panel-3 .signupType'));
         if (document.querySelector('.spz-4006 .g-recaptcha')) {
           document.querySelector('.spz-4006 .popup-wrapper ').insertAdjacentElement("beforeend", document.querySelector('.spz-4006 .g-recaptcha'))
         }
         //select condition checking
-        const checkSelectCondition = () => {
-          for (let i = 0; i < document.querySelectorAll('.spz-4006 .spz-input-wrapper').length; i++) {
-            if (document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].querySelector('.hide')) {
-              document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].classList.add('hide')
-            } else {
-              document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].classList.remove('hide')
-            }
-          }
-        }
-        checkSelectCondition()
+        // const checkSelectCondition = () => {
+        //   for (let i = 0; i < document.querySelectorAll('.spz-4006 .spz-input-wrapper').length; i++) {
+        //     if (document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].querySelector('.hide')) {
+        //       document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].classList.add('hide')
+        //     } else {
+        //       document.querySelectorAll('.spz-4006 .spz-input-wrapper')[i].classList.remove('hide')
+        //     }
+        //   }
+        // }
+        // checkSelectCondition()
         //select arrow
         for (let x = 0; x < document.querySelectorAll('.spz-4006 form select').length; x++) {
           document.querySelectorAll('.spz-4006 form select')[x].parentNode.insertAdjacentHTML("beforeend", `

@@ -193,17 +193,28 @@ $mobile: 767.98px;
 }
 
 .spz-4006 .spz-form-wrap .spz-input-wrapper.email,
-.spz-4006 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
+.spz-4006 .spz-form-wrap .spz-input-wrapper.accountingSoftware,
+.spz-4006 .spz-form-wrap .spz-input-wrapper.msDynamicsOption {
   width: 100%;
 }
 
 .spz-4006 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
-  margin-top: -8px;
+  // margin-top: -8px;
   margin-bottom: 8px;
+}
+.spz-4006 .spz-form-wrap .spz-input-wrapper.msDynamicsOption {
+  margin-top: -8px;
+}
+.spz-4006 .spz-form-wrap .spz-input-wrapper.msDynamicsOption:has(#msDynamicsOption.hide){
+  label,
+  .arrow{
+    display: none;
+  }
 }
 
 .spz-4006 .spz-form-wrap .spz-input-wrapper.firstName,
-.spz-4006 .spz-form-wrap .spz-input-wrapper.phone {
+.spz-4006 .spz-form-wrap .spz-input-wrapper.phone,
+.spz-4006 .spz-form-wrap .spz-input-wrapper.numberOfEmployees {
   margin-right: 12px;
 }
 
@@ -1244,5 +1255,17 @@ $mobile: 767.98px;
         padding: 69px 0 48px;
       }
     }
+  }
+}
+/* css update */
+.spz-4006 #form-panel-3 {
+  display: none;
+}
+.spz-4006 .form-signup.is-simple{
+  width: 100%;
+}
+.spz-4006.v2 .why_us{
+  @include mobile(){
+    padding-bottom: 54px;
   }
 }

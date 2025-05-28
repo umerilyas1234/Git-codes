@@ -288,64 +288,6 @@ function loadTestCode5001() {
             }
           });
         }
-
-
-        window.addEventListener("click", function (e) {
-          if (e.target.matches('.button-free-trial') || e.target.matches('.free_trial_button')) {
-            updatestatesTwo();
-            updatesteps();
-          } else if (e.target.matches('.button-request-demo') || e.target.matches('.request_demo_button') || e.target.matches('.product_epp_buttons_button_demo') || e.target.closest('.product_epp_buttons_button_demo') || e.target.closest('.product_epp_buttons_button_link_menu')) {
-            updateStates();
-            updatesteps();
-          }
-        });
-        function updateStates() {
-          document.querySelectorAll('.question-superheading').forEach((item) => {
-            item.textContent = 'Request Demo';
-          });
-          setTimeout(() => {
-            document.querySelector('#productDTModal .spz-form-wrap .question-superheading').textContent = 'Request Demo';
-            document.querySelector('#productDTModal .cf-button').value = 'Request Demo';
-            document.querySelector('#productDTModal .cf-button').textContent = 'Request Demo';
-            if (!document.querySelector('#productDTModal .cf-button').classList.contains('req_demo')) {
-              document.querySelector('#productDTModal .cf-button').classList.add('req_demo');
-            }
-          }, 1000);
-        }
-        function updatestatesTwo() {
-          document.querySelectorAll('.question-superheading').forEach((item) => {
-            item.textContent = 'Get Your Free Trial';
-          });
-          setTimeout(() => {
-            document.querySelector('#productDTModal .spz-form-wrap .question-superheading').textContent = 'Get Your Free Trial';
-            document.querySelector('#productDTModal .cf-button').value = 'Get my free trial';
-            document.querySelector('#productDTModal .cf-button').textContent = 'Get my free trial';
-            if (document.querySelector('#productDTModal .cf-button.req_demo')) {
-              document.querySelector('#productDTModal .cf-button').classList.remove('req_demo');
-            }
-          }, 1000);
-          // document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').textContent = 'Get my free trial';
-        }
-        function updatesteps() {
-          document.querySelectorAll('.question-item').forEach((item) => {
-            item.classList.add('spz-hidden');
-          });
-          document.querySelectorAll('.progress-item').forEach((item) => {
-            item.classList.remove('completed', 'active');
-          });
-          document.querySelector('.progress-item:first-child').classList.add('active');
-          document.querySelector('.question-form').classList.add('spz-hidden');
-          document.querySelector('.question-1').classList.remove('spz-hidden');
-          setTimeout(() => {
-            document.querySelectorAll('.spz-form-wrap .spz-input-wrap').forEach(wrapper => {
-              const input = wrapper.querySelector('input');
-              if (input && input.value.length === 0) {
-                wrapper.classList.remove("has-value", "focused", "has-error");
-              }
-            });
-          }, 1000);
-        }
-
       }
 
       setTimeout(() => {
@@ -412,6 +354,68 @@ function loadTestCode5001() {
 
       prefillForm();
     }, 1000);
+
+    window.addEventListener("click", function (e) {
+      console.log(e.target);
+      if (e.target.matches('.button-free-trial') || e.target.matches('.free_trial_button') || e.target.matches('.product_top_buttons a:last-child')) {
+        updatestatesTwo();
+        updatesteps();
+      } else if (e.target.matches('.button-request-demo') || e.target.matches('.request_demo_button') || e.target.matches('.product_top_buttons a:first-child') || e.target.matches('.product_epp_buttons_button_demo') || e.target.closest('.product_epp_buttons_button_demo') || e.target.closest('.product_epp_buttons_button_link_menu')) {
+        updateStates();
+        updatesteps();
+      }
+    });
+
+    function updateStates() {
+      console.log('updateStates');
+      document.querySelector('#productDTModal').classList.add('req_demoModal');
+      setTimeout(() => {
+        document.querySelector('#productDTModal .cf-button').value = 'Request Demo';
+        document.querySelector('#productDTModal .cf-button').textContent = 'Request Demo';
+        if (!document.querySelector('#productDTModal .cf-button').classList.contains('req_demo')) {
+          document.querySelector('#productDTModal .cf-button').classList.add('req_demo');
+        }
+      }, 1000);
+    }
+
+    function updatestatesTwo() {
+      console.log('updatestatesTwo');
+      document.querySelector('#productDTModal').classList.remove('req_demoModal');
+      setTimeout(() => {
+        document.querySelector('#productDTModal .cf-button').value = 'Get my free trial';
+        document.querySelector('#productDTModal .cf-button').textContent = 'Get my free trial';
+        if (document.querySelector('#productDTModal .cf-button.req_demo')) {
+          document.querySelector('#productDTModal .cf-button').classList.remove('req_demo');
+        }
+      }, 1000);
+      // document.querySelector('#modalFormRequestContainer .spz-form-wrap form .cf-button').textContent = 'Get my free trial';
+    }
+
+    function updatesteps() {
+      document.querySelectorAll('.question-item').forEach((item) => {
+        item.classList.add('spz-hidden');
+      });
+      document.querySelectorAll('.progress-item').forEach((item) => {
+        item.classList.remove('completed', 'active');
+      });
+      if (document.querySelector('.progress-item:first-child')) {
+        document.querySelector('.progress-item:first-child').classList.add('active');
+      }
+      if (document.querySelector('.question-form')) {
+        document.querySelector('.question-form').classList.add('spz-hidden');
+      }
+      if (document.querySelector('.question-1')) {
+        document.querySelector('.question-1').classList.remove('spz-hidden');
+      }
+      setTimeout(() => {
+        document.querySelectorAll('.spz-form-wrap .spz-input-wrap').forEach(wrapper => {
+          const input = wrapper.querySelector('input');
+          if (input && input.value.length === 0) {
+            wrapper.classList.remove("has-value", "focused", "has-error");
+          }
+        });
+      }, 1000);
+    }
 
     // Clear saved values after form submission
     // document.getElementById('#modalFormRequestContainer').addEventListener('submit', function () {

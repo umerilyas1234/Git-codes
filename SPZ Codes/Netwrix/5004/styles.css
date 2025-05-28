@@ -439,6 +439,7 @@
   line-height: 20px;
   margin-top: 2px;
   z-index: 2;
+  padding-left: 23px;
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   .spz_t5004 #productDTModal #modalFormRequestContainer .spz-form-wrap [class*=cf-error-] {
@@ -613,6 +614,11 @@
 .spz_t5004 #productDTModal .cf-privacy-policy-notice br {
   display: inline-block !important;
 }
+@media only screen and (max-height: 700px) {
+  .spz_t5004 #productDTModal .product_dt_modal_content {
+    align-items: flex-start;
+  }
+}
 .spz_t5004 #productDTModal .product_dt_modal_content .product_dt_modal_c_form_container {
   max-width: 548px !important;
 }
@@ -655,9 +661,34 @@
 }
 .spz_t5004 .product_dt_modal_h_close:hover svg {
   background-color: #7B7B7B;
+  fill: #7b7b7b;
   border-radius: 4px;
 }
 .spz_t5004 .product_dt_modal_h_close:active svg, .spz_t5004 .product_dt_modal_h_close:focus svg {
   background-color: #464646;
   border-radius: 4px;
+}
+.spz_t5004 #productDTModal.req_demoModal .question-superheading {
+  font-size: 0;
+}
+.spz_t5004 #productDTModal.req_demoModal .question-superheading::after {
+  content: "Request Demo";
+  font-size: 32px;
+}
+@media (max-width: 767px) {
+  .spz_t5004 #productDTModal.req_demoModal .question-superheading::after {
+    font-size: 24px;
+  }
+}
+.spz_t5004 #productDTModal:not(.req_demoModal) .question-superheading {
+  font-size: 0;
+}
+.spz_t5004 #productDTModal:not(.req_demoModal) .question-superheading::after {
+  content: "Get Your Free Trial";
+  font-size: 32px;
+}
+@media (max-width: 767px) {
+  .spz_t5004 #productDTModal:not(.req_demoModal) .question-superheading::after {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=styles.css.map */

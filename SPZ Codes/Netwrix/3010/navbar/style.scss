@@ -1,0 +1,133 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1399px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.spz_3010_navbar {
+
+  .desktop-navigation {
+    .new_pricing {
+      .navbar-dropdown {
+        width: 195px;
+      }
+
+      &.is-hoverable.narrow-menu .navbar-dropdown {
+        padding: 24px 32px;
+        background: #F3F4FA;
+
+        li {
+          border: none;
+
+          &:not(:last-child) {
+            margin-bottom: 12px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            border: none;
+            color: #0068DA;
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              color: #354556;
+            }
+
+            img {
+              width: 20px;
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-navigation {
+    .mobile-nav-menu {
+      .navmenu-buy{
+        display: none;
+      }
+      .navmenu-buy-2 {
+        >a {
+          color: #354556;
+        }
+        >ul{
+          >li{
+            padding: 0;
+            a{
+              display: flex;
+              align-items: center;
+              color: #354556;
+              padding: 15px 28px;
+              img{
+                width: 20px;
+                height: 20px;
+                max-height: unset;
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

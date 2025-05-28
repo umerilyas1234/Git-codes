@@ -4,7 +4,7 @@ if (window.location.href.includes("/product/credit") || window.location.href.inc
       document.querySelector('body').classList.add('spz_t7001');
       // Insert the new hero section
       localStorage.setItem('bdcAbTest15', '7004-con');
-      // debugger;
+      debugger;
       var formHeading = document.querySelector('form .heading-style-h4');
       formHeading.textContent = 'Get a demo';
       // formHeading.insertAdjacentHTML('afterend', `<div class="ratings">
@@ -59,23 +59,21 @@ if (window.location.href.includes("/product/credit") || window.location.href.inc
       // change position
       document.querySelector('#lastName').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#email').closest('.form-field-wrap'));
       document.querySelector('#email').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#name').closest('.form-field-wrap'));
-      document.querySelector('#numberOfEmployees').closest('.form-field-wrap').insertAdjacentHTML('afterend', `<div class="form-field-wrap signupType"><label for="signupType">Business Type</label></div>`);
-      document.querySelector('.form-field-wrap.signupType').insertAdjacentElement('afterBegin', document.querySelector('select#signupType'));
 
       // adding Business Type 
-      // document.querySelector('.form-options').insertAdjacentHTML("beforebegin", `<div class="form-field-wrap business-type hasValue">
-      //       <select class="business-type" id="businessType" required></select>
-      //           <label for="businessType">Business Type</label> 
-      //       </div>`);
+      document.querySelector('.form-options').insertAdjacentHTML("beforebegin", `<div class="form-field-wrap business-type hasValue">
+            <select class="business-type" id="businessType" required></select>
+                <label for="businessType">Business Type</label> 
+            </div>`);
 
-      // for (let i = 0; i < document.querySelectorAll('#signupType .form-option-field span').length; i++) {
-      //   document.querySelector('#businessType').insertAdjacentHTML("beforeend", `
-      //           <option value="${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}</option>  
-      //       `)
-      // }
-      // document.querySelector('#businessType').addEventListener("change", function () {
-      //   document.querySelectorAll('#signupType .form-option-field')[document.querySelector('#businessType').selectedIndex].querySelector('input').click()
-      // })
+      for (let i = 0; i < document.querySelectorAll('#signupType .form-option-field span').length; i++) {
+        document.querySelector('#businessType').insertAdjacentHTML("beforeend", `
+                <option value="${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}</option>  
+            `)
+      }
+      document.querySelector('#businessType').addEventListener("change", function () {
+        document.querySelectorAll('#signupType .form-option-field')[document.querySelector('#businessType').selectedIndex].querySelector('input').click()
+      })
 
       //select arrow
       for (let x = 0; x < document.querySelectorAll('form.form-wrapper select').length; x++) {
@@ -91,7 +89,7 @@ if (window.location.href.includes("/product/credit") || window.location.href.inc
       //disclaimer 
       document.querySelector('.button-disclaimer').innerHTML = ` By continuing, you agree to BILL's <a href="/legal/terms-of-service" target="_blank" class="text-size-small no-wrap">Terms of Service</a> and&nbsp;<a href="/privacy" target="_blank" class="text-size-small no-wrap">Privacy Notice</a>.`
 
-      const fieldsToHide = ['#Job-Title', '#phone', '#numberOfEmployees', '#signupType'];
+      const fieldsToHide = ['#Job-Title', '#phone', '#numberOfEmployees', '#businessType'];
       fieldsToHide.forEach(selector => {
         document.querySelector(selector).closest('.form-field-wrap').classList.add('hide');
       });
@@ -112,7 +110,7 @@ if (window.location.href.includes("/product/credit") || window.location.href.inc
           // Check if all required fields are filled and email is valid
           if (firstName !== '' && lastName !== '' && email !== '' && name !== '' && emailValid) {
             // Select the elements to unhide
-            const fieldsToShow = ['#Job-Title', '#phone', '#numberOfEmployees', '#signupType'];
+            const fieldsToShow = ['#Job-Title', '#phone', '#numberOfEmployees', '#businessType'];
 
             fieldsToShow.forEach(selector => {
               const fieldWrap = document.querySelector(selector).closest('.form-field-wrap');
@@ -276,31 +274,27 @@ if (window.location.href.includes("/product/accounts-payable")) {
 
 
       // adding Business Type 
-      // document.querySelector('.form-options').insertAdjacentHTML("beforebegin", `<div class="form-field-columns">
-      //     <div class="form-field-wrap business-type hasValue">
-      //       <select class="business-type" id="businessType" required></select>
-      //           <label for="businessType">Business Type</label> 
-      //       </div>
-      //   </div>`);
+      document.querySelector('.form-options').insertAdjacentHTML("beforebegin", `<div class="form-field-columns">
+          <div class="form-field-wrap business-type hasValue">
+            <select class="business-type" id="businessType" required></select>
+                <label for="businessType">Business Type</label> 
+            </div>
+        </div>`);
 
       // change position
       document.querySelector('#lastName').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#email').closest('.form-field-wrap'));
       document.querySelector('#email').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#name').closest('.form-field-wrap'));
       document.querySelector('#phone').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#numberOfEmployees').closest('.form-field-wrap'));
-      // document.querySelector('#businessType').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#accountingSoftware').closest('.form-field-wrap'));
-      document.querySelector('#numberOfEmployees').closest('.form-field-wrap').insertAdjacentHTML('afterend', `<div class="form-field-wrap signupType"><label for="signupType">Business Type</label></div>`);
-      document.querySelector('.form-field-wrap.signupType').insertAdjacentElement('afterBegin', document.querySelector('select#signupType'));
-      document.querySelector('#signupType').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#accountingSoftware').closest('#accountingSoftwareContainer'));
-      document.querySelector('#accountingSoftwareContainer').classList.add('form-field-wrap');
+      document.querySelector('#businessType').closest('.form-field-wrap').insertAdjacentElement('afterend', document.querySelector('#accountingSoftware').closest('.form-field-wrap'));
 
-      // for (let i = 0; i < document.querySelectorAll('#signupType .form-option-field span').length; i++) {
-      //   document.querySelector('#businessType').insertAdjacentHTML("beforeend", `
-      //           <option value="${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}</option>  
-      //       `)
-      // }
-      // document.querySelector('#businessType').addEventListener("change", function () {
-      //   document.querySelectorAll('#signupType .form-option-field')[document.querySelector('#businessType').selectedIndex].querySelector('input').click()
-      // })
+      for (let i = 0; i < document.querySelectorAll('#signupType .form-option-field span').length; i++) {
+        document.querySelector('#businessType').insertAdjacentHTML("beforeend", `
+                <option value="${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('#signupType .form-option-field')[i].querySelector('span').textContent}</option>  
+            `)
+      }
+      document.querySelector('#businessType').addEventListener("change", function () {
+        document.querySelectorAll('#signupType .form-option-field')[document.querySelector('#businessType').selectedIndex].querySelector('input').click()
+      })
 
       //select arrow
       for (let x = 0; x < document.querySelectorAll('form.form-wrapper select').length; x++) {
@@ -320,7 +314,7 @@ if (window.location.href.includes("/product/accounts-payable")) {
       //disclaimer 
       document.querySelector('.button-disclaimer').innerHTML = ` By continuing, you agree to BILL's <a href="/legal/terms-of-service" target="_blank" class="text-size-small no-wrap">Terms of Service</a> and&nbsp;<a href="/privacy" target="_blank" class="text-size-small no-wrap">Privacy Notice</a>.`
 
-      const fieldsToHide = ['#phone', '#accountingSoftware', '#signupType', "#numberOfEmployees"];
+      const fieldsToHide = ['#phone', '#accountingSoftware', '#businessType', "#numberOfEmployees"];
       fieldsToHide.forEach(selector => {
         document.querySelector(selector).closest('.form-field-wrap').classList.add('hide');
       });
@@ -341,7 +335,7 @@ if (window.location.href.includes("/product/accounts-payable")) {
           // Check if all required fields are filled and email is valid
           if (firstName !== '' && lastName !== '' && email !== '' && name !== '' && emailValid) {
             // Select the elements to unhide
-            const fieldsToShow = ['#phone', '#accountingSoftware', '#signupType', "#numberOfEmployees"];
+            const fieldsToShow = ['#phone', '#accountingSoftware', '#businessType', "#numberOfEmployees"];
 
             fieldsToShow.forEach(selector => {
               const fieldWrap = document.querySelector(selector).closest('.form-field-wrap');
