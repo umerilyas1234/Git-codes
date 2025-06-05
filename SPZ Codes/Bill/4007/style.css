@@ -118,15 +118,27 @@
   display: none;
 }
 .spz-4007 .spz-form-wrap .spz-input-wrapper.email,
-.spz-4007 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
+.spz-4007 .spz-form-wrap .spz-input-wrapper.accountingSoftware, 
+.spz-4007 .spz-form-wrap .spz-input-wrapper.msDynamicsOption {
   width: 100%;
 }
 .spz-4007 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
-  margin-top: -8px;
+  /* margin-top: -8px; */
   margin-bottom: 8px;
 }
+.spz-4007 .spz-form-wrap .spz-input-wrapper.msDynamicsOption {
+  margin-top: -8px;
+}
+.spz-4007 .spz-form-wrap .spz-input-wrapper.msDynamicsOption:has(.hide.w-select) label,
+.spz-4007 .spz-form-wrap .spz-input-wrapper.msDynamicsOption:has(.hide.w-select) .arrow{
+  display: none;
+}
+.spz-4007 #form-panel-3 {
+  display: none;
+}
 .spz-4007 .spz-form-wrap .spz-input-wrapper.firstName,
-.spz-4007 .spz-form-wrap .spz-input-wrapper.phone {
+.spz-4007 .spz-form-wrap .spz-input-wrapper.phone,
+.spz-4007 .spz-form-wrap .spz-input-wrapper.numberOfEmployees {
   margin-right: 12px;
 }
 .spz-4007 .spz-form-wrap .spz-input-wrapper label {

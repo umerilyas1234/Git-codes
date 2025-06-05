@@ -531,7 +531,7 @@ img {
     }
   }
 
-  .two-way-navigation{
+  .two-way-navigation.with-related-topics {
     padding-top: 74px;
 
     @include mobile() {

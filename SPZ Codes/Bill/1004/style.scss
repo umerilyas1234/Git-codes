@@ -125,7 +125,8 @@ $mobile: 767px;
   display: none;
 }
 
-.spz-1002 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
+.spz-1002 .spz-form-wrap .spz-input-wrapper.accountingSoftware,
+.spz-1002 .spz-form-wrap .spz-input-wrapper.msDynamicsOption {
   width: 100%;
 }
 
@@ -139,7 +140,12 @@ $mobile: 767px;
 .spz-1002 .spz-form-wrap .form-options {
   display: none;
 }
-
+.spz-1002 .spz-form-wrap .spz-input-wrapper.msDynamicsOption:has(#msDynamicsOption.hide){
+  label,
+  .arrow{
+    display: none;
+  }
+}
 .spz-1002 .spz-form-wrap .spz-input-wrapper label {
   position: absolute;
   overflow: hidden;
@@ -1341,6 +1347,11 @@ $mobile: 767px;
 }
 
 .spz_t1004 {
+  .spz-input-wrapper{
+    &.null{
+      display: none;
+    }
+  }
   .signup-column {
     grid-row-gap: 0;
     grid-column-gap: 0;

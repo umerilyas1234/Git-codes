@@ -427,11 +427,11 @@ img {
 .spz_11002 .guide_detailInner p:not(:last-child) {
   margin-bottom: 40px;
 }
-.spz_11002 .two-way-navigation {
+.spz_11002 .two-way-navigation.with-related-topics {
   padding-top: 74px;
 }
 @media (max-width: 767.98px) {
-  .spz_11002 .two-way-navigation {
+  .spz_11002 .two-way-navigation.with-related-topics {
     padding-top: 54px;
   }
 }/*# sourceMappingURL=style.css.map */

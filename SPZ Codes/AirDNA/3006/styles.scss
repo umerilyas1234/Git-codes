@@ -1,0 +1,223 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_3006 {
+  .case_studySection {
+    padding: 78px 0;
+    background: #EFF1FD;
+    margin-top: 2rem;
+    margin: 2rem -1rem 0;
+    @include tablet(){
+      padding: 56px 0;
+    }
+    @include mobile(){
+      padding: 32px 0;
+    }
+    .splide__list{
+      >li{
+        padding: 0 8px;
+        @include mobile(){
+          padding: 0 6px;
+        }
+      }
+    }
+  }
+
+  .logo_sliderData {
+    width: 100%;
+  }
+
+  .slider_main {
+    ul {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      margin: 0 -8px;
+      @include mobile(){
+        margin: 0 -6px;
+      }
+
+      li {
+        padding: 0 8px;
+        @include mobile(){
+          padding: 0 6px;
+        }
+        &:first-child{
+          .slider_data{
+            max-width: 305px;
+            @include mobile(){
+              .slider_left picture img{
+                max-width: 94px;
+              }
+            }
+          }
+        }
+        &:nth-child(2){
+          .slider_data{
+            max-width: 249px;
+            @include mobile(){
+              .slider_left picture img{
+                max-width: 58px;
+              }
+            }
+          }
+        }
+        &:nth-child(3){
+          .slider_data{
+            max-width: 277px;
+            @include mobile(){
+              .slider_left picture img{
+                max-width: 99px;
+              }
+            }
+          }
+        }
+        &:nth-child(4){
+          .slider_data{
+            @include mobile(){
+              .slider_left picture img{
+                max-width: 76px;
+              }
+            }
+          }
+        }
+        &:last-child{
+          .slider_data{
+            max-width: 286px;
+            @include mobile(){
+              .slider_left picture img{
+                max-width: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slider_data {
+    border-radius: 6px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    @include mobile(){
+      padding: 11px 0;
+    }
+  }
+
+  .slider_left {
+    picture {
+      display: inline-block;
+      padding: 13px 16px 13px 15px;
+
+      img {
+        display: inline-block;
+        @include mobile(){
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .slideR_right {
+    padding: 0 16px 0 15px;
+    border-left: 1px solid #E5E5E5;
+
+    strong {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #212121;
+      text-align: right;
+      font-family: "aktiv-grotesk";
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      padding-bottom: 2px;
+      white-space: nowrap;
+      transform: translateY(-1px);
+      img {
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 4px;
+        margin-top: 2px;
+      }
+      @include mobile(){
+        font-size: 16px;
+        line-height: 24px;
+        transform: translateY(0px)translateX(1px);
+        img{
+          width: 16px;
+          height: 16px;
+          margin-right: 3.5px;
+          margin-top: -0.5px;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      color: #666;
+      text-align: right;
+      font-family: "aktiv-grotesk";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      transform: translateX(-0.5px);
+      @include mobile(){
+        transform: translateX(-1.5px);
+      }
+    }
+  }
+}

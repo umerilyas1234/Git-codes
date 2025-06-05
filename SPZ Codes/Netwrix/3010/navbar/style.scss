@@ -54,6 +54,9 @@ img {
 }
 
 .spz_3010_navbar {
+  .navbar-start>a[href="how_to_buy.html"] {
+    display: none;
+  }
 
   .desktop-navigation {
     .new_pricing {
@@ -103,22 +106,26 @@ img {
 
   .mobile-navigation {
     .mobile-nav-menu {
-      .navmenu-buy{
+      .navmenu-buy {
         display: none;
       }
+
       .navmenu-buy-2 {
         >a {
           color: #354556;
         }
-        >ul{
-          >li{
+
+        >ul {
+          >li {
             padding: 0;
-            a{
+
+            a {
               display: flex;
               align-items: center;
               color: #354556;
               padding: 15px 28px;
-              img{
+
+              img {
                 width: 20px;
                 height: 20px;
                 max-height: unset;

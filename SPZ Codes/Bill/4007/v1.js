@@ -1,42 +1,42 @@
-const bodyInterval4007 = setInterval(function(){
-  if(document.querySelector('body') && !document.querySelector('.spz-4007')){
-  clearInterval(bodyInterval4007)
-  document.querySelector('body').classList.add("spz-4007")
-  localStorage.setItem('bdcAbTest11','4007-v1');
-  const loadJS =(url, implementationCode, location)=>{
-      var scriptTag = document.createElement('script');
-      scriptTag.src = url;
-      scriptTag.onload = implementationCode;
-      scriptTag.onreadystatechange = implementationCode;
-  
-      location.appendChild(scriptTag);
-  };
-  const gb_load_css=(path)=> {
-      let css = document.createElement('link');
-      css.rel = 'stylesheet';
-      css.media = 'all';
-      css.href = path;
-  
-      document.getElementsByTagName('head')[0].appendChild(css);
-  }
-  gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
-  function trigger(el, eventType) {
-      if (typeof eventType === 'string' && typeof el[eventType] === 'function') {
-      el[eventType]();
-      } else {
-      const event =
-          typeof eventType === 'string'
-          ? new Event(eventType, {bubbles: true})
-          : eventType;
-      el.dispatchEvent(event);
-      }
-  }
-  //DEVELOPER - STEP 1 of 5 - Put your asana task URL here
-  const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
-  //DEVELOPER - STEP 2 of 5 - This adds content inside the box.
-  const formElements = {
-      customHTMLBefore: `
-      ${ /*This html goes is inserted before the form */'' }
+const bodyInterval4007 = setInterval(function () {
+	if (document.querySelector('body') && !document.querySelector('.spz-4007')) {
+		clearInterval(bodyInterval4007)
+		document.querySelector('body').classList.add("spz-4007")
+		localStorage.setItem('bdcAbTest11', '4007-v1');
+		const loadJS = (url, implementationCode, location) => {
+			var scriptTag = document.createElement('script');
+			scriptTag.src = url;
+			scriptTag.onload = implementationCode;
+			scriptTag.onreadystatechange = implementationCode;
+
+			location.appendChild(scriptTag);
+		};
+		const gb_load_css = (path) => {
+			let css = document.createElement('link');
+			css.rel = 'stylesheet';
+			css.media = 'all';
+			css.href = path;
+
+			document.getElementsByTagName('head')[0].appendChild(css);
+		}
+		gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
+		function trigger(el, eventType) {
+			if (typeof eventType === 'string' && typeof el[eventType] === 'function') {
+				el[eventType]();
+			} else {
+				const event =
+					typeof eventType === 'string'
+						? new Event(eventType, { bubbles: true })
+						: eventType;
+				el.dispatchEvent(event);
+			}
+		}
+		//DEVELOPER - STEP 1 of 5 - Put your asana task URL here
+		const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
+		//DEVELOPER - STEP 2 of 5 - This adds content inside the box.
+		const formElements = {
+			customHTMLBefore: `
+      ${ /*This html goes is inserted before the form */''}
       <div class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -46,63 +46,63 @@ const bodyInterval4007 = setInterval(function(){
           <h2>Get started with a risk-free trial.</h2>
       </div>
       `,
-      customHTMLAfter: ``,
-  };
-  
-  //DEVELOPER - STEP 3 of 5 - This adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
-  const formUniqueSelector = ".form-signup" //<--- form uqniue selector goes here. e.g.
-  
-  //content different for each page
-  let image;
-  let bigTitle;
-  let list;
-  image=`
+			customHTMLAfter: ``,
+		};
+
+		//DEVELOPER - STEP 3 of 5 - This adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
+		const formUniqueSelector = ".form-signup" //<--- form uqniue selector goes here. e.g.
+
+		//content different for each page
+		let image;
+		let bigTitle;
+		let list;
+		image = `
   <picture>
       <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/4002/ach_bills-tablet_mobile_1.webp">
       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/4002/ach_bills-desktop_1.webp" alt="Hero Image" width="1346" height="1038">
   </picture>
   `;
-  bigTitle='Make and receive payments faster with ACH';
-  list=`
+		bigTitle = 'Make and receive payments faster with ACH';
+		list = `
   <div class="list">
       <div><strong>Digital payments.</strong> Send and receive electronic payments directly from your account. Same-day. Auto-pay. Enterprise security.</div>
       <div><strong>Flat transaction fees.</strong> Pay one flat rate of $0.59 per ACH transaction, no matter the transaction amount. </div>
       <div><strong>Workflow integrations.</strong> Fully integrates with invoice intake, storage, and approvals. Plus 2-way sync with all major accounting software.</div>
       </div>
   `
-  //bill page
-  if(window.location.href.indexOf("/lp/bill-pay") > -1){
-      document.querySelector('body').classList.add("bill")
-      bigTitle='Streamline approvals and payments';
-      list=`
+		//bill page
+		if (window.location.href.indexOf("/lp/bill-pay") > -1) {
+			document.querySelector('body').classList.add("bill")
+			bigTitle = 'Streamline approvals and payments';
+			list = `
   <div class="list">
       <div><strong>AP management.</strong> Automate approvals & payments. Access invoices & proof of payments in one place. Unlimited storage.</div>
       <div><strong>Payments.</strong> Pay vendors via ACH, check, international wire transfer, vendor direct virtual cards, and more. </div>
       <div><strong>Integrations.</strong> Two-way sync with QuickBooks, QuickBooks Online, Xero, and Intacct. Avoid manual double-entry. </div>
       </div>
   `
-  
-  }
-  //invoice page
-  if (window.location.href.indexOf("/lp/invoices") > -1) {
-      document.querySelector('body').classList.add("invoice")
-      bigTitle='Get paid faster by streamlining invoicing'
-      image=`
+
+		}
+		//invoice page
+		if (window.location.href.indexOf("/lp/invoices") > -1) {
+			document.querySelector('body').classList.add("invoice")
+			bigTitle = 'Get paid faster by streamlining invoicing'
+			image = `
   <picture>
       <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/4002/invoices-tablet_mobile_1.webp">
       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/4002/invoices-desktop_1.webp" alt="Hero Image" width="1346" height="1038">
   </picture>
   `
-  list=`
+			list = `
   <div class="list">
       <div><strong>Invoice builder.</strong> Generate bulk invoices in minutes. Send via email. Auto-include contracts and customer documents. </div>
       <div><strong>Payments.</strong> Let clients pay via ACH, credit, wire, and more. Accept recurring payments. Automated reminders.</div>
       <div><strong>Integrations.</strong> Two-way sync with QuickBooks, QuickBooks Online, Xero, and Intacct. Avoid manual double-entry. </div>
   </div>
-  ` 
-  }
-  //add new hero section 
-  document.querySelector('.spz-4007 #formjumplink').insertAdjacentHTML("afterend",`
+  `
+		}
+		//add new hero section 
+		document.querySelector('.spz-4007 #formjumplink').insertAdjacentHTML("afterend", `
       <div class="new-hero-section">
       <div class="new-hero-section-wrapper">
           <div class="left">
@@ -240,224 +240,223 @@ const bodyInterval4007 = setInterval(function(){
         <button class="spz-4007-products-cta">Get Started</button>
       </div>
   `)
-  loadJS('https://res.cloudinary.com/spiralyze/raw/upload/v1744614686/bill/script/smooth-scroll.min.js', function(){}, document.body);
-  if(document.querySelector('.spz-4007 .static-logos') && document.querySelector('.spz-4007 .static-logos').closest('section')){
-      document.querySelector('.spz-4007 .static-logos').closest('section').classList.add("spz-d-none")
-  }
-  document.querySelector('.spz-4007 .new-hero-section .left .form .spz-4007-hero-cta').addEventListener("click",function(){
-      document.querySelector('.spz-4007 .popup-wrapper').classList.add("show")
-      document.querySelector('html').classList.add("scroll-hidden")
-      document.querySelector('.spz-4007 .spz-input-wrapper.email input').value=document.querySelector('.spz-4007 .new-hero-section .left .form input').value;
-      trigger(document.querySelector('.spz-4007 .spz-input-wrapper.email input'),'change')
-  })
-  document.querySelector('.spz-4007 .new-hero-section .left .form input').addEventListener("keypress",function (e) {
-      if (e.key === 'Enter') {
-          e.preventDefault();
-          document.querySelector('.spz-4007 .new-hero-section .left .form .spz-4007-hero-cta').click()
-      }
-  });
-  document.querySelector('.spz-4007-products-cta').addEventListener("click",function(){
-    let scroll = new SmoothScroll();
-    scroll.animateScroll(document.querySelector('.spz-4007 .new-hero-section').getBoundingClientRect().y + scrollY, null, {
-        easing: 'easeOutQuad',
-        speed: 500,
-        speedAsDuration: true
-    });
-    setTimeout(function(){
-        document.querySelector('.spz-4007 .popup-wrapper').classList.add("show")
-        document.querySelector('html').classList.add("scroll-hidden")
-    },501)
-  })
-  loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function(){
-      var splide4007 = new Splide( '.spz-4007 .slider-wrapper-4007 .splide4007', {
-      type   : 'loop',
-      autoWidth: true,
-      arrows: false,
-      pagination: false,
-      focus: 'center',
-      drag: false,
-      speed: 20000,
-      easing: 'linear',
-      waitForTransition: true,
-      autoplay: true,
-      interval: 0,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      direction: 'rtl',
-      });
-      setTimeout(function(){
-      splide4007.mount();
-      window.dispatchEvent(new Event('resize'));
-      },200)
-      window.dispatchEvent(new Event('resize'));
-      window.addEventListener('resize', function() {
-      splide4007.refresh()
-      splide4007.destroy()
-      splide4007.mount();
-      })
-  }, document.body);
-  //form code
-  const formLoaded = setInterval(() => {
-      if(document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0){
-      clearInterval(formLoaded);
-      addForm(formElements, formUniqueSelector);
-      //form modification
-      //adding wrapper
-      for(let i=0;i<document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select').length;i++){
-          let target = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i];
-          let wrapper = document.createElement('div');
-          wrapper.classList.add('spz-input-wrapper',document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("id"));
-          target.parentNode.insertBefore(wrapper, target);
-          wrapper.appendChild(target);
-      }
-      //adding label
-      for(let i=0;i<document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select').length;i++){
-          let label = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("placeholder")== "Number Of Employees" ? "Number of Employees" : document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("placeholder")
-          if(!label && document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].querySelector('option')) {
-              label=document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].querySelector('option').textContent;
-          }
-          document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].insertAdjacentHTML("afterend",`
+		loadJS('https://res.cloudinary.com/spiralyze/raw/upload/v1744614686/bill/script/smooth-scroll.min.js', function () { }, document.body);
+		if (document.querySelector('.spz-4007 .static-logos') && document.querySelector('.spz-4007 .static-logos').closest('section')) {
+			document.querySelector('.spz-4007 .static-logos').closest('section').classList.add("spz-d-none")
+		}
+		document.querySelector('.spz-4007 .new-hero-section .left .form .spz-4007-hero-cta').addEventListener("click", function () {
+			document.querySelector('.spz-4007 .popup-wrapper').classList.add("show")
+			document.querySelector('html').classList.add("scroll-hidden")
+			document.querySelector('.spz-4007 .spz-input-wrapper.email input').value = document.querySelector('.spz-4007 .new-hero-section .left .form input').value;
+			trigger(document.querySelector('.spz-4007 .spz-input-wrapper.email input'), 'change')
+		})
+		document.querySelector('.spz-4007 .new-hero-section .left .form input').addEventListener("keypress", function (e) {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				document.querySelector('.spz-4007 .new-hero-section .left .form .spz-4007-hero-cta').click()
+			}
+		});
+		document.querySelector('.spz-4007-products-cta').addEventListener("click", function () {
+			let scroll = new SmoothScroll();
+			scroll.animateScroll(document.querySelector('.spz-4007 .new-hero-section').getBoundingClientRect().y + scrollY, null, {
+				easing: 'easeOutQuad',
+				speed: 500,
+				speedAsDuration: true
+			});
+			setTimeout(function () {
+				document.querySelector('.spz-4007 .popup-wrapper').classList.add("show")
+				document.querySelector('html').classList.add("scroll-hidden")
+			}, 501)
+		})
+		loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
+			var splide4007 = new Splide('.spz-4007 .slider-wrapper-4007 .splide4007', {
+				type: 'loop',
+				autoWidth: true,
+				arrows: false,
+				pagination: false,
+				focus: 'center',
+				drag: false,
+				speed: 20000,
+				easing: 'linear',
+				waitForTransition: true,
+				autoplay: true,
+				interval: 0,
+				pauseOnHover: false,
+				pauseOnFocus: false,
+				direction: 'rtl',
+			});
+			setTimeout(function () {
+				splide4007.mount();
+				window.dispatchEvent(new Event('resize'));
+			}, 200)
+			window.dispatchEvent(new Event('resize'));
+			window.addEventListener('resize', function () {
+				splide4007.refresh()
+				splide4007.destroy()
+				splide4007.mount();
+			})
+		}, document.body);
+		//form code
+		const formLoaded = setInterval(() => {
+			if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
+				clearInterval(formLoaded);
+				addForm(formElements, formUniqueSelector);
+				//form modification
+				//adding wrapper
+				for (let i = 0; i < document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select').length; i++) {
+					let target = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i];
+					let wrapper = document.createElement('div');
+					wrapper.classList.add('spz-input-wrapper', document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("id"));
+					target.parentNode.insertBefore(wrapper, target);
+					wrapper.appendChild(target);
+				}
+				//adding label
+				for (let i = 0; i < document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select').length; i++) {
+					let label = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("placeholder") == "Number Of Employees" ? "Number of Employees" : document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("placeholder")
+					if (!label && document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].querySelector('option')) {
+						label = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].querySelector('option').textContent;
+					}
+					document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].insertAdjacentHTML("afterend", `
           <label for="${document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select')[i].getAttribute("id")}">${label}</label> 
       `)
-          }
-      // change position
-      document.querySelector('.spz-4007 .spz-input-wrapper.firstName').insertAdjacentElement('beforebegin',document.querySelector('.spz-4007 .spz-input-wrapper.email'))
-      if(document.querySelector('.spz-4007 .g-recaptcha')) {
-          document.querySelector('.spz-4007 .popup-wrapper ').insertAdjacentElement("beforeend",document.querySelector('.spz-4007 .g-recaptcha'))
-      }
+				}
+				// change position
+				document.querySelector('.spz-4007 .spz-input-wrapper.firstName').insertAdjacentElement('beforebegin', document.querySelector('.spz-4007 .spz-input-wrapper.email'))
+				document.querySelector('.spz-4007 .spz-input-wrapper.numberOfEmployees').insertAdjacentElement('afterend', document.querySelector('#form-panel-3 .signupType'));
+				if (document.querySelector('.spz-4007 .g-recaptcha')) {
+					document.querySelector('.spz-4007 .popup-wrapper ').insertAdjacentElement("beforeend", document.querySelector('.spz-4007 .g-recaptcha'))
+				}
 
-      //select condition checking
-      const checkSelectCondition =()=>{
-          for (let i=0;i<document.querySelectorAll('.spz-4007 .spz-input-wrapper').length;i++){
-          if(document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].querySelector('.hide')){
-              document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].classList.add('hide')
-          } else {
-              document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].classList.remove('hide')
-          }
+				//select condition checking
+				//   const checkSelectCondition =()=>{
+				//       for (let i=0;i<document.querySelectorAll('.spz-4007 .spz-input-wrapper').length;i++){
+				//       if(document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].querySelector('.hide')){
+				//           document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].classList.add('hide')
+				//       } else {
+				//           document.querySelectorAll('.spz-4007 .spz-input-wrapper')[i].classList.remove('hide')
+				//       }
 
-          }
-      }
-      checkSelectCondition()
-          //select arrow
-          for(let x=0;x<document.querySelectorAll('.spz-4007 form select').length;x++){
-          document.querySelectorAll('.spz-4007 form select')[x].parentNode.insertAdjacentHTML("beforeend",`
+				//       }
+				//   }
+				//   checkSelectCondition()
+				//select arrow
+				for (let x = 0; x < document.querySelectorAll('.spz-4007 form select').length; x++) {
+					document.querySelectorAll('.spz-4007 form select')[x].parentNode.insertAdjacentHTML("beforeend", `
           <div class="arrow"></div>  
           `)
-          }
-          //submit button 
-          document.querySelector('.spz-4007 .submit-button.button-signup-2').value="Instant Access";
-          document.querySelector('.spz-4007 .submit-button.button-signup-2').classList.add("spz-submitcta-4007")
-          //disclaimer 
-          document.querySelector('.spz-4007 .button-disclaimer').innerHTML=`
+				}
+				//submit button 
+				document.querySelector('.spz-4007 .submit-button.button-signup-2').value = "Instant Access";
+				document.querySelector('.spz-4007 .submit-button.button-signup-2').classList.add("spz-submitcta-4007")
+				//disclaimer 
+				document.querySelector('.spz-4007 .button-disclaimer').innerHTML = `
           By continuing, you agree to BILL <a href="/legal/terms-of-service" target="_blank" class="text-size-small no-wrap">Terms of Service</a> and&nbsp;<a href="/privacy" target="_blank" class="text-size-small no-wrap">Privacy Notice</a>.
-          ` 
-          //input even listerer
-          const allInput = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select');
-          function labelChange(e) {
-          if (e.value == '' || e.value == null) {
-              e.closest(".spz-input-wrapper").classList.remove("hasValue");
-          } else if (e.value != '' || e.value != null) {
-              e.closest(".spz-input-wrapper").classList.add("hasValue");
-          }
-          }
-          allInput.forEach(function (e) {
-          e.addEventListener('blur', () => {
-              labelChange(e);
-          }, true);
-          e.addEventListener('change', () => {
-              labelChange(e);
-          }, true);
-          labelChange(e);
-          })
-          //remove unecessary select
-          for(let x=0;x<document.querySelectorAll('.spz-4007 #accountingSoftwareContainer select').length;x++){
-          document.querySelectorAll('.spz-4007 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
-          }
-          //browser detection
-          let userAgent = navigator.userAgent;
-          let browser;
-          if(userAgent.match(/edg/i)){
-          browser = "edge";
-          }else if(userAgent.match(/firefox|fxios/i)){
-          browser = "firefox";
-          }else if(userAgent.match(/opr\//i)){
-          browser = "opera";
-          }else if(userAgent.match(/chrome|chromium|crios/i)){
-          browser = "chrome";
-          }else if(userAgent.match(/safari/i)){
-          browser = "safari";
-          }else{
-          //alert("Other browser");
-          }
-          document.querySelector('.spz-4007').classList.add(browser);
+          `
+				//input even listerer
+				const allInput = document.querySelectorAll('.spz-4007 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]),.spz-4007 form select');
+				function labelChange(e) {
+					if (e.value == '' || e.value == null) {
+						e.closest(".spz-input-wrapper").classList.remove("hasValue");
+					} else if (e.value != '' || e.value != null) {
+						e.closest(".spz-input-wrapper").classList.add("hasValue");
+					}
+				}
+				allInput.forEach(function (e) {
+					e.addEventListener('blur', () => {
+						labelChange(e);
+					}, true);
+					e.addEventListener('change', () => {
+						labelChange(e);
+					}, true);
+					labelChange(e);
+				})
+				//remove unecessary select
+				for (let x = 0; x < document.querySelectorAll('.spz-4007 #accountingSoftwareContainer select').length; x++) {
+					document.querySelectorAll('.spz-4007 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
+				}
+				//browser detection
+				let userAgent = navigator.userAgent;
+				let browser;
+				if (userAgent.match(/edg/i)) {
+					browser = "edge";
+				} else if (userAgent.match(/firefox|fxios/i)) {
+					browser = "firefox";
+				} else if (userAgent.match(/opr\//i)) {
+					browser = "opera";
+				} else if (userAgent.match(/chrome|chromium|crios/i)) {
+					browser = "chrome";
+				} else if (userAgent.match(/safari/i)) {
+					browser = "safari";
+				} else {
+					//alert("Other browser");
+				}
+				document.querySelector('.spz-4007').classList.add(browser);
 
-          document.querySelector('.spz-4007 .spz-form-wrap .close-button').addEventListener("click",function(){
-          document.querySelector('.spz-4007 .popup-wrapper').classList.remove("show")
-          document.querySelector('html').classList.remove("scroll-hidden")
-          })
-      }
-  })
+				document.querySelector('.spz-4007 .spz-form-wrap .close-button').addEventListener("click", function () {
+					document.querySelector('.spz-4007 .popup-wrapper').classList.remove("show")
+					document.querySelector('html').classList.remove("scroll-hidden")
+				})
+			}
+		})
 
 
 
-  /***********************************
-   ************************************
-  DO NOT TOUCH
-  BEYOND THIS LINE
-  ******************************
-  ************************/
-  
-  
-  // This is the code to generate the form over UI section do no edit it
-  function addForm(formData, formSelector) {
-      const formTemplate = `
+		/***********************************
+		 ************************************
+		DO NOT TOUCH
+		BEYOND THIS LINE
+		******************************
+		************************/
+
+
+		// This is the code to generate the form over UI section do no edit it
+		function addForm(formData, formSelector) {
+			const formTemplate = `
           <div class="popup-wrapper"> 
           <div class="spz-form-wrap">
               <div class="form-section">
-              ${
-                  formData.customHTMLBefore.replace(/\s/g, "").length !== 0
-                  ? formData.customHTMLBefore
-                  : ""
-              }
+              ${formData.customHTMLBefore.replace(/\s/g, "").length !== 0
+					? formData.customHTMLBefore
+					: ""
+				}
               </div>
               <div class="the-form"></div>
-              ${
-                  formData.customHTMLAfter.replace(/\s/g, "").length !== 0
-                  ? formData.customHTMLAfter
-                  : ""
-              }
+              ${formData.customHTMLAfter.replace(/\s/g, "").length !== 0
+					? formData.customHTMLAfter
+					: ""
+				}
               </div>
           </div>
           </div>
           `;
-      document.body.insertAdjacentHTML(
-      "beforeend",
-      formTemplate
-      ); /*Insert spz-form-wrap before closing body tag*/
-      if (!document.querySelector(formSelector)) {
-      document
-          .querySelector(".spz-form-wrap .the-form")
-          .insertAdjacentHTML(
-          "beforeend",
-          "<div style='color:red;'>Add proper form selector in code to load form</div>"
-          );
-      } else {
-      const formLoaded = setInterval(() => {
-          if (
-          document.querySelector(formSelector) &&
-          document.querySelectorAll(`${formSelector} input`).length > 0
-          ) {
-          clearInterval(formLoaded);
-          document
-              .querySelector(".spz-form-wrap .the-form")
-              .appendChild(
-              document.querySelector(formSelector)
-              ); /*Apply form to spz form wrapper*/
-          }
-      });
-      }
-      
-  }
-  
-  }
-},10)
+			document.body.insertAdjacentHTML(
+				"beforeend",
+				formTemplate
+			); /*Insert spz-form-wrap before closing body tag*/
+			if (!document.querySelector(formSelector)) {
+				document
+					.querySelector(".spz-form-wrap .the-form")
+					.insertAdjacentHTML(
+						"beforeend",
+						"<div style='color:red;'>Add proper form selector in code to load form</div>"
+					);
+			} else {
+				const formLoaded = setInterval(() => {
+					if (
+						document.querySelector(formSelector) &&
+						document.querySelectorAll(`${formSelector} input`).length > 0
+					) {
+						clearInterval(formLoaded);
+						document
+							.querySelector(".spz-form-wrap .the-form")
+							.appendChild(
+								document.querySelector(formSelector)
+							); /*Apply form to spz form wrapper*/
+					}
+				});
+			}
+
+		}
+
+	}
+}, 10)

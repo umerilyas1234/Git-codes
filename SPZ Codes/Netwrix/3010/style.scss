@@ -114,25 +114,33 @@ img {
   }
 
   .buy_nowList {
-    max-width: 800px;
+    max-width: 828px;
     margin: auto;
 
     >ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0 -6px;
+      margin: 0 -20px;
       list-style: none;
       padding-left: 0;
 
       >li {
         width: 50%;
-        padding: 0 6px;
+        padding: 0 20px;
       }
     }
 
     @include tablet() {
       max-width: 692px;
+
+      >ul {
+        margin: 0 -8px;
+
+        >li {
+          padding: 0 8px;
+        }
+      }
     }
 
     @include mobile() {
@@ -387,8 +395,10 @@ img {
     }
 
     @include mobile() {
-      background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/3010/cta-mobile-bg.webp');
+      background: #fff;
       padding: 32px 24px;
+      max-width: 420px;
+      margin: auto;
     }
 
     h2 {

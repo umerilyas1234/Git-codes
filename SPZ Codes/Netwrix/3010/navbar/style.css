@@ -2,6 +2,9 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+.spz_3010_navbar .navbar-start > a[href="how_to_buy.html"] {
+  display: none;
+}
 .spz_3010_navbar .desktop-navigation .new_pricing .navbar-dropdown {
   width: 195px;
 }
