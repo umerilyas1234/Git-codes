@@ -1,11 +1,11 @@
 const bodyInterval1008 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_1016')) {
     clearInterval(bodyInterval1008)
-    document.querySelector('body').classList.add("spz_1008")    
-    
-    // 1016 code
-    document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/products.html" class="getDemo_cta v2 spz_1016_v2">Get a Free Trial</a>`)
-
+    document.querySelector('body').classList.add("spz_1008")
+    setTimeout(() => {
+      // 1016 code
+      document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/products.html" class="getDemo_cta v2 spz_1016_v2">Get a Free Trial</a>`)
+    }, 300);
     function validateEmail(email) {
       var re =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -14,6 +14,7 @@ const bodyInterval1008 = setInterval(function () {
 
     const run1008Test = () => {
       document.querySelector('body').classList.add("spz_1016")
+
       for (let i = 0; i < document.querySelectorAll('[action="/contact.html"]').length; i++) {
         const formParent = document.querySelectorAll('[action="/contact.html"]')[i].closest('.v-modal-container')
         formParent.classList.add("popup-wrapper-1008")

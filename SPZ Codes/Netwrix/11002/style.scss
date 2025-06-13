@@ -378,6 +378,8 @@ img {
           font-weight: 400;
           text-align: left !important;
           line-height: 24px !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
           &::-webkit-input-placeholder {
             color: #54585C;

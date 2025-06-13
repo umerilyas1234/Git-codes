@@ -2,10 +2,10 @@ const bodyInterval1008 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_1016')) {
     clearInterval(bodyInterval1008)
     document.querySelector('body').classList.add("spz_1008")
-
-    // 1016 code
-    document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/one-to-one.html" class="getDemo_cta spz_1016_v1">Get Demo</a>`)
-
+    setTimeout(() => {
+      // 1016 code
+      document.querySelector('header .navbar-end .contact-item').insertAdjacentHTML('afterbegin', `<a href="https://www.netwrix.com/one-to-one.html" class="getDemo_cta spz_1016_v1">Get Demo</a>`)
+    }, 300);
     function validateEmail(email) {
       var re =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

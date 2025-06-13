@@ -87,7 +87,7 @@
     flex-direction: column;
   }
 
-  .spz_t2006:not(.step-2-hide) .form_outer {
+  .spz_t2006 .form_outer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -112,7 +112,7 @@
     flex-direction: column;
   }
 
-  .spz_t2006:not(.step-2-hide) .form_outer {
+  .spz_t2006 .form_outer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;

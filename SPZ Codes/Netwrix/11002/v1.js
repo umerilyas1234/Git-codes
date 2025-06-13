@@ -95,7 +95,7 @@ const bodyInterval11002 = setInterval(function () {
 			} else {
 				document.querySelector('#SPZ_Test').value = document.querySelector('#SPZ_Test').value + ",variant_11002";
 			}
-		}, 200);
+		}, 300);
 
 		function updatedText() {
 			const errMsg = document.querySelector('#errorBodyForm');

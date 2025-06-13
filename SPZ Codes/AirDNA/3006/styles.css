@@ -1,8 +1,24 @@
+@media only screen and (max-height: 530px) {
+  .spz_3006 main > section:first-child {
+    min-height: 700px;
+  }
+}
 .spz_3006 .case_studySection {
   padding: 78px 0;
   background: #EFF1FD;
   margin-top: 2rem;
   margin: 2rem -1rem 0;
+}
+.spz_3006 .case_studySection + section.MuiBox-root {
+  display: none;
+}
+.spz_3006 .case_studySection + section.MuiBox-root + div.MuiBox-root {
+  display: none;
+}
+@media only screen and (min-width: 767px) {
+  .spz_3006 .case_studySection + section.MuiBox-root + div.MuiBox-root + section.MuiBox-root {
+    padding-top: 60px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .spz_3006 .case_studySection {
@@ -13,6 +29,11 @@
   .spz_3006 .case_studySection {
     padding: 32px 0;
   }
+}
+.spz_3006 .case_studySection .splide__list {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 .spz_3006 .case_studySection .splide__list > li {
   padding: 0 8px;

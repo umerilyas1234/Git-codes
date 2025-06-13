@@ -356,7 +356,6 @@ function loadTestCode5001() {
     }, 1000);
 
     window.addEventListener("click", function (e) {
-      console.log(e.target);
       if (e.target.matches('.button-free-trial') || e.target.matches('.free_trial_button') || e.target.matches('.product_top_buttons a:last-child')) {
         updatestatesTwo();
         updatesteps();
@@ -367,7 +366,6 @@ function loadTestCode5001() {
     });
 
     function updateStates() {
-      console.log('updateStates');
       document.querySelector('#productDTModal').classList.add('req_demoModal');
       setTimeout(() => {
         document.querySelector('#productDTModal .cf-button').value = 'Request Demo';
@@ -379,7 +377,6 @@ function loadTestCode5001() {
     }
 
     function updatestatesTwo() {
-      console.log('updatestatesTwo');
       document.querySelector('#productDTModal').classList.remove('req_demoModal');
       setTimeout(() => {
         document.querySelector('#productDTModal .cf-button').value = 'Get my free trial';

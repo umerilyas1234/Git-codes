@@ -62,7 +62,7 @@ function loadTestCode2005() {
       const inputsSelectors = [".spz_form #ModalForm_nwf_fname", ".spz_form #ModalForm_nwf_lname", ".spz_form #ModalForm_nwf_email", ".spz_form #ModalForm_nwf_phone"]
 
       //DEV 5/6. Add Form labels below
-      const labelValues = ["First Name", "Last Name", "Work Email", "Phone"]
+      const labelValues = ["First Name", "Last Name", "Work Email", "Direct Phone"]
 
       const formLoaded = setInterval(() => {
         if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
@@ -370,6 +370,26 @@ function loadTestCode2005() {
             }
           }
         });
+
+        const errMsg = document.querySelector('.spz_form .modelFormError');
+        if (errMsg) {
+          let html = errMsg.innerHTML;
+          if (html.includes('Business Email')) {
+            if(!document.querySelector('.the-form.email_er1')){
+              errMsg.closest('.the-form').classList.add('email_er1');
+              errMsg.closest('.the-form').classList.remove('email_er2');
+            }
+          } else if (html.includes('business e-mail')) {
+            if (!document.querySelector('.the-form.email_er2')){
+              errMsg.closest('.the-form').classList.add('email_er2');
+              errMsg.closest('.the-form').classList.remove('email_er1');
+            }
+          } else {
+            errMsg.closest('.the-form.email_er2')?.classList.remove('email_er2');
+            errMsg.closest('.the-form.email_er1')?.classList.remove('email_er1');
+          }
+        }
+
       }
 
       setTimeout(() => {

@@ -219,48 +219,55 @@ function spz5002Test() {
 
 
       console.log('Time 2 > ' + new Date().getTime() / 1000);
-
-      var link = document.createElement('link');
-      link.type = 'text/css';
-      link.rel = 'stylesheet';
-      link.href = 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css';
-      document.head.appendChild(link);
-
-      const loadJS = (url, implementationCode, location) => {
-        var scriptTag = document.createElement('script');
-        scriptTag.src = url;
-        scriptTag.onload = implementationCode;
-        scriptTag.onreadystatechange = implementationCode;
-        location.appendChild(scriptTag);
-      };
-
-      loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js', function () {
-        var caseStudySlider = new Splide('.caseStudySlider', {
-          type: 'loop',
-          autoWidth: true,
-          arrows: false,
-          pagination: false,
-          drag: false,
-          speed: 20000,
-          easing: 'linear',
-          waitForTransition: true,
-          autoplay: true,
-          interval: 0,
-          pauseOnHover: false,
-          pauseOnFocus: false,
-
-        });
-
-        setTimeout(function () {
-          caseStudySlider.mount();
-        }, 500);
-        window.dispatchEvent(new Event('resize'));
-      }, document.body);
-    
+      playSlider();
     }
   }
-  
+
 }
+
+function playSlider() {
+  var link = document.createElement('link');
+  link.type = 'text/css';
+  link.rel = 'stylesheet';
+  link.href = 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css';
+  document.head.appendChild(link);
+
+  const loadJS = (url, implementationCode, location) => {
+    var scriptTag = document.createElement('script');
+    scriptTag.src = url;
+    scriptTag.onload = implementationCode;
+    scriptTag.onreadystatechange = implementationCode;
+    location.appendChild(scriptTag);
+  };
+
+  loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js', function () {
+    var caseStudySlider = new Splide('.caseStudySlider', {
+      type: 'loop',
+      autoWidth: true,
+      arrows: false,
+      pagination: false,
+      drag: false,
+      speed: 60000, // Slower = smoother
+      easing: 'linear',
+      waitForTransition: false, // Important for seamless feel
+      autoplay: true,
+      interval: 1, // Not 0 – avoids Firefox hiccups
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      rewind: false,
+    });
+
+    setTimeout(function () {
+      caseStudySlider.mount();
+    }, 500);
+    window.dispatchEvent(new Event('resize'));
+  }, document.body);
+}
+
+window.onpageshow = function (event) {
+  playSlider();
+};
+
 
 function removeTest() {
   document.querySelector('.case_studySection')?.remove();
@@ -314,7 +321,7 @@ const observer = new MutationObserver(function (mutations) {
       clearTimeout(executeTimeout)
       executeTimeout = setTimeout(function () {
         executeTest();
-      }, 800)
+      }, 100)
     } else {
       removeTest();
     }

@@ -80,7 +80,7 @@
     flex-direction: column;
   }
 
-  .spz_t2010:not(.step-2-hide) .form_outer {
+  .spz_t2010 .form_outer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -105,7 +105,7 @@
     flex-direction: column;
   }
 
-  .spz_t2010:not(.step-2-hide) .form_outer {
+  .spz_t2010 .form_outer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1046,4 +1046,18 @@
     -ms-flex-align: center;
     align-items: center;
   }
+}
+.spz_t2010 .the-form.email_er1 .modelFormError.v-show {
+  font-size: 0;
+}
+.spz_t2010 .the-form.email_er1 .modelFormError.v-show::after {
+  content: "Work Email cannot be blank.";
+  font-size: 12px;
+}
+.spz_t2010 .the-form.email_er2 .modelFormError.v-show {
+  font-size: 0;
+}
+.spz_t2010 .the-form.email_er2 .modelFormError.v-show::after {
+  content: "Enter your work e-mail.";
+  font-size: 12px;
 }

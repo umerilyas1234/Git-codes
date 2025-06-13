@@ -29,42 +29,42 @@ function spz1002Test() {
               <div class="hero_crads">
                 <div class="cards">
                   <div class="card" value="Whole Home">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521418/oncourse/1002/whole_home.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853729/oncourse/1002/whole_home_2.svg"
                       alt="Whole Home" height="24" width="24">
                     <div class="card-text">Whole <br> Home</div>
                   </div>
                   <div class="card" value="Identity Threat Detection & Response">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521425/oncourse/1002/appliances.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853741/oncourse/1002/appliances_2.svg"
                       alt="Appliances" height="24" width="24">
                     <div class="card-text">Appliances</div>
                   </div>
                   <div class="card" value="Heating & Cooling">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521431/oncourse/1002/heating__cooling.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853741/oncourse/1002/heating__cooling_2.svg"
                       alt="Heating & Cooling" height="24" width="24">
                     <div class="card-text">Heating & <br> Cooling</div>
                   </div>
                   <div class="card" value="Sewer">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521438/oncourse/1002/sewer.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853761/oncourse/1002/sewer_2.svg"
                       alt="Sewer" height="24" width="24">
                     <div class="card-text">Sewer</div>
                   </div>
                   <div class="card" value="Water">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521445/oncourse/1002/water.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853761/oncourse/1002/water_2.svg"
                       alt="Water" height="24" width="24">
                     <div class="card-text">Water</div>
                   </div>
                   <div class="card" value="Electric">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521452/oncourse/1002/electric.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853761/oncourse/1002/electric_2.svg"
                       alt="Electric" height="24" width="24">
                     <div class="card-text">Electric</div>
                   </div>
                   <div class="card" value="Gas">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521459/oncourse/1002/gas.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853780/oncourse/1002/gas_2.svg"
                       alt="Gas" height="24" width="24">
                     <div class="card-text">Gas</div>
                   </div>
                   <div class="card" value="Plumbing">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748521466/oncourse/1002/plumbing.svg"
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1748853780/oncourse/1002/plumbing_2.svg"
                       alt="Plumbing" height="24" width="24">
                     <div class="card-text">Plumbing</div>
                   </div>

@@ -50,21 +50,50 @@ $mobile: 767px;
 }
 
 .spz_3006 {
+  @media only screen and (max-height: 530px){
+   main {
+    > section:first-child{
+      min-height: 700px;
+    }
+   }
+  }
   .case_studySection {
     padding: 78px 0;
     background: #EFF1FD;
     margin-top: 2rem;
     margin: 2rem -1rem 0;
-    @include tablet(){
+
+    +section.MuiBox-root {
+      display: none;
+
+      +div.MuiBox-root {
+        display: none;
+
+        +section.MuiBox-root {
+          @media only screen and (min-width: 767px) {
+            padding-top: 60px;
+          }
+        }
+      }
+    }
+
+    @include tablet() {
       padding: 56px 0;
     }
-    @include mobile(){
+
+    @include mobile() {
       padding: 32px 0;
     }
-    .splide__list{
-      >li{
+
+    .splide__list {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+
+      >li {
         padding: 0 8px;
-        @include mobile(){
+
+        @include mobile() {
           padding: 0 6px;
         }
       }
@@ -81,59 +110,70 @@ $mobile: 767px;
       padding-left: 0;
       list-style: none;
       margin: 0 -8px;
-      @include mobile(){
+
+      @include mobile() {
         margin: 0 -6px;
       }
 
       li {
         padding: 0 8px;
-        @include mobile(){
+
+        @include mobile() {
           padding: 0 6px;
         }
-        &:first-child{
-          .slider_data{
+
+        &:first-child {
+          .slider_data {
             max-width: 305px;
-            @include mobile(){
-              .slider_left picture img{
+
+            @include mobile() {
+              .slider_left picture img {
                 max-width: 94px;
               }
             }
           }
         }
-        &:nth-child(2){
-          .slider_data{
+
+        &:nth-child(2) {
+          .slider_data {
             max-width: 249px;
-            @include mobile(){
-              .slider_left picture img{
+
+            @include mobile() {
+              .slider_left picture img {
                 max-width: 58px;
               }
             }
           }
         }
-        &:nth-child(3){
-          .slider_data{
+
+        &:nth-child(3) {
+          .slider_data {
             max-width: 277px;
-            @include mobile(){
-              .slider_left picture img{
+
+            @include mobile() {
+              .slider_left picture img {
                 max-width: 99px;
               }
             }
           }
         }
-        &:nth-child(4){
-          .slider_data{
-            @include mobile(){
-              .slider_left picture img{
+
+        &:nth-child(4) {
+          .slider_data {
+            @include mobile() {
+              .slider_left picture img {
                 max-width: 76px;
               }
             }
           }
         }
-        &:last-child{
-          .slider_data{
+
+        &:last-child {
+          .slider_data {
             max-width: 286px;
-            @include mobile(){
-              .slider_left picture img{
+
+            @include mobile() {
+              .slider_left picture img {
                 max-width: 90px;
               }
             }
@@ -150,7 +190,8 @@ $mobile: 767px;
     padding: 15px 0;
     display: flex;
     align-items: center;
-    @include mobile(){
+
+    @include mobile() {
       padding: 11px 0;
     }
   }
@@ -162,7 +203,8 @@ $mobile: 767px;
 
       img {
         display: inline-block;
-        @include mobile(){
+
+        @include mobile() {
           height: auto;
         }
       }
@@ -186,6 +228,7 @@ $mobile: 767px;
       padding-bottom: 2px;
       white-space: nowrap;
       transform: translateY(-1px);
+
       img {
         width: 24px;
         height: 24px;
@@ -193,11 +236,13 @@ $mobile: 767px;
         margin-right: 4px;
         margin-top: 2px;
       }
-      @include mobile(){
+
+      @include mobile() {
         font-size: 16px;
         line-height: 24px;
         transform: translateY(0px)translateX(1px);
-        img{
+
+        img {
           width: 16px;
           height: 16px;
           margin-right: 3.5px;
@@ -215,7 +260,8 @@ $mobile: 767px;
       font-weight: 400;
       line-height: 16px;
       transform: translateX(-0.5px);
-      @include mobile(){
+
+      @include mobile() {
         transform: translateX(-1.5px);
       }
     }

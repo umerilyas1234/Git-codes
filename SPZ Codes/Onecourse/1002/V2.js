@@ -32,49 +32,49 @@ function spz1002Test() {
                   <ul>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521479/oncourse/1002/whole_home_1.svg" alt="Whole Home"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853995/oncourse/1002/whole_home_3.svg" alt="Whole Home"></span>
                         <strong>Whole Home</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521501/oncourse/1002/appliances_1.svg" alt="Appliances"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/appliances_3.svg" alt="Appliances"></span>
                         <strong>Appliances</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521509/oncourse/1002/heating__cooling_1.svg" alt="Heating & Cooling"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/heating__cooling_3.svg" alt="Heating & Cooling"></span>
                         <strong>Heating & <br> Cooling</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521494/oncourse/1002/sewer_1.svg" alt="Sewer"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/sewer_3.svg" alt="Sewer"></span>
                         <strong>Sewer</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521486/oncourse/1002/water_1.svg" alt="Water"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/water_3.svg" alt="Water"></span>
                         <strong>Water</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521516/oncourse/1002/electric_1.svg" alt="Electric"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/electric_3.svg" alt="Electric"></span>
                         <strong>Electric</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521524/oncourse/1002/gas_1.svg" alt="Gas"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/gas_3.svg" alt="Gas"></span>
                         <strong>Gas</strong>
                       </div>
                     </li>
                     <li>
                       <div class="cards_twoData">
-                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748521534/oncourse/1002/plumbing_1.svg" alt="Plumbing"></span>
+                        <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1748853996/oncourse/1002/plumbing_3.svg" alt="Plumbing"></span>
                         <strong>Plumbing</strong>
                       </div>
                     </li>

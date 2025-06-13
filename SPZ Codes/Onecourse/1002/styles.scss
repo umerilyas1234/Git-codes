@@ -1,11 +1,11 @@
 $desktop-lg: 1760px;
 $desktop: 1440px;
 $desktop-sm: 1366px;
-$tablet-lg: 1199px;
+$tablet-lg: 1199.98px;
 $tablet-pro: 1024px;
-$tablet: 1023px;
+$tablet: 1023.98px;
 $tablet-sm: 768px;
-$mobile: 767px;
+$mobile: 767.98px;
 
 @mixin desktop-lg {
   @media (max-width: #{$desktop-lg}) {
@@ -83,6 +83,24 @@ $mobile: 767px;
   font-weight: normal;
   src: local('Sofia Pro Bold'), url('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Bold_Az.woff') format('woff');
 }
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-Light.woff2') format('woff2'),
+      url('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-ExtraLight.woff2') format('woff2'),
+      url('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 .spz_1002 {
@@ -91,35 +109,40 @@ $mobile: 767px;
   }
 
   .spz_hero {
-    background: #02418D;
+    background: #F0F9FF;
     padding: 72px 0;
 
     &.v2 {
-      background: #0364D8;
-      .hero_toggle{
+      background: #F0F9FF;
+
+      .hero_toggle {
         padding-bottom: 32px;
-        @include mobile(){
-          padding-bottom: 31.5px;
+
+        @include mobile() {
+          padding-bottom: 32.5px;
         }
       }
-      .toggle_main {
-        small {
-          .slider{
-            background-color: #02418D;
-          }
-          .toggle {
-            input{
-              &:checked {
-                &+ .slider{
-                  background-color: #02418D;
-                }
-              }
-            }
-          }
-        }
-      }
-      .hero_crads{
-        @include mobile(){
+
+      // .toggle_main {
+      //   small {
+      //     .slider {
+      //       background-color: #02418D;
+      //     }
+
+      //     .toggle {
+      //       input {
+      //         &:checked {
+      //           &+.slider {
+      //             background-color: #02418D;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+
+      .hero_crads {
+        @include mobile() {
           padding-bottom: 8px;
         }
       }
@@ -151,55 +174,55 @@ $mobile: 767px;
   .hero_heading {
     text-align: center;
     padding-bottom: 24px;
-
+    @include mobile(){
+      padding-bottom: 23.5px;
+    }
     h3 {
-      color: #FFE36C;
+      color: #186699;
       text-align: center;
-      font-family: 'Sofia Pro SemiBold';
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
-      line-height: 22.5px;
-      letter-spacing: 0.45px;
+      line-height: 19.5px;
+      letter-spacing: 0.39px;
       text-transform: uppercase;
-      margin: 0 0 12px;
+      margin: 0 0 8px;
 
       @include tablet() {
-        margin-bottom: 13px;
+        margin-bottom: 8px;
       }
 
       @include mobile() {
         font-size: 13px;
         line-height: 19.5px;
-        letter-spacing: 0.39px;
-        margin-bottom: 13px;
+        margin-bottom: 8px;
       }
     }
 
     h1 {
-      color: #F5F5F4;
+      color: #000;
       text-align: center;
-      font-family: 'Sofia Pro Bold';
+      // font-family: 'Sofia Pro Bold';
       font-size: 48px;
-      font-weight: 900;
-      line-height: 48px;
-      letter-spacing: 0.26px;
-      margin: 0 0 16px;
+      font-weight: 700;
+      line-height: 57.6px;
+      margin: 0 0 16.5px;
 
       @include tablet() {
-        letter-spacing: 0.15px;
+        padding: 0 20px;
+        margin-bottom: 17px;
       }
 
       @include mobile() {
         font-size: 36px;
-        line-height: 36px;
-        letter-spacing: 0.1px;
+        line-height: 43.2px;
+        margin-bottom: 15.5px;
       }
     }
 
     p {
-      color: #FFF;
+      color: #000;
       text-align: center;
-      font-family: 'Sofia Pro Light';
+      font-family: 'Manrope';
       font-size: 18px;
       font-weight: 300;
       line-height: 27px;
@@ -207,6 +230,10 @@ $mobile: 767px;
 
       @include tablet() {
         padding: 0 10px;
+      }
+      @include mobile(){
+        font-weight: 400;
+        letter-spacing: 0.15px;
       }
     }
   }
@@ -224,13 +251,22 @@ $mobile: 767px;
 
       span {
         display: inline-block;
-        color: #F5F5F4;
-        font-family: 'Sofia Pro Medium';
+        color: #000;
+        // font-family: 'Sofia Pro Medium';
         font-size: 14px;
         font-weight: 600;
         line-height: 21px;
       }
-
+      &:has(input:checked){
+        span{
+          color: rgba(0, 0, 0, 0.60);
+        }
+        .toggle{
+          & + span{
+            color: #000;
+          }
+        }
+      }
       .toggle {
         position: relative;
         display: inline-block;
@@ -238,11 +274,15 @@ $mobile: 767px;
         height: 24px;
         margin: 0 8px;
 
+        &+span {
+          color: rgba(0, 0, 0, 0.60);
+        }
+
         input {
           display: none;
 
           &:checked+.slider {
-            background-color: #0364D8;
+            background-color: #186699;
 
             &:before {
               transform: translateX(16px);
@@ -258,7 +298,7 @@ $mobile: 767px;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #0364D8;
+        background-color: #186699;
         transition: 0.4s;
         border-radius: 12px;
 
@@ -307,14 +347,17 @@ $mobile: 767px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 29px 10px 23px;
+      padding:29.5px 10px 23px;
       border-radius: 4px;
       border: 1px solid rgba(245, 245, 244, 0.30);
-      background: #02418D;
+      background: #DFF3FF;
       cursor: pointer;
       margin: 0 6px;
       position: relative;
-
+      transition: all 0.3s ease-in-out;
+      @include tablet-pro(){
+        margin: 0 5px;
+      }
       @include tablet() {
         margin-bottom: 12px;
       }
@@ -323,14 +366,15 @@ $mobile: 767px;
         width: 76px;
         height: 90px;
         margin: 0 4px 8px;
-        padding: 16px 5px 12px;
+        padding: 17px 5px 12px;
       }
 
       &:hover {
-        border: 1px solid rgba(245, 245, 244, 0.80);
+        border: 1px solid rgba(0, 102, 153, 0.80);
+        background: #DFF3FF;
 
         &::before {
-          border-color: rgba(245, 245, 244, 0.80);
+          border-color: rgba(0, 102, 153, 0.80);
         }
       }
 
@@ -340,21 +384,22 @@ $mobile: 767px;
         width: 16px;
         height: 16px;
         border-radius: 2px;
-        border: 1.5px solid rgba(245, 245, 244, 0.30);
-        background: #02418D;
+        border: 1.5px solid rgba(0, 102, 153, 0.30);
+        background: #DFF3FF;
         top: 4px;
         left: 4px;
+        transition: all 0.3s ease-in-out;
       }
 
       &.active {
-        border-color: rgba(245, 245, 244, 0.80);
-        background: linear-gradient(0deg, rgba(245, 245, 244, 0.06) 0%, rgba(245, 245, 244, 0.06) 100%), #02418D;
+        border-color: rgba(0, 102, 153, 0.80);
+        background: #F0F9FF;
 
         &::before {
-          background-color: #FFF;
+          background-color: #186699;
           border: none;
-          left: 4.3px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13' fill='none'%3E%3Cpath d='M11.584 3.479C11.584 3.67091 11.5107 3.86291 11.3643 4.00916L5.36426 10.0092C5.21836 10.1563 5.02617 10.229 4.83398 10.229C4.6418 10.229 4.45008 10.1558 4.30383 10.0093L1.30383 7.00928C1.15734 6.86338 1.08398 6.67119 1.08398 6.479C1.08398 6.05057 1.43438 5.729 1.83398 5.729C2.02589 5.729 2.21789 5.80225 2.36414 5.94873L4.83398 8.41963L10.3043 2.94932C10.4496 2.80236 10.6418 2.729 10.834 2.729C11.2348 2.729 11.584 3.0501 11.584 3.479Z' fill='%230364D8'/%3E%3C/svg%3E");
+          left: 4px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13' fill='none'%3E%3Cpath d='M11.25 3.26221C11.25 3.45411 11.1768 3.64611 11.0303 3.79236L5.03027 9.79236C4.88438 9.93955 4.69219 10.0122 4.5 10.0122C4.30781 10.0122 4.11609 9.93896 3.96984 9.79248L0.969844 6.79248C0.823359 6.64658 0.75 6.45439 0.75 6.26221C0.75 5.83377 1.10039 5.51221 1.5 5.51221C1.69191 5.51221 1.88391 5.58545 2.03016 5.73193L4.5 8.20283L9.97031 2.73252C10.1156 2.58557 10.3078 2.51221 10.5 2.51221C10.9008 2.51221 11.25 2.8333 11.25 3.26221Z' fill='white'/%3E%3C/svg%3E");
           background-position: center center;
           background-repeat: no-repeat;
 
@@ -367,22 +412,24 @@ $mobile: 767px;
       >img {
         width: 24px;
         display: block;
-        margin-bottom: 8.5px;
+        margin-bottom: 5.5px;
         pointer-events: none;
-
+        @include tablet(){
+          margin-bottom: 5px;
+        }
         @include mobile() {
-          margin-bottom: 6.5px;
+          margin-bottom: 4.5px;
         }
       }
 
       .card-text {
         text-align: center;
-        color: #F5F5F4;
-        font-family: 'Sofia Pro Regular';
+        color: #000;
+        // font-family: 'Sofia Pro Regular';
         font-size: 16px;
         font-weight: 500;
         line-height: 19.2px;
-        min-height: 34px;
+        min-height: 38.41px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -418,6 +465,25 @@ $mobile: 767px;
           padding: 0;
           gap: 0;
           align-items: flex-start;
+          border-radius: 6px;
+          border: 1px solid rgba(24, 102, 153, 0.40);
+          background: #FFF;
+          padding: 3px;
+          height: 54px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            border-color: rgba(24, 102, 153, 0.80);
+          }
+
+          &:has(input:active),
+          &:has(input:focus) {
+            border-color: rgba(24, 102, 153, 0.80);
+          }
+
+          &:has(p.awr-find-your-protection-plan__input-error) {
+            border-color: rgba(184, 52, 54, 0.80);
+          }
 
           @include mobile() {
             flex-direction: row;
@@ -431,18 +497,13 @@ $mobile: 767px;
             align-items: flex-start;
 
             >p.awr-find-your-protection-plan__input-error {
-              color: #FFC2C2;
-              font-family: 'Sofia Pro Regular';
+              color: #B83436;
+              // font-family: 'Sofia Pro Regular';
               font-size: 12px;
               font-weight: 500;
               line-height: 18px;
-              margin-top: 4px;
-            }
-
-            &:has(>p.awr-find-your-protection-plan__input-error) {
-              .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"] {
-                background: linear-gradient(0deg, rgba(248, 124, 124, 0.10) 0%, rgba(248, 124, 124, 0.10) 100%), #F5F5F4;
-              }
+              margin-top: 6px;
+              margin-left: -4px;
             }
           }
 
@@ -451,7 +512,7 @@ $mobile: 767px;
 
             .pointer-events-none {
               svg {
-                color: #5A5A4F;
+                color: #186699;
                 width: 10.5px;
                 height: 14px;
                 margin-top: -3px;
@@ -464,37 +525,28 @@ $mobile: 767px;
               }
             }
 
-            &:has(input:active),
-            &:has(input:focus) {
-              .pointer-events-none {
-                svg {
-                  color: #000;
-                }
-              }
-            }
-
             input {
               &[placeholder="Zip Code"] {
                 padding: 11px 16px 11px 40.5px;
-                height: 54px;
+                height: 46px;
                 border: none;
-                background-color: #F5F5F4;
-                color: #5A5A4F;
+                background-color: #fff;
+                color: #000;
                 font-family: 'Sofia Pro Regular';
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 24px;
-                caret-color: #5A5A4F;
+                caret-color: #000;
                 border-radius: 0;
                 border-top-left-radius: 6px;
                 border-bottom-left-radius: 6px;
 
                 &::-webkit-input-placeholder {
-                  color: #5A5A4F;
+                  color: rgba(0, 0, 0, 0.60);
                 }
 
                 &::-moz-placeholder {
-                  color: #5A5A4F;
+                  color: rgba(0, 0, 0, 0.60);
                 }
 
                 &:disabled {
@@ -506,7 +558,6 @@ $mobile: 767px;
                   outline: none;
                   border: none;
                   box-shadow: none;
-                  background: linear-gradient(0deg, rgba(255, 227, 108, 0.10) 0%, rgba(255, 227, 108, 0.10) 100%), #F5F5F4;
                   color: #000;
 
                   &::-webkit-input-placeholder {
@@ -517,27 +568,23 @@ $mobile: 767px;
                     font-size: 0;
                   }
                 }
-
-                &:hover {
-                  background: linear-gradient(0deg, rgba(255, 227, 108, 0.10) 0%, rgba(255, 227, 108, 0.10) 100%), #F5F5F4;
-                }
               }
             }
           }
 
           >button {
             &[type="submit"] {
-              width: 151px;
-              height: 54px;
-              border-radius: 0;
-              border-top-right-radius: 6px;
-              border-bottom-right-radius: 6px;
-              padding: 19px 49px 19px 20px;
-              background-color: #FFE36C;
+              width: 147.25px;
+              height: 46px;
+              border-radius: 4px;
+              background: #186699;
+              padding: 14px 49px 14px 27px;
+              background-color: #186699;
               transition: all 0.3s ease-in-out;
               position: relative;
+
               &:hover {
-                background-color: #FABB14;
+                background-color: #0A4C70;
               }
 
               &:disabled {
@@ -553,25 +600,29 @@ $mobile: 767px;
                 // }
 
                 p {
-                  font-family: 'Sofia Pro SemiBold';
-                  color: #02418D;
+                  // font-family: 'Sofia Pro SemiBold';
+                  color: #fff;
                   text-align: center;
                   font-size: 0;
                   display: flex;
                   align-items: center;
                   white-space: nowrap;
+
                   &::after {
                     content: 'Get Pricing';
                     font-size: 16px;
                     font-weight: 600;
                     line-height: 24px;
+                    letter-spacing: -0.1px;
                   }
 
                   &+span[role="status"] {
                     width: 9px;
-
+                    position: absolute;
+                    right: 20px;
+                    top: 11px;
                     svg {
-                      width: 9px;
+                      width: 13px;
                     }
                   }
                 }
@@ -579,13 +630,13 @@ $mobile: 767px;
                 .awr-find-your-protection-plan__arrow-right {
                   position: absolute;
                   right: 20px;
-                  top: 21.5px;
-                  width: 9px;
-                  height: 10.286px;
+                  top: 16px;
+                  width: 13px;
+                  height: 14.286px;
                   margin-top: -0.5px;
-                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='11' viewBox='0 0 9 11' fill='none'%3E%3Cg clip-path='url(%23clip0_363_149)'%3E%3Cpath d='M0.0181828 5.47897C0.0181828 5.83455 0.287379 6.12183 0.64296 6.12183H6.80434L4.68693 8.23924C4.43582 8.49035 4.43582 8.89716 4.68693 9.14828C4.81349 9.27383 4.97823 9.33611 5.14296 9.33611C5.30769 9.33611 5.47202 9.27333 5.59738 9.14777L8.81166 5.93349C9.06278 5.68237 9.06278 5.27556 8.81166 5.02445L5.59738 1.81016C5.34626 1.55905 4.93945 1.55905 4.68834 1.81016C4.43722 2.06128 4.43722 2.46809 4.68834 2.7192L6.80434 4.83611H0.64296C0.287379 4.83611 0.0181828 5.12339 0.0181828 5.47897Z' fill='%2302418D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_363_149'%3E%3Crect width='9' height='10.2857' fill='white' transform='matrix(-1 0 0 1 9 0.336121)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='15' viewBox='0 0 13 15' fill='none'%3E%3Cg clip-path='url(%23clip0_383_1433)'%3E%3Cpath d='M0.774748 7.47894C0.774748 7.96293 1.14115 8.35394 1.62514 8.35394H10.0115L7.12943 11.236C6.78764 11.5778 6.78764 12.1315 7.12943 12.4733C7.3017 12.6442 7.52592 12.7289 7.75014 12.7289C7.97436 12.7289 8.19803 12.6435 8.36865 12.4726L12.7437 8.0976C13.0854 7.7558 13.0854 7.20209 12.7437 6.86029L8.36865 2.48529C8.02686 2.14349 7.47315 2.14349 7.13135 2.48529C6.78955 2.82709 6.78955 3.3808 7.13135 3.7226L10.0115 6.60394H1.62514C1.14115 6.60394 0.774748 6.99496 0.774748 7.47894Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_383_1433'%3E%3Crect width='12.25' height='14' fill='white' transform='matrix(-1 0 0 1 13 0.479004)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
                   background-repeat: no-repeat;
-                  background-size: 9px;
+                  background-size: 13px;
 
                   svg {
                     display: none;
@@ -609,13 +660,16 @@ $mobile: 767px;
       li {
         width: auto;
         padding: 0 6px;
-        @include tablet(){
+
+        @include tablet() {
           padding-bottom: 12px;
         }
       }
-      @include mobile(){
+
+      @include mobile() {
         margin: 0 -4px;
-        li{
+
+        li {
           padding: 0 4px 16px;
         }
       }
@@ -628,27 +682,32 @@ $mobile: 767px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     @include mobile() {
       width: 76px;
       height: 110px;
     }
+
     span {
       width: 70px;
       height: 70px;
       border-radius: 4px;
-      background: #02418D;
+      background: #DFF3FF;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
-      margin-bottom: 9px;
-      @include mobile(){
+      margin-bottom: 8px;
+
+      @include tablet() {
+        margin-bottom: 7.5px;
+      }
+
+      @include mobile() {
         margin-bottom: 7px;
       }
+
       img {
         display: block;
-        width: 33px;
-        height: 33px;
       }
     }
 
@@ -659,12 +718,13 @@ $mobile: 767px;
       text-align: center;
       width: 100%;
       min-height: 34px;
-      color: #F5F5F4;
-      font-family: 'Sofia Pro Regular';
+      color: #000;
+      // font-family: 'Sofia Pro Regular';
       font-size: 14px;
       font-weight: 500;
       line-height: 16.8px;
-      @include mobile(){
+
+      @include mobile() {
         font-size: 13px;
         line-height: 15.6px;
         padding: 0 5px;

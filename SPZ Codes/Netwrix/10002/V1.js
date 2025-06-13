@@ -20,11 +20,13 @@ function loadTestCode10002() {
     const formContainer = document.querySelector(`#${formId}`).closest('.v-modal-mask');
     formContainer.classList.add('spz_modal');
 
-    if (document.querySelector('input#SPZ_Test')) {
-      document.querySelectorAll('input#SPZ_Test').forEach((input) => {
-        input.value = 'variant_10002';
-      });
-    }
+    // setTimeout(() => {
+    //   if (document.querySelector('input#SPZ_Test')) {
+    //     document.querySelectorAll('input#SPZ_Test').forEach((input) => {
+    //       input.value = 'variant_10002';
+    //     });
+    //   }
+    // }, 1000);
 
 
     //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
@@ -88,6 +90,7 @@ function loadTestCode10002() {
         setCookie('ExperimentValue', existingValues.join(','), 1);
       }
     }
+
   }
 }
 

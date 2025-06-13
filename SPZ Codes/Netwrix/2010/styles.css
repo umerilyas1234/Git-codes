@@ -201,7 +201,7 @@ html {
     padding: 28px 20px 28.5px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .spz_t2006 .spz-form-wrap {
     width: calc(100% - 30px);
     max-height: unset;
@@ -1060,7 +1060,7 @@ html {
     padding: 28px 20px 28px;
   }
 }
-.spz_t2010.step-2-hide .spz-form-wrap .right {
+.spz_t2010 .spz-form-wrap .right {
   width: 477px;
   padding: 41px 40px 40px;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg.webp");
@@ -1071,18 +1071,18 @@ html {
   align-items: center;
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .spz_t2010.step-2-hide .spz-form-wrap .right {
+  .spz_t2010 .spz-form-wrap .right {
     max-width: 380px;
     padding: 15px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
-  .spz_t2010.step-2-hide .spz-form-wrap .right {
+  .spz_t2010 .spz-form-wrap .right {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-tablet.webp");
   }
 }
 @media (max-width: 767.98px) {
-  .spz_t2010.step-2-hide .spz-form-wrap .right {
+  .spz_t2010 .spz-form-wrap .right {
     padding: 32px 20px;
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-mobile.webp");
   }
@@ -1119,7 +1119,7 @@ html {
     padding: 28px 20px 28.5px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .spz_t2010.step-2-hide .spz-form-wrap {
     width: calc(100% - 30px);
     padding: 0;
@@ -1550,6 +1550,13 @@ html {
   margin: 0;
   padding-bottom: 40px;
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .spz_t2010 .right_data h3 {
+    padding-bottom: 20px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .spz_t2010 .right_data h3 {
     max-width: 510px;
@@ -1609,4 +1616,18 @@ html {
   color: #fff;
   font-weight: 700;
   display: contents;
+}
+.spz_t2010 .the-form.email_er1 .modelFormError.v-show {
+  font-size: 0;
+}
+.spz_t2010 .the-form.email_er1 .modelFormError.v-show::after {
+  content: "Work Email cannot be blank.";
+  font-size: 12px;
+}
+.spz_t2010 .the-form.email_er2 .modelFormError.v-show {
+  font-size: 0;
+}
+.spz_t2010 .the-form.email_er2 .modelFormError.v-show::after {
+  content: "Enter your work e-mail.";
+  font-size: 12px;
 }/*# sourceMappingURL=styles.css.map */

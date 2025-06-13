@@ -127,9 +127,6 @@ function loadTestCode2044() {
 
         loadJS_SPZ(splideJSURL, loadSplideSliderSPZ, document.body);
 
-
-
-
         function heroSplideSlider() {
           var setSplideInterVal = setInterval(function () {
             if (typeof Splide !== 'undefined') {
@@ -186,11 +183,6 @@ function loadTestCode2044() {
 					heroSplideSlider();
 				});
 
-
-
-
-
-
         var heroSection = document.querySelector('.new_hero');
         document.querySelector('.new_hero').insertAdjacentHTML('beforebegin', '<div class="new_heroOuter"></div>');
         document.querySelector('.new_heroOuter').insertAdjacentElement('afterbegin', heroSection);
@@ -204,8 +196,8 @@ function loadTestCode2044() {
         clearInterval(hiddenValueInterval);
         document.querySelector('[name=spiralyze_testing_hidden_field]').value = "#2044_home_variant";
       }
-
     }, 100);
+
   }
 }
 

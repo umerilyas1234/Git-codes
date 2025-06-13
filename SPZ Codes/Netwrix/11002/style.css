@@ -294,6 +294,8 @@ img {
   font-weight: 400;
   text-align: left !important;
   line-height: 24px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .spz_11002 .spz_wrapper > div:first-child input[type=email]::-webkit-input-placeholder {
   color: #54585C;

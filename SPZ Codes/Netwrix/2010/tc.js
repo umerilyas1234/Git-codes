@@ -28,7 +28,6 @@ const combineWord = (wordArray) => {
   }
   return myString;
 }
-
 function loadTestCode2006() {
   if (!document.querySelector("body").classList.contains("spz_t2010")) {
     document.querySelector("body").classList.add("spz_t2010");
@@ -54,16 +53,12 @@ function loadTestCode2006() {
         </div>
         `,
       };
-
       //DEV 3/6.  Adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
       const formUniqueSelector = ".spz_form"
-
       //DEV 4/6. Find the class or ID of the control inputs and place it below e.g. "#some_input_id", ".some_input_unique_classname", "input[name='FirstName']" etc...
       const inputsSelectors = [".spz_form #ModalForm_nwf_fname", ".spz_form #ModalForm_nwf_lname", ".spz_form #ModalForm_nwf_email", ".spz_form #ModalForm_nwf_phone"]
-
       //DEV 5/6. Add Form labels below
-      const labelValues = ["First Name", "Last Name", "Business Email", "Direct Phone"]
-
+      const labelValues = ["First Name", "Last Name", "Work Email", "Direct Phone"]
       const formLoaded = setInterval(() => {
         if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
           clearInterval(formLoaded);
@@ -71,9 +66,7 @@ function loadTestCode2006() {
           animateLabels(inputsSelectors, labelValues);
         }
       })
-
       // DEV 6/6. Delete function below pushing code to A/B testing platform. It's needed only for internal purposes.
-
       /***********************************
       ************************************
       DO NOT TOUCH
@@ -115,17 +108,13 @@ function loadTestCode2006() {
         inputs.map((item, index) => {
           console.log("ahgjgdjhfgdhsak");
           const parentDiv = findParent(inputs[index]);
-
           const label = document.createElement("label");
           const input = document.querySelector(inputs[index]);
-
           label.innerText = labelValues[index];
           label.classList.add(`label-spz`);
-
           label.classList.add(`label-spz-${item.replace(".spz_form #", "")}`);
           label.style.width = "";
           parentDiv.classList.add("spz-input-wrap");
-
           label.addEventListener("click", function (e) {
             e.target.nextElementSibling.focus();
           });
@@ -154,7 +143,6 @@ function loadTestCode2006() {
           console.log("something is wrong");
         }
       }
-
       // This is the code to generate the form over UI section do no edit it
       function addForm(formData, formSelector) {
         const formTemplate = `
@@ -278,7 +266,6 @@ function loadTestCode2006() {
           "beforeend",
           formTemplate
         ); /*Insert spz-form-wrap before closing body tag*/
-
         if (document.cookie.includes('Data Security Posture Management')) {
           document.querySelector('#checkbox_item_1').click();
         }
@@ -297,7 +284,6 @@ function loadTestCode2006() {
         if (document.cookie.includes('Endpoint Management')) {
           document.querySelector('#checkbox_item_6').click();
         }
-
         document.querySelector('.qlf-cta').addEventListener('click', () => {
           if (document.querySelectorAll('.step-inner-wrapper input:checked').length > 0) {
             document.querySelector('body').classList.add('step-2-hide');
@@ -349,15 +335,32 @@ function loadTestCode2006() {
             }
           }
         });
+        
+        const errMsg = document.querySelector('.spz_form .modelFormError');
+        if (errMsg) {
+          let html = errMsg.innerHTML;
+          if (html.includes('Business Email')) {
+            if (!document.querySelector('.the-form.email_er1')) {
+              errMsg.closest('.the-form').classList.add('email_er1');
+              errMsg.closest('.the-form').classList.remove('email_er2');
+            }
+          } else if (html.includes('business e-mail')) {
+            if (!document.querySelector('.the-form.email_er2')) {
+              errMsg.closest('.the-form').classList.add('email_er2');
+              errMsg.closest('.the-form').classList.remove('email_er1');
+            }
+          } else {
+            errMsg.closest('.the-form.email_er2')?.classList.remove('email_er2');
+            errMsg.closest('.the-form.email_er1')?.classList.remove('email_er1');
+          }
+        }
       }
-
       setTimeout(() => {
         document.querySelector('.form_outer').style.display = 'flex';
         document.querySelector('.form_outer #ModalForm_product').value = '';
         document.querySelector('.form_outer #ModalForm_product').setAttribute('value', '');
         // animateLabels(inputsSelectors, labelValues);
       }, 1000);
-
       // adding caption
       //obeserv the form error class 
       const targetNode = document.querySelector('.spz_form');
@@ -372,23 +375,18 @@ function loadTestCode2006() {
         if (document.querySelector('html').classList.contains('is-clipped')) {
           document.querySelector('html').classList.remove('is-clipped')
         }
-
       }
       const observer = new MutationObserver(callback);
       observer.observe(targetNode, config);
-
       //hidden field
       if (document.querySelector('.spz_form #SPZ_Test').value == "") {
         document.querySelector('.spz_form #SPZ_Test').value = "control_2010"
       } else {
         document.querySelector('.spz_form #SPZ_Test').value = document.querySelector('.spz_form #SPZ_Test').value + ",control_2010";
       }
-
     }, 300);
-
   }
 }
-
 var bodyInterval = setInterval(() => {
   if (document.querySelectorAll("body").length > 0) {
     clearInterval(bodyInterval);
