@@ -277,13 +277,13 @@ function loadTestCode2005() {
                         <h3>Secure data, identities, endpoints, & access</h3>
                         <ul>
                           <li>
-                            <p><strong>Access.</strong> Control access to sensitive data. Enforce least privilege rights. Eliminate weak passwords.</p>
+                            <p><strong>Access.</strong> Control access to sensitive data, enforce least privilege, eliminate weak passwords.</p>
                           </li>
                           <li>
-                            <p><strong>Threats.</strong> Detect & auto-remediate threats. Data leaks, DDoS attacks, unauthorized changes, etc.</p>
+                            <p><strong>Threats.</strong> Detect & block threats, prevent data leaks, auto-remediate unauthorized changes.</p>
                           </li>
                           <li>
-                            <p><strong>Compliance.</strong> Generate compliance reports. Includes NIST, GDPR, HIPAA, PCI-DSS, and more.</p>
+                            <p><strong>Compliance.</strong> Generate compliance reports for NIST, GDPR, HIPAA, PCI-DSS, and more.</p>
                           </li>
                         </ul>
                       </div>
@@ -375,12 +375,12 @@ function loadTestCode2005() {
         if (errMsg) {
           let html = errMsg.innerHTML;
           if (html.includes('Business Email')) {
-            if(!document.querySelector('.the-form.email_er1')){
+            if (!document.querySelector('.the-form.email_er1')) {
               errMsg.closest('.the-form').classList.add('email_er1');
               errMsg.closest('.the-form').classList.remove('email_er2');
             }
           } else if (html.includes('business e-mail')) {
-            if (!document.querySelector('.the-form.email_er2')){
+            if (!document.querySelector('.the-form.email_er2')) {
               errMsg.closest('.the-form').classList.add('email_er2');
               errMsg.closest('.the-form').classList.remove('email_er1');
             }
@@ -396,7 +396,12 @@ function loadTestCode2005() {
         document.querySelector('.form_outer #ModalForm_product').value = '';
         document.querySelector('.form_outer #ModalForm_product').setAttribute('value', '');
         // document.querySelector('.form_outer').insertAdjacentHTML('beforeend', '<div class="spz_caption"><p>* Result is as of 01/23/2025. 4.5 rating is based on 186 reviews in the File Analysis Software market. Gartner® and Peer Insights™ are trademarks of Gartner, Inc. and/or its affiliates. All rights reserved. Gartner Peer Insights content consists of the opinions of individual end users based on their own experiences, and should not be construed as statements of fact, nor do they represent the views of Gartner or its affiliates. Gartner does not endorse any vendor, product or service depicted in this content nor makes any warranties, expressed or implied, with respect to this content, about its accuracy or completeness, including any warranties of merchantability or fitness for a particular purpose.</p></div>');
-
+        //hidden field
+        if (document.querySelector('.spz_form #SPZ_Test').value == "") {
+          document.querySelector('.spz_form #SPZ_Test').value = "variant_2010"
+        } else {
+          document.querySelector('.spz_form #SPZ_Test').value = document.querySelector('.spz_form #SPZ_Test').value + ",variant_2010";
+        }
       }, 1000);
 
 
@@ -417,14 +422,6 @@ function loadTestCode2005() {
       }
       const observer = new MutationObserver(callback);
       observer.observe(targetNode, config);
-
-      //hidden field
-      if (document.querySelector('.spz_form #SPZ_Test').value == "") {
-        document.querySelector('.spz_form #SPZ_Test').value = "variant_2010"
-      } else {
-        document.querySelector('.spz_form #SPZ_Test').value = document.querySelector('.spz_form #SPZ_Test').value + ",variant_2010";
-      }
-
     }, 300);
 
   }

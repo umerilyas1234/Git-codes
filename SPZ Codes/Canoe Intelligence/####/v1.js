@@ -19,15 +19,15 @@ function spz1003() {
     document.querySelector('.heroContent').insertAdjacentHTML('afterbegin', `<div class="heroLeft">
           <h1>Streamline every step of alts management</h1>
           <ul>
-            <li><strong>Never miss a document.</strong> Automatically retrieve docs from 500+ portals and inboxes. Focus on strategy, not logistics.</li>
-            <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics, and more with industrial-grade AI.</li>
-            <li><strong>Power better decisions.</strong> Unlock portfolio insights and deliver clean data wherever you need it.</li>
+              <li><strong>Never miss a document.</strong> Automatically retrieve docs from 500+ portals and inboxes. Focus on strategy, not logistics.</li>
+              <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics and more with industrial-grade AI.</li>
+              <li><strong>Power better decisions.</strong> Unlock portfolio insights and deliver clean data wherever you need it.</li>
           </ul>
       </div>`);
 
     document.querySelector('.hero-form-wrapper').insertAdjacentHTML('afterend', `<ul>
           <li><strong>Never miss a document.</strong> Automatically retrieve docs from 500+ portals and inboxes. Focus on strategy, not logistics.</li>
-          <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics, and more with industrial-grade AI.</li>
+          <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics and more with industrial-grade AI.</li>
           <li><strong>Power better decisions.</strong> Unlock portfolio insights and deliver clean data wherever you need it.</li>
       </ul>`);
 

@@ -1,0 +1,17 @@
+<div class="spz-sticky-footer">
+  <div class="spz-footer-container">
+    <div class="spz-trust-logos-wrap">
+      <div class="spz-copy-wrap">
+        <div class="spz-copy-heading">${template_stickyFooterContent.heading}</div>
+        <div class="spz-copy-subheading">${template_stickyFooterContent.subHeading}</div>
+      </div>
+    </div>
+    <div class="spz-ctas-wrap">
+      ${template_stickyFooterContent.CTAs.map((item) => `<a href=${item.ctaURL}
+        class=${item.className}>${item.ctaText}</a>`).join("")}
+    </div>
+  </div>
+  <div class="close_wrapper">
+    <a href="javascript:;" class="sticky_close"></a>
+  </div>
+</div>

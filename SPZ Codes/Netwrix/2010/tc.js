@@ -335,7 +335,7 @@ function loadTestCode2006() {
             }
           }
         });
-        
+
         const errMsg = document.querySelector('.spz_form .modelFormError');
         if (errMsg) {
           let html = errMsg.innerHTML;
@@ -360,6 +360,12 @@ function loadTestCode2006() {
         document.querySelector('.form_outer #ModalForm_product').value = '';
         document.querySelector('.form_outer #ModalForm_product').setAttribute('value', '');
         // animateLabels(inputsSelectors, labelValues);
+        //hidden field
+        if (document.querySelector('.spz_form #SPZ_Test').value == "") {
+          document.querySelector('.spz_form #SPZ_Test').value = "control_2010"
+        } else {
+          document.querySelector('.spz_form #SPZ_Test').value = document.querySelector('.spz_form #SPZ_Test').value + ",control_2010";
+        }
       }, 1000);
       // adding caption
       //obeserv the form error class 
@@ -378,12 +384,6 @@ function loadTestCode2006() {
       }
       const observer = new MutationObserver(callback);
       observer.observe(targetNode, config);
-      //hidden field
-      if (document.querySelector('.spz_form #SPZ_Test').value == "") {
-        document.querySelector('.spz_form #SPZ_Test').value = "control_2010"
-      } else {
-        document.querySelector('.spz_form #SPZ_Test').value = document.querySelector('.spz_form #SPZ_Test').value + ",control_2010";
-      }
     }, 300);
   }
 }

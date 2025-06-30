@@ -46,51 +46,59 @@
 .spz_3006 .logo_sliderData {
   width: 100%;
 }
-.spz_3006 .slider_main {
+.spz_3006 .slider_main ul {
   display: flex;
   padding-left: 0;
   list-style: none;
   margin: 0 -8px;
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main {
+  .spz_3006 .slider_main ul {
     margin: 0 -6px;
   }
 }
-.spz_3006 .slider_main .slider_data:first-child {
+.spz_3006 .slider_main ul li {
+  padding: 0 8px;
+}
+@media (max-width: 767px) {
+  .spz_3006 .slider_main ul li {
+    padding: 0 6px;
+  }
+}
+.spz_3006 .slider_main ul li:first-child .slider_data {
   max-width: 305px;
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main .slider_data:first-child .slider_left picture img {
+  .spz_3006 .slider_main ul li:first-child .slider_data .slider_left picture img {
     max-width: 94px;
   }
 }
-.spz_3006 .slider_main .slider_data:nth-child(2) {
+.spz_3006 .slider_main ul li:nth-child(2) .slider_data {
   max-width: 249px;
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main .slider_data:nth-child(2) .slider_left picture img {
+  .spz_3006 .slider_main ul li:nth-child(2) .slider_data .slider_left picture img {
     max-width: 58px;
   }
 }
-.spz_3006 .slider_main .slider_data:nth-child(3) {
+.spz_3006 .slider_main ul li:nth-child(3) .slider_data {
   max-width: 277px;
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main .slider_data:nth-child(3) .slider_left picture img {
+  .spz_3006 .slider_main ul li:nth-child(3) .slider_data .slider_left picture img {
     max-width: 99px;
   }
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main .slider_data:nth-child(4) .slider_left picture img {
+  .spz_3006 .slider_main ul li:nth-child(4) .slider_data .slider_left picture img {
     max-width: 76px;
   }
 }
-.spz_3006 .slider_main .slider_data:last-child {
+.spz_3006 .slider_main ul li:last-child .slider_data {
   max-width: 286px;
 }
 @media (max-width: 767px) {
-  .spz_3006 .slider_main .slider_data:last-child .slider_left picture img {
+  .spz_3006 .slider_main ul li:last-child .slider_data .slider_left picture img {
     max-width: 90px;
   }
 }
@@ -101,12 +109,10 @@
   padding: 15px 0;
   display: flex;
   align-items: center;
-  margin: 0 8px;
 }
 @media (max-width: 767px) {
   .spz_3006 .slider_data {
     padding: 11px 0;
-    margin: 0 6px;
   }
 }
 .spz_3006 .slider_left picture {

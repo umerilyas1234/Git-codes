@@ -79,16 +79,16 @@ $mobile: 767.98px;
 }
 
 .spz_1003 .hero_section {
-  background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_6_webp.webp');
+  background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_1.webp');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-color: #293054;
   padding-top: 22px;
   padding-bottom: 22px;
   flex: 1 0 auto;
 
   &:has(.question-item.question-2:not(.spz-hidden)) {
-    // background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_2.webp');
+    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_2.webp');
 
     h1 {
       margin-top: 57.5px;
@@ -129,7 +129,7 @@ $mobile: 767.98px;
   }
 
   &:has(.hero-form-wrapper:not(.spz-hidden)) {
-    // background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_3.webp');
+    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/1440_step_3.webp');
 
     h1 {
       margin-top: 50.5px;
@@ -259,10 +259,10 @@ $mobile: 767.98px;
   color: #293054;
 }
 
-.spz_1003 .footer-main .copy-rights .foot-links ul li a:hover,
-.spz_1003 .footer-main .copy-rights button#hs_show_banner_button:hover {
-  color: #C423F9 !important;
-}
+// .spz_1003 .footer-main .copy-rights .foot-links ul li a:hover,
+// .spz_1003 .footer-main .copy-rights button#hs_show_banner_button:hover {
+//   color: #C423F9 !important;
+// }
 
 .spz_1003 .footer-main .copy-rights p {
   flex: 1 0 auto;
@@ -319,16 +319,16 @@ $mobile: 767.98px;
 
 @media (max-width: 991.98px) {
   .spz_1003 .hero_section {
-    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_webp.webp');
+    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_step_1.webp');
 
-    // &:has(.question-item.question-2:not(.spz-hidden)) {
-    //   background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_step_2.webp');
-    // }
+    &:has(.question-item.question-2:not(.spz-hidden)) {
+      background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_step_2.webp');
+    }
 
-    // &:has(.hero-form-wrapper:not(.spz-hidden)) {
-    //   background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_step_3.webp');
-    //   background-position: top;
-    // }
+    &:has(.hero-form-wrapper:not(.spz-hidden)) {
+      background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_768_step_3.webp');
+      background-position: top;
+    }
   }
 
   .spz_1003 .heroContent {
@@ -389,15 +389,15 @@ $mobile: 767.98px;
 
 @media (max-width: 767.98px) {
   .spz_1003 .hero_section {
-    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_webp.webp');
+    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_step_1.webp');
 
-    // &:has(.question-item.question-2:not(.spz-hidden)) {
-    //   background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_step_2.webp');
-    // }
+    &:has(.question-item.question-2:not(.spz-hidden)) {
+      background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_step_2.webp');
+    }
 
-    // &:has(.hero-form-wrapper:not(.spz-hidden)) {
-    //   background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_step_3.webp');
-    // }
+    &:has(.hero-form-wrapper:not(.spz-hidden)) {
+      background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1003/bg_360_step_3.webp');
+    }
   }
 
   .spz_1003 .hero_section .container {
@@ -470,6 +470,9 @@ $mobile: 767.98px;
     margin-left: auto;
   }
 }
+
+
+
 
 /* Form CSS start */
 .spz_1003 .hero-form-wrapper {
@@ -1084,9 +1087,7 @@ $mobile: 767.98px;
   .logo_list {
     padding-top: 25px;
     padding-bottom: 74px;
-    @include tablet(){
-      max-width: 690px;
-    }
+
     ul {
       display: flex;
       flex-wrap: wrap;

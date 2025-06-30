@@ -7,214 +7,192 @@ function spz5002Test() {
     // Put your test code here
     if (document.querySelector('.spz_3006 main > section:first-child')) {
       document.querySelector('.spz_3006 main > section:first-child').insertAdjacentHTML('afterend', `
-          <div class="case_studySection">
-            <div class="splide caseStudySlider" id="logo_slider">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="slider_main">
-                      <ul>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-desktop_1.webp"
-                                  alt="venture rei" width="147" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">350%</strong>
-                              <span>Owner lead <br>
-                                conversions</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-desktop_1.webp"
-                                  alt="kissimmee" width="91" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">100%</strong>
-                              <span> More <br>
-                                market data</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-desktop_1.webp"
-                                  alt="stay marquis" width="133" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">67%</strong>
-                              <span>Number of <br>
-                                properties</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-desktop_1.webp"
-                                  alt="easy street" width="120" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">100%</strong>
-                              <span>Lower default rate <br>
-                                than industry average</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-desktop_1.webp"
-                                  alt="guestable" width="142" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">20%</strong>
-                              <span>Revenue year <br>
-                                over year</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="slider_main">
-                      <ul>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-desktop_1.webp"
-                                  alt="venture rei" width="147" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">350%</strong>
-                              <span>Owner lead <br>
-                                conversions</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-desktop_1.webp"
-                                  alt="kissimmee" width="91" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">100%</strong>
-                              <span> More <br>
-                                market data</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-desktop_1.webp"
-                                  alt="stay marquis" width="133" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">67%</strong>
-                              <span>Number of <br>
-                                properties</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-desktop_1.webp"
-                                  alt="easy street" width="120" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">100%</strong>
-                              <span>Lower default rate <br>
-                                than industry average</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slider_data">
-                            <div class="slider_left">
-                              <picture>
-                                <source
-                                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-mobile_1.webp"
-                                  type="image/webp" media="(max-width: 767px)">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-desktop_1.webp"
-                                  alt="guestable" width="142" height="38">
-                              </picture>
-                            </div>
-                            <div class="slideR_right">
-                              <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
-                                  alt="arrow up">20%</strong>
-                              <span>Revenue year <br>
-                                over year</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
+<div class="case_studySection">
+  <div class="splide caseStudySlider" id="logo_slider">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slider_main">
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-desktop_1.webp"
+                    alt="venture rei" width="147" height="38">
+                </picture>
               </div>
-            </div>  
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">350%</strong>
+                <span>Owner lead <br>
+                  conversions</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-desktop_1.webp"
+                    alt="kissimmee" width="91" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">100%</strong>
+                <span> More <br>
+                  market data</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-desktop_1.webp"
+                    alt="stay marquis" width="133" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">67%</strong>
+                <span>Number of <br>
+                  properties</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-desktop_1.webp"
+                    alt="easy street" width="120" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">100%</strong>
+                <span>Lower default rate <br>
+                  than industry average</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-desktop_1.webp"
+                    alt="guestable" width="142" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">20%</strong>
+                <span>Revenue year <br>
+                  over year</span>
+              </div>
+            </div>
           </div>
+        </li>
+        <li class="splide__slide">
+          <div class="slider_main">
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/venture-rei-desktop_1.webp"
+                    alt="venture rei" width="147" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">350%</strong>
+                <span>Owner lead <br>
+                  conversions</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/kissimmee-desktop_1.webp"
+                    alt="kissimmee" width="91" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">100%</strong>
+                <span> More <br>
+                  market data</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/stay-marquis-desktop_1.webp"
+                    alt="stay marquis" width="133" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">67%</strong>
+                <span>Number of <br>
+                  properties</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/easy-street-desktop_1.webp"
+                    alt="easy street" width="120" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">100%</strong>
+                <span>Lower default rate <br>
+                  than industry average</span>
+              </div>
+            </div>
+            <div class="slider_data">
+              <div class="slider_left">
+                <picture>
+                  <source
+                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-mobile_1.webp"
+                    type="image/webp" media="(max-width: 767px)">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3006/guestable-desktop_1.webp"
+                    alt="guestable" width="142" height="38">
+                </picture>
+              </div>
+              <div class="slideR_right">
+                <strong><img src="//res.cloudinary.com/spiralyze/image/upload/v1747906826/airdna/3006/arrow-up.svg"
+                    alt="arrow up">20%</strong>
+                <span>Revenue year <br>
+                  over year</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
         `);
 
 
@@ -246,15 +224,15 @@ function playSlider() {
       autoWidth: true,
       arrows: false,
       pagination: false,
+      focus: 'center',
       drag: false,
-      speed: 60000, // Slower = smoother
+      speed: 50000,
       easing: 'linear',
-      waitForTransition: false, // Important for seamless feel
+      waitForTransition: true,
       autoplay: true,
-      interval: 1, // Not 0 – avoids Firefox hiccups
+      interval: 0,
       pauseOnHover: false,
       pauseOnFocus: false,
-      rewind: false,
     });
 
     setTimeout(function () {

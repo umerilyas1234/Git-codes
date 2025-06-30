@@ -1,52 +1,236 @@
-<div class="logo_list">
-  <ul>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890296/canoeintelligence/1003/blackstone-logo_1.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884536/canoeintelligence/1003/blackstone-logo.svg" alt="blackstone">
-        </picture>
-      </div>
-    </li>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890297/canoeintelligence/1003/icon_7.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884538/canoeintelligence/1003/icon_3.svg" alt="cambridge associates">
-        </picture>
-      </div>
-    </li>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890296/canoeintelligence/1003/icon_6.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884540/canoeintelligence/1003/icon_4.svg" alt="hamilton lane">
-        </picture>
-      </div>
-    </li>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890295/canoeintelligence/1003/prime-quadrant-logo_1.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884536/canoeintelligence/1003/prime-quadrant-logo.svg" alt="prime quadrant">
-        </picture>
-      </div>
-    </li>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890295/canoeintelligence/1003/provenio-capital_idj2lhoel1_1-1_1.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884536/canoeintelligence/1003/provenio-capital_idj2lhoel1_1-1.svg" alt="provenio capital">
-        </picture>
-      </div>
-    </li>
-    <li>
-      <div class="logo_main">
-        <picture>
-          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1748890295/canoeintelligence/1003/swancap-logo_1.svg">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1748884536/canoeintelligence/1003/swancap-logo.svg" alt="swancap">
-        </picture>
-      </div>
-    </li>
-  </ul>
-</div>
+<script>
+  function spz1001() {
+    if (!document.querySelector('body').classList.contains('spz_1001')) {
+      document.querySelector('body').classList.add('spz_1001');
+
+      document.querySelector('.demo-request').classList.add('hero_section');
+      document.querySelector('.demo_form').classList.add('heroContent');
+      document.querySelector('.form_bg').parentElement.classList.add('hero-form-wrapper');
+      document.querySelector('.form_bg').parentElement.classList.remove('col-lg-8', 'col-md-12');
+      document.querySelector('.form_bg').parentElement.parentElement.classList.add('heroRight');
+      document.querySelector('.form_bg').parentElement.parentElement.classList.remove('row');
+
+      document.querySelector('.heroContent').insertAdjacentHTML('beforebegin', `<div class="container">
+            <a href="https://canoeintelligence.com/" title="Canoe" class="site-logo">
+                <img width="120" height="27" src="https://canoeintelligence.com/wp-content/uploads/2024/05/brand-canoe-white.svg" alt="Canoe">
+            </a>
+        </div>`);
+
+      document.querySelector('.heroContent').insertAdjacentHTML('afterbegin', `<div class="heroLeft">
+            <h1>Streamline every step of alts management</h1>
+            <ul>
+                <li><strong>Never miss a document.</strong> Automatically retrieve docs from 500+ portals and inboxes. Focus on strategy, not logistics.</li>
+                <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics and more with industrial-grade AI.</li>
+                <li><strong>Power better decisions.</strong> Unlock portfolio insights and deliver clean data wherever you need it.</li>
+            </ul>
+        </div>`);
+
+      document.querySelector('.hero-form-wrapper').insertAdjacentHTML('afterend', `<ul>
+            <li><strong>Never miss a document.</strong> Automatically retrieve docs from 500+ portals and inboxes. Focus on strategy, not logistics.</li>
+            <li><strong>Transform raw data.</strong> Extract crucial data points and manage cap calls, distributions, fund metrics and more with industrial-grade AI.</li>
+            <li><strong>Power better decisions.</strong> Unlock portfolio insights and deliver clean data wherever you need it.</li>
+        </ul>`);
+
+      document.querySelector('.heroContent').insertAdjacentHTML('afterend', `<div class="container">
+            <h3>Trusted by over 400 clients, from single family offices to large institutions.</h3>
+            <div class="logo-wrapper">
+                <picture>
+                    <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1001/logos_combined_mobile_2x.webp">
+                    <source media="(max-width:991.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1001/logos_combined_tablet_2x.webp">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/canoeintelligence/1001/logos_combined_desktop_2x.webp" title="Trusted by Over 400 Clients" alt="Trusted by Over 400 Clients">
+                </picture>
+            </div>
+        </div>`);
+
+      document.querySelector('.form_bg').insertAdjacentHTML('afterbegin', `<h3>Get a demo</h3>`);
+      // Footer code
+      document.querySelector('button#hs_show_banner_button')?.removeAttribute('style');
+
+
+      // Form visual changes code
+      function formModification() {
+
+        // Add Label dynamically
+        document.querySelectorAll('.hero_section .gfield.gfield_visibility_visible:not(.gform_hidden)').forEach(function (el) {
+          const label = el.querySelector('label');
+          const inputElement = el.querySelector('input, select, textarea');
+
+          if (inputElement && label) {
+            if (label && label.innerText.includes('Company Type*')) {
+              label.innerText = 'Company type*';
+            }
+            if (label && label.innerText.toLowerCase().includes('country / region')) {
+              console.log('label text is = ' + label.innerText + "'");
+              label.innerText = 'Country*';
+            }
+            if (inputElement.tagName === 'TEXTAREA') {
+              label.innerText = 'Message (optional)';
+            }
+            inputElement.setAttribute('placeholder', label.innerText);
+            inputElement.setAttribute('autocomplete', 'no-fill');
+          }
+        });
+
+        // Reorder fields
+        const field16 = document.querySelector('.hero_section #field_3_16');
+        const field2 = document.querySelector('.hero_section #field_3_2');
+        const field9 = document.querySelector('.hero_section #field_3_9');
+        const footer = document.querySelector('.hero_section .gform_footer');
+
+        if (field16 && field2) field16.after(field2);
+        if (footer && field9) footer.after(field9);
+
+        // Input/Select/Textarea focus/blur/change logic
+        const allInputs = document.querySelectorAll('.hero_section .gform_fields .gfield.gfield_visibility_visible input, .hero_section .gform_fields .gfield.gfield_visibility_visible select, .hero_section .gform_fields .gfield.gfield_visibility_visible textarea');
+
+        function labelChange(el) {
+          const field = el.closest('.gfield');
+          if (!field) return;
+
+          if (el.tagName === 'SELECT') {
+            const label = field.querySelector('label');
+            const selectValue = el.value;
+
+            if (label && selectValue === '') {
+              const firstOption = el.querySelector('option');
+              if (firstOption) {
+                firstOption.innerText = label.innerText;
+              }
+            }
+          }
+
+          if (!el.value) {
+            field.classList.remove('active', 'focused');
+          } else {
+            field.classList.add('active');
+            field.classList.remove('focused');
+          }
+        }
+
+        allInputs.forEach(function (el) {
+          el.addEventListener('focus', () => {
+            el.closest('.gfield')?.classList.add('active', 'focused');
+          });
+
+          el.addEventListener('blur', () => {
+            labelChange(el);
+          });
+
+          el.addEventListener('change', () => {
+            labelChange(el);
+
+            // Reset state field class if hidden
+            const stateField = document.querySelector('#field_3_18');
+            if (stateField?.style.display === 'none') {
+              stateField.classList.remove('active');
+            }
+          });
+
+          // Initial check
+          labelChange(el);
+        });
+      }
+
+
+      // Call the function to modify the form on page load
+
+      setTimeout(() => {
+        formModification();
+      }, 500);
+
+      // Call the function to modify the form on gform_post_render event
+      jQuery(document).on('gform_post_render', function (event, formId) {
+        // Only select the form inside .hero_section
+        const $heroForm = jQuery('.hero_section form#gform_3');
+
+        if ($heroForm.length && !$heroForm.data('modified')) {
+          $heroForm.data('modified', true);
+          console.log('form rendered');
+          document.querySelector('body').classList.add('removeAnimation');
+          formModification();
+          // Remove the animation class after a short delay       
+          setTimeout(() => {
+            document.querySelector('body').classList.remove('removeAnimation');
+          }, 2000);
+          const validationMessage = document.querySelector('.hero_section .gfield--input-type-email .validation_message');
+          if (validationMessage) {
+            validationMessage.innerHTML = validationMessage.innerHTML.replace(
+              'The email address entered is invalid, please check the formatting (e.g. email@domain.com).',
+              'Invalid email format.'
+            );
+          }
+        }
+      });
+    }
+  }
+
+  spz1001();
+
+
+
+  (function () {
+
+    //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
+    const expName = '1001'; //experiment name should be #1001, #1002, #1003 etc.
+    const variantName = `#` + expName + `_spz_var`; //variantName should be _V1, _V2, _TC etc.
+    const clientDomain = '.canoeintelligence.com'; //domain should be .spiralyze.com
+
+    hiddenValue(expName, variantName);
+
+    /***********************************
+    ************************************
+    DO NOT TOUCH
+    BEYOND THIS LINE
+    ******************************
+    ************************/
+    function hiddenValue(currentExperimentName, currentExperimentValue) {
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + ";domain=" + clientDomain + ";path=/";
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+
+      var ExistingExperimentName = getCookie('ExperimentName');
+      var ExistingExperimentValue = getCookie('ExperimentValue');
+      var ExistingExperimentNameList = ExistingExperimentName ? ExistingExperimentName.split(',') : [];
+
+      if (!ExistingExperimentName) {
+
+        setCookie('ExperimentName', currentExperimentName, 1);
+        setCookie('ExperimentValue', currentExperimentValue, 1);
+
+      } else if (ExistingExperimentNameList.length > 0 && ExistingExperimentNameList.indexOf(currentExperimentName) == -1) {
+
+        setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
+        setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
+
+      } else if (ExistingExperimentNameList.length > 0 && ExistingExperimentNameList.indexOf(currentExperimentName) > -1) {
+
+        var existingNames = ExistingExperimentName.split(',');
+        var existingValues = ExistingExperimentValue.split(',');
+
+        var index = existingNames.indexOf(currentExperimentName);
+        existingValues[index] = currentExperimentValue;
+
+        setCookie('ExperimentName', existingNames.join(','), 1);
+        setCookie('ExperimentValue', existingValues.join(','), 1);
+      }
+    }
+  }());
+
+</script>

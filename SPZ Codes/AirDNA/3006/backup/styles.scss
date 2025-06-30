@@ -50,14 +50,13 @@ $mobile: 767px;
 }
 
 .spz_3006 {
-  @media only screen and (max-height: 530px) {
-    main {
-      >section:first-child {
-        min-height: 700px;
-      }
+  @media only screen and (max-height: 530px){
+   main {
+    > section:first-child{
+      min-height: 700px;
     }
+   }
   }
-
   .case_studySection {
     padding: 78px 0;
     background: #EFF1FD;
@@ -106,60 +105,79 @@ $mobile: 767px;
   }
 
   .slider_main {
-
-    display: flex;
-    padding-left: 0;
-    list-style: none;
-    margin: 0 -8px;
-
-    @include mobile() {
-      margin: 0 -6px;
-    }
-
-    .slider_data:first-child {
-      max-width: 305px;
+    ul {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      margin: 0 -8px;
 
       @include mobile() {
-        .slider_left picture img {
-          max-width: 94px;
-        }
+        margin: 0 -6px;
       }
-    }
 
-    .slider_data:nth-child(2) {
-      max-width: 249px;
+      li {
+        padding: 0 8px;
 
-      @include mobile() {
-        .slider_left picture img {
-          max-width: 58px;
+        @include mobile() {
+          padding: 0 6px;
         }
-      }
-    }
 
-    .slider_data:nth-child(3) {
-      max-width: 277px;
+        &:first-child {
+          .slider_data {
+            max-width: 305px;
 
-      @include mobile() {
-        .slider_left picture img {
-          max-width: 99px;
+            @include mobile() {
+              .slider_left picture img {
+                max-width: 94px;
+              }
+            }
+          }
         }
-      }
-    }
 
-    .slider_data:nth-child(4) {
-      @include mobile() {
-        .slider_left picture img {
-          max-width: 76px;
+        &:nth-child(2) {
+          .slider_data {
+            max-width: 249px;
+
+            @include mobile() {
+              .slider_left picture img {
+                max-width: 58px;
+              }
+            }
+          }
         }
-      }
-    }
 
-    .slider_data:last-child {
-      max-width: 286px;
+        &:nth-child(3) {
+          .slider_data {
+            max-width: 277px;
 
-      @include mobile() {
-        .slider_left picture img {
-          max-width: 90px;
+            @include mobile() {
+              .slider_left picture img {
+                max-width: 99px;
+              }
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          .slider_data {
+            @include mobile() {
+              .slider_left picture img {
+                max-width: 76px;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .slider_data {
+            max-width: 286px;
+
+            @include mobile() {
+              .slider_left picture img {
+                max-width: 90px;
+              }
+            }
+          }
         }
       }
     }
@@ -172,11 +190,9 @@ $mobile: 767px;
     padding: 15px 0;
     display: flex;
     align-items: center;
-    margin: 0 8px;
 
     @include mobile() {
       padding: 11px 0;
-      margin: 0 6px;
     }
   }
 

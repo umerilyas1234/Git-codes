@@ -78,10 +78,6 @@ function runCode() {
           console.log("form length 222222 = " + formElement.length);
         }, 10000);
 
-
-
-
-
         console.log(formId);
         const formContainer = document.querySelector(`#${formId}`).closest('.v-modal-container');
         console.log(formContainer);
@@ -94,11 +90,7 @@ function runCode() {
           formContainer.querySelector(`form #SPZ_Test`).value = 'variant1_6009';
           console.log('updated states');
         }
-
-
-
         updateFormAndButton();
-
         const targetNode = formContainer.querySelector(`form .modelFormSubmit`);
         const config = { attributes: true, attributeFilter: ['value', 'class'] };
         const callback = (mutationList, observer) => {
