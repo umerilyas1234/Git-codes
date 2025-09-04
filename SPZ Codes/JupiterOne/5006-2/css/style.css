@@ -341,13 +341,13 @@
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:hover {
   border-color: #041e42;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input[type=email]:not(:-moz-placeholder-shown) {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input[type=email]:not(:-moz-placeholder) {
   border-color: #ccc;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input[type=email]:not(:placeholder-shown) {
   border-color: #ccc;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input[type=email]:not(:-moz-placeholder-shown) + label {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input[type=email]:not(:-moz-placeholder) + label {
   top: 0;
   left: 10px;
   padding: 0 4px;
@@ -375,13 +375,13 @@
   background: #fff;
   color: #041e42;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:-moz-placeholder-shown) {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:-moz-placeholder) {
   border-color: #041e42;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:placeholder-shown) {
   border-color: #041e42;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:-moz-placeholder-shown) + label {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:-moz-placeholder) + label {
   color: #041e42;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input:focus:not(:placeholder-shown) + label {
@@ -408,13 +408,13 @@
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error + label {
   color: #ff0000;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:-moz-placeholder-shown) {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:-moz-placeholder) {
   border-color: #ff0000;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:placeholder-shown) {
   border-color: #ff0000;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:-moz-placeholder-shown) + label {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:-moz-placeholder) + label {
   color: #ff0000;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input input.error:not(:placeholder-shown) + label {
@@ -458,13 +458,13 @@
   background: #fff;
   color: #ff0000;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:-moz-placeholder-shown) {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:-moz-placeholder) {
   border-color: #ff0000;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:placeholder-shown) {
   border-color: #ff0000;
 }
-.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:-moz-placeholder-shown) + label {
+.spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:-moz-placeholder) + label {
   color: #ff0000;
 }
 .spz_50061 .hs-lp-hero_form_col form .hs-form-field .input.filled input.error:not(:placeholder-shown) + label {

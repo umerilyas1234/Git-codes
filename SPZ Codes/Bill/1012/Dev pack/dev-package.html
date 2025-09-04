@@ -1,0 +1,146 @@
+<!-- Add this code before closing the "body" tag. Please refer to the given screenshot: 'https://app.screencast.com/adli0DJymQyyF'-->
+<!-- Hide or remove ".header-minimal, #formjumplink elements.  -->
+<div class="spz-form-wrap">
+  <div class="form-section">
+    <div class="form heading">
+      <h2>Start using BILL Today</h2>
+    </div>
+  </div>
+  <div class="the-form">
+
+  </div>
+</div>
+
+<!-- Add form with class name ".form-signup" in ".the-form" element that we added using above HTML. Refering the screenshot: "https://app.screencast.com/EkWSw2aW7o99a". It should look like this "https://app.screencast.com/KEVCRYfVldB55" after adding the form. -->
+
+
+<!-- This code requires some JavaScript, which is provided below. -->
+<script>
+  const formUniqueSelector = ".form-signup" //<--- form uqniue selector goes here. e.g.
+
+  const formLoaded = setInterval(() => {
+    if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
+      clearInterval(formLoaded);
+      //form modification
+      //adding wrapper
+      for (let i = 0; i < document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select').length; i++) {
+        let target = document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i];
+        let wrapper = document.createElement('div');
+        wrapper.classList.add('spz-input-wrapper', document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].getAttribute("id"));
+        target.parentNode.insertBefore(wrapper, target);
+        wrapper.appendChild(target);
+      }
+      //adding label
+      for (let i = 0; i < document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select').length; i++) {
+        let label = document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].getAttribute("placeholder") == "Number Of Employees" ? "Number of Employees" : document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].getAttribute("placeholder")
+        if (!label && document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].querySelector('option')) {
+          label = document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].querySelector('option').textContent;
+        }
+        document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].insertAdjacentHTML("afterend", `
+        <label for="${document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select')[i].getAttribute("id")}">${label}</label> 
+     `)
+      }
+      // change position
+      document.querySelector('.the-form .spz-input-wrapper.email').insertAdjacentElement('afterend', document.querySelector('.the-form .spz-input-wrapper.name'))
+      document.querySelector('.the-form .spz-input-wrapper.numberOfEmployees').insertAdjacentElement("beforebegin", document.querySelector('.the-form .spz-input-wrapper.signupType'))
+      document.querySelector('.the-form .spz-input-wrapper.signupType select option').disabled = true;
+
+      //products style
+      document.querySelector('.the-form #form-panel-3 .text-size-tiny').textContent = "(Check all that apply)"
+
+      // //select arrow
+      for (let x = 0; x < document.querySelectorAll('.the-form form select').length; x++) {
+        document.querySelectorAll('.the-form form select')[x].parentNode.insertAdjacentHTML("beforeend", `
+        <div class="arrow"></div>  
+        `)
+      }
+
+      //submit button 
+      document.querySelector('.the-form .submit-button.button-signup-2').classList.add("spz_1012_v1")
+      document.querySelector('.the-form .submit-button.button-signup-2').disabled = false
+
+      // existiing account
+      document.querySelector('.the-form .button-disclaimer').insertAdjacentHTML("afterend", `<div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login" class="spz_1012_v1">Login</a></div>`);
+
+      //  form bottom text
+      document.querySelector('.form-wrapper').insertAdjacentElement('beforeend', document.querySelector('.form-wrapper.is-sub-wrapper .text-size-small:nth-child(2)'));
+      document.querySelectorAll('.the-form .form-wrapper .text-size-small.is-form ').forEach(el => {
+        el.innerHTML = el.innerHTML.replace(/&nbsp;/g, ' ');
+      });
+
+      //input even listerer
+      const allInput = document.querySelectorAll('.the-form form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.the-form form select');
+      function labelChange(e) {
+        if (e.value == '' || e.value == null) {
+          e.closest(".spz-input-wrapper").classList.remove("hasValue");
+        } else if (e.value != '' || e.value != null) {
+          e.closest(".spz-input-wrapper").classList.add("hasValue");
+        }
+      }
+      allInput.forEach(function (e) {
+        e.addEventListener('blur', () => {
+          labelChange(e);
+        }, true);
+        e.addEventListener('change', () => {
+          labelChange(e);
+        }, true);
+        labelChange(e);
+      })
+      //remove unecessary select
+      for (let x = 0; x < document.querySelectorAll('.the-form #accountingSoftwareContainer select').length; x++) {
+        document.querySelectorAll('.the-form #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
+      }
+      //change label and option on mobile and desktop 
+      const checkSelectLabel = () => {
+        let labelText;
+        if (window.matchMedia("(max-width: 767.98px)").matches) {
+          labelText = "Your accounting software?"
+        } else {
+          labelText = "Which accounting software do you use?"
+        }
+        document.querySelector('.the-form .spz-input-wrapper.accountingSoftware label').textContent = labelText;
+        document.querySelector('.the-form .spz-input-wrapper.accountingSoftware select option').textContent = labelText;
+      }
+      checkSelectLabel();
+      window.addEventListener("resize", function () {
+        checkSelectLabel();
+      })
+
+      //onlynumber 
+      function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+          return false;
+        }
+        return true;
+      }
+      const NOEInterval = setInterval(function () {
+        if (document.querySelector('.the-form .spz-form-wrap .spz-input-wrapper.numberOfEmployees input')) {
+          clearInterval(NOEInterval)
+          document.querySelector('.the-form .spz-form-wrap .spz-input-wrapper.numberOfEmployees input').addEventListener('keypress', function (event) {
+            if (!isNumber(event)) event.preventDefault();
+          }, false);
+        }
+      }, 10)
+      //browser detection
+      let userAgent = navigator.userAgent;
+      let browser;
+      if (userAgent.match(/edg/i)) {
+        browser = "edge";
+      } else if (userAgent.match(/firefox|fxios/i)) {
+        browser = "firefox";
+      } else if (userAgent.match(/opr\//i)) {
+        browser = "opera";
+      } else if (userAgent.match(/chrome|chromium|crios/i)) {
+        browser = "chrome";
+      } else if (userAgent.match(/safari/i)) {
+        browser = "safari";
+      } else {
+        //alert("Other browser");
+      }
+      document.querySelector('.the-form').classList.add(browser);
+    }
+  })
+
+</script>

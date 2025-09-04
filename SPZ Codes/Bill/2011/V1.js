@@ -1,8 +1,190 @@
+// TC 2014
+const bodyInterval2014 = setInterval(function(){
+  if(document.querySelector('body') && !document.querySelector('.spz_2014_v2')) {
+    clearInterval(bodyInterval2014);
+    document.querySelector('body').classList.add("spz_2014_v2");
+    
+    HeroBannerTextChanges();
+    videoModal();
+    clickEvents();
+    
+    function HeroBannerTextChanges() {
+    	// Wrap Meet BILL in a span for make it colored
+    	const heroTitle = document.querySelector('.hero-full-width-wrapper .hero-full-width .hero-full-width-left .hero-left-wrapper .header-hero');
+			if (heroTitle) {
+			    const originalText = heroTitle.textContent.trim();
+			    const updatedText = originalText.replace(
+			        'Meet BILL.',
+			        '<span class="orange-text">Meet BILL.</span>'
+			    );
+			    heroTitle.innerHTML = updatedText;
+			}
+			
+			// Update Hero Subhead Text
+			const heroSubHead = document.querySelector('.spz_2014_v2 .hero-full-width-wrapper .hero-full-width .hero-full-width-left .hero-left-wrapper .subheader-hero');
+			if (heroSubHead) {
+			    const originalText = heroSubHead.textContent.trim();
+			    const updatedText = originalText.replace('grow—all', 'grow — all');
+			    heroSubHead.innerHTML = updatedText;
+			}
+			
+			// Updating button disclaimer Text
+			const buttonDisclaimer = document.querySelector('.spz_2014_v2 .hero-full-width-wrapper .hero-full-width .button-disclaimer.is-email');
+
+			if (buttonDisclaimer) {
+			    const originalHTML = buttonDisclaimer.innerHTML;
+			    const updatedHTML = originalHTML.replace(`BILL's`, `BILL`);
+			    buttonDisclaimer.innerHTML = updatedHTML;
+			}
+
+			
+			// Update Arrow SVG Icon
+      if(document.querySelector('.spz_2014_v2 .hero-full-width-wrapper .hero-full-width a.button-link.link-container .arrow-icon')) {
+        document.querySelector('.spz_2014_v2 .hero-full-width-wrapper .hero-full-width a.button-link.link-container .arrow-icon').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+          <path d="M10.5303 2.9696L17.5607 9.99993L10.5303 17.0303L9.46966 15.9696L14.6893 10.75L3.5 10.75V9.24999L14.6894 9.24999L9.46966 4.03026L10.5303 2.9696Z" fill="#024DBD"></path>
+        </svg>`;
+      }
+			
+			// Adding Hero Banner Images
+			if (!document.querySelector('.spz_2014_image_innerWrapper') && document.querySelector('.hero-full-width-wrapper .hero-full-width > div.full-width-grid-item.is-right')) {
+					document.querySelector('.hero-full-width-wrapper .hero-full-width > div.full-width-grid-item.is-right').innerHTML = ` <div class="spz_2014_image_innerWrapper">
+					<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2014/hero-image-1.webp" alt="AP & AR"> <div class="spz_2014_video_thumbnail_outer">
+					    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2014/video-thumbnail.webp" alt="Accounting" class="spz_2014_video_thumbnail">
+					    <span class="video_play_icon">
+					    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none">
+							  <path d="M12 6.26795C13.3333 7.03775 13.3333 8.96225 12 9.73205L3 14.9282C1.66667 15.698 -7.31543e-07 14.7358 -6.64245e-07 13.1962L-2.09983e-07 2.80385C-1.42685e-07 1.26425 1.66667 0.301995 3 1.0718L12 6.26795Z" fill="#111111"></path>
+							  </span>
+							</svg>
+					    <div class="spz_2014_video_context">
+					        <span>See BILL in action</span>
+					    </div>
+					</div><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2014/hero-image-3.webp" alt="Spend & Expense"></div>`;
+			}
+    }	
+		
+	function videoModal() {
+		if (!document.querySelector('.spz_2014_video_wrapper')) {
+				document.body.insertAdjacentHTML('afterbegin', `<div class="spz_2014_video_wrapper">
+				<div class="spz_video_outer">
+					<span class="spz_2014_video_clost_btn">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="default_svg">
+							<path d="M18 6L6 18M6 6L18 18" stroke="#797C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="hover_svg">
+									<path d="M18 6L6 18M6 6L18 18" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+					</span>
+					<div class="spz_video_inner">
+						<div class="spz_video_cover_image">
+							<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2014/viedeo-thumbnail-open.webp" alt="video cover image">
+							<span class="modal_play_icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none">
+												<path d="M12 6.26795C13.3333 7.03775 13.3333 8.96225 12 9.73205L3 14.9282C1.66667 15.698 -7.31543e-07 14.7358 -6.64245e-07 13.1962L-2.09983e-07 2.80385C-1.42685e-07 1.26425 1.66667 0.301995 3 1.0718L12 6.26795Z" fill="#111111"></path>
+											</svg></span>
+						</div>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/laAQUVKibDw?si=Ihn8QhCg2RGWOJVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+					<div class="spz_video_modal_content">
+						<div class="content-text">
+							<p class="email-input">Manage finances in a fraction of the time</p>
+							<a class="get-started-btn" href="https://www.bill.com/signup">Get Started</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>`);
+		}
+	}
+		
+	function clickEvents() {
+		function preventBodyScroll(e) {
+			e.preventDefault();
+		}
+		// Show Video Overlay
+		// document.querySelector('.spz_2014_video_thumbnail_outer').addEventListener('click', function(){
+		// 	document.body.classList.add('video_modal_active');
+		// 	document.addEventListener('touchmove', preventBodyScroll, { passive: false });
+		// });
+			
+			
+		// Handle youtube video play
+		const videoCoverImage = document.querySelector('.spz_video_cover_image');
+		const videoInner = document.querySelector('.spz_video_inner');
+		const iframe = document.querySelector('.spz_video_inner iframe');
+		
+		if (videoCoverImage && videoInner && iframe) {
+			videoCoverImage.addEventListener('click', function() {
+				// Add the modal_video_play class to parent
+				videoInner.classList.add('modal_video_play');
+				
+				// Get the current iframe src
+				let iframeSrc = iframe.src;
+				
+				// Add autoplay parameter to the YouTube URL if not already present
+				if (iframeSrc.indexOf('autoplay=1') === -1) {
+					// Check if URL already has parameters
+					const separator = iframeSrc.indexOf('?') !== -1 ? '&' : '?';
+					iframeSrc += separator + 'autoplay=1';
+					
+					// Update iframe src to trigger autoplay
+					iframe.src = iframeSrc;
+				}
+			});
+		}
+			
+			
+		// Close video modal
+		const closeBtn = document.querySelector('.spz_2014_video_clost_btn');
+		const videoWrapper = document.querySelector('.spz_2014_video_wrapper');
+		
+		if (closeBtn && videoWrapper) {
+			closeBtn.addEventListener('click', function() {
+					// Remove class from body
+					document.body.classList.remove('video_modal_active');
+					document.removeEventListener('touchmove', preventBodyScroll);
+				
+				// Stop the video by removing and re-adding iframe
+				if (iframe) {
+					const originalSrc = iframe.src.replace(/[?&]autoplay=1/, '');
+					iframe.src = originalSrc;
+				}
+				
+				// Remove the play class
+				if (videoInner) {
+					videoInner.classList.remove('modal_video_play');
+				}
+			});
+		}
+	}
+
+	// Email validation function
+	function validateEmail() {
+		const form = document.querySelector('#email-form');
+		const emailInput = document.querySelector('#email');
+		const emailValue = emailInput.value.trim();
+
+		// Check for empty, missing @, or @ at the end
+		if (emailValue === '' || !emailValue.includes('@') || emailValue.endsWith('@')) {
+			form.classList.add('spz_invalid_input_error');
+		} else {
+			form.classList.remove('spz_invalid_input_error');
+		}
+	}
+
+	// Add click event listener to button
+	document.querySelector('#homepage-form-button').addEventListener('click', function (e) {
+		validateEmail();
+	});
+
+  }
+}, 10);
+
+
+// Variant 2011
 const bodyInterval2011 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_2011')) {
     clearInterval(bodyInterval2011)
     document.querySelector('body').classList.add("spz_2011")
-    localStorage.setItem('bdcAbTest9', '9-2011.v1');
+    localStorage.setItem('bdcAbTest9', '2011-v1');
 
     const loadJS = (url, implementationCode, location) => {
       var scriptTag = document.createElement('script');
@@ -23,7 +205,8 @@ const bodyInterval2011 = setInterval(function () {
     gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
 
 
-    document.querySelector('.testimonial-slider').closest('.background-color-light-orange').classList.add('spz_hidden');
+    document.querySelector('.testimonial-slider').closest('.background-color-grey-200').classList.add('spz_hidden');
+    document.querySelector('.is-stats').closest('section').classList.add('spz_hidden');
     document.querySelector('.spz_hidden').insertAdjacentHTML('afterend', `
       <div class="slider_wrapper">
         <div class="slider_heading">
@@ -47,12 +230,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-case-study-clif-family" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-case-study-clif-family" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1" 
-                          data-video="/progressive_redirect/playback/638997409/rendition/1080p/file.mp4?loc=external&signature=0a728a508cf987dc60130c3d800b963682b9711368daf3af498bc2e104afafd0"
+                          data-video="https://fast.wistia.net/embed/iframe/qsi0yzwcu7?autoplay=1&muted=1"
                           data-bg="preview-clif-family-winery.webp"
+                          data-client="Clif Family Winery"
+                          data-percentage=" 20% efficiency increase"
                           >
                           <img src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"  alt="Play icon"> Watch Video</a>
                         </li>
@@ -75,12 +260,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-success-story-bear-robotics" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-success-story-bear-robotics" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
-                            data-video="/progressive_redirect/playback/669952495/rendition/1080p/1080p.mp4?loc=external&signature=1a7eb78b8c6399cb2262b8099f6ff03196f36ee7715293ebaf6f6dcbb7c2f738"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2Fjwvge9s02n&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2Fjwvge9s02n%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F8c1d8537a46e34b95ba2e6e060d184519ab8dcc7.jpg%3Fimage_crop_resized%3D640x360&type=text%2Fhtml&schema=wistia&wvideo=jwvge9s02n"
                             data-bg="preview-bear-robotics.webp"
+                            data-client="Bear Robotics"
+                            data-percentage="67% faster close"
                           ><img
                               src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
                               alt="Play icon"> Watch Video</a>
@@ -104,12 +291,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-success-story-bare-bones-broth" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-success-story-bare-bones-broth" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
-                            data-video="/progressive_redirect/playback/574351702/rendition/1080p/file.mp4?loc=external&signature=8fbb6ac483a6837e857e2c4e4a7c0cc7844087a11624164ba449d21f098c0353"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2F3lt7m3bjs1&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2F3lt7m3bjs1%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Feef6794833bd32891a0a1f2c036e9b8ff5d81cd9.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=3lt7m3bjs1"
                             data-bg="preview-bare-bones.webp"
+                            data-client="Bare Bones"
+                            data-percentage="significant time savings"
                           ><img
                               src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
                               alt="Play icon"> Watch Video</a>
@@ -133,12 +322,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-case-study-golden-ratio" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-case-study-golden-ratio" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
-                            data-video="/progressive_redirect/playback/696662551/rendition/1080p?loc=external&signature=dba25ffa97af2a5e148eafc417820f9086c9c17bfe16e0f26da95841af4a72b4"
+                            data-video="https://fast.wistia.net/embed/iframe/ktnw1ol7mz?autoplay=1&muted=1"
                             data-bg="preview-golden-ratio.webp"
+                            data-client="Golden Ratio"
+                            data-percentage="80% faster payables"
                           ><img
                               src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
                               alt="Play icon"> Watch Video</a>
@@ -162,12 +353,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-success-story-wag" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-success-story-wag" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
-                            data-video="/external/600365358.hd.mp4?s=e1b8c49db6195770e47372b376e718149a325905&profile_id=174"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2Fhvvbvpx8lo&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2Fhvvbvpx8lo%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F23574dbc2669530a00f1a4e6aa2783d9dce8fdb6.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=hvvbvpx8lo"
                             data-bg="preview-wag.webp"
+                            data-client="Wag"
+                            data-percentage="80% faster close"
                           ><img
                               src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
                               alt="Play icon"> Watch Video</a>
@@ -191,12 +384,14 @@ const bodyInterval2011 = setInterval(function () {
                     <div class="slider_btns">
                       <ul>
                         <li>
-                          <a href="https://www.bill.com/case-study/customer-success-story-generation-teach" target="_blank" class="slider_btn spz_2011_v1">Read Story</a>
+                          <a href="https://www.bill.com/case-study/customer-success-story-generation-teach" class="slider_btn spz_2011_v1 read_story">Read Story</a>
                         </li>
                         <li>
                           <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
-                            data-video="/external/560727126.hd.mp4?s=e0262bfa77907ce87efefb823f14467f649514c8&profile_id=175"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2F1s8hkqa693&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2F1s8hkqa693%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Fd16dfb3f68d424fb7e1b86147091817d42fcd626.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=1s8hkqa693"
                             data-bg="preview-generation-teach.webp"
+                            data-client="Generation Teach"
+                            data-percentage="90% faster payment processing"
                           ><img
                               src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
                               alt="Play icon"> Watch Video</a>
@@ -264,13 +459,12 @@ const bodyInterval2011 = setInterval(function () {
                 <path d="M12 6.26795C13.3333 7.03775 13.3333 8.96225 12 9.73205L3 14.9282C1.66667 15.698 -7.31543e-07 14.7358 -6.64245e-07 13.1962L-2.09983e-07 2.80385C-1.42685e-07 1.26425 1.66667 0.301995 3 1.0718L12 6.26795Z" fill="#111111"></path>
               </svg>
             </div>
-            <video id="videoPlayer" controls playsinline">
-              <source src="" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe id="videoPlayer" allow="autoplay; fullscreen" autoplay="1" muted="1" frameborder="0" 
+            scrolling="no" playsinline">
+            </iframe>
           </div>
           <div class="modal_footer">
-            <p>Clif Family Winery achieved <strong>20% efficiency increase</strong> with BILL</p>
+            <p></p>
             <a href="https://www.bill.com/signup" class="modal_footerBtn button is-cta-small w-inline-block spz_2011_v1">Get Started</a>
           </div>
         </div>
@@ -279,20 +473,25 @@ const bodyInterval2011 = setInterval(function () {
 
     const popup = document.querySelector(".popup_wrapper");
     const popup_outer = document.querySelector(".video_container");
-    var video = popup_outer.querySelector("video");
+    const modalFooter_text = document.querySelector(".modal_footer p");
+    var video = popup_outer.querySelector("iframe");
     const playBtn = document.querySelector('.play_button');
+    let currentVideoId = "";
 
     window.addEventListener('click', function (e) {
       if (e.target.classList.contains('video_btn')) {
         const videoId = e.target.getAttribute("data-video");
+        currentVideoId = videoId; 
         const bg = e.target.getAttribute("data-bg");
+        const client = e.target.getAttribute("data-client");
+        const percentage = e.target.getAttribute("data-percentage");
 
         popup_outer.style.background = `url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/${bg})`;
         popup_outer.style.backgroundSize = "cover";
         popup_outer.style.backgroundPosition = "center";
 
-        video.src = `https://player.vimeo.com${videoId}`;
-
+        modalFooter_text.innerHTML = `${client} achieved <strong>${percentage}</strong> with BILL`;
+        
         // Show Popup
         popup.classList.add("visible");
         document.querySelector('body').classList.add('no_scroll');
@@ -301,6 +500,7 @@ const bodyInterval2011 = setInterval(function () {
       if (e.target.classList.contains('play_button')) {
         e.target.classList.add('hide');
         video.style.display = 'flex';
+        video.src = `${currentVideoId}`;
         video.play();
       }
 
@@ -312,8 +512,6 @@ const bodyInterval2011 = setInterval(function () {
         document.querySelector('body').classList.remove('no_scroll');
       }
     });
-
-
 
     loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
 
@@ -332,6 +530,10 @@ const bodyInterval2011 = setInterval(function () {
           },
           1920: {
             perPage: 1.48854,
+            gap: "32px",
+          },
+          1440: {
+            perPage: 1.34800,
             gap: "32px",
           },
           1023: {
@@ -385,6 +587,19 @@ const bodyInterval2011 = setInterval(function () {
       window.addEventListener('click', function (e) {
         if (e.target.closest("splide__slide") || e.target.classList.contains("splide__arrow") || e.target.closest('.testimonial_slider')) {
           stopAutoplay();
+        }
+        if(e.target.classList.contains('read_story') || e.target.closest('.read_story')) {
+          localStorage.setItem("scrollToSlider", "true");
+        }
+      });
+
+      window.addEventListener("load", function () {
+        if (localStorage.getItem("scrollToSlider") === "true") {
+          const section = document.querySelector(".slider_wrapper");
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          localStorage.removeItem("scrollToSlider");
         }
       });
 

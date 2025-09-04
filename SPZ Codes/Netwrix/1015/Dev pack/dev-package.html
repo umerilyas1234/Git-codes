@@ -1,0 +1,156 @@
+<!-- Add the following code after ".head-cont .new-review-ribbon" elemnt. Please refer to the given screenshot: 'https://app.screencast.com/98gtjc2PLNgjc'. It should look like this "https://app.screencast.com/Wm5W05WiZi1NB"-->
+<div class="performance">
+  <div class="auto_container">
+    <div class="performance_inner">
+      <div class="performance_list">
+        <ul>
+          <li>
+            <div class="performance_data">
+              <strong>
+                85%
+                <span>less time <br>
+                  auditing</span>
+              </strong>
+              <p>Extremely helpful. I can investigate an incident in a few clicks, whereas before it would take hours to dig through logs.</p>
+              <small>
+                <span>
+                  <strong>Boytcho Boytchev</strong>
+                  <i>Information Security Officer</i>
+                </span>
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1015/logo-credissimo.webp" alt="credissimo" width="81" height="48">
+              </small>
+            </div>
+          </li>
+          <li>
+            <div class="performance_data">
+              <strong>
+                90%
+                <span>faster <br>
+                  compliance</span>
+              </strong>
+              <p>The best tool. It provides quality reporting to help us comply with regulations and decrease the time spent.</p>
+              <small>
+                <span>
+                  <strong>Predrag Škundrić</strong>
+                  <i>CISO</i>
+                </span>
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1746090103/netwrix/1015/logo-api-bank.svg" alt="API bank" width="59" height="45">
+              </small>
+            </div>
+          </li>
+          <li>
+            <div class="performance_data">
+              <strong>
+                6X
+                <span>faster <br>
+                  audits</span>
+              </strong>
+              <p>Netwrix Auditor gathers all the data we need for internal audits while taking the usual 2–3 hours down to 30 minutes.</p>
+              <small>
+                <span>
+                  <strong>Cody Lavallee</strong>
+                  <i>IT Infra Manager</i>
+                </span>
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1746090103/netwrix/1015/logo-progress-residential.svg" alt="progress residential" width="111" height="48">
+              </small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Change the text here "https://app.screencast.com/RIupq6VnHJJsH", "4.5" to "4.7" and "143" to "206". It should look like this "https://app.screencast.com/F8EDl1gkWfZkn"  . -->
+
+
+
+
+<!-- This code requires some JavaScript, which is provided below. -->
+<script>
+    function heroCopyChanges() {
+      // Wrap hero elements in a new wrapper element
+      const parent = document.querySelector('.head-cont .new-hero-1001');
+
+      // Select the two elements you want to wrap
+      const wrapper = parent.querySelector('.wrapper');
+      const heroImage = parent.querySelector('.hero-image');
+
+      // Create the new wrapper div
+      const newWrapper = document.createElement('div');
+      newWrapper.className = 'new-hero-1011-wrapper';
+
+      // Append the selected elements to the new wrapper
+      newWrapper.appendChild(wrapper);
+      newWrapper.appendChild(heroImage);
+
+      // Append the new wrapper to the parent
+      parent.appendChild(newWrapper);
+
+      // ----------------------------------------------
+      // ----------------------------------------------
+
+      // Move logo section inside hero banner
+      const logoSection = document.querySelector('.head-cont .shifter-wrapper .cta-links-wrapper');
+      document.querySelector('.new-hero-1011-wrapper').insertAdjacentElement('afterend', logoSection);
+
+      // Update the logo images
+      document.querySelector('.head-cont .cta-links-wrapper img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1746421617/netwrix/1011/logos_1441.svg');
+      document.querySelector('.head-cont .cta-links-wrapper .cta-links-block source[media*="767px"]').setAttribute('srcset', 'https://res.cloudinary.com/spiralyze/image/upload/v1746421617/netwrix/1011/logos_mobile_1.svg');
+      document.querySelector('.head-cont .cta-links-wrapper .cta-links-block img').insertAdjacentHTML('beforebegin', `<source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1746421616/netwrix/1011/logos_1921.svg" type="image/webp" media="(min-width: 1920px)">`);
+      document.querySelector('.head-cont .cta-links-wrapper .cta-links-block img').insertAdjacentHTML('beforebegin', `<source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1746421617/netwrix/1011/logos_tablet_1.svg" type="image/webp" media="(max-width: 1024px)">`);
+
+      // Wrapping Ratings elements in a single div
+      const starImage = document.querySelector('.head-cont .new-hero-1001 .wrapper .review img + img');
+      starImage.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1754668576/netwrix/1015/stars.svg');
+      const ratingText = document.querySelectorAll('.head-cont .new-hero-1001 .wrapper .review img + img ~ span');
+
+      const reviewTextDiv = document.createElement('div');
+      reviewTextDiv.className = 'spz-1011-reviewText';
+
+      // Append star image
+      reviewTextDiv.appendChild(starImage);
+      // Append each span
+      ratingText.forEach(span => {
+        reviewTextDiv.appendChild(span);
+      });
+
+      // Insert the new wrapper into the DOM
+      document.querySelector('.head-cont .new-hero-1001 .wrapper .review').appendChild(reviewTextDiv);
+
+      // Change Hero Title copy
+      document.querySelector('.head-cont .new-hero-1001 .wrapper .title').innerHTML = `Identify Threats. <br class="desktop-break">Secure Data. <br class="tablet-break">Reduce Risk.`;
+
+      // Update Review count
+      const reviewsCountInterval = setInterval(function () {
+        if (document.querySelector('.spz-1011-reviewText span')) {
+          clearInterval(reviewsCountInterval);
+          document.querySelector('.spz-1011-reviewText  > span:nth-of-type(1)').textContent = `4.7`;
+          document.querySelector('.spz-1011-reviewText span:last-child').innerHTML = `(206 reviews)<sup>*</sup>`;
+          document.querySelector('.head-cont .shifter-wrapper .new-review-ribbon .reviews-count span').textContent = `(206 reviews)`;
+        }
+      }, 10);
+
+    }
+
+    function handleCards() {
+      // Adding class to cards for maintaining easily with css
+      document.querySelectorAll('.head-cont .new-hero-1001 .wrapper .cards .card').forEach(function (card, index) {
+        card.classList.add(`card-${index + 1}`);
+      });
+    }
+
+    function imageChanges() {
+      // Updating main hero banner image
+      document.querySelector('.head-cont .new-hero-1001 .hero-image img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1011/image_4x_2.webp');
+      document.querySelector('.head-cont .new-hero-1001 .hero-image source:not([media])').setAttribute('srcset', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1011/image_4x_2.webp');
+      document.querySelectorAll('.head-cont .new-hero-1001 .hero-image source[media="(max-width:1259px)"], .head-cont .new-hero-1001 .hero-image source[media="(max-width:767px)"]').forEach(function (ele) {
+        ele.srcset = 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/1011/image_4x_2.webp';
+      });
+    }
+
+    heroCopyChanges();
+    handleCards();
+    imageChanges();
+
+</script>

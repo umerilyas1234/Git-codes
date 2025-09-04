@@ -32,7 +32,7 @@ function spz1003() {
       </ul>`);
 
     document.querySelector('.heroContent').insertAdjacentHTML('afterend', `<div class="container">
-          <h3>Trusted by over 400 clients, from single family offices to large institutions</h3>
+          <h3>Trusted by over 425 clients, from single family offices to large institutions</h3>
           <div class="logo_list">
             <ul>
               <li>
@@ -102,10 +102,9 @@ function spz1003() {
 
         if (inputElement && label) {
           if (label && label.innerText.includes('Company Type*')) {
-            label.innerText = 'Company type*';
+            label.innerText = 'Company Type*';
           }
           if (label && label.innerText.toLowerCase().includes('country / region')) {
-            console.log('label text is = ' + label.innerText + "'");
             label.innerText = 'Country*';
           }
           if (inputElement.tagName === 'TEXTAREA') {
@@ -121,7 +120,7 @@ function spz1003() {
       const field2 = document.querySelector('.hero_section #field_3_2');
       const field9 = document.querySelector('.hero_section #field_3_9');
       const footer = document.querySelector('.hero_section .gform_footer');
-      field9.innerHTML = `Canoe Intelligence uses your contact information to inform you about our products and services. You can unsubscribe anytime. For details on opting out and our privacy practices, see our <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.`;
+      field9.innerHTML = `Canoe Intelligence needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.`;
       if (field16 && field2) field16.after(field2);
       if (footer && field9) footer.after(field9);
 
@@ -192,7 +191,6 @@ function spz1003() {
 
       if ($heroForm.length && !$heroForm.data('modified')) {
         $heroForm.data('modified', true);
-        console.log('form rendered');
         document.querySelector('body').classList.add('removeAnimation');
         formModification();
         // Remove the animation class after a short delay       
@@ -489,7 +487,6 @@ function spz1003() {
 
           // ✅ Update field
           const inputField = document.querySelector('.heroRight #input_3_31');
-          console.log('Field found:', inputField);
           const values = [];
 
           if (q1Selection) values.push(q1Selection);
@@ -503,7 +500,6 @@ function spz1003() {
 
           if (inputField) {
             inputField.value = values.join(', ');
-            console.log('Input value set to:', inputField.value);
           }
         }
 

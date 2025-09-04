@@ -234,13 +234,13 @@
   border-color: #31936A !important;
   outline: none !important;
 }
-.spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown) {
+.spz_t5002 .form_inputModal input:not(:-moz-placeholder) {
   border-color: #728499 !important;
 }
 .spz_t5002 .form_inputModal input:not(:placeholder-shown) {
   border-color: #728499 !important;
 }
-.spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown):active, .spz_t5002 .form_inputModal input:not(:-moz-placeholder-shown):focus {
+.spz_t5002 .form_inputModal input:not(:-moz-placeholder):active, .spz_t5002 .form_inputModal input:not(:-moz-placeholder):focus {
   border-color: #31936A !important;
 }
 .spz_t5002 .form_inputModal input:not(:placeholder-shown):active, .spz_t5002 .form_inputModal input:not(:placeholder-shown):focus {

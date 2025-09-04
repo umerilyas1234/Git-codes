@@ -11,7 +11,7 @@ html {
 .spz_t2006 {
   height: 100vh;
   overflow: hidden;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
 }
 
 .spz_t2006 > div > .v-modal-mask {
@@ -50,7 +50,7 @@ html {
 }
 
 .spz_t2006 .form_outer {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
   height: 100vh;
   overflow: hidden;
   z-index: 999999;
@@ -292,7 +292,7 @@ html {
 .spz_t2006 .spz-input-wrap select {
   color: transparent;
   padding-right: 30px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1726744775/netwrix/2002/frame.svg") !important;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1726744775/netwrix/2002/frame.svg") !important;
   background-repeat: no-repeat !important;
   background-position: 94% center !important;
   background-size: 18px !important;
@@ -967,7 +967,7 @@ html {
 }
 
 .spz_t2010 .form_outer {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2002/bg.webp") no-repeat top left/cover;
   overflow: hidden;
   z-index: 999999;
   width: 100%;
@@ -1000,7 +1000,7 @@ html {
     position: relative;
     overflow: auto;
     min-height: 100vh;
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2005/bg-tablet.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2005/bg-tablet.webp");
   }
 }
 @media (max-width: 767.98px) {
@@ -1012,7 +1012,7 @@ html {
     position: relative;
     overflow: auto;
     min-height: 100vh;
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2005/bg-mobile.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2005/bg-mobile.webp");
   }
 }
 .spz_t2010.step-2-hide .spz-form-wrap {
@@ -1063,7 +1063,7 @@ html {
 .spz_t2010 .spz-form-wrap .right {
   width: 477px;
   padding: 41px 40px 40px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg.webp");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1078,13 +1078,13 @@ html {
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .spz_t2010 .spz-form-wrap .right {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-tablet.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-tablet.webp");
   }
 }
 @media (max-width: 767.98px) {
   .spz_t2010 .spz-form-wrap .right {
     padding: 32px 20px;
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-mobile.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2010/bg-mobile.webp");
   }
 }
 
@@ -1211,7 +1211,7 @@ html {
 .spz_t2010 .spz-input-wrap select {
   color: transparent;
   padding-right: 30px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1726744775/netwrix/2002/frame.svg") !important;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1726744775/netwrix/2002/frame.svg") !important;
   background-repeat: no-repeat !important;
   background-position: 93% center !important;
   background-size: 18px !important;
@@ -1588,7 +1588,7 @@ html {
   top: -0.5px;
   width: 24px;
   height: 24px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1747048286/netwrix/2010/icon-check.svg");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1747048286/netwrix/2010/icon-check.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

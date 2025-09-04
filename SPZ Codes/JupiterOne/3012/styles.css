@@ -287,7 +287,7 @@
 .spz_3012 .demo_form form .j1-header-form-input:hover {
   border-color: #888;
 }
-.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown) + label {
+.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder) + label {
   top: 0;
   left: 27px;
   background-color: #fff;
@@ -308,19 +308,19 @@
 .spz_3012 .demo_form form .j1-header-form-input:active, .spz_3012 .demo_form form .j1-header-form-input:focus {
   border-color: #03E7BB;
 }
-.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown) {
+.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder) {
   border-color: #CCC;
 }
 .spz_3012 .demo_form form .j1-header-form-input:not(:placeholder-shown) {
   border-color: #CCC;
 }
-.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown):hover {
+.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder):hover {
   border-color: #888;
 }
 .spz_3012 .demo_form form .j1-header-form-input:not(:placeholder-shown):hover {
   border-color: #888;
 }
-.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown):active, .spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown):focus {
+.spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder):active, .spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder):focus {
   border-color: #03E7BB;
 }
 .spz_3012 .demo_form form .j1-header-form-input:not(:placeholder-shown):active, .spz_3012 .demo_form form .j1-header-form-input:not(:placeholder-shown):focus {
@@ -337,7 +337,7 @@
     width: 100%;
     max-width: 100%;
   }
-  .spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder-shown) + label {
+  .spz_3012 .demo_form form .j1-header-form-input:not(:-moz-placeholder) + label {
     top: 0;
     left: 25px;
   }

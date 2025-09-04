@@ -1,0 +1,879 @@
+:root {
+  --inputHeight: 52px
+}
+
+body .thank-you-screen .form_outer {
+  display: none
+}
+
+body.usercube .form_outer {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-usercube-desktop.webp)
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body.usercube .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-usercube-tablet.webp)
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.usercube .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-usercube-mobile.webp)
+  }
+}
+
+body.password_policy .form_outer {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-assword_policy_enforcer-desktop.webp)
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body.password_policy .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-password_policy_enforcer-tablet.webp)
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.password_policy .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-password_policy_enforcer-mobile.webp)
+  }
+}
+
+body.data_access .form_outer {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-enterpise_auditor-desktop.webp)
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body.data_access .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-enterpise_auditor-tablet.webp)
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.data_access .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-enterpise_auditor-mobile.webp)
+  }
+}
+
+body.data_classification .form_outer {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-data_classification-desktop.webp)
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body.data_classification .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-data_classification-tablet.webp)
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.data_classification .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-data_classification-mobile.webp)
+  }
+
+  body.data_classification .form_outer .form_heading h2 {
+    padding: 0 25px
+  }
+}
+
+body .progress,
+body .header-flex-container {
+  display: none
+}
+
+body .welcome-screen {
+  padding: 0
+}
+
+body .welcome-screen>h2,
+body .welcome-screen>p,
+body .welcome-screen>.overlay-form,
+body .welcome-screen>.language-selector {
+  display: none
+}
+
+body .form-horizontal>div {
+  width: calc(50% - 8px)
+}
+
+body .form-horizontal>div.privacy-text {
+  display: none
+}
+
+@media (max-width: 767.98px) {
+  body .form-horizontal>div {
+    width: 100%
+  }
+}
+
+body .form-horizontal>div.error-summary {
+  width: 100%
+}
+
+body .form-horizontal>div.error input,
+body .form-horizontal>div.error select,
+body .form-horizontal>div.error textarea,
+body .form-horizontal>div.email_error input,
+body .form-horizontal>div.email_error select,
+body .form-horizontal>div.email_error textarea {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .form-horizontal>div.error select,
+body .form-horizontal>div.email_error select {
+  color: transparent
+}
+
+body .form-horizontal>div.error select:focus,
+body .form-horizontal>div.error select:active,
+body .form-horizontal>div.email_error select:focus,
+body .form-horizontal>div.email_error select:active {
+  color: #354556
+}
+
+body .form-horizontal>div.error select:focus option:first-child,
+body .form-horizontal>div.error select:active option:first-child,
+body .form-horizontal>div.email_error select:focus option:first-child,
+body .form-horizontal>div.email_error select:active option:first-child {
+  color: #354556
+}
+
+body .form-horizontal>div.error .focused input+label[class*=label-spz-],
+body .form-horizontal>div.error .focused select+label[class*=label-spz-],
+body .form-horizontal>div.error .focused textarea+label[class*=label-spz-],
+body .form-horizontal>div.error .has-value input+label[class*=label-spz-],
+body .form-horizontal>div.error .has-value select+label[class*=label-spz-],
+body .form-horizontal>div.error .has-value textarea+label[class*=label-spz-],
+body .form-horizontal>div.email_error .focused input+label[class*=label-spz-],
+body .form-horizontal>div.email_error .focused select+label[class*=label-spz-],
+body .form-horizontal>div.email_error .focused textarea+label[class*=label-spz-],
+body .form-horizontal>div.email_error .has-value input+label[class*=label-spz-],
+body .form-horizontal>div.email_error .has-value select+label[class*=label-spz-],
+body .form-horizontal>div.email_error .has-value textarea+label[class*=label-spz-] {
+  color: #df0000
+}
+
+body .form-horizontal>div.error .focused input,
+body .form-horizontal>div.error .focused select,
+body .form-horizontal>div.error .focused textarea,
+body .form-horizontal>div.email_error .focused input,
+body .form-horizontal>div.email_error .focused select,
+body .form-horizontal>div.email_error .focused textarea {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .form-horizontal>div.error .has-value input,
+body .form-horizontal>div.error .has-value select,
+body .form-horizontal>div.error .has-value textarea,
+body .form-horizontal>div.email_error .has-value input,
+body .form-horizontal>div.email_error .has-value select,
+body .form-horizontal>div.email_error .has-value textarea {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .form-horizontal>div.error .has-value select,
+body .form-horizontal>div.error .focused select,
+body .form-horizontal>div.email_error .has-value select,
+body .form-horizontal>div.email_error .focused select {
+  color: #354556
+}
+
+body .form-horizontal>div.error .has-value select option,
+body .form-horizontal>div.error .focused select option,
+body .form-horizontal>div.email_error .has-value select option,
+body .form-horizontal>div.email_error .focused select option {
+  color: #354556
+}
+
+body .form-horizontal>div.error .has-value select option:first-child,
+body .form-horizontal>div.error .focused select option:first-child,
+body .form-horizontal>div.email_error .has-value select option:first-child,
+body .form-horizontal>div.email_error .focused select option:first-child {
+  color: transparent
+}
+
+body .form-horizontal>div.error .has-value select:hover option:first-child,
+body .form-horizontal>div.error .focused select:hover option:first-child,
+body .form-horizontal>div.email_error .has-value select:hover option:first-child,
+body .form-horizontal>div.email_error .focused select:hover option:first-child {
+  color: #354556
+}
+
+body .contact-cont {
+  padding-top: 0
+}
+
+body .contact-cont>.container,
+body .contact-cont .v-office-locations-heading {
+  display: none
+}
+
+body .form-wrapper-2 {
+  padding: 0
+}
+
+body .form_outer {
+  padding: 50px 0;
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-auditor-desktop.webp);
+  backdrop-filter: blur(4px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  min-height: 100vh
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-auditor-tablet.webp);
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+    overflow: auto;
+    justify-content: space-between
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .form_outer {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/9001/bg-auditor-mobile.webp);
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+    overflow: auto
+  }
+}
+
+body .spz-form-wrap {
+  max-width: 554px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 40px;
+  background-color: #fff;
+  text-align: center
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body .spz-form-wrap {
+    max-height: unset;
+    overflow: auto
+  }
+
+  body .spz-form-wrap::-webkit-scrollbar {
+    display: none
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .spz-form-wrap {
+    padding: 28px 20px;
+    transform: none
+  }
+}
+
+@media (max-width: 767px) {
+  body .spz-form-wrap {
+    width: 100%;
+    max-height: unset;
+    overflow: auto
+  }
+
+  body .spz-form-wrap::-webkit-scrollbar {
+    display: none
+  }
+}
+
+body .spz-form-wrap .the-form {
+  margin-top: 14px
+}
+
+body .spz-form-wrap form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 16px
+}
+
+@media (max-width: 767.98px) {
+  body .spz-form-wrap form {
+    gap: 0
+  }
+}
+
+body .spz-form-wrap form .error-summary {
+  width: 100%;
+  color: #df0000;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  background: #fff;
+  padding: 0 23.5px;
+  transform: translateY(-20px)
+}
+
+body .spz-form-wrap form .error-summary:before {
+  content: "";
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2.67463 13.9453H13.3265C13.4995 13.9453 13.6695 13.9004 13.82 13.815C13.9704 13.7296 14.0962 13.6066 14.1849 13.458C14.2736 13.3095 14.3222 13.1405 14.3261 12.9675C14.3299 12.7946 14.2888 12.6236 14.2068 12.4712L8.88119 2.58062C8.50338 1.87937 7.49775 1.87937 7.11994 2.58062L1.79431 12.4712C1.7123 12.6236 1.67121 12.7946 1.67505 12.9675C1.6789 13.1405 1.72755 13.3095 1.81625 13.458C1.90496 13.6066 2.03068 13.7296 2.18113 13.815C2.33158 13.9004 2.50162 13.9453 2.67463 13.9453Z' stroke='%23DF0000' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.82043 6.10587L7.99981 9.91837L8.17887 6.10743C8.17998 6.08307 8.1761 6.05874 8.16749 6.03592C8.15887 6.01311 8.14569 5.99229 8.12876 5.97474C8.11182 5.95719 8.09149 5.94328 8.06899 5.93385C8.0465 5.92443 8.02232 5.91969 7.99793 5.91993C7.97397 5.92016 7.9503 5.9252 7.92832 5.93473C7.90634 5.94426 7.88649 5.95811 7.86994 5.97544C7.8534 5.99277 7.84049 6.01324 7.83199 6.03564C7.82348 6.05804 7.81956 6.08192 7.82043 6.10587Z' stroke='%23DF0000' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 12.4141C7.87639 12.4141 7.75555 12.3774 7.65277 12.3087C7.54999 12.2401 7.46988 12.1424 7.42258 12.0282C7.37527 11.914 7.36289 11.7884 7.38701 11.6671C7.41113 11.5459 7.47065 11.4345 7.55806 11.3471C7.64547 11.2597 7.75683 11.2002 7.87807 11.1761C7.99931 11.152 8.12497 11.1643 8.23918 11.2116C8.35338 11.2589 8.45099 11.339 8.51967 11.4418C8.58834 11.5446 8.625 11.6654 8.625 11.7891C8.625 11.9548 8.55915 12.1138 8.44194 12.231C8.32473 12.3482 8.16576 12.4141 8 12.4141Z' fill='%23DF0000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center
+}
+
+body .spz-form-wrap form .error-summary.v-show {
+  margin: 0 auto 24px;
+  text-align: center
+}
+
+body .spz-form-wrap form .error-summary.v-show:before {
+  display: inline-block;
+  transform: translate(-2px) translateY(2px)
+}
+
+body .spz-form-wrap .mktoFormRow {
+  max-width: calc(50% - 8px) !important;
+  width: 100%
+}
+
+body .inner-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 8px
+}
+
+body .inner-wrapper .spz-input-wrap:nth-of-type(8) {
+  width: 100%
+}
+
+body .inner-wrapper .g-recaptcha {
+  margin: 12px auto 14px
+}
+
+body .inner-wrapper .privacy {
+  padding-top: 16.5px !important
+}
+
+body .inner-wrapper:has(.spz-input-wrap.hide) .g-recaptcha {
+  display: none
+}
+
+body .inner-wrapper:has(.spz-input-wrap.hide) .privacy {
+  padding-top: 15.5px !important
+}
+
+@media (max-width: 767.98px) {
+  body .inner-wrapper:has(.spz-input-wrap.hide) .privacy {
+    padding-top: 16.5px !important
+  }
+}
+
+body .spz-input-wrap {
+  position: relative;
+  width: 100%;
+  padding: 0 0 16px
+}
+
+@media (max-width: 767.98px) {
+  body .spz-input-wrap {
+    width: 100%;
+    padding-bottom: 16px
+  }
+}
+
+body .spz-input-wrap textarea {
+  height: 100px;
+  resize: none
+}
+
+body .spz-input-wrap input,
+body .spz-input-wrap select,
+body .spz-input-wrap textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  padding: 14px 15px;
+  text-overflow: ellipsis;
+  color: #354556;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+  margin-bottom: 0;
+  caret-color: #0090ff;
+  box-shadow: none
+}
+
+body .spz-input-wrap input:focus,
+body .spz-input-wrap input:active,
+body .spz-input-wrap select:focus,
+body .spz-input-wrap select:active,
+body .spz-input-wrap textarea:focus,
+body .spz-input-wrap textarea:active {
+  box-shadow: none
+}
+
+body .spz-input-wrap input.error,
+body .spz-input-wrap input.email_error,
+body .spz-input-wrap select.error,
+body .spz-input-wrap select.email_error,
+body .spz-input-wrap textarea.error,
+body .spz-input-wrap textarea.email_error {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .spz-input-wrap input.error+label[class*=label-spz-],
+body .spz-input-wrap input.email_error+label[class*=label-spz-],
+body .spz-input-wrap select.error+label[class*=label-spz-],
+body .spz-input-wrap select.email_error+label[class*=label-spz-],
+body .spz-input-wrap textarea.error+label[class*=label-spz-],
+body .spz-input-wrap textarea.email_error+label[class*=label-spz-] {
+  color: #df0000
+}
+
+body .spz-input-wrap input.error.focused+label[class*=label-spz-],
+body .spz-input-wrap input.error.has-value+label[class*=label-spz-],
+body .spz-input-wrap input.email_error.focused+label[class*=label-spz-],
+body .spz-input-wrap input.email_error.has-value+label[class*=label-spz-],
+body .spz-input-wrap select.error.focused+label[class*=label-spz-],
+body .spz-input-wrap select.error.has-value+label[class*=label-spz-],
+body .spz-input-wrap select.email_error.focused+label[class*=label-spz-],
+body .spz-input-wrap select.email_error.has-value+label[class*=label-spz-],
+body .spz-input-wrap textarea.error.focused+label[class*=label-spz-],
+body .spz-input-wrap textarea.error.has-value+label[class*=label-spz-],
+body .spz-input-wrap textarea.email_error.focused+label[class*=label-spz-],
+body .spz-input-wrap textarea.email_error.has-value+label[class*=label-spz-] {
+  color: #df0000
+}
+
+body .spz-input-wrap input.error input,
+body .spz-input-wrap input.error select,
+body .spz-input-wrap input.error textarea,
+body .spz-input-wrap input.email_error input,
+body .spz-input-wrap input.email_error select,
+body .spz-input-wrap input.email_error textarea,
+body .spz-input-wrap select.error input,
+body .spz-input-wrap select.error select,
+body .spz-input-wrap select.error textarea,
+body .spz-input-wrap select.email_error input,
+body .spz-input-wrap select.email_error select,
+body .spz-input-wrap select.email_error textarea,
+body .spz-input-wrap textarea.error input,
+body .spz-input-wrap textarea.error select,
+body .spz-input-wrap textarea.error textarea,
+body .spz-input-wrap textarea.email_error input,
+body .spz-input-wrap textarea.email_error select,
+body .spz-input-wrap textarea.email_error textarea {
+  border-color: #df0000
+}
+
+body .spz-input-wrap input.error select,
+body .spz-input-wrap input.email_error select,
+body .spz-input-wrap select.error select,
+body .spz-input-wrap select.email_error select,
+body .spz-input-wrap textarea.error select,
+body .spz-input-wrap textarea.email_error select {
+  color: transparent
+}
+
+body .spz-input-wrap input.error select:focus,
+body .spz-input-wrap input.error select:active,
+body .spz-input-wrap input.email_error select:focus,
+body .spz-input-wrap input.email_error select:active,
+body .spz-input-wrap select.error select:focus,
+body .spz-input-wrap select.error select:active,
+body .spz-input-wrap select.email_error select:focus,
+body .spz-input-wrap select.email_error select:active,
+body .spz-input-wrap textarea.error select:focus,
+body .spz-input-wrap textarea.error select:active,
+body .spz-input-wrap textarea.email_error select:focus,
+body .spz-input-wrap textarea.email_error select:active {
+  color: #354556
+}
+
+body .spz-input-wrap input.error select:focus option:first-child,
+body .spz-input-wrap input.error select:active option:first-child,
+body .spz-input-wrap input.email_error select:focus option:first-child,
+body .spz-input-wrap input.email_error select:active option:first-child,
+body .spz-input-wrap select.error select:focus option:first-child,
+body .spz-input-wrap select.error select:active option:first-child,
+body .spz-input-wrap select.email_error select:focus option:first-child,
+body .spz-input-wrap select.email_error select:active option:first-child,
+body .spz-input-wrap textarea.error select:focus option:first-child,
+body .spz-input-wrap textarea.error select:active option:first-child,
+body .spz-input-wrap textarea.email_error select:focus option:first-child,
+body .spz-input-wrap textarea.email_error select:active option:first-child {
+  color: #354556
+}
+
+body .spz-input-wrap select {
+  color: transparent;
+  padding-right: 40px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"%3E%3Cpath d="M8.46764 12.5326C8.60816 12.6723 8.79825 12.7507 8.99639 12.7507C9.19453 12.7507 9.38462 12.6723 9.52514 12.5326L15.5251 6.53264C15.648 6.38916 15.7122 6.20461 15.7049 6.01585C15.6976 5.82709 15.6194 5.64804 15.4858 5.51447C15.3522 5.3809 15.1732 5.30265 14.9844 5.29536C14.7957 5.28806 14.6111 5.35227 14.4676 5.47514L9.00014 10.9426L3.53264 5.46764C3.39141 5.32641 3.19987 5.24707 3.00014 5.24707C2.80041 5.24707 2.60887 5.32641 2.46764 5.46764C2.32641 5.60887 2.24707 5.80041 2.24707 6.00014C2.24707 6.19987 2.32641 6.39141 2.46764 6.53264L8.46764 12.5326Z" fill="%2354585C"/%3E%3C/svg%3E');
+  background-repeat: no-repeat !important;
+  background-position: 93% center !important;
+  background-size: 18px !important;
+  background-color: #fff;
+  -webkit-appearance: none;
+  cursor: pointer
+}
+
+@media (max-width: 767.98px) {
+  body .spz-input-wrap select {
+    background-position: 94% center !important
+  }
+}
+
+body .spz-input-wrap select:focus,
+body .spz-input-wrap select:active {
+  color: #354556;
+  box-shadow: none
+}
+
+body .spz-input-wrap select:focus option:first-child,
+body .spz-input-wrap select:active option:first-child {
+  color: #354556
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body .spz-input-wrap select {
+    background-position: 94.6% center
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .spz-input-wrap select {
+    background-position: 94.5% center
+  }
+}
+
+body .spz-input-wrap.focused input,
+body .spz-input-wrap.focused select,
+body .spz-input-wrap.focused textarea {
+  border-color: #0090ff
+}
+
+body .spz-input-wrap.focused input.error,
+body .spz-input-wrap.focused input.email_error,
+body .spz-input-wrap.focused select.error,
+body .spz-input-wrap.focused select.email_error,
+body .spz-input-wrap.focused textarea.error,
+body .spz-input-wrap.focused textarea.email_error {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .spz-input-wrap.has-value input,
+body .spz-input-wrap.has-value select,
+body .spz-input-wrap.has-value textarea {
+  border-color: #66bcff
+}
+
+body .spz-input-wrap.has-value input.error,
+body .spz-input-wrap.has-value input.email_error,
+body .spz-input-wrap.has-value select.error,
+body .spz-input-wrap.has-value select.email_error,
+body .spz-input-wrap.has-value textarea.error,
+body .spz-input-wrap.has-value textarea.email_error {
+  border-color: #df0000;
+  background-color: #fff
+}
+
+body .spz-input-wrap input:-webkit-autofill,
+body .spz-input-wrap input:-webkit-autofill:hover,
+body .spz-input-wrap input:-webkit-autofill:focus,
+body .spz-input-wrap select:-webkit-autofill,
+body .spz-input-wrap select:-webkit-autofill:hover,
+body .spz-input-wrap select:-webkit-autofill:focus,
+body .spz-input-wrap textarea:-webkit-autofill,
+body .spz-input-wrap textarea:-webkit-autofill:hover,
+body .spz-input-wrap textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(255, 255, 255) inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-text-fill-color: #2B2B2B !important;
+  z-index: 2;
+  position: relative
+}
+
+body .spz-input-wrap input,
+body .spz-input-wrap select {
+  height: var(--inputHeight) !important
+}
+
+body .spz-input-wrap input option:first-child,
+body .spz-input-wrap select option:first-child {
+  color: transparent
+}
+
+body .spz-input-wrap input option:first-child:hover,
+body .spz-input-wrap select option:first-child:hover {
+  color: #354556
+}
+
+body .form-horizontal .privacy {
+  width: 100%;
+  color: #54585c;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 8px
+}
+
+body .form-horizontal .privacy a {
+  color: #54585c;
+  transition: all .3s ease;
+  border: none;
+  text-decoration: underline
+}
+
+body .form-horizontal .privacy a:hover {
+  color: #0090ff
+}
+
+@media (max-width: 767.98px) {
+  body .form-horizontal .privacy {
+    padding-left: 25px;
+    padding-right: 25px
+  }
+}
+
+body .form-horizontal input[type=submit] {
+  margin-top: 12px;
+  float: left;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 13px 24px;
+  background: #d22730;
+  border-width: 0;
+  width: 100%;
+  height: 54px;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all .3s ease
+}
+
+body .form-horizontal input[type=submit]:hover {
+  background: #e63b44
+}
+
+body .form-horizontal input[type=submit]:focus,
+body .form-horizontal input[type=submit]:active {
+  background: #be131c
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  body .form-horizontal input[type=submit] {
+    transform: translate(0)
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .form-horizontal input[type=submit] {
+    transform: translate(0);
+    margin-top: 11.5px
+  }
+}
+
+body .spz-input-wrap label[class*=label-spz-] {
+  position: absolute;
+  left: 16px;
+  line-height: var(--inputHeight);
+  top: 0;
+  transition: top .25s linear;
+  padding: 0;
+  color: #54585c;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 5;
+  margin-bottom: 0
+}
+
+body .focused label[class*=label-spz-],
+body .has-value label[class*=label-spz-] {
+  top: calc(-1 * (var(--inputHeight) / 4 - 4.5px));
+  background: #fff;
+  line-height: normal;
+  transition: top .15s linear;
+  padding: 0 6px;
+  color: #354556;
+  font-size: 12px;
+  left: 10px
+}
+
+@media (max-width: 767.98px) {
+
+  body .focused label[class*=label-spz-],
+  body .has-value label[class*=label-spz-] {
+    left: 13px;
+    padding: 0 3px
+  }
+}
+
+body .has-value select,
+body .focused select,
+body .has-value select option,
+body .focused select option {
+  color: #354556
+}
+
+body .has-value select option:first-child,
+body .focused select option:first-child {
+  color: transparent
+}
+
+body .has-value.error select,
+body .focused.error select,
+body .has-value.error select option,
+body .focused.error select option {
+  color: #354556
+}
+
+body .has-value.error select option:first-child,
+body .focused.error select option:first-child {
+  color: transparent
+}
+
+body .form_logo {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 23.5px;
+  margin-bottom: 32.5px
+}
+
+body .form_logo img {
+  display: block;
+  width: auto;
+  margin: auto
+}
+
+body .form_heading {
+  padding-bottom: 14px
+}
+
+body .form_heading h2 {
+  margin: 0;
+  color: #000 !important;
+  font-family: Roboto !important;
+  text-align: center !important;
+  font-size: 32px !important;
+  font-weight: 500 !important;
+  line-height: 40px !important;
+  padding: 0 14px !important;
+  margin-bottom: 0 !important
+}
+
+@media (max-width: 767.98px) {
+  body .form_heading h2 {
+    font-size: 24px !important;
+    line-height: 32px !important
+  }
+}
+
+body .securityInfo {
+  color: #54585c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  float: left;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 16px
+}
+
+body .securityInfo a {
+  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+  color: inherit;
+  text-decoration: underline;
+  transition: all .3s ease
+}
+
+body .securityInfo a:hover {
+  color: #d22730
+}
+
+body .securityInfo a:focus,
+body .securityInfo a:active {
+  color: #54585c
+}
+
+@media (max-width: 767.98px) {
+  body .securityInfo {
+    padding: 0 25px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1259px),
+(min-width: 1260px) and (max-width: 1599px),
+(min-width: 1600px) {
+  body .securityInfo .visible-xs-inline {
+    display: none
+  }
+}
+
+body .form_main {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+@media only screen and (min-width: 1200px) {
+  body .form_main {
+    align-items: unset
+  }
+}
+
+@media (max-width: 767.98px) {
+  body .form_main {
+    padding: 0 25px;
+    align-items: flex-start
+  }
+}
+
+body .cookie-information-cont {
+  z-index: 100000000000000000
+}
+
+body .error-message {
+  color: #df0000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 4px
+}
+
+body .error-message svg {
+  width: 16px;
+  height: 16px
+}
+
+body .error-message svg {
+  margin-right: 4px
+}
+
+body .footer-flex-container {
+  display: none
+}

@@ -111,6 +111,7 @@ function runCode() {
         document.querySelector(`.spz_modal .modelFormSubmit`).value = 'Download Free Trial';
       }
       document.querySelector(`.spz_modal form #SPZ_Test`).value = 'variant1_6009';
+      document.querySelector('.spz_modal .securityInfo').innerHTML = document.querySelector('.spz_modal .securityInfo').innerHTML.replace('the the', 'the');
       console.log('updated states');
     }
     updateFormAndButton();

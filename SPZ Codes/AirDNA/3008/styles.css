@@ -173,12 +173,23 @@
   padding-bottom: 8px;
 }
 
+.spz_3008 .original_hero > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div .MuiOutlinedInput-root input:not(:-moz-placeholder) {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
 .spz_3008 .original_hero > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div .MuiOutlinedInput-root input:not(:placeholder-shown) {
   padding-top: 24px;
   padding-bottom: 8px;
 }
 
 .spz_3008 .original_hero > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div .MuiOutlinedInput-root input:not(:-moz-placeholder-shown) + label {
+  top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.spz_3008 .original_hero > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div .MuiOutlinedInput-root input:not(:-moz-placeholder) + label {
   top: 8px;
   font-size: 12px;
   line-height: 16px;

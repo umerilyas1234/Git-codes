@@ -1,0 +1,303 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 1023px;
+$tablet-sm: 768px;
+$mobile: 767px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_10001 {
+
+  background: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/Form_Over_UI/form_over_ui_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  main {
+    display: none;
+  }
+
+  /*Background end */
+
+  /*Style form wrapping div like shadows wrapper background border-radius etc...*/
+  .spz-form-wrap {
+    max-width: 500px;
+    /*Set form container width*/
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 32px 32px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+    z-index: 1000000;
+  }
+
+  @media(max-width: 575px) {
+    .spz-form-wrap {
+      width: calc(100% - 40px);
+      padding: 12px 24px 24px;
+    }
+  }
+
+  /*Style form wrapping div end*/
+  /*Form layout styling*/
+  .spz-form-wrap form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--input-horizontal-gap);
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .spz-form-wrap .mktoFormRow {
+    max-width: calc(50% - (var(--input-horizontal-gap) / 2));
+    width: 100%;
+  }
+
+  @media(max-width: 575px) {
+    .spz-form-wrap .mktoFormRow {
+      max-width: 100%;
+    }
+  }
+
+  /*Form layout styling end*/
+  /*Inputs and labels states*/
+
+  /*Default state*/
+  .spz-input-wrap input,
+  .spz-input-wrap select {
+    height: var(--inputHeight) !important;
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+  }
+
+  .spz-input-wrap select {
+    background: transparent;
+  }
+
+  .spz-input-wrap select+label {
+    position: absolute;
+    left: 24px;
+    line-height: var(--inputHeight);
+    top: 0;
+    transition: top 0.25s linear;
+    padding: 0;
+    color: #777;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    z-index: -1;
+  }
+
+  .spz-input-wrap input:placeholder-shown+label {
+    position: absolute;
+    left: 24px;
+    line-height: var(--inputHeight);
+    top: 0;
+    transition: top 0.25s linear;
+    padding: 0;
+    color: #777;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  /*Hover state*/
+  .spz-form-wrap input:hover,
+  .spz-form-wrap select:hover {
+    border: var(--input-border-hover);
+  }
+
+  /*Focus state*/
+  .spz-form-wrap input:focus,
+  .spz-form-wrap select:focus {
+    border: var(--input-border-focus);
+  }
+
+  .spz-input-wrap select:focus {
+    background: #fff;
+  }
+
+  .spz-input-wrap input:focus+label,
+  .spz-input-wrap select:focus+label {
+    position: absolute;
+    left: 24px;
+    color: #3620FF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    top: calc(-1 * (var(--inputHeight) / 4));
+    background: #fff;
+    line-height: normal;
+    transition: top 0.15s linear;
+    padding: 0 3px;
+    z-index: 1;
+  }
+
+  /*Active focused state empty value*/
+  .spz-input-wrap input:focus:placeholder-shown+label {
+    position: absolute;
+    left: 24px;
+    color: #3620FF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    top: calc(-1 * (var(--inputHeight) / 4));
+    background: #fff;
+    line-height: normal;
+    transition: top 0.15s linear;
+    padding: 0 3px;
+  }
+
+  /*Active focused state not empty value*/
+  .spz-input-wrap input:focus:not(:placeholder-shown)+label {
+    position: absolute;
+    left: 24px;
+    color: #3620FF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    top: calc(-1 * (var(--inputHeight) / 4));
+    background: #fff;
+    line-height: normal;
+    transition: top 0.15s linear;
+    padding: 0 3px;
+  }
+
+  /*Filled state*/
+  .spz-input-wrap input:not(:placeholder-shown)+label,
+  .spz-input-wrap.has-value select+label {
+    position: absolute;
+    left: 24px;
+    color: #000;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    top: calc(-1 * (var(--inputHeight) / 4));
+    background: #fff;
+    line-height: normal;
+    transition: top 0.15s linear;
+    padding: 0 3px;
+    z-index: 1;
+  }
+
+  /*Hide placeholders*/
+  .spz-input-wrap input::placeholder {
+    color: transparent;
+    opacity: 0;
+  }
+
+  /*Inputs and labels states end*/
+  /*Styling other elements*/
+  .spz-company-logo {
+    margin-bottom: 24px;
+  }
+
+  .spz-superheading {
+    color: #3620FF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 3.36px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .spz-form-heading {
+    color: #000;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+
+  .spz-subheading {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+
+  /*Styling other elements end*/
+
+  .spz-input-wrap {
+    position: relative;
+    margin-bottom: 20px !important;
+  }
+
+  .spz-input-wrap .mktoError {
+    bottom: unset;
+    top: var(--inputHeight);
+  }
+
+  /*put selectors you need to hide .spz-form-wrap will be rendered before closing body tag. In some cases, you'll have to find a single selector to hide all inner content. For example, see below selector*/
+  your_selector_what_you_need_to_hide {
+    display: none !important;
+  }
+
+  header,
+  #fl-main-content,
+  .fl-builder-content,
+  .book-demo-page {
+    display: none !important;
+  }
+
+  .mktoFieldDescriptor.mktoFormCol {
+    margin-bottom: 0 !important;
+  }
+}

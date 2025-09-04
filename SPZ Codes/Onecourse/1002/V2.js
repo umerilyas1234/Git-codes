@@ -5,27 +5,16 @@ function spz1002Test() {
   if (!document.querySelector('body').classList.contains('spz_1002')) {
     document.querySelector('body').classList.add('spz_1002');
     // Put your test code here
-    if (document.querySelector('.spz_1002 section .awr-hero')) {
-      document.querySelector('.spz_1002 section .awr-hero').insertAdjacentHTML('beforebegin', `
+
+    if (document.querySelector('.spz_1002 section .awr-home__render-components>div:first-child')) {
+      document.querySelector('.spz_1002 section .awr-home__render-components>div:first-child').insertAdjacentHTML('beforeend', `
         <div class="spz_hero v2">
           <div class="auto_container">
             <div class="spz_heroInner">
               <div class="hero_heading">
-                <h3>America’s Leading Home Warranty Provider</h3>
-                <h1>Protect every part of your home</h1>
-                <p>Full warranties for 23+ home systems. 24/7 claims. Certified techs. </p>
-              </div>
-              <div class="hero_toggle">
-                <div class="toggle_main">
-                  <small>
-                    <span>Owner</span>
-                    <label class="toggle">
-                      <input type="checkbox" id="btnToggle" name="btnToggle" />
-                      <span class="slider"></span>
-                    </label>
-                    <span>Renter</span>
-                  </small>
-                </div>
+                <h3>A Leading Home Warranty Provider</h3>
+                <h1>Protection for what matters most</h1>
+                <p>Covers major systems or everyday breakdowns. 24/7 phone support. Vetted technicians.</p>
               </div>
               <div class="hero_crads">
                 <div class="cards_two">
@@ -89,8 +78,7 @@ function spz1002Test() {
         </div>
         `);
 
-
-      document.querySelector('.hero_form').insertAdjacentElement('afterbegin', document.querySelector('.awr-hero .awr-hero__find-protection-container'));
+      document.querySelector('.hero_form').insertAdjacentElement('afterbegin', document.querySelector('.awr-find-your-protection-plan'));
       document.querySelector('.hero_form input[placeholder="Enter ZIP Code"]').placeholder = 'Zip Code';
       
       console.log('Time 2 > ' + [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds(), new Date().getMilliseconds()].map((v, i) => v.toString().padStart(i === 3 ? 3 : 2, '0')).join(':'));
@@ -105,7 +93,7 @@ function removeTest() {
   if (input) {
     input.placeholder = 'Enter ZIP Code';
   }
-  document.querySelector('.awr-hero .awr-hero__text-panel .awr-rich-text')?.insertAdjacentElement('afterend', document.querySelector('.hero_form .awr-hero__find-protection-container'));
+  document.querySelector('section .awr-home__render-components>div:first-child .awr-hero__text-panel .awr-rich-text + div')?.insertAdjacentElement('afterend', document.querySelector('.hero_form .awr-find-your-protection-plan'));
   document.querySelector('.spz_1002 .spz_hero')?.remove();
   document.querySelector('body').classList.remove('spz_1002');
 }

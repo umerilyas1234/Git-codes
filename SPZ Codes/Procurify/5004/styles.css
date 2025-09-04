@@ -115,7 +115,7 @@
   border-color: #31936A !important;
   outline: none !important;
 }
-.spz_t5004 .form_input input:not(:-moz-placeholder-shown) + label {
+.spz_t5004 .form_input input:not(:-moz-placeholder) + label {
   top: 0;
   left: 16px;
   width: auto !important;
@@ -137,19 +137,19 @@
   font-weight: 400 !important;
   line-height: 16px !important;
 }
-.spz_t5004 .form_input input:not(:-moz-placeholder-shown) {
+.spz_t5004 .form_input input:not(:-moz-placeholder) {
   border-color: #728499 !important;
 }
 .spz_t5004 .form_input input:not(:placeholder-shown) {
   border-color: #728499 !important;
 }
-.spz_t5004 .form_input input:not(:-moz-placeholder-shown):active, .spz_t5004 .form_input input:not(:-moz-placeholder-shown):focus {
+.spz_t5004 .form_input input:not(:-moz-placeholder):active, .spz_t5004 .form_input input:not(:-moz-placeholder):focus {
   border-color: #31936A !important;
 }
 .spz_t5004 .form_input input:not(:placeholder-shown):active, .spz_t5004 .form_input input:not(:placeholder-shown):focus {
   border-color: #31936A !important;
 }
-.spz_t5004 .form_input input:not(:-moz-placeholder-shown) + label {
+.spz_t5004 .form_input input:not(:-moz-placeholder) + label {
   color: #1A3038 !important;
 }
 .spz_t5004 .form_input input:not(:placeholder-shown) + label {
@@ -166,7 +166,7 @@
     width: 100%;
     max-width: 100%;
   }
-  .spz_t5004 .form_input input:not(:-moz-placeholder-shown) + label {
+  .spz_t5004 .form_input input:not(:-moz-placeholder) + label {
     top: 0;
     left: 20px;
   }

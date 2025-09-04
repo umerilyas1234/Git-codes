@@ -8,21 +8,28 @@ function spz1002Test() {
   }
 }
 
+function isZipExcluded() {
+  const zipInput = document.querySelector('#zip-code');
+  if (!zipInput) return false;
+
+  const zip = parseInt(zipInput.value.trim(), 10);
+
+  return zip >= 20101 && zip <= 24658;
+}
 
 function removeTest() {
   document.querySelector('body').classList.remove('spz_5002');
 }
 
 var pageList = [
-  "https://beta.awrusa.com/plans/all-plans",
-  "https://beta.awrusa.com/plans/water-sewer",
-  "https://beta.awrusa.com/plans/heating-cooling",
-  "https://beta.awrusa.com/plans/electrical-gas",
-  "https://beta.awrusa.com/plans/appliances",
-  "https://beta.awrusa.com/plans/whole-home"
+  "https://www.awrusa.com/plans/all-plans",
+  "https://www.awrusa.com/plans/water-sewer",
+  "https://www.awrusa.com/plans/heating-cooling",
+  "https://www.awrusa.com/plans/electrical-gas",
+  "https://www.awrusa.com/plans/appliances",
+  "https://www.awrusa.com/plans/whole-home"
 ];
 
-let testRemoved = false;
 function observerForLoadingBlock() {
   var target = document.body;
   if (!target) return;
@@ -41,7 +48,7 @@ function observerForLoadingBlock() {
 
     if (running) return;
 
-    if (pageList.includes(currentPage)) {
+    if (pageList.includes(currentPage) && !isZipExcluded()) {
       running = true;
       console.log("Mutation detected: Run spz1002Test()");
       spz1002Test();
@@ -49,10 +56,9 @@ function observerForLoadingBlock() {
         running = false;
       }, 100);
     } else {
-      if (!testRemoved) {
+      if (document.querySelector('body').classList.contains('spz_5002') ) {
         console.log("URL not in list, running removeTest()");
         removeTest();
-        testRemoved = true;
       }
     }
   };

@@ -1,0 +1,18 @@
+<!-- Change the test of this CTA ".form-cont button.btn_filled_red" to "Request Demo" Please refer to the given screenshot: 'https://app.screencast.com/KRO31j6RF6auf'. It should look like this "https://app.screencast.com/rK8vQEsYcV2OY"-->
+
+<!-- This code requires some JavaScript, which is provided below. -->
+<script>
+  window.addEventListener('click', function (e) {
+    if (e.target.matches('.form-cont button.btn_filled_red')) {
+      e.preventDefault();
+      window.location.href = 'https://www.netwrix.com/one-to-one.html';
+    }
+  });
+
+  var button = document.querySelector(".form-cont [id^='app-']");
+  var buttonID = button.id;
+  const formId = `form-${buttonID}`;
+  const formContainer = document.querySelector(`#${formId}`).closest('.v-modal-mask');
+  formContainer.classList.add('spz_modal');
+
+</script>

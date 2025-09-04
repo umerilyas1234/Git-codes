@@ -787,13 +787,13 @@
   background: #fff;
   color: #041e42;
 }
-.spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:-moz-placeholder-shown) {
+.spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:-moz-placeholder) {
   border-color: #041e42;
 }
 .spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:placeholder-shown) {
   border-color: #041e42;
 }
-.spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:-moz-placeholder-shown) + label {
+.spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:-moz-placeholder) + label {
   color: #041e42;
 }
 .spz_12001 .form_listData #lower-cloud-spend-form > div input:focus:not(:placeholder-shown) + label {

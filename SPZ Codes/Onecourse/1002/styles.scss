@@ -105,7 +105,22 @@ $mobile: 767.98px;
 
 .spz_1002 {
   .awr-hero {
-    display: none;
+    display: block;
+    .awr-hero__wrapper{
+      display: none;
+    }
+  }
+  section {
+    .awr-home__render-components{
+      >div{
+        &:first-child{
+          display: block;
+          >.flex{
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   .spz_hero {
@@ -114,7 +129,9 @@ $mobile: 767.98px;
 
     &.v2 {
       background: #F0F9FF;
-
+      .hero_heading{
+        padding-bottom: 32px;
+      }
       .hero_toggle {
         padding-bottom: 32px;
 
@@ -122,24 +139,6 @@ $mobile: 767.98px;
           padding-bottom: 32.5px;
         }
       }
-
-      // .toggle_main {
-      //   small {
-      //     .slider {
-      //       background-color: #02418D;
-      //     }
-
-      //     .toggle {
-      //       input {
-      //         &:checked {
-      //           &+.slider {
-      //             background-color: #02418D;
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
 
       .hero_crads {
         @include mobile() {
@@ -208,7 +207,6 @@ $mobile: 767.98px;
       margin: 0 0 16.5px;
 
       @include tablet() {
-        padding: 0 20px;
         margin-bottom: 17px;
       }
 
@@ -325,7 +323,7 @@ $mobile: 767.98px;
     }
 
     @include mobile() {
-      padding-bottom: 16px;
+      padding-bottom: 18px;
       max-width: 336px;
       margin: auto;
     }
@@ -337,7 +335,7 @@ $mobile: 767.98px;
       flex-wrap: wrap;
 
       @include mobile() {
-        margin: 0 -4px;
+        margin: 0 -3px;
       }
     }
 
@@ -363,9 +361,9 @@ $mobile: 767.98px;
       }
 
       @include mobile() {
-        width: 76px;
+        width: 77.5px;
         height: 90px;
-        margin: 0 4px 8px;
+        margin: 0 3px 6px;
         padding: 17px 5px 12px;
       }
 
@@ -445,202 +443,198 @@ $mobile: 767.98px;
   }
 
   .hero_form {
-    .awr-hero__find-protection-container {
+    .awr-find-your-protection-plan {
+      border: none;
+      border-radius: 6px;
+      background-color: transparent;
+      gap: 0;
       margin-top: 0;
       max-width: 400px;
       margin: auto;
       border: none;
+      .awr-find-your-protection-plan__tabs-container {
+        display: none;
+      }
 
-      .awr-find-your-protection-plan {
-        border: none;
-        border-radius: 6px;
-        background-color: transparent;
+      form {
+        padding: 0;
         gap: 0;
+        align-items: flex-start;
+        border-radius: 6px;
+        border: 1px solid rgba(24, 102, 153, 0.40);
+        background: #FFF;
+        padding: 3px;
+        height: 54px;
+        transition: all 0.3s ease-in-out;
 
-        .awr-find-your-protection-plan__tabs-container {
-          display: none;
+        &:hover {
+          border-color: rgba(24, 102, 153, 0.80);
         }
 
-        form {
-          padding: 0;
-          gap: 0;
+        &:has(input:active),
+        &:has(input:focus) {
+          border-color: rgba(24, 102, 153, 0.80);
+        }
+
+        &:has(p.awr-find-your-protection-plan__input-error) {
+          border-color: rgba(184, 52, 54, 0.80);
+        }
+
+        @include mobile() {
+          flex-direction: row;
+          max-width: 328px;
+          margin: auto;
+        }
+
+        .awr-find-your-protection-plan__input-container {
+          display: flex;
+          flex-wrap: wrap;
           align-items: flex-start;
-          border-radius: 6px;
-          border: 1px solid rgba(24, 102, 153, 0.40);
-          background: #FFF;
-          padding: 3px;
-          height: 54px;
-          transition: all 0.3s ease-in-out;
 
-          &:hover {
-            border-color: rgba(24, 102, 153, 0.80);
+          >p.awr-find-your-protection-plan__input-error {
+            color: #B83436;
+            // font-family: 'Sofia Pro Regular';
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-top: 6px;
+            margin-left: -4px;
           }
+        }
 
-          &:has(input:active),
-          &:has(input:focus) {
-            border-color: rgba(24, 102, 153, 0.80);
-          }
+        .awr-find-your-protection-plan__zipcode-container {
+          order: -1;
 
-          &:has(p.awr-find-your-protection-plan__input-error) {
-            border-color: rgba(184, 52, 54, 0.80);
-          }
+          .pointer-events-none {
+            svg {
+              color: #186699;
+              width: 10.5px;
+              height: 14px;
+              margin-top: -3px;
+            }
 
-          @include mobile() {
-            flex-direction: row;
-            max-width: 328px;
-            margin: auto;
-          }
+            &:has(svg) {
 
-          .awr-find-your-protection-plan__input-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-
-            >p.awr-find-your-protection-plan__input-error {
-              color: #B83436;
-              // font-family: 'Sofia Pro Regular';
-              font-size: 12px;
-              font-weight: 500;
-              line-height: 18px;
-              margin-top: 6px;
-              margin-left: -4px;
+              padding-left: 0;
+              margin-left: 16px;
             }
           }
 
-          .awr-find-your-protection-plan__zipcode-container {
-            order: -1;
-
-            .pointer-events-none {
-              svg {
-                color: #186699;
-                width: 10.5px;
-                height: 14px;
-                margin-top: -3px;
-              }
-
-              &:has(svg) {
-
-                padding-left: 0;
-                margin-left: 16px;
-              }
-            }
-
-            input {
-              &[placeholder="Zip Code"] {
-                padding: 11px 16px 11px 40.5px;
-                height: 46px;
-                border: none;
-                background-color: #fff;
-                color: #000;
-                font-family: 'Sofia Pro Regular';
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 24px;
-                caret-color: #000;
-                border-radius: 0;
-                border-top-left-radius: 6px;
-                border-bottom-left-radius: 6px;
-
-                &::-webkit-input-placeholder {
-                  color: rgba(0, 0, 0, 0.60);
-                }
-
-                &::-moz-placeholder {
-                  color: rgba(0, 0, 0, 0.60);
-                }
-
-                &:disabled {
-                  opacity: 1;
-                }
-
-                &:focus,
-                &:active {
-                  outline: none;
-                  border: none;
-                  box-shadow: none;
-                  color: #000;
-
-                  &::-webkit-input-placeholder {
-                    font-size: 0;
-                  }
-
-                  &::-moz-placeholder {
-                    font-size: 0;
-                  }
-                }
-              }
-            }
-          }
-
-          >button {
-            &[type="submit"] {
-              width: 147.25px;
+          input {
+            &[placeholder="Zip Code"] {
+              padding: 11px 16px 11px 40.5px;
               height: 46px;
-              border-radius: 4px;
-              background: #186699;
-              padding: 14px 49px 14px 27px;
-              background-color: #186699;
-              transition: all 0.3s ease-in-out;
-              position: relative;
+              border: none;
+              background-color: #fff;
+              color: #000;
+              font-family: 'Sofia Pro Regular';
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              caret-color: #000;
+              border-radius: 0;
+              border-top-left-radius: 6px;
+              border-bottom-left-radius: 6px;
 
-              &:hover {
-                background-color: #0A4C70;
+              &::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.60);
+              }
+
+              &::-moz-placeholder {
+                color: rgba(0, 0, 0, 0.60);
               }
 
               &:disabled {
                 opacity: 1;
               }
 
-              span {
-                padding: 0;
-                display: block;
+              &:focus,
+              &:active {
+                outline: none;
+                border: none;
+                box-shadow: none;
+                color: #000;
 
-                // >div {
-                //   position: relative;
-                // }
-
-                p {
-                  // font-family: 'Sofia Pro SemiBold';
-                  color: #fff;
-                  text-align: center;
+                &::-webkit-input-placeholder {
                   font-size: 0;
-                  display: flex;
-                  align-items: center;
-                  white-space: nowrap;
-
-                  &::after {
-                    content: 'Get Pricing';
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 24px;
-                    letter-spacing: -0.1px;
-                  }
-
-                  &+span[role="status"] {
-                    width: 9px;
-                    position: absolute;
-                    right: 20px;
-                    top: 11px;
-                    svg {
-                      width: 13px;
-                    }
-                  }
                 }
 
-                .awr-find-your-protection-plan__arrow-right {
+                &::-moz-placeholder {
+                  font-size: 0;
+                }
+              }
+            }
+          }
+        }
+
+        >button {
+          &[type="submit"] {
+            width: 147.25px;
+            height: 46px;
+            border-radius: 4px;
+            background: #186699;
+            padding: 14px 49px 14px 27px;
+            background-color: #186699;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+
+            &:hover {
+              background-color: #0A4C70;
+            }
+
+            &:disabled {
+              opacity: 1;
+            }
+
+            span {
+              padding: 0;
+              display: block;
+
+              // >div {
+              //   position: relative;
+              // }
+
+              p {
+                // font-family: 'Sofia Pro SemiBold';
+                color: #fff;
+                text-align: center;
+                font-size: 0;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+
+                &::after {
+                  content: 'Get Pricing';
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: 24px;
+                  letter-spacing: -0.1px;
+                }
+
+                &+span[role="status"] {
+                  width: 9px;
                   position: absolute;
                   right: 20px;
-                  top: 16px;
-                  width: 13px;
-                  height: 14.286px;
-                  margin-top: -0.5px;
-                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='15' viewBox='0 0 13 15' fill='none'%3E%3Cg clip-path='url(%23clip0_383_1433)'%3E%3Cpath d='M0.774748 7.47894C0.774748 7.96293 1.14115 8.35394 1.62514 8.35394H10.0115L7.12943 11.236C6.78764 11.5778 6.78764 12.1315 7.12943 12.4733C7.3017 12.6442 7.52592 12.7289 7.75014 12.7289C7.97436 12.7289 8.19803 12.6435 8.36865 12.4726L12.7437 8.0976C13.0854 7.7558 13.0854 7.20209 12.7437 6.86029L8.36865 2.48529C8.02686 2.14349 7.47315 2.14349 7.13135 2.48529C6.78955 2.82709 6.78955 3.3808 7.13135 3.7226L10.0115 6.60394H1.62514C1.14115 6.60394 0.774748 6.99496 0.774748 7.47894Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_383_1433'%3E%3Crect width='12.25' height='14' fill='white' transform='matrix(-1 0 0 1 13 0.479004)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-                  background-repeat: no-repeat;
-                  background-size: 13px;
-
+                  top: 11px;
                   svg {
-                    display: none;
+                    width: 13px;
                   }
+                }
+              }
+
+              .awr-find-your-protection-plan__arrow-right {
+                position: absolute;
+                right: 20px;
+                top: 16px;
+                width: 13px;
+                height: 14.286px;
+                margin-top: -0.5px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='15' viewBox='0 0 13 15' fill='none'%3E%3Cg clip-path='url(%23clip0_383_1433)'%3E%3Cpath d='M0.774748 7.47894C0.774748 7.96293 1.14115 8.35394 1.62514 8.35394H10.0115L7.12943 11.236C6.78764 11.5778 6.78764 12.1315 7.12943 12.4733C7.3017 12.6442 7.52592 12.7289 7.75014 12.7289C7.97436 12.7289 8.19803 12.6435 8.36865 12.4726L12.7437 8.0976C13.0854 7.7558 13.0854 7.20209 12.7437 6.86029L8.36865 2.48529C8.02686 2.14349 7.47315 2.14349 7.13135 2.48529C6.78955 2.82709 6.78955 3.3808 7.13135 3.7226L10.0115 6.60394H1.62514C1.14115 6.60394 0.774748 6.99496 0.774748 7.47894Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_383_1433'%3E%3Crect width='12.25' height='14' fill='white' transform='matrix(-1 0 0 1 13 0.479004)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-size: 13px;
+
+                svg {
+                  display: none;
                 }
               }
             }

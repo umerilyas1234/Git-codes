@@ -863,7 +863,14 @@ $mobile: 767px;
     display: none;
   }
 }
-
+.spz_6002{
+  #signupType{
+    &:active,
+    &:focus{
+      color: #111;
+    }
+  }
+}
 @media (max-width: 991.98px) {
   .spz_6002 .new-hero-section {
     padding-bottom: 0;

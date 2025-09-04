@@ -44,51 +44,54 @@ const bodyInterval1002 = setInterval(function () {
         }
         // change position
         document.querySelector('.spz-1012 .spz-input-wrapper.email').insertAdjacentElement('afterend', document.querySelector('.spz-1012 .spz-input-wrapper.name'))
+        document.querySelector('.spz-1012 .spz-input-wrapper.numberOfEmployees').insertAdjacentElement("beforebegin",document.querySelector('.spz-1012 .spz-input-wrapper.signupType'))
+        document.querySelector('.spz-1012 .spz-input-wrapper.signupType select option').disabled = true;
+
         // adding Business Type
 
-        document.querySelector('.spz-1012 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
-          <div class="spz-input-wrapper business-type">
-            <select class="business-type" id="businessType" required></select>
-            <label for="businessType">Business Type</label> 
-          </div>   
-         `)
-        for (let i = 0; i < document.querySelectorAll('.spz-1012 #signupType .form-option-field span').length; i++) {
-          document.querySelector('.spz-1012 #businessType').insertAdjacentHTML("beforeend", `
-              <option value="${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
-            `)
-        }
-        document.querySelector('.spz-1012 #businessType').addEventListener("change", function () {
-          document.querySelectorAll('.spz-1012 #signupType .form-option-field')[document.querySelector('.spz-1012 #businessType').selectedIndex].querySelector('input').click()
-        })
-        //trigger click based on selected radiobutton
-        if (document.querySelector('.spz-1012 #signupType .form-option-field [name="formoptions"]:checked').value == 'direct') {
-          document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
-          document.querySelectorAll('.spz-1012 #businessType option')[0].selected = 'selected'
-        } else {
-          document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
-          document.querySelectorAll('.spz-1012 #signupType .form-option-field')[1].querySelector('input').click()
-          document.querySelectorAll('.spz-1012 #businessType option')[1].selected = 'selected'
-        }
+        // document.querySelector('.spz-1012 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
+        //   <div class="spz-input-wrapper business-type">
+        //     <select class="business-type" id="businessType" required></select>
+        //     <label for="businessType">Business Type</label> 
+        //   </div>   
+        //  `)
+        // for (let i = 0; i < document.querySelectorAll('.spz-1012 #signupType .form-option-field span').length; i++) {
+        //   document.querySelector('.spz-1012 #businessType').insertAdjacentHTML("beforeend", `
+        //       <option value="${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
+        //     `)
+        // }
+        // document.querySelector('.spz-1012 #businessType').addEventListener("change", function () {
+        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[document.querySelector('.spz-1012 #businessType').selectedIndex].querySelector('input').click()
+        // })
+        // //trigger click based on selected radiobutton
+        // if (document.querySelector('.spz-1012 #signupType .form-option-field [name="formoptions"]:checked').value == 'direct') {
+        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
+        //   document.querySelectorAll('.spz-1012 #businessType option')[0].selected = 'selected'
+        // } else {
+        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
+        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[1].querySelector('input').click()
+        //   document.querySelectorAll('.spz-1012 #businessType option')[1].selected = 'selected'
+        // }
         //products style
         document.querySelector('.spz-1012 #form-panel-3 .text-size-tiny').textContent = "(Check all that apply)"
         //checbox listener
-        const checkboxListener = () => {
-          for (let x = 0; x < document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select').length; x++) {
-            if (document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].classList.contains("hide")) {
-              document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.add("hide")
-            }
-            else {
-              document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.remove("hide")
-            }
-          }
-        }
-        checkboxListener()
-        for (let i = 0; i < document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]').length; i++) {
-          document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]')[i].addEventListener("change", function () {
-            checkboxListener()
-          })
-        }
-        //select arrow
+        // const checkboxListener = () => {
+        //   for (let x = 0; x < document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select').length; x++) {
+        //     if (document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].classList.contains("hide")) {
+        //       document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.add("hide")
+        //     }
+        //     else {
+        //       document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.remove("hide")
+        //     }
+        //   }
+        // }
+        // checkboxListener()
+        // for (let i = 0; i < document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]').length; i++) {
+        //   document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]')[i].addEventListener("change", function () {
+        //     checkboxListener()
+        //   })
+        // }
+        // //select arrow
         for (let x = 0; x < document.querySelectorAll('.spz-1012 form select').length; x++) {
           document.querySelectorAll('.spz-1012 form select')[x].parentNode.insertAdjacentHTML("beforeend", `
             <div class="arrow"></div>  

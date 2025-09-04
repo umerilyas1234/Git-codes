@@ -638,7 +638,7 @@ const observer = new MutationObserver(function () {
       executeTimeout = setTimeout(function () {
         console.log('✅ Correct URL, running executeTest');
         executeTest();
-      }, 800);
+      }, 300);
     } else {
       console.log('❌ Wrong URL, running removeTest');
       clearTimeout(executeTimeout);

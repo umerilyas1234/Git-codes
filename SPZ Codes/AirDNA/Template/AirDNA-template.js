@@ -70,7 +70,6 @@ function spz3007Test() {
 
 function removeTest() {
     document.body.classList.remove('spz_3007');
-    document.querySelector('.header-logo-color')?.remove();
     document.querySelector('.hero_section')?.remove();
 }
 

@@ -43,6 +43,15 @@
   font-display: swap;
 }
 .spz_1002 .awr-hero {
+  display: block;
+}
+.spz_1002 .awr-hero .awr-hero__wrapper {
+  display: none;
+}
+.spz_1002 section .awr-home__render-components > div:first-child {
+  display: block;
+}
+.spz_1002 section .awr-home__render-components > div:first-child > .flex {
   display: none;
 }
 .spz_1002 .spz_hero {
@@ -51,6 +60,9 @@
 }
 .spz_1002 .spz_hero.v2 {
   background: #F0F9FF;
+}
+.spz_1002 .spz_hero.v2 .hero_heading {
+  padding-bottom: 32px;
 }
 .spz_1002 .spz_hero.v2 .hero_toggle {
   padding-bottom: 32px;
@@ -128,7 +140,6 @@
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .spz_1002 .hero_heading h1 {
-    padding: 0 20px;
     margin-bottom: 17px;
   }
 }
@@ -233,7 +244,7 @@
 }
 @media (max-width: 767.98px) {
   .spz_1002 .hero_crads {
-    padding-bottom: 16px;
+    padding-bottom: 18px;
     max-width: 336px;
     margin: auto;
   }
@@ -246,7 +257,7 @@
 }
 @media (max-width: 767.98px) {
   .spz_1002 .hero_crads .cards {
-    margin: 0 -4px;
+    margin: 0 -3px;
   }
 }
 .spz_1002 .hero_crads .card {
@@ -276,9 +287,9 @@
 }
 @media (max-width: 767.98px) {
   .spz_1002 .hero_crads .card {
-    width: 76px;
+    width: 77.5px;
     height: 90px;
-    margin: 0 4px 8px;
+    margin: 0 3px 6px;
     padding: 17px 5px 12px;
   }
 }
@@ -353,22 +364,20 @@
     line-height: 15.6px;
   }
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container {
+.spz_1002 .hero_form .awr-find-your-protection-plan {
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  gap: 0;
   margin-top: 0;
   max-width: 400px;
   margin: auto;
   border: none;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan {
-  border: none;
-  border-radius: 6px;
-  background-color: transparent;
-  gap: 0;
-}
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan .awr-find-your-protection-plan__tabs-container {
+.spz_1002 .hero_form .awr-find-your-protection-plan .awr-find-your-protection-plan__tabs-container {
   display: none;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form {
+.spz_1002 .hero_form .awr-find-your-protection-plan form {
   padding: 0;
   gap: 0;
   align-items: flex-start;
@@ -379,28 +388,28 @@
   height: 54px;
   transition: all 0.3s ease-in-out;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form:hover {
+.spz_1002 .hero_form .awr-find-your-protection-plan form:hover {
   border-color: rgba(24, 102, 153, 0.8);
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form:has(input:active), .spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form:has(input:focus) {
+.spz_1002 .hero_form .awr-find-your-protection-plan form:has(input:active), .spz_1002 .hero_form .awr-find-your-protection-plan form:has(input:focus) {
   border-color: rgba(24, 102, 153, 0.8);
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form:has(p.awr-find-your-protection-plan__input-error) {
+.spz_1002 .hero_form .awr-find-your-protection-plan form:has(p.awr-find-your-protection-plan__input-error) {
   border-color: rgba(184, 52, 54, 0.8);
 }
 @media (max-width: 767.98px) {
-  .spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form {
+  .spz_1002 .hero_form .awr-find-your-protection-plan form {
     flex-direction: row;
     max-width: 328px;
     margin: auto;
   }
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__input-container {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__input-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__input-container > p.awr-find-your-protection-plan__input-error {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__input-container > p.awr-find-your-protection-plan__input-error {
   color: #B83436;
   font-size: 12px;
   font-weight: 500;
@@ -408,20 +417,20 @@
   margin-top: 6px;
   margin-left: -4px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container {
   order: -1;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container .pointer-events-none svg {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container .pointer-events-none svg {
   color: #186699;
   width: 10.5px;
   height: 14px;
   margin-top: -3px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container .pointer-events-none:has(svg) {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container .pointer-events-none:has(svg) {
   padding-left: 0;
   margin-left: 16px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"] {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"] {
   padding: 11px 16px 11px 40.5px;
   height: 46px;
   border: none;
@@ -436,28 +445,28 @@
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]::-webkit-input-placeholder {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]::-moz-placeholder {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]::-moz-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:disabled {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:disabled {
   opacity: 1;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus, .spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus, .spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active {
   outline: none;
   border: none;
   box-shadow: none;
   color: #000;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus::-webkit-input-placeholder, .spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active::-webkit-input-placeholder {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus::-webkit-input-placeholder, .spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active::-webkit-input-placeholder {
   font-size: 0;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus::-moz-placeholder, .spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active::-moz-placeholder {
+.spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:focus::-moz-placeholder, .spz_1002 .hero_form .awr-find-your-protection-plan form .awr-find-your-protection-plan__zipcode-container input[placeholder="Zip Code"]:active::-moz-placeholder {
   font-size: 0;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] {
   width: 147.25px;
   height: 46px;
   border-radius: 4px;
@@ -467,17 +476,17 @@
   transition: all 0.3s ease-in-out;
   position: relative;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit]:hover {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit]:hover {
   background-color: #0A4C70;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit]:disabled {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit]:disabled {
   opacity: 1;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span {
   padding: 0;
   display: block;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span p {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span p {
   color: #fff;
   text-align: center;
   font-size: 0;
@@ -485,23 +494,23 @@
   align-items: center;
   white-space: nowrap;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span p::after {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span p::after {
   content: "Get Pricing";
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.1px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span p + span[role=status] {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span p + span[role=status] {
   width: 9px;
   position: absolute;
   right: 20px;
   top: 11px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span p + span[role=status] svg {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span p + span[role=status] svg {
   width: 13px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span .awr-find-your-protection-plan__arrow-right {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span .awr-find-your-protection-plan__arrow-right {
   position: absolute;
   right: 20px;
   top: 16px;
@@ -512,7 +521,7 @@
   background-repeat: no-repeat;
   background-size: 13px;
 }
-.spz_1002 .hero_form .awr-hero__find-protection-container .awr-find-your-protection-plan form > button[type=submit] span .awr-find-your-protection-plan__arrow-right svg {
+.spz_1002 .hero_form .awr-find-your-protection-plan form > button[type=submit] span .awr-find-your-protection-plan__arrow-right svg {
   display: none;
 }
 .spz_1002 .cards_two ul {

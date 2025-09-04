@@ -14,7 +14,7 @@ html.spz_10003.is-clipped {
 }
 
 .spz_10003 .spz_10003-section {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2001/BG-jpg.jpg");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2001/BG-jpg.jpg");
   background-size: cover;
   background-position: top center;
   background-color: #00299D;
@@ -204,7 +204,7 @@ html.spz_10003.is-clipped {
   line-height: 26px;
   padding-left: 36px;
   position: relative;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1726489366/netwrix/2001/frame_1171276132.svg");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1726489366/netwrix/2001/frame_1171276132.svg");
   background-repeat: no-repeat;
   background-position: -0.5px 0px;
   margin-top: 32px;
@@ -558,6 +558,25 @@ html.spz_10003.is-clipped {
   justify-content: space-between;
   align-items: center;
   margin-top: 19.5px;
+}
+.spz_10003 .spz_10003-section .trusted .logo-section img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 1024px) and (max-width: 1399.98px) {
+  .spz_10003 .spz_10003-section .trusted .logo-section img[alt="Geneva Foundation Logo"] {
+    max-width: 111px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .spz_10003 .spz_10003-section .trusted .logo-section img[alt="Geneva Foundation Logo"] {
+    max-width: 111px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_10003 .spz_10003-section .trusted .logo-section img[alt="Geneva Foundation Logo"] {
+    max-width: 111px;
+  }
 }
 
 .new_footerOuter {
@@ -1114,6 +1133,7 @@ html.spz_10003.is-clipped {
 }
 
 .spz_10003 .accrodion-section .content-part .accordion .accor-title svg {
+  min-width: 18px;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -1200,11 +1220,15 @@ html.spz_10003.is-clipped {
   background: #E63B44;
   color: #fff;
 }
-.custom_btn:active, .custom_btn:focus {
+.custom_btn:active {
   background: #BE131C;
   color: #fff;
   outline: none;
   box-shadow: none;
+}
+.custom_btn:focus {
+  color: #fff;
+  background: #D22730;
 }
 
 .spz_10003 .accrodion-section .content-part .accordion a {
@@ -1234,6 +1258,12 @@ html.spz_10003.is-clipped {
 
 .spz_10003 .accrodion-section .content-part .accordion a:active {
   background: #BE131C;
+}
+
+.spz_10003 .accrodion-section .content-part .accordion a:focus {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .spz_10003 .accrodion-section .slide-part {
@@ -1405,7 +1435,7 @@ html.spz_10003.is-clipped {
 /* Accordion Styling Ends Here */
 .spz_10003 .brodcast_section {
   padding: 80px 0;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10003/background__4.webp") !important;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10003/background__4.webp") !important;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1413,6 +1443,21 @@ html.spz_10003.is-clipped {
 @media (max-width: 767.98px) {
   .spz_10003 .brodcast_section {
     padding: 65px 0 64px;
+  }
+}
+.spz_10003 .broadcast_inner {
+  padding: 0 20px;
+  max-width: 1280px;
+  margin: auto;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .spz_10003 .broadcast_inner {
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_10003 .broadcast_inner {
+    padding: 0;
   }
 }
 .spz_10003 .broad_detail {
@@ -1544,23 +1589,34 @@ html.spz_10003.is-clipped {
     max-width: 40px;
   }
 }
-.spz_10003 .form-horizontal.er_1 .modelFormError {
+.spz_10003 .form-horizontal.er_1 .modelFormError:not(.error-message) {
   font-size: 0 !important;
 }
-.spz_10003 .form-horizontal.er_1 .modelFormError::after {
+.spz_10003 .form-horizontal.er_1 .modelFormError:not(.error-message)::after {
   content: "Work Email cannot be blank.";
   font-size: 12px;
   display: inline-block;
   transform: translateY(3px);
 }
-.spz_10003 .form-horizontal.er_2 .modelFormError {
+.spz_10003 .form-horizontal.er_2 .modelFormError:not(.error-message) {
   font-size: 0 !important;
 }
-.spz_10003 .form-horizontal.er_2 .modelFormError::after {
+.spz_10003 .form-horizontal.er_2 .modelFormError:not(.error-message)::after {
   content: "Enter your work e-mail.";
   font-size: 12px;
   display: inline-block;
   transform: translateY(3px);
+}
+.spz_10003 .form-horizontal .modelFormError.error-message + .modelFormError {
+  display: none !important;
+}
+.spz_10003 .form-horizontal:has(.modelFormError.error-message) .email_valid #ModalForm_nwf_email {
+  transition: all 1s ease;
+  border: 1px solid #66BCFF !important;
+}
+.spz_10003 .form-horizontal:has(.modelFormError.error-message) .email_valid #ModalForm_nwf_email + label {
+  transition: all 1s ease;
+  color: #354556 !important;
 }
 
 .spz_10003 .spz-review-ribbon {

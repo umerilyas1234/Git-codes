@@ -59,7 +59,7 @@ const bodyInterval10003 = setInterval(function () {
               <img src="//res.cloudinary.com/spiralyze/image/upload/v1726489372/netwrix/2001/frame_1171276165.svg" alt="Virgin Logo" width="88" height="72" >
               <img src="//res.cloudinary.com/spiralyze/image/upload/v1726489368/netwrix/2001/frame_1171276163.svg" alt="Denso Logo" width="128" height="72" >
               <img src="//res.cloudinary.com/spiralyze/image/upload/v1726489367/netwrix/2001/frame_1171276162.svg" alt="Allianz Logo" width="167" height="72" >
-              <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2001/frame_1171276161.webp" alt="Geneva Foundation Logo" width="167" height="72" >
+              <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10003/image_1.webp" alt="Geneva Foundation Logo" width="164" height="49" >
             </div>
           </div>
 
@@ -300,7 +300,7 @@ const bodyInterval10003 = setInterval(function () {
                     <div class="slider_main">
                       <div class="slider_data">
                         <figure>
-                          <img src="https://res.cloudinary.com/spiralyze/image/upload/v1747219884/netwrix/10003/logo_09.svg" alt="Avtice Directory">
+                          <img src="https://res.cloudinary.com/spiralyze/image/upload/v1747219884/netwrix/10003/logo_09.svg" alt="Actice Directory">
                         </figure>
                       </div>
                       <div class="slider_data">
@@ -354,7 +354,7 @@ const bodyInterval10003 = setInterval(function () {
                     <div class="slider_main">
                              <div class="slider_data">
                         <figure>
-                          <img src="https://res.cloudinary.com/spiralyze/image/upload/v1747219884/netwrix/10003/logo_09.svg" alt="Avtice Directory">
+                          <img src="https://res.cloudinary.com/spiralyze/image/upload/v1747219884/netwrix/10003/logo_09.svg" alt="Active Directory">
                         </figure>
                       </div>
                       <div class="slider_data">
@@ -425,7 +425,7 @@ const bodyInterval10003 = setInterval(function () {
             </div>
           </div>
           <div class="footer-note">
-            * Result is as of 11/14/2024. 4.5 rating is based on 143 reviews in the File Analysis Software market. Gartner® and Peer Insights™ are trademarks of Gartner, Inc. and/or its affiliates. All rights reserved. Gartner Peer Insights content consists of the opinions of individual end users based on their own experiences, and should not be construed as statements of fact, nor do they represent the views of Gartner or its affiliates. Gartner does not endorse any vendor, product or service depicted in this content nor makes any warranties, expressed or implied, with respect to this content, about its accuracy or completeness, including any warranties of merchantability or fitness for a particular purpose.
+            * Result is as of 11/14/2024. 4.5 rating is based on 186 reviews in the File Analysis Software market. Gartner® and Peer Insights™ are trademarks of Gartner, Inc. and/or its affiliates. All rights reserved. Gartner Peer Insights content consists of the opinions of individual end users based on their own experiences, and should not be construed as statements of fact, nor do they represent the views of Gartner or its affiliates. Gartner does not endorse any vendor, product or service depicted in this content nor makes any warranties, expressed or implied, with respect to this content, about its accuracy or completeness, including any warranties of merchantability or fitness for a particular purpose.
           </div>
         </div>
       </div>
@@ -433,7 +433,9 @@ const bodyInterval10003 = setInterval(function () {
     `)
 
     // copy nav list item
-    document.querySelector('.spz_10003 .spz_10003-section .header .language-button ul').innerHTML = document.querySelector('.spz_10003 .navbar-language .navbar-dropdown').innerHTML;
+    if (document.querySelector('.spz_10003 .spz_10003-section .header .language-button ul') && document.querySelector('.spz_10003 .navbar-language .navbar-dropdown')) {
+      document.querySelector('.spz_10003 .spz_10003-section .header .language-button ul').innerHTML = document.querySelector('.spz_10003 .navbar-language .navbar-dropdown').innerHTML;
+    }
 
     //move form & modification add delay
     setTimeout(function () {
@@ -466,7 +468,7 @@ const bodyInterval10003 = setInterval(function () {
         </div>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1747219884/netwrix/10003/logo_gartner.svg" alt="Gartner Logo" width="98" height="35" >
         <div class="right-logo-text">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1747220007/netwrix/10003/stars_1.svg" alt="Stars Icon" width="108" height="20" >
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1751298102/netwrix/10003/stars_2.svg" alt="Stars Icon" width="108" height="20" >
           <div class="text desktop">
             <span>4.5</span>
             <span>(186 reviews)</span>
@@ -552,22 +554,22 @@ const bodyInterval10003 = setInterval(function () {
 
       })
 
-      document.querySelectorAll('.spz_10003 .spz_10003-section .form-section .right .form-wrapper input').forEach(input => {
-        input.addEventListener('keyup', function () {
-          const firstName = document.querySelector('#ModalForm_nwf_firstName')?.value.trim() || "";
-          const lastName = document.querySelector('#ModalForm_nwf_lastName')?.value.trim() || "";
-          const phone = document.querySelector('#ModalForm_nwf_phone')?.value.trim() || "";
-          const phoneDigits = phone.replace(/\D/g, ""); // Strip non-digits
-          const isValid = firstName !== "" && lastName !== "" && phoneDigits.length >= 10;
-          const formBtnTwo = document.querySelector('.form_btnTwo');
-          if (isValid) {
-            formBtnTwo?.classList.remove('show');
-            removeError();
-          } else {
-            formBtnTwo?.classList.add('show');
-          }
-        });
-      });
+      // document.querySelectorAll('.spz_10003 .spz_10003-section .form-section .right .form-wrapper input').forEach(input => {
+      //   input.addEventListener('keyup', function () {
+      //     const firstName = document.querySelector('#ModalForm_nwf_firstName')?.value.trim() || "";
+      //     const lastName = document.querySelector('#ModalForm_nwf_lastName')?.value.trim() || "";
+      //     const phone = document.querySelector('#ModalForm_nwf_phone')?.value.trim() || "";
+      //     const phoneDigits = phone.replace(/\D/g, ""); // Strip non-digits
+      //     const isValid = firstName !== "" && lastName !== "" && phoneDigits.length >= 10;
+      //     const formBtnTwo = document.querySelector('.form_btnTwo');
+      //     if (isValid) {
+      //       formBtnTwo?.classList.remove('show');
+      //       removeError();
+      //     } else {
+      //       formBtnTwo?.classList.add('show');
+      //     }
+      //   });
+      // });
 
       if (document.querySelector('.right #SPZ_Test')) {
         document.querySelector('.right #SPZ_Test').value = 'variant_10003';
@@ -577,7 +579,7 @@ const bodyInterval10003 = setInterval(function () {
         const errMsg = document.querySelector('.spz_10003-section .form-section .right .form-wrapper .modelFormError');
         if (errMsg) {
           let html = errMsg.innerHTML;
-  
+
           if (html.includes('Business Email')) {
             errMsg.closest('.form-horizontal').classList.add('er_1');
             errMsg.closest('.form-horizontal').classList.remove('er_2');
@@ -722,20 +724,37 @@ const bodyInterval10003 = setInterval(function () {
         const firstName = document.querySelector('#ModalForm_nwf_firstName')?.value.trim() || "";
         const lastName = document.querySelector('#ModalForm_nwf_lastName')?.value.trim() || "";
         const phone = document.querySelector('#ModalForm_nwf_phone')?.value.trim() || "";
+        const email = document.querySelector('#ModalForm_nwf_email')?.value;
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const emailValid = emailPattern.test(email);
+        if (emailValid) {
+          document.querySelector('.spz_10003-section .form-section .right .form-wrapper .wrapDialogForm  form #ModalForm_nwf_email').closest('.width50').classList.add('email_valid');
+        } else {
+          document.querySelector('.spz_10003-section .form-section .right .form-wrapper .wrapDialogForm  form #ModalForm_nwf_email').closest('.width50').classList.remove('email_valid');
+        }
 
         // Extract digits from phone
         const phoneDigits = phone.replace(/\D/g, "");
 
         // Check if all required fields are filled and phone number is valid
         if (firstName && lastName && phoneDigits.length >= 10) {
-          removeError();
+          setTimeout(() => {
+            removeError();
+          }, 1000);
+          // e.target.classList.remove('show');
+          document.querySelector('.spz_10003-section .form-section .right .form-wrapper .wrapDialogForm  form .modelFormSubmit').click();
+
         } else {
-          showError();
+          setTimeout(() => {
+            showError();
+          }, 1000);
+          // document.querySelector('#ModalForm_nwf_email').closest('.width50').classList.remove('error');
         }
       }
       if (e.target.classList.contains('free_trial')) {
         e.preventDefault();
-        const target = document.querySelector('.right .wrapDialogForm ');
+        const target = document.querySelector('.right .wrapDialogForm');
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
@@ -759,11 +778,12 @@ const bodyInterval10003 = setInterval(function () {
         document.querySelector('#ModalForm_nwf_phone').closest('.width50').classList.add('error');
       }
       if (!errorMsg) {
-        document.querySelector('.spz_10003 .spz_10003-section .form-section .right .form-wrapper .modelFormError').insertAdjacentHTML('beforebegin', `
-              <div class="modelFormError v-show error-message">${fieldName} cannot be blank.</div>
-            `);
+        document.querySelector('.spz_10003 .spz_10003-section .form-section .right .form-wrapper .modelFormError').insertAdjacentHTML('beforebegin',
+          ` <div class="modelFormError v-show error-message">${fieldName} cannot be blank.</div>`
+        );
       }
     }
+
 
     function removeError() {
       document.querySelector('#ModalForm_nwf_firstName').closest('.width50').classList.remove('error');
@@ -771,7 +791,7 @@ const bodyInterval10003 = setInterval(function () {
       document.querySelector('#ModalForm_nwf_phone').closest('.width50').classList.remove('error');
       const errorMsg = document.querySelector('.error-message');
       if (errorMsg) {
-        errorMsg.remove();
+          errorMsg.remove();
       }
     }
 

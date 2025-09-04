@@ -107,7 +107,7 @@ function runCode() {
 													<h4>Built for businesses under 150 employees</h4>
 												</div>
 												<div class="btn_outer">
-													<a href="https://buy.netwrix.com/1902/purl-netwrixessentials" class="custom_btn btn_red spz_6011_v1">Buy Now</a>
+													<a href="https://buy.netwrix.com/1902/purl-netwrixessentials?tracking=gtm" class="custom_btn btn_red spz_6011_v1">Buy Now</a>
 													<a href="javascript:void(0);" class="hyperLink spz_6011_v1">Or start a free trial</a>
 												</div>
 											</div>
@@ -198,7 +198,7 @@ function runCode() {
 			CTAs: [
 				{
 					ctaText: "Buy Now",
-					ctaURL: "https://buy.netwrix.com/1902/purl-netwrixessentials",
+					ctaURL: "https://buy.netwrix.com/1902/purl-netwrixessentials?tracking=gtm",
 				}
 			]
 		};

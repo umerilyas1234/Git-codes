@@ -65,7 +65,7 @@ html.spz_10003.is-clipped {
 }
 
 .spz_10003 .spz_10003-section {
-  background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2001/BG-jpg.jpg');
+  background-image: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/2001/BG-jpg.jpg');
   background-size: cover;
   background-position: top center;
   background-color: #00299D;
@@ -257,7 +257,7 @@ html.spz_10003.is-clipped {
   line-height: 26px;
   padding-left: 36px;
   position: relative;
-  background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1726489366/netwrix/2001/frame_1171276132.svg');
+  background-image: url('https://res.cloudinary.com/spiralyze/image/upload/v1726489366/netwrix/2001/frame_1171276132.svg');
   background-repeat: no-repeat;
   background-position: -0.5px 0px;
   margin-top: 32px;
@@ -379,11 +379,13 @@ html.spz_10003.is-clipped {
   background: white;
   box-shadow: none;
   outline: none;
+
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+
   @include mobile() {
     margin-top: 0;
   }
@@ -597,6 +599,20 @@ html.spz_10003.is-clipped {
   justify-content: space-between;
   align-items: center;
   margin-top: 19.5px;
+  img{
+    object-fit: contain;
+    &[alt="Geneva Foundation Logo"]{
+      @include tablet-pro(){
+        max-width: 111px;
+      }
+      @include tablet(){
+        max-width: 111px;
+      }
+      @include mobile(){
+        max-width: 111px;
+      }
+    }
+  }
 }
 
 .new_footerOuter {
@@ -1238,6 +1254,7 @@ html.spz_10003.is-clipped {
 }
 
 .spz_10003 .accrodion-section .content-part .accordion .accor-title svg {
+  min-width: 18px;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -1325,12 +1342,16 @@ html.spz_10003.is-clipped {
     color: #fff;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     background: #BE131C;
     color: #fff;
     outline: none;
     box-shadow: none;
+  }
+
+  &:focus {
+    color: #fff;
+    background: #D22730;
   }
 }
 
@@ -1363,6 +1384,11 @@ html.spz_10003.is-clipped {
   background: #BE131C;
 }
 
+.spz_10003 .accrodion-section .content-part .accordion a:focus {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
 
 .spz_10003 .accrodion-section .slide-part {
   width: 100%;
@@ -1576,13 +1602,27 @@ html.spz_10003.is-clipped {
 .spz_10003 {
   .brodcast_section {
     padding: 80px 0;
-    background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10003/background__4.webp')!important;
+    background-image: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/10003/background__4.webp') !important;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
     @include mobile() {
       padding: 65px 0 64px;
+    }
+  }
+
+  .broadcast_inner {
+    padding: 0 20px;
+    max-width: 1280px;
+    margin: auto;
+
+    @include tablet() {
+      padding: 0;
+    }
+
+    @include mobile() {
+      padding: 0;
     }
   }
 
@@ -1744,7 +1784,7 @@ html.spz_10003.is-clipped {
 
   .form-horizontal {
     &.er_1 {
-      .modelFormError {
+      .modelFormError:not(.error-message) {
         font-size: 0 !important;
 
         &::after {
@@ -1757,14 +1797,34 @@ html.spz_10003.is-clipped {
     }
 
     &.er_2 {
-      .modelFormError {
-        font-size: 0!important;
+      .modelFormError:not(.error-message) {
+        font-size: 0 !important;
 
         &::after {
           content: 'Enter your work e-mail.';
           font-size: 12px;
           display: inline-block;
           transform: translateY(3px);
+        }
+      }
+    }
+
+    .modelFormError.error-message {
+      &+.modelFormError {
+        display: none !important;
+      }
+    }
+
+    &:has(.modelFormError.error-message) {
+      .email_valid {
+        #ModalForm_nwf_email {
+          transition: all 1s ease;
+          border: 1px solid #66BCFF !important;
+
+          &+label {
+            transition: all 1s ease;
+            color: #354556 !important;
+          }
         }
       }
     }

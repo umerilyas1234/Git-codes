@@ -1,8 +1,34 @@
-const bodyInterval1002 = setInterval(function () {
-  if (document.querySelector('body') && !document.querySelector('.spz-1012')) {
-    clearInterval(bodyInterval1002)
-    document.querySelector('body').classList.add("spz-1012")
-    localStorage.setItem('bdcAbTest12','1004-con');
+const startTime=Date.now()
+function getTimestamp() {
+  const now = new Date();
+  return `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')} ` +
+         `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}.` +
+         `${now.getMilliseconds().toString().padStart(3, '0')}`;
+}
+
+console.log("Script start at:", getTimestamp());
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded (event):', getTimestamp());
+  });
+} else {
+  console.log('DOM already loaded (no event):', getTimestamp());
+}
+console.log('Current document.readyState:', document.readyState);
+
+window.addEventListener("load",function(){
+  const endTime=Date.now()
+  const loadTimeInSeconds=(( endTime- startTime)/1000).toFixed(2);
+  console.log('Page fully load in ' +loadTimeInSeconds+' seconds')
+})
+
+const bodyInterval1016 = setInterval(function () {
+  if (document.querySelector('body') && !document.querySelector('.spz-1016')) {
+    console.log("modify the body: "+getTimestamp())
+    clearInterval(bodyInterval1016)
+    document.querySelector('body').classList.add("spz-1016")
+    localStorage.setItem('bdcAbTest12', '1016-v1');
     //DEVELOPER - STEP 1 of 5 - Put your asana task URL here
     const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
     //DEVELOPER - STEP 2 of 5 - This adds content inside the box.
@@ -10,112 +36,149 @@ const bodyInterval1002 = setInterval(function () {
       customHTMLBefore: `
       ${ /*This html goes is inserted before the form */''}
         <div class="form heading">
-          <h2>Start using BILL Today</h2>
+          <h2>Start using <span class="orange">BILL</span> today</h2>
         </div>
       `,
       customHTMLAfter: ``,
     };
-
+    const setHTMLHeight =()=>{
+      document.querySelector('html').removeAttribute("style");
+      if(document.body.offsetHeight>screen.height) {
+       document.querySelector('html').style.minHeight=document.body.offsetHeight+"px";
+      } 
+    }
+    
     //DEVELOPER - STEP 3 of 5 - This adds the form. Find the class or ID of the control form and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
     const formUniqueSelector = ".form-signup" //<--- form uqniue selector goes here. e.g.
 
     const formLoaded = setInterval(() => {
       if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
+        console.log("modify the form: "+getTimestamp())
         clearInterval(formLoaded);
         addForm(formElements, formUniqueSelector);
+        
+        const BRPoup =document.querySelectorAll('.spz-1016 #br-invite-dialog');
+        const ACPopup =document.querySelectorAll('.spz-1016 #ac-flag-dialog')
+        // move popup
+        for(let i=0;i<BRPoup.length;i++){
+          document.querySelector('.spz-1016 .spz-form-wrap').insertAdjacentElement("afterend",BRPoup[i])
+          document.querySelector('.spz-1016 .spz-form-wrap').insertAdjacentElement("afterend",ACPopup[i])
+        }
+        
         //form modification
         //adding wrapper
-        for (let i = 0; i < document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select').length; i++) {
-          let target = document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i];
+        for (let i = 0; i < document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select').length; i++) {
+          let target = document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i];
           let wrapper = document.createElement('div');
-          wrapper.classList.add('spz-input-wrapper', document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].getAttribute("id"));
+          wrapper.classList.add('spz-input-wrapper', document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].getAttribute("id"));
           target.parentNode.insertBefore(wrapper, target);
           wrapper.appendChild(target);
         }
-        //adding label
-        for (let i = 0; i < document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select').length; i++) {
-          let label = document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].getAttribute("placeholder") == "Number Of Employees" ? "Number of Employees" : document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].getAttribute("placeholder")
-          if (!label && document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].querySelector('option')) {
-            label = document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].querySelector('option').textContent;
+        //adding label & error
+        for (let i = 0; i < document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select').length; i++) {
+          let label = document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].getAttribute("placeholder") == "Number Of Employees" ? "Number of Employees" : document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].getAttribute("placeholder")
+          if (!label && document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].querySelector('option')) {
+            label = document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].querySelector('option').textContent;
           }
-          document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].insertAdjacentHTML("afterend", `
-            <label for="${document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select')[i].getAttribute("id")}">${label}</label> 
+          document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].insertAdjacentHTML("afterend", `
+            <label for="${document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select')[i].getAttribute("id")}">${label}</label> 
          `)
         }
+        document.querySelector('.spz-1016 .spz-input-wrapper.phone input').setAttribute("placeholder","Phone Number")
+        document.querySelector('.spz-1016 .spz-input-wrapper.phone label').textContent="Phone Number"
         // change position
-        document.querySelector('.spz-1012 .spz-input-wrapper.email').insertAdjacentElement('afterend', document.querySelector('.spz-1012 .spz-input-wrapper.name'))
-        document.querySelector('.spz-1012 .spz-input-wrapper.numberOfEmployees').insertAdjacentElement('afterend', document.querySelector('.spz-1012 .spz-input-wrapper.signupType'))
-        // adding Business Type
+         document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
 
-        // document.querySelector('.spz-1012 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
-        //   <div class="spz-input-wrapper business-type">
-        //     <select class="business-type" id="businessType" required></select>
-        //     <label for="businessType">Business Type</label> 
-        //   </div>   
-        //  `)
-        // for (let i = 0; i < document.querySelectorAll('.spz-1012 #signupType .form-option-field span').length; i++) {
-        //   document.querySelector('.spz-1012 #businessType').insertAdjacentHTML("beforeend", `
-        //       <option value="${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz-1012 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
-        //     `)
-        // }
-        // document.querySelector('.spz-1012 #businessType').addEventListener("change", function () {
-        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[document.querySelector('.spz-1012 #businessType').selectedIndex].querySelector('input').click()
-        // })
-        // //trigger click based on selected radiobutton
-        // if (document.querySelector('.spz-1012 #signupType .form-option-field [name="formoptions"]:checked').value == 'direct') {
-        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
-        //   document.querySelectorAll('.spz-1012 #businessType option')[0].selected = 'selected'
-        // } else {
-        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[0].querySelector('input').click()
-        //   document.querySelectorAll('.spz-1012 #signupType .form-option-field')[1].querySelector('input').click()
-        //   document.querySelectorAll('.spz-1012 #businessType option')[1].selected = 'selected'
-        // }
+         /
+        // adding Business Type
+        /*
+        document.querySelector('.spz-1016 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
+          <div class="spz-input-wrapper business-type">
+            <select class="business-type" id="businessType" required>
+            <option value="" disabled="">Business Type</option>
+            </select>
+            <label for="businessType">Business Type</label> 
+          </div>   
+         `)
+         document.querySelector('.spz-1016 #businessType').selectedIndex = 0;
+         document.querySelector('.spz-1016 #direct').checked=false
+        for (let i = 0; i < document.querySelectorAll('.spz-1016 #signupType .form-option-field span').length; i++) {
+          document.querySelector('.spz-1016 #businessType').insertAdjacentHTML("beforeend", `
+              <option value="${document.querySelectorAll('.spz-1016 #signupType .form-option-field')[i].querySelector('span').textContent}" >${document.querySelectorAll('.spz-1016 #signupType .form-option-field')[i].querySelector('span').textContent}</option>  
+            `)
+        }
+        document.querySelector('.spz-1016 #businessType').addEventListener("change", function () {
+          document.querySelectorAll('.spz-1016 #signupType .form-option-field')[document.querySelector('.spz-1016 #businessType').selectedIndex-1].querySelector('input').click();
+          sessionStorage.setItem("businessType", document.querySelector('.spz-1016 #businessType').selectedIndex);
+        })
+        */
+        //move form option
+        document.querySelector('.spz-1016 .spz-input-wrapper.numberOfEmployees').insertAdjacentElement("beforebegin",document.querySelector('.spz-1016 .spz-input-wrapper.signupType'))
+        document.querySelector('.spz-1016 .spz-input-wrapper.signupType select option').disabled = true;
+        /*
+        //trigger click based on selected radiobutton
+        //document.querySelector('.spz-1016 #signupType .form-option-field [name="formoptions"]:checked').value
+        if(sessionStorage.getItem("businessType") &&  document.querySelector('#firstName').value){
+          if (sessionStorage.getItem("businessType") == 1) {
+            document.querySelectorAll('.spz-1016 #signupType .form-option-field')[0].querySelector('input').click()
+            document.querySelectorAll('.spz-1016 #businessType option')[0].selected = 'selected'
+            document.querySelector('.spz-1016 #businessType').selectedIndex = 1
+          } else {
+            document.querySelectorAll('.spz-1016 #signupType .form-option-field')[0].querySelector('input').click()
+            document.querySelectorAll('.spz-1016 #signupType .form-option-field')[1].querySelector('input').click()
+            document.querySelectorAll('.spz-1016 #businessType option')[1].selected = 'selected'
+            document.querySelector('.spz-1016 #businessType').selectedIndex = 2
+          }
+        }
+        
+        */
+        
         //products style
-        document.querySelector('.spz-1012 #form-panel-3 .text-size-tiny').textContent = "(Check all that apply)"
+        document.querySelector('.spz-1016 #form-panel-3 .text-size-tiny').textContent = "(Check all that apply)"
         //checbox listener
         // const checkboxListener = () => {
-        //   for (let x = 0; x < document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select').length; x++) {
-        //     if (document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].classList.contains("hide")) {
-        //       document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.add("hide")
+        //   for (let x = 0; x < document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select').length; x++) {
+        //     if (document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select')[x].classList.contains("hide")) {
+        //       document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.add("hide")
         //     }
         //     else {
-        //       document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.remove("hide")
+        //       document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select')[x].closest('.spz-input-wrapper').classList.remove("hide")
         //     }
         //   }
         // }
         // checkboxListener()
-        for (let i = 0; i < document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]').length; i++) {
-          document.querySelectorAll('.spz-1012 [name="productInterestCheckbox"]')[i].addEventListener("change", function () {
-            checkboxListener()
-          })
-        }
+        // for (let i = 0; i < document.querySelectorAll('.spz-1016 [name="productInterestCheckbox"]').length; i++) {
+        //   document.querySelectorAll('.spz-1016 [name="productInterestCheckbox"]')[i].addEventListener("change", function () {
+        //     checkboxListener()
+        //   })
+        // }
         //select arrow
-        for (let x = 0; x < document.querySelectorAll('.spz-1012 form select').length; x++) {
-          document.querySelectorAll('.spz-1012 form select')[x].parentNode.insertAdjacentHTML("beforeend", `
+        for (let x = 0; x < document.querySelectorAll('.spz-1016 form select').length; x++) {
+          document.querySelectorAll('.spz-1016 form select')[x].parentNode.insertAdjacentHTML("beforeend", `
             <div class="arrow"></div>  
             `)
         }
         //submit button 
-        document.querySelector('.spz-1012 .submit-button.button-signup-2').classList.add("spz_1012_v1")
-        document.querySelector('.spz-1012 .submit-button.button-signup-2').disabled = false
+        document.querySelector('.spz-1016 .submit-button.button-signup-2').classList.add("spz_1016_v1")
+        document.querySelector('.spz-1016 .submit-button.button-signup-2').disabled = false
         /*
         //disclaimer 
-        document.querySelector('.spz-1012 .button-disclaimer').innerHTML=`
+        document.querySelector('.spz-1016 .button-disclaimer').innerHTML=`
         By continuing, you agree to BILL <a href="/legal/terms-of-service" target="_blank" class="text-size-small no-wrap">Terms of Service</a> and&nbsp;<a href="/privacy" target="_blank" class="text-size-small no-wrap">Privacy Notice</a>.
         ` 
         */
 
         // existiing account
-        document.querySelector('.spz-1012 .button-disclaimer').insertAdjacentHTML("afterend", `<div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login" class="spz_1012_v1">Login</a></div>`);
+        document.querySelector('.spz-1016 .button-disclaimer').insertAdjacentHTML("afterend", `<div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login" class="spz_1016_v1">Log in</a></div>`);
 
         //  form bottom text
         document.querySelector('.form-wrapper').insertAdjacentElement('beforeend', document.querySelector('.form-wrapper.is-sub-wrapper .text-size-small:nth-child(2)'));
-        document.querySelectorAll('.spz-1012 .form-wrapper .text-size-small.is-form ').forEach(el => {
+        document.querySelectorAll('.spz-1016 .form-wrapper .text-size-small.is-form ').forEach(el => {
           el.innerHTML = el.innerHTML.replace(/&nbsp;/g, ' ');
         });
         
         //input even listerer
-        const allInput = document.querySelectorAll('.spz-1012 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1012 form select');
+        const allInput = document.querySelectorAll('.spz-1016 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),.spz-1016 form select');
         function labelChange(e) {
           if (e.value == '' || e.value == null) {
             e.closest(".spz-input-wrapper").classList.remove("hasValue");
@@ -133,8 +196,8 @@ const bodyInterval1002 = setInterval(function () {
           labelChange(e);
         })
         //remove unecessary select
-        for (let x = 0; x < document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select').length; x++) {
-          document.querySelectorAll('.spz-1012 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
+        for (let x = 0; x < document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select').length; x++) {
+          document.querySelectorAll('.spz-1016 #accountingSoftwareContainer select')[x].querySelector('option').disabled = true;
         }
         //change label and option on mobile and desktop 
         const checkSelectLabel = () => {
@@ -144,13 +207,22 @@ const bodyInterval1002 = setInterval(function () {
           } else {
             labelText = "Which accounting software do you use?"
           }
-          document.querySelector('.spz-1012 .spz-input-wrapper.accountingSoftware label').textContent = labelText;
-          document.querySelector('.spz-1012 .spz-input-wrapper.accountingSoftware select option').textContent = labelText;
+          document.querySelector('.spz-1016 .spz-input-wrapper.accountingSoftware label').textContent = labelText;
+          document.querySelector('.spz-1016 .spz-input-wrapper.accountingSoftware select option').textContent = labelText;
         }
         checkSelectLabel();
         window.addEventListener("resize", function () {
           checkSelectLabel();
+          setHTMLHeight();
         })
+        
+        const targetNode = document.querySelector("body");
+        const config = { childList: true, subtree: true };
+        const callback = (mutationList, observer) => {
+          setHTMLHeight()
+        };
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
 
         //onlynumber 
         function isNumber(evt) {
@@ -161,14 +233,18 @@ const bodyInterval1002 = setInterval(function () {
           }
           return true;
         }
+       
         const NOEInterval = setInterval(function () {
-          if (document.querySelector('.spz-1012 .spz-form-wrap .spz-input-wrapper.numberOfEmployees input')) {
+          if (document.querySelector('.spz-1016 .spz-form-wrap .spz-input-wrapper.numberOfEmployees input')) {
             clearInterval(NOEInterval)
-            document.querySelector('.spz-1012 .spz-form-wrap .spz-input-wrapper.numberOfEmployees input').addEventListener('keypress', function (event) {
+            document.querySelector('.spz-1016 .spz-form-wrap .spz-input-wrapper.numberOfEmployees input').addEventListener('keypress', function (event) {
               if (!isNumber(event)) event.preventDefault();
             }, false);
+            
           }
         }, 10)
+
+       
         //browser detection
         let userAgent = navigator.userAgent;
         let browser;
@@ -185,7 +261,8 @@ const bodyInterval1002 = setInterval(function () {
         } else {
           //alert("Other browser");
         }
-        document.querySelector('.spz-1012').classList.add(browser);
+        document.querySelector('.spz-1016').classList.add(browser);
+        console.log("Vwo test ended: "+getTimestamp())
       }
     })
 

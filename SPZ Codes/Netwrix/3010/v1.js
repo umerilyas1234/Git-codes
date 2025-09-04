@@ -22,7 +22,7 @@ const bodyInterval3010 = setInterval(function () {
 														Essentials Edition</h2>
 													<h4>Built for businesses under 150 employees</h4>
 													<div class="btn_outer">
-														<a href="https://buy.netwrix.com" class="custom_btn btn_red">Buy Now</a>
+														<a href="https://buy.netwrix.com/1902/purl-netwrixessentials?tracking=gtm" class="custom_btn btn_red">Buy Now</a>
 														<a href="javascript:void(0);" class="hyperLink">Or start a free trial</a>
 													</div>
 												</div>
@@ -123,7 +123,6 @@ const bodyInterval3010 = setInterval(function () {
 			if (e.target.classList.contains('contact_me')) {
 				e.preventDefault();
 				document.querySelector('.navbar-item.contact-item button').click();
-				document.querySelector('.v-modal-mask:has(.popup-wrapper-1008)').closest('div').style.display = 'table';
 			}
 			if (e.target.classList.contains('hyperLink')) {
 				e.preventDefault();

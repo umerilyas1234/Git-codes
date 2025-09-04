@@ -529,7 +529,7 @@
   border-color: #B4B3B9;
   background-color: #f9f9f9;
 }
-.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown) + label {
+.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder) + label {
   top: -10px;
   left: 10px;
   background-color: #fff;
@@ -553,13 +553,13 @@
   border-color: #3E27B7;
   box-shadow: 0px 0px 0px 2px rgba(62, 39, 183, 0.2);
 }
-.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown) {
+.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder) {
   border-color: #B4B3B9;
 }
 .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:placeholder-shown) {
   border-color: #B4B3B9;
 }
-.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown):hover {
+.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder):hover {
   border-color: #B4B3B9;
   background-color: #f9f9f9;
 }
@@ -567,13 +567,13 @@
   border-color: #B4B3B9;
   background-color: #f9f9f9;
 }
-.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown):active, .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown):focus {
+.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder):active, .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder):focus {
   border-color: #3E27B7;
 }
 .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:placeholder-shown):active, .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:placeholder-shown):focus {
   border-color: #3E27B7;
 }
-.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown) + label {
+.spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder) + label {
   color: #332A5D;
 }
 .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:placeholder-shown) + label {
@@ -599,7 +599,7 @@
     width: 100%;
     max-width: 100%;
   }
-  .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder-shown) + label {
+  .spz_6001 .spz_hero .js-signup-form .g-signup-form .g-signup-form__field input:not(:-moz-placeholder) + label {
     top: -10px;
     left: 10px;
   }

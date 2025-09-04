@@ -82,12 +82,15 @@ $mobile: 767.98px;
     font-weight: 400;
     line-height: 16px;
     padding: 7px 15px 0;
-    @include tablet(){
+
+    @include tablet() {
       padding: 9px 15px 0;
     }
-    @include mobile(){
+
+    @include mobile() {
       padding: 9px 0 0;
     }
+
     a {
       color: #1B0EB1;
       font-size: 12px;
@@ -95,16 +98,19 @@ $mobile: 767.98px;
       line-height: 16px;
       display: inline-flex;
       margin-right: 2px;
-      @include tablet(){
+
+      @include tablet() {
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
       }
-      @include mobile(){
+
+      @include mobile() {
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
       }
+
       &:hover {
         text-decoration: underline;
       }
@@ -191,14 +197,19 @@ $mobile: 767.98px;
   display: none;
 }
 
+.spz-1012 .spz-form-wrap .spz-input-wrapper select.hide~* {
+  display: none;
+}
+
 .spz-1012 .spz-form-wrap .spz-input-wrapper.email,
-.spz-1012 .spz-form-wrap .spz-input-wrapper.accountingSoftware {
+.spz-1012 .spz-form-wrap .spz-input-wrapper.accountingSoftware,
+.spz-1012 .spz-form-wrap .spz-input-wrapper.msDynamicsOption  {
   width: 100%;
 }
 
 .spz-1012 .spz-form-wrap .spz-input-wrapper.firstName,
 .spz-1012 .spz-form-wrap .spz-input-wrapper.name,
-.spz-1012 .spz-form-wrap .spz-input-wrapper.business-type {
+.spz-1012 .spz-form-wrap .spz-input-wrapper.signupType {
   margin-right: 12px;
 }
 
@@ -255,7 +266,8 @@ $mobile: 767.98px;
   -webkit-text-fill-color: #111 !important;
   z-index: 2;
   position: relative;
-  ~ label {
+
+  ~label {
     font-size: 12px;
     line-height: 16px;
     background: white;
@@ -344,6 +356,10 @@ $mobile: 767.98px;
   border: none !important;
   grid-row-gap: 0;
   margin-bottom: 24px;
+
+  &+#form-panel-3 {
+    display: none;
+  }
 }
 
 .spz-1012 .form-dropdown {
