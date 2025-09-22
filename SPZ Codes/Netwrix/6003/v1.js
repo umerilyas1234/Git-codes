@@ -126,8 +126,8 @@ function runCode6007() {
             <div class="content">
               <p>Lockdown, control, and monitor USB and peripheral ports to stop data theft and data loss.</p>
               <div class="button-wrapper">
-                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Device control" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Device control" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
+                <a href="javascript:void(0);" data-section="Device control" class="spz-6003-section-launch-cta">Request Free Trial</a>
+                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Device control" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
               </div>
               <div class="mobile-image">
               <picture>
@@ -147,8 +147,8 @@ function runCode6007() {
             <div class="content">
               <p>Stop data loss at the endpoint with contextual scanning across Windows, macOS, and Linux.</p>
               <div class="button-wrapper">
-                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Content-aware protection" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Content-aware protection" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
+                <a href="javascript:void(0);" data-section="Content-aware protection" class="spz-6003-section-launch-cta">Request Free Trial</a>
+                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Content-aware protection" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
               </div>
               <div class="mobile-image">
               <picture>
@@ -168,8 +168,8 @@ function runCode6007() {
             <div class="content">
               <p>Encrypt, manage and secure USB storage devices to safeguard data in transit.</p>
               <div class="button-wrapper">
-                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Enforced encryption" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Enforced encryption" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
+                <a href="javascript:void(0);" data-section="Enforced encryption" class="spz-6003-section-launch-cta">Request Free Trial</a>
+                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Enforced encryption" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
               </div>
               <div class="mobile-image">
                 <picture>
@@ -189,8 +189,8 @@ function runCode6007() {
             <div class="content">
               <p>Scan sensitive data stored on Windows, Mac, and Linux endpoints and remotely take remediation actions.</p>
               <div class="button-wrapper">
-                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Discovery" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Discovery" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
+                <a href="javascript:void(0);" data-section="Discovery" class="spz-6003-section-launch-cta">Request Free Trial</a>
+                <a href="https://www.netwrix.com/netwrix-endpoint-protector-online-product-demos.html" data-section="Discovery" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
               </div>
               <div class="mobile-image">
                 <picture>
@@ -286,7 +286,11 @@ function runCode6007() {
       }
     }
   });
-
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('spz-6003-section-launch-cta')) {
+      document.querySelector('.hero-buttons .buttons-cont .button-section:first-child button').click();
+    }
+  });
   window.addEventListener("resize", function () {
     setHeightOnResize()
   })
@@ -331,110 +335,110 @@ function runCode6009() {
                     </div>
                 </div>
         </div>
-          <div class="spz-6003-section">
-    <div class="wrapper">
-      <div class="title">Features</div>
-      <div class="carousel-section">
-        <div class="text">
-          <div class="child active" data-index="1">
-            <div class="carousel-title">
-              <span>Risk assessment</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="content">
-              <p>View a list of current vulnerabilities and their associated risk level. Includes passwordless users, loose permissions, sensitive data in filenames, and more. See which vulnerabilities are most critical and prioritize remediation.</p>
-              <p>Easily adjust risk thresholds so you only see what impacts your organization.</p>
-              <div class="button-wrapper">
-                <a href="https://www.netwrix.com/product_online_demo.html" data-section="Risk assessment" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Risk assessment" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
+        <div class="spz-6003-section">
+          <div class="wrapper">
+            <div class="title">Features</div>
+            <div class="carousel-section">
+              <div class="text">
+                <div class="child active" data-index="1">
+                  <div class="carousel-title">
+                    <span>Risk assessment</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p>View a list of current vulnerabilities and their associated risk level. Includes passwordless users, loose permissions, sensitive data in filenames, and more. See which vulnerabilities are most critical and prioritize remediation.</p>
+                    <p>Easily adjust risk thresholds so you only see what impacts your organization.</p>
+                    <div class="button-wrapper">
+                      <a href="javascript:void(0);" data-section="Risk assessment" class="spz-6003-section-launch-cta">Download Free Trial</a>
+                      <a href="https://www.netwrix.com/product_online_demo.html" data-section="Risk assessment" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
+                    </div>
+                    <div class="mobile-image">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img-mob.png">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img-tablet.png" alt="risk_assessment_image" width="1911" height="1127">
+                    </picture> 
+                    </div>
+                  </div>
+                </div>
+                <div class="child" data-index="2">
+                  <div class="carousel-title">
+                    <span>Threat detection</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p>Identify threats and security gaps across your IT environment. Unusual logins, suspicious admin activity, multiple inactive users, and more.</p>
+                    <p>Get alerts before breaches or system failures occur. Investigate and remediate risks. </p>
+                    <div class="button-wrapper">
+                      <a href="javascript:void(0);" data-section="Threat detection" class="spz-6003-section-launch-cta">Download Free Trial</a>
+                      <a href="https://www.netwrix.com/product_online_demo.html" data-section="Threat detection" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
+                    </div>
+                    <div class="mobile-image">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/threat_detection-img-mob.png">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/threat_detection-img-tablet.png" alt="threat_detection_image" width="1728" height="1120">
+                    </picture> 
+                    </div>
+                  </div>
+                </div>
+                <div class="child" data-index="3">
+                  <div class="carousel-title">
+                    <span>Change, access, and configuration reporting</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p>Get detailed reports on environment changes, access permissions, and configurations.</p>
+                    <p>See who changed what, when, and where. Rollback unauthorized changes. Identify who can access sensitive folders & correct loose permissions. View reports of critical systems at any given date. Compare with current configurations.</p>
+                    <p>Covers Active Directory, user accounts, Windows Server, and more.</p>
+                    <div class="button-wrapper">
+                      <a href="javascript:void(0);" data-section="Change, access, and configuration reporting" class="spz-6003-section-launch-cta">Download Free Trial</a>
+                      <a href="https://www.netwrix.com/product_online_demo.html" data-section="Change, access, and configuration reporting" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
+                    </div>
+                    <div class="mobile-image">
+                      <picture>
+                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/change_access-img-mob.png">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/change_access-img-tablet.png" alt="change_access_and_configuration_reporting_image" width="1728" height="1120">
+                      </picture> 
+                    </div>
+                  </div>
+                </div>
+                <div class="child" data-index="4">
+                  <div class="carousel-title">
+                    <span>Access reviews</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="content">
+                    <p>Accurately enforce least privilege by delegating permissions review to resource owners. Let owners check access levels, suggest permission changes, and leave notes. Track review statuses & send reminders.</p>
+                    <div class="button-wrapper">
+                      <a href="javascript:void(0);" data-section="Access reviews" class="spz-6003-section-launch-cta">Download Free Trial</a>
+                      <a href="https://www.netwrix.com/product_online_demo.html" data-section="Access reviews" class="spz-6003-section-schedule-cta"> Launch In-Browser Demo</a>
+                    </div>
+                    <div class="mobile-image">
+                      <picture>
+                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/access_reviews-img-mob.png">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/access_reviews-img-tablet.png" alt="access_reviews_image" width="1728" height="1120">
+                      </picture> 
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="mobile-image">
-              <picture>
-                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img-mob.png">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img-tablet.png" alt="risk_assessment_image" width="1911" height="1127">
-              </picture> 
-              </div>
-            </div>
-          </div>
-          <div class="child" data-index="2">
-            <div class="carousel-title">
-              <span>Threat detection</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="content">
-              <p>Identify threats and security gaps across your IT environment. Unusual logins, suspicious admin activity, multiple inactive users, and more.</p>
-              <p>Get alerts before breaches or system failures occur. Investigate and remediate risks. </p>
-              <div class="button-wrapper">
-                <a href="https://www.netwrix.com/product_online_demo.html" data-section="Threat detection" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Threat detection" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
-              </div>
-              <div class="mobile-image">
-              <picture>
-                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/threat_detection-img-mob.png">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/threat_detection-img-tablet.png" alt="threat_detection_image" width="1728" height="1120">
-              </picture> 
-              </div>
-            </div>
-          </div>
-          <div class="child" data-index="3">
-            <div class="carousel-title">
-              <span>Change, access, and configuration reporting</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="content">
-              <p>Get detailed reports on environment changes, access permissions, and configurations.</p>
-              <p>See who changed what, when, and where. Rollback unauthorized changes. Identify who can access sensitive folders & correct loose permissions. View reports of critical systems at any given date. Compare with current configurations.</p>
-              <p>Covers Active Directory, user accounts, Windows Server, and more.</p>
-              <div class="button-wrapper">
-                <a href="https://www.netwrix.com/product_online_demo.html" data-section="Change, access, and configuration reporting" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Change, access, and configuration reporting" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
-              </div>
-              <div class="mobile-image">
-                <picture>
-                  <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/change_access-img-mob.png">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/change_access-img-tablet.png" alt="change_access_and_configuration_reporting_image" width="1728" height="1120">
-                </picture> 
-              </div>
-            </div>
-          </div>
-          <div class="child" data-index="4">
-            <div class="carousel-title">
-              <span>Access reviews</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M8.46739 12.5326C8.60792 12.6723 8.79801 12.7507 8.99614 12.7507C9.19428 12.7507 9.38437 12.6723 9.52489 12.5326L15.5249 6.53264C15.6478 6.38916 15.712 6.20461 15.7047 6.01585C15.6974 5.82709 15.6191 5.64804 15.4856 5.51447C15.352 5.3809 15.1729 5.30265 14.9842 5.29536C14.7954 5.28806 14.6109 5.35227 14.4674 5.47514L8.99989 10.9426L3.53239 5.46764C3.39117 5.32641 3.19962 5.24707 2.99989 5.24707C2.80017 5.24707 2.60862 5.32641 2.46739 5.46764C2.32617 5.60887 2.24683 5.80041 2.24683 6.00014C2.24683 6.19987 2.32617 6.39141 2.46739 6.53264L8.46739 12.5326Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="content">
-              <p>Accurately enforce least privilege by delegating permissions review to resource owners. Let owners check access levels, suggest permission changes, and leave notes. Track review statuses & send reminders.</p>
-              <div class="button-wrapper">
-                <a href="https://www.netwrix.com/product_online_demo.html" data-section="Access reviews" class="spz-6003-section-launch-cta">Launch In-Browser Demo</a>
-                <a href="https://www.netwrix.com/one-to-one.html" data-section="Access reviews" class="spz-6003-section-schedule-cta">Schedule One-to-One Demo</a>
-              </div>
-              <div class="mobile-image">
-                <picture>
-                  <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/access_reviews-img-mob.png">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/access_reviews-img-tablet.png" alt="access_reviews_image" width="1728" height="1120">
-                </picture> 
+              <div class="image">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img.png" alt="risk_assessment_image" class="reference" width="1911" height="1127">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img.png" alt="risk_assessment_image" class="hero active" data-index="1" alt="risk_assessment_image" width="1911" height="1127">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/threat_detection-img.webp" class="hero" data-index="2" alt="threat_detection_image" width="1728" height="1120">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/change_access-img.webp" class="hero" data-index="3" alt="change_access_and_configuration_reporting_image" width="1728" height="1120">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/access_reviews-img_2.webp" class="hero" data-index="4" alt="access_reviews_image" width="1728" height="1120">
               </div>
             </div>
           </div>
         </div>
-        <div class="image">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img.png" alt="risk_assessment_image" class="reference" width="1911" height="1127">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/11001/risk_assessment-img.png" alt="risk_assessment_image" class="hero active" data-index="1" alt="risk_assessment_image" width="1911" height="1127">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/threat_detection-img.webp" class="hero" data-index="2" alt="threat_detection_image" width="1728" height="1120">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/change_access-img.webp" class="hero" data-index="3" alt="change_access_and_configuration_reporting_image" width="1728" height="1120">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6003/access_reviews-img_2.webp" class="hero" data-index="4" alt="access_reviews_image" width="1728" height="1120">
-        </div>
-      </div>
-    </div>
-  </div>
         `;
 
     if (window.location.href.includes('netwrix.com/auditor')) {
@@ -476,6 +480,9 @@ function runCode6009() {
         setTimeout(() => {
           updateFormAndButton();
         }, 100);
+      }
+      if (e.target.classList.contains('spz-6003-section-launch-cta')) {
+        document.querySelector('.spz-6009 .hero-buttons .one-field-form-button-test button').click();
       }
     });
 

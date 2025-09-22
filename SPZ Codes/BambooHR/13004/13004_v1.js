@@ -18,15 +18,7 @@ const bodyInterval13004 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_13004_v1')) {
     clearInterval(bodyInterval13004)
     document.querySelector('body').classList.add("spz_13004_v1")
-    setTimeout(() => {
-      document.querySelector('.footer-wrapper .footer .links').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .legal'));
-      document.querySelector('.footer-wrapper .footer .brand').insertAdjacentHTML('beforebegin', `<div class="footer_left">
-        <div class="footer_logo">
-          <a href="javascript:void(0)"><img src="//res.cloudinary.com/spiralyze/image/upload/v1754579391/bamboohr/13004/bhr_logo_white.svg" alt="BambooHR Logo"></a>
-        </div>
-      </div>`);
-      document.querySelector('.footer_left').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .brand'));
-    }, 1800);
+
     document.querySelector('#base').insertAdjacentHTML('afterbegin', `
 <div class="spz_hero">
   <video autoplay muted loop playsinline class="hero_rightAnimation">
@@ -50,18 +42,15 @@ const bodyInterval13004 = setInterval(function () {
         <h1>More Than an Alternative—BambooHR® Is an <span>Upgrade</span></h1>
         <p>Simplify HR with award-winning solutions for everything from hire to retire. </p>
         <div class="cta_outer">
-          <button class="custom_cta spz13004_v1 get_demoCta">Get Started</button>
+          <button class="custom_cta spz13004_v1 get_demoCta">Get a Demo</button>
         </div>
       </div>
       <div class="hero_main">
         <div class="hero_imageContainer">
           <div class="hero_imageMain">
             <picture>
-              <source
-                srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_8.webp"
-                type="image/webp" media="(max-width: 1023px)">
               <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_9.webp"
-                alt="Hero image">
+               class="blur" alt="Hero image">
             </picture>
           </div>
           <div class="hero_formContainer">
@@ -170,7 +159,7 @@ const bodyInterval13004 = setInterval(function () {
                     </clipPath>
                   </defs>
                 </svg> <span>Please select at least one solution</span></div>
-              <div class="qlf-cta custom_cta spz13004_v1 SPZ_QualifyingQuestionsCTA get_demoCta">Get Started</div>
+              <div class="qlf-cta custom_cta spz13004_v1 SPZ_QualifyingQuestionsCTA get_demoCta">Get a Demo</div>
             </div>
           </div>
         </div>
@@ -528,7 +517,6 @@ const bodyInterval13004 = setInterval(function () {
   </div>
   <div class="cta-wrapper">
     <button class="spz-1031-get-demo-cta get_demoCta spz13004_v1">Get a Demo</button>
-    <a class="spz-1031-free-trial-cta spz13004_v1" href="https://www.bamboohr.com/signup/">Start Free Trial</a>
   </div>
 </div>
 
@@ -611,11 +599,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Applicant Tracking</span>
+                      </li>
+                      <li>
+                        <span>Candidate Experience</span>
+                      </li>
+                      <li>
+                        <span>Onboarding Tasks</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Set budgets for departments, projects, vendors, purchase orders, spend categories, and more.
-                      Automated multi-level approval workflows.</p>
-                    <p>Get real-time spend insights. Identify opportunities to eliminate spend or switch to lower-cost
-                      alternatives.</p>
+                    <p>Find, hire, and onboard the best talent quickly. With the powerful BambooHR applicant tracking system and proactive onboarding tasks, you can create a compelling candidate experience and better first days for new hires.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -647,10 +649,26 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Time Tracking</span>
+                      </li>
+                      <li>
+                        <span>Benefits Enrollment</span>
+                      </li>
+                      <li>
+                        <span>Payroll Automation</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Auto-match purchase orders, vendor invoices, and receiving reports. No more digging through all
-                      your accounting platforms to compare POs and invoices.</p>
-                    <p>Sync purchasing data with ERPs. Reduce reconciliation time 90%.</p>
+                    <p>
+                    Track hours and manage multi-rate pay, simplify time off requests, streamline benefits enrollment, and run payroll all from a single platform. No more data double entry or manual approval processes—just easy, accurate payroll for you and your employees.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -683,9 +701,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Employee Satisfaction</span>
+                      </li>
+                      <li>
+                        <span>Performance Growth</span>
+                      </li>
+                      <li>
+                        <span>Recognition & Rewards</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Manage purchasing, contracts, vendor relationships, and invoicing in one place. No more toggling
-                      between windows and double-entering data. Streamline financial operations. </p>
+                    <p>Build the kind of workplace where your people know you’re invested in their happiness and development. Get the tools you need to gather feedback, strengthen employee satisfaction, and grow your people.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -704,7 +738,7 @@ const bodyInterval13004 = setInterval(function () {
                 </div>
                 <div class="title">
                   <div class="text">
-                    <span>Integration Marketplace</span>
+                    <span>Compensation</span>
                   </div>
                   <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none">
@@ -718,46 +752,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
-                  <div class="text">
-                    <p>Automate requests, approvals, and purchase orders. Let procurement teams, approvers, and
-                      suppliers communicate in real-time. Streamline vendor management with preferred vendors and
-                      pre-negotiated terms.</p>
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Compensation Planning</span>
+                      </li>
+                      <li>
+                        <span>Benchmarking Data</span>
+                      </li>
+                      <li>
+                        <span>Streamlined Approvals</span>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-              </div>
-              <picture>
-                <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_4.webp">
-                <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_3.webp"
-                  alt="Integration Marketplace" width="688" height="404" loading="lazy">
-              </picture>
-            </div>
-            <div class="child" data-index="5">
-              <div class="child_inner">
-                <div class="bar">
-                  <div class="line"></div>
-                </div>
-                <div class="title">
                   <div class="text">
-                    <span>Compliance</span>
+                    <p>Take the lead on compensation strategy with access to trusted benchmarking data and advanced planning tools. Create salary bands, streamline approvals, communicate total rewards, and ensure fair pay—all within one easy-to-use platform.
+                    </p>
                   </div>
-                  <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none">
-                    <path d="M20.0039 15.6001L11.8015 7.39769L3.60086 15.6001" stroke="#599D15" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                    fill="none">
-                    <path d="M16.6699 7L9.83458 13.8353L3.00072 7" stroke="#95918F" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="content">
-                  <div class="text">
-                    <p>Automate requests, approvals, and purchase orders. Let procurement teams, approvers, and
-                      suppliers communicate in real-time. Streamline vendor management with preferred vendors and
-                      pre-negotiated terms.</p>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -765,7 +778,7 @@ const bodyInterval13004 = setInterval(function () {
                 <source media="(max-width:767.98px)"
                   srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_3.webp">
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_4.webp"
-                  alt="Compliance" width="688" height="404" loading="lazy">
+                  alt="Compensation" width="688" height="404" loading="lazy">
               </picture>
             </div>
           </div>
@@ -790,7 +803,7 @@ const bodyInterval13004 = setInterval(function () {
               src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_3.webp"
               alt="Integration Marketplace" width="616" height="616" loading="lazy">
             <img class="hero" data-index="6"
-              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_4.webp" alt="Compliance"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_4.webp" alt="Compensation"
               width="616" height="616" loading="lazy">
           </div>
         </div>
@@ -803,22 +816,19 @@ const bodyInterval13004 = setInterval(function () {
   <div class="auto_container">
     <div class="integration_inner">
       <div class="integration_data">
-        <h2>40+ pre-built integrations</h2>
+        <h2>150+ pre-built integrations</h2>
         <picture>
           <source media="(max-width:767.98px)"
-            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_4.webp">
+            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/frame_1538229189.webp">
           <source media="(max-width:1023.98px)"
-            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_3.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_2.webp"
+            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_7.webp">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_5.webp"
             alt="integrations" loading="lazy">
         </picture>
         <div class="cta_list">
           <ul>
             <li>
               <button href="javascript:void(0);" class="custom_cta get_demoCta spz13004_v1 outline">Get My Demo</button>
-            </li>
-            <li>
-              <button href="https://www.bamboohr.com/integrations/" class="custom_cta spz13004_v1">See All Integrations</button>
             </li>
           </ul>
         </div>
@@ -854,7 +864,7 @@ const bodyInterval13004 = setInterval(function () {
           <li>
             <div class="integration_listContent">
               <span>
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/getapp.webp" width="140.59"
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/media_14fada2cef6759df01fbbab3c04fab9125c5c7f96_2.webp" width="140.59"
                   alt="GetApp">
               </span>
               <strong>
@@ -884,16 +894,6 @@ const bodyInterval13004 = setInterval(function () {
 </div>
 
 <div class="get_started">
-  <video autoplay muted loop playsinline class="hero_rightAnimation">
-    <source
-      src="https://res.cloudinary.com/spiralyze/video/upload/v1756210732/bamboohr/13004/assets/Animations/Animation_1_Right.mp4"
-      type="video/mp4" />
-  </video>
-  <video autoplay muted loop playsinline class="hero_leftAnimation">
-    <source
-      src="https://res.cloudinary.com/spiralyze/video/upload/v1756210732/bamboohr/13004/assets/Animations/Animation_1_Left.mp4"
-      type="video/mp4" />
-  </video>
   <div class="auto_container">
     <div class="get_startedInner">
       <h2>Get Started with BambooHR® Today</h2>
@@ -918,7 +918,7 @@ const bodyInterval13004 = setInterval(function () {
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/onboarding_4.webp",
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/performance_management_4.webp",
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience_4.webp",
-      "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compensation_4.webp"
+      "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compensation_5.webp"
     ];
     const tabImages = [
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_8.webp",
@@ -929,7 +929,7 @@ const bodyInterval13004 = setInterval(function () {
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/onboarding_3.webp",
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/performance_management_3.webp",
       "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience_3.webp",
-      "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compensation_3.webp"
+      "https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compensation_6.webp"
     ];
 
     let checkedOrder = [];
@@ -938,20 +938,69 @@ const bodyInterval13004 = setInterval(function () {
       return window.matchMedia("(max-width: 1023px)").matches ? tabImages : desktopImages;
     }
 
-    function setImage(src, applyBlur = false) {
-      image.classList.add("fade-out");
-      image.addEventListener("transitionend", function handler() {
-        image.removeEventListener("transitionend", handler);
+    // Preload images to prevent loading delays
+    function preloadImages() {
+      const allImages = [...desktopImages, ...tabImages];
+      allImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+
+    // Initialize the image state properly on page load
+    function initializeImageState() {
+      const images = getImageSet();
+      // Set the initial image without transition to prevent flicker
+      setImage(images[0], true, true);
+    }
+
+    function setImage(src, applyBlur = false, skipTransition = false) {
+      if (image.src === src) {
+        if (applyBlur) {
+          image.classList.add("blur");
+        } else {
+          image.classList.remove("blur");
+        }
+        return;
+      }
+
+      // Skip transition for initial load to prevent flicker
+      if (skipTransition) {
         image.src = src;
         if (applyBlur) {
           image.classList.add("blur");
         } else {
           image.classList.remove("blur");
         }
+        return;
+      }
+
+      image.classList.add("fade-out");
+
+      let done = false;
+      function finish() {
+        if (done) return; // prevent double calls
+        done = true;
+
+        image.src = src;
+
+        if (applyBlur) {
+          image.classList.add("blur");
+        } else {
+          image.classList.remove("blur");
+        }
+
         image.classList.remove("fade-out");
         image.classList.add("fade-in");
-        setTimeout(() => image.classList.remove("fade-in"), 200);
-      });
+
+        setTimeout(() => image.classList.remove("fade-in"), 100);
+      }
+
+      // Call finish when transition ends
+      image.addEventListener("transitionend", finish, { once: true });
+
+      // Fallback in case transitionend doesn't fire
+      setTimeout(finish, 150);
     }
 
     checkboxes.forEach((checkbox, index) => {
@@ -984,6 +1033,12 @@ const bodyInterval13004 = setInterval(function () {
         setImage(images[0], true);
       }
     });
+
+    // Initialize the image state on page load
+    initializeImageState();
+
+    // Preload all images to prevent loading delays
+    preloadImages();
 
     // tabs slider js
 
@@ -1132,9 +1187,9 @@ const bodyInterval13004 = setInterval(function () {
       }
     })
 
-    document.querySelector('.spz-1031-get-demo-cta').addEventListener("click", function () {
-      document.querySelector('.spz-1031 .hero-section a[data-modal="#demo-modal"]').click()
-    })
+    // document.querySelector('.spz-1031-get-demo-cta').addEventListener("click", function () {
+    //   document.querySelector('.spz-1031 .hero-section a[data-modal="#demo-modal"]').click()
+    // })
 
     // dragging functionality using normal mouse
     const scrollableDiv = document.querySelector('.spz-1031-tabs-custom-container .tabs-custom-wrapper').querySelector('.tabs-custom-header');
@@ -1334,37 +1389,13 @@ const bodyInterval13004 = setInterval(function () {
     // Add scroll event listener to run the code when "DevOne" is in view
     document.addEventListener('scroll', function () {
       const featureSection = document.querySelector('.section2_2003');
-      console.log(featureSection);
       if (featureSection && isInViewport(featureSection)) {
         runAutoAccordion();
         document.removeEventListener('scroll', arguments.callee);
       }
     });
 
-
-    function stopSection2AccordionAutoPlay() {
-      var accordionWrapperEle = document.querySelector(".section2_2003 .accordion-wrapper");
-      accordionWrapperEle.classList.add("stop");
-    }
-
-    function startSection2AccordionAutoPlay() {
-      var accordionWrapperEle = document.querySelector(".section2_2003 .accordion-wrapper");
-      accordionWrapperEle.classList.remove("stop");
-    }
-
     const accordionWrapper = document.querySelector(".section2_2003 .accordion-wrapper");
-
-    // accordionWrapper.addEventListener("mouseenter", function(event) {
-    //     if (event.target.matches(".child.active")) {
-    //         stopSection2AccordionAutoPlay();
-    //     }
-    // }, true);
-
-    // accordionWrapper.addEventListener("mouseleave", function(event) {
-    //     if (event.target.matches(".child.active")) {
-    //         startSection2AccordionAutoPlay();
-    //     }
-    // }, true);
 
     const checkFeatureTitleHeight = () => {
       const spans = document.querySelectorAll(".section2_2003 .accordion-wrapper .child .title > .text span");
@@ -1379,11 +1410,11 @@ const bodyInterval13004 = setInterval(function () {
     };
     checkFeatureTitleHeight();
 
-    // for popup section
+    // for popup section - only run if URL condition is met
     document.querySelector('main#base').insertAdjacentHTML('beforeend', `
     <div class="spz-11002-popup-wrapper">
       <div class="popup-content">
-        <div class="button-close"></div>
+        <div class="button-close-2"></div>
         <div class="form">
         </div>
         <div class="flex-center">
@@ -1405,50 +1436,87 @@ const bodyInterval13004 = setInterval(function () {
     // form modification
     const formInterval = setInterval(function () {
       if (document.querySelector('.bhrForm__partnerDisclaimer')) {
-        document.querySelector('.spz-11002-popup-wrapper .popup-content .form').insertAdjacentElement("afterbegin", document.querySelector('.form-wrapper .form-col'))
-        clearInterval(formInterval)
-        document.querySelector('.spz-11002-popup-wrapper .popup-content .form .form-col-container > p:first-child strong').textContent = "Get a Demo";
-        document.querySelector('#LblEmail').closest('.mktoFormRow').classList.add('width50', 'email-parent')
-        document.querySelector('#LblEmail').textContent = "Email Address*";
-        document.querySelector('#LblFirstName').closest('.mktoFormRow').classList.add('fname-parent')
-        document.querySelector('#LblLastName').closest('.mktoFormRow').classList.add('lname-parent')
-        document.querySelector('#LblPhone').closest('.mktoFormRow').classList.add('phone-parent')
-        document.querySelector('#LblTitle').closest('.mktoFormRow').classList.add('job-parent', 'width50')
-        document.querySelector('#LblCompany').closest('.mktoFormRow').classList.add('company-parent', 'width50')
-        document.querySelector('#LblCountry').closest('.mktoFormRow').classList.add('country-parent', 'width50')
-        document.querySelector('#LblEmployees_Text__c').closest('.mktoFormRow').classList.add('employee_c-parent')
-        if (document.querySelector('.bhrForm__partnerDisclaimer').parentNode.parentNode.classList.contains("form-checkbox-flex")) {
-          document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-2', "privacy-policy")
-          document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-1', "privacy-policy")
+        if (window.location.href.includes('/pl-pages/bamboohr-software-basics')) {
+          document.querySelector('.popup-form-wrapper .button-close').click();
+          let waitforForm = setInterval(function () {
+            if (document.querySelector('#base .form-popup-content-container .form-wrapper .form-col .form-col-container')) {
+              clearInterval(waitforForm);
+              document.querySelector('.spz-11002-popup-wrapper .popup-content .form').insertAdjacentElement("afterbegin", document.querySelector('.form-wrapper .form-col .form-col-container'))
+              mainFormChanges();
+              document.querySelector('.spz-11002-popup-wrapper').classList.add("show");
+              document.querySelector('body').classList.add("hidden");
+            }
+          }, 100)
         } else {
-          document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-1', "privacy-policy")
-          document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-2', "privacy-policy")
+          document.querySelector('.spz-11002-popup-wrapper .popup-content .form').insertAdjacentElement("afterbegin", document.querySelector('.form-wrapper .form-col'))
+          clearInterval(formInterval)
+          mainFormChanges();
         }
-        /*
-        document.querySelector('.mktoPlaceholderDisclaimer__c').closest('.mktoFormRow').classList.add('disclaimer-parent-1',"privacy-policy")
-        document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-1',"privacy-policy")
-        document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-2',"privacy-policy")
-        document.querySelector('#LblDisclaimer__c').closest('.mktoFormRow').classList.add('disclaimer-parent-2',"privacy-policy")
-        */
-        document.querySelector('.spz-11002-popup-wrapper .popup-content .form .mktoButton').textContent = "Submit"
-        document.querySelector('.spz-11002-popup-wrapper .popup-content .form .mktoButton').classList.add("spz13004_v1")
-        document.querySelector('[name="FirstName"]').tabIndex = 1;
-        document.querySelector('[name="LastName"]').tabIndex = 2;
-        document.querySelector('[name="Email"]').tabIndex = 3;
-        document.querySelector('[name="Title"]').tabIndex = 4;
-        document.querySelector('[name="Company"]').tabIndex = 5;
-        document.querySelector('[name="Employees_Text__c"]').tabIndex = 6;
-        document.querySelector('[name="Phone"]').tabIndex = 7;
-        document.querySelector('[name="Country"]').tabIndex = 8;
-        document.querySelector('[name="LPV1__c"]').value = "13004 Variant"
+        function mainFormChanges() {
+          document.querySelector('.spz-11002-popup-wrapper .popup-content .form .form-col-container > p:nth-of-type(1) strong').textContent = "Get a Demo";
+          document.querySelector('#LblEmail').closest('.mktoFormRow').classList.add('width50', 'email-parent')
+          document.querySelector('#LblEmail').textContent = "Email Address*";
+          document.querySelector('#LblFirstName').closest('.mktoFormRow').classList.add('fname-parent')
+          document.querySelector('#LblLastName').closest('.mktoFormRow').classList.add('lname-parent')
+          document.querySelector('#LblPhone').closest('.mktoFormRow').classList.add('phone-parent')
+          document.querySelector('#LblTitle').closest('.mktoFormRow').classList.add('job-parent', 'width50')
+          document.querySelector('#LblCompany').closest('.mktoFormRow').classList.add('company-parent', 'width50')
+          document.querySelector('#LblCountry').closest('.mktoFormRow').classList.add('country-parent', 'width50')
+          document.querySelector('#LblEmployees_Text__c').closest('.mktoFormRow').classList.add('employee_c-parent')
+          if (document.querySelector('.bhrForm__partnerDisclaimer').parentNode.parentNode.classList.contains("form-checkbox-flex")) {
+            document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-2', "privacy-policy")
+            document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-1', "privacy-policy")
+          } else {
+            document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-1', "privacy-policy")
+            document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-2', "privacy-policy")
+          }
+          /*
+          document.querySelector('.mktoPlaceholderDisclaimer__c').closest('.mktoFormRow').classList.add('disclaimer-parent-1',"privacy-policy")
+          document.querySelector('.mktoPlaceholder').closest('.mktoFormRow').classList.add('disclaimer-parent-1',"privacy-policy")
+          document.querySelector('.bhrForm__partnerDisclaimer').closest('.mktoFormRow').classList.add('disclaimer-parent-2',"privacy-policy")
+          document.querySelector('#LblDisclaimer__c').closest('.mktoFormRow').classList.add('disclaimer-parent-2',"privacy-policy")
+          */
+          document.querySelector('.spz-11002-popup-wrapper .popup-content .form .mktoButton').textContent = "Submit"
+          document.querySelector('.spz-11002-popup-wrapper .popup-content .form .mktoButton').classList.add("spz13004_v1")
+          document.querySelector('[name="FirstName"]').tabIndex = 1;
+          document.querySelector('[name="LastName"]').tabIndex = 2;
+          document.querySelector('[name="Email"]').tabIndex = 3;
+          document.querySelector('[name="Title"]').tabIndex = 4;
+          document.querySelector('[name="Company"]').tabIndex = 5;
+          document.querySelector('[name="Employees_Text__c"]').tabIndex = 6;
+          document.querySelector('[name="Phone"]').tabIndex = 7;
+          document.querySelector('[name="Country"]').tabIndex = 8;
+          document.querySelector('[name="LPV1__c"]').value = "13004 Variant1";
+        }
       }
     }, 20)
 
-    document.querySelector('.spz-11002-popup-wrapper .popup-content .button-close').addEventListener("click", function () {
-      document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
+    document.querySelector('.spz-11002-popup-wrapper .popup-content .button-close-2').addEventListener("click", function () {
+      if(document.querySelector('.spz-11002-popup-wrapper')){
+        document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
+      }
       document.querySelector('body').classList.remove("hidden")
-      document.querySelector('.hero-section-11002').classList.remove("hidden")
+      if(document.querySelector('.hero-section-11002')){
+        document.querySelector('.hero-section-11002').classList.remove("hidden")
+      }
     })
+
+    let waitforFooter = setInterval(() => {
+      if (document.querySelector('.footer-wrapper .footer .links')) {
+        clearInterval(waitforFooter);
+        setTimeout(() => {
+          document.querySelector('.footer-wrapper .footer .links').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .legal'));
+          document.querySelector('.footer-wrapper .footer .brand').insertAdjacentHTML('beforebegin', `<div class="footer_left">
+            <div class="footer_logo">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1754579391/bamboohr/13004/bhr_logo_white.svg" alt="BambooHR Logo">
+            </div>
+          </div>`);
+          document.querySelector('.footer_left').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .brand'));
+        }, 1000);
+      }
+    }, 2);
+
+
     window.addEventListener('click', function (e) {
       if (document.cookie.includes('Data Security Posture Management')) {
         document.querySelector('#checkbox_item_1').click();
@@ -1473,7 +1541,7 @@ const bodyInterval13004 = setInterval(function () {
         document.querySelector('body').classList.add("hidden")
         document.querySelector('main > div > span +  div.spacer-wrapper').classList.add("hidden");
       }
-      if (e.target.classList.contains("button-close")) {
+      if (e.target.classList.contains("button-close-2")) {
         document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
         document.querySelector('body').classList.remove("hidden")
         document.querySelector('.hero-section-11002').classList.remove("hidden")
@@ -1483,7 +1551,7 @@ const bodyInterval13004 = setInterval(function () {
     (function () {
       //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.
       const expName = '13004'; //experiment name should be #1001, #1002, #1003 etc.
-      const variantName = `#` + expName + `_Variant`; //variantName should be _TrueControl, _Variant etc.
+      const variantName = `#` + expName + `_Variant1`; //variantName should be _TrueControl, _Variant etc.
       const clientDomain = '.bamboohr.com'; //domain should be .spiralyze.com
 
       hiddenValue(expName, variantName);
@@ -1543,26 +1611,6 @@ const bodyInterval13004 = setInterval(function () {
         }
       }
     }());
-
-
-    // For safari - Browser Back
-    // MktoForms2.whenReady(function (form) {
-    //   window.onpageshow = function (event) {
-    //     if (event.persisted) {
-    //       var selector = document.querySelector('main .form .mktoForm .mktoButton');
-    //       selector.textContent = "Get Free Demo";
-    //       selector.removeAttribute("disabled");
-    //       const fieldsToHide = ['#LblFirstName', '#LblLastName', '#LblEmail', "#LblTitle"];
-    //       fieldsToHide.forEach(selector => {
-    //         document.querySelector(selector).closest('.mktoFormRow').classList.remove('hide');
-    //       });
-    //       document.querySelector('.form-wrapper')?.classList.remove('step_2');
-    //       document.querySelector('.stepper img').src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/10002/Stepper_2.png";
-    //       hideOnload();
-    //     }
-    //   };
-
-    // });
 
   }
 

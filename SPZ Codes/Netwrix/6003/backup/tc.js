@@ -3,7 +3,7 @@ function runCode6007() {
   document.body.classList.add('spz-6001');
   // Get the current URL
   var currentUrl = window.location.href.split('?')[0].split('#')[0];
-
+    
   // Check if the URL matches one of the given URLs and execute the corresponding code
   if (currentUrl === 'https://www.netwrix.com/auditor.html') {
       var newHero = `<div class="new-hero audit">

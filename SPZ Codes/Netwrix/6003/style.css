@@ -3,7 +3,7 @@
 }
 
 .spz-6009 .new-hero {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_1920.webp");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_1920.webp");
   background-repeat: no-repeat;
   padding: 194px 0 80px;
   background-size: cover;
@@ -144,6 +144,7 @@
     margin-bottom: 24px;
     width: 100%;
   }
+  .spz-6003 .hero-buttons.head-cont .buttons-cont .button-section:first-child,
   .spz-6009 .hero-buttons.head-cont .buttons-cont .button-section:first-child {
     margin-bottom: 0;
   }
@@ -194,7 +195,7 @@
 .spz-6009 .hero-image-contain::after {
   position: absolute;
   content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/image_4x_1.webp");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/image_4x_1.webp");
   width: 832px;
   height: 500px;
   background-size: cover;
@@ -204,14 +205,14 @@
 }
 
 .spz-6009 .usercube-spz .hero-image-contain::after {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Usercube_bg.png");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Usercube_bg.png");
   height: 538px;
   left: 32px;
   width: 888px;
 }
 
 .spz-6009 .endpointProtector-spz .hero-image-contain::after {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1729497735/netwrix/6001/Endpoint-Protector-bg.png");
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1729497735/netwrix/6001/Endpoint-Protector-bg.png");
   width: 808px;
   height: 551px;
   left: 34px;
@@ -291,7 +292,7 @@
 
 @media (max-width: 1670.98px) {
   .spz-6009 .usercube-spz .hero-image-contain::after {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Usercube_bg_new.png");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/Usercube_bg_new.png");
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1099.98px) {
@@ -314,7 +315,7 @@
 }
 @media (max-width: 991.98px) {
   .spz-6009 .new-hero {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_768.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_768.webp");
     padding: 80px 0;
   }
   .spz-6009 .new-hero.endpointProtector-spz {
@@ -358,7 +359,7 @@
 }
 @media (max-width: 767.98px) {
   .spz-6009 .new-hero {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_360.webp");
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/6001/bg_360.webp");
     padding: 64px 0;
   }
   .spz-6009 .new-hero.endpointProtector-spz {
@@ -430,6 +431,9 @@
   }
   .spz-6009 .hero-buttons.head-cont .buttons-cont .button-section:last-child .text-row {
     padding: 0;
+  }
+  .spz-6009 .securityInfo {
+    padding: 0 10px;
   }
 }
 .spz-6009 .form-horizontal input:-webkit-autofill,
@@ -1197,5 +1201,11 @@
   }
   .spz-6003.endpoint .spz-6003-section .wrapper{
     padding-bottom: 64px;
+  }
+  /* .spz-6003 .hero-buttons.head-cont .buttons-cont .button-section:first-child .text-row {
+    padding: 0;
+  } */
+  .spz-6003 .securityInfo {
+    padding: 0 10px;
   }
 }

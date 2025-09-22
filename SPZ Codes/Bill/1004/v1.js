@@ -28,7 +28,7 @@ const bodyInterval1016 = setInterval(function () {
     console.log("modify the body: "+getTimestamp())
     clearInterval(bodyInterval1016)
     document.querySelector('body').classList.add("spz-1016")
-    localStorage.setItem('bdcAbTest12', '1016-v1');
+    localStorage.setItem('bdcAbTest12', '1004-v1');
     //DEVELOPER - STEP 1 of 5 - Put your asana task URL here
     const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
     //DEVELOPER - STEP 2 of 5 - This adds content inside the box.
@@ -87,9 +87,10 @@ const bodyInterval1016 = setInterval(function () {
         document.querySelector('.spz-1016 .spz-input-wrapper.phone input').setAttribute("placeholder","Phone Number")
         document.querySelector('.spz-1016 .spz-input-wrapper.phone label').textContent="Phone Number"
         // change position
-         document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
+        //  document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
+         document.querySelector('.spz-1016 .spz-input-wrapper.email').insertAdjacentElement('afterend', document.querySelector('.spz-1016 .spz-input-wrapper.name'))
 
-         /
+         
         // adding Business Type
         /*
         document.querySelector('.spz-1016 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
@@ -350,7 +351,7 @@ function loadTestCode1004() {
     const triageData = [
       //Question 1 start
       {
-        questionSuperHeading: "Start using BILL Today",
+        questionSuperHeading: "Start using BILL today",
         questionHeading: "What product(s) are you interested in?",
         answers: [
           {
@@ -368,19 +369,19 @@ function loadTestCode1004() {
       //Question 1 end
       //Question 2 start
       {
-        questionSuperHeading: "Start using BILL Today",
+        questionSuperHeading: "Start using BILL today",
         questionHeading: "What type of business are you?",
         questionSubHeading: "",
         answers: [
           {
             answerTextTwo: 'Small / Midsize Business',
-            answerText: "Financial operations for one business.",
+            answerText: "Financial operations for one business or entity",
             answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1728899595/bill/1004/icon-small_midsize_business.svg',
             answerAlt: 'Small / Midsize Business'
           },
           {
             answerTextTwo: 'Accounting Firm',
-            answerText: "Accounting services for multiple clients.",
+            answerText: "Accounting services for multiple clients",
             answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1728899595/bill/1004/icon-accounting_firm.svg',
             answerAlt: 'Accounting Firm'
           }
@@ -415,7 +416,7 @@ function loadTestCode1004() {
                 <div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''}">
                   <a href="javascript:void(0);" class="go_back">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#1B0EB1" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#024DBD" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     Back
                   </a> 
@@ -437,7 +438,12 @@ function loadTestCode1004() {
           }).join('')
             }
                     </div>
-                    <div class="next-question">Next <img src="//res.cloudinary.com/spiralyze/image/upload/v1728899617/bill/1004/arrow-right.svg" alt="arrow"></div>
+                    <div class="next-question">
+                      Next 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M10.5303 2.9696L17.5607 9.99993L10.5303 17.0303L9.46966 15.9696L14.6893 10.75L3.5 10.75V9.24999L14.6894 9.24999L9.46966 4.03026L10.5303 2.9696Z" fill="white"/>
+                      </svg>
+                    </div>
                 </div>
                 `
         }).join('')
@@ -445,7 +451,7 @@ function loadTestCode1004() {
             <div class="question-form spz-hidden">
               <a href="javascript:void(0);" class="go_back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#1B0EB1" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#024DBD" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 Back
               </a> 
@@ -501,25 +507,25 @@ function loadTestCode1004() {
 
           // First step: multi-select OS options
           if (answerText === "Accounts Payable & Receivable") {
-            document.querySelector('#productInterestAP').click();
-            document.querySelector('#productInterestAP').checked = isChecked;
+            document.querySelector('.the-form #productInterestAP').click();
+            document.querySelector('.the-form #productInterestAP').checked = isChecked;
             storeSelection('apChecked', isChecked);
           } else if (answerText === "Spend & Expense") {
-            document.querySelector('#productInterestSE').click();
-            document.querySelector('#productInterestSE').checked = isChecked;
+            document.querySelector('.the-form #productInterestSE').click();
+            document.querySelector('.the-form #productInterestSE').checked = isChecked;
             storeSelection('seChecked', isChecked);
           }
 
-          const businessTypeSelect = document.querySelector('select#signupType');
-          if (answerText === "Financial operations for one business.") {
+          const businessTypeSelect = document.querySelector('.the-form select#signupType');
+          if (answerText === "Financial operations for one business or entity") {
             businessTypeSelect.selectedIndex = 0;
-            document.querySelector('select#signupType').value = 'direct';
-            document.querySelector('select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
+            document.querySelector('.the-form select#signupType').value = 'direct';
+            document.querySelector('.the-form select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
             storeSelection('businessType', businessTypeSelect.value);
-          } else if (answerText === "Accounting services for multiple clients.") {
+          } else if (answerText === "Accounting services for multiple clients") {
             businessTypeSelect.selectedIndex = 1;
-            document.querySelector('select#signupType').value = 'console';
-            document.querySelector('select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
+            document.querySelector('.the-form select#signupType').value = 'console';
+            document.querySelector('.the-form select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
             storeSelection('businessType', businessTypeSelect.value);
           }
         });
@@ -535,20 +541,20 @@ function loadTestCode1004() {
           if (retrieveSelection('apChecked') === 'true' && answerText === "Accounts Payable & Receivable") {
             console.log('AP is checked');
 
-            if (!document.querySelector('#productInterestAP').checked) {
-              document.querySelector('#productInterestAP + span').click();
+            if (!document.querySelector('.the-form #productInterestAP').checked) {
+              document.querySelector('.the-form #productInterestAP + span').click();
               // console.log('AP checkbox was not checked, checking it now');
-              // document.querySelector('#productInterestAP').checked = true;
+              // document.querySelector('.the-form #productInterestAP').checked = true;
             }
             item.classList.add('selected');
           }
 
           // Check for SE
           if (retrieveSelection('seChecked') === 'true' && answerText === "Spend & Expense") {
-            if (!document.querySelector('#productInterestSE').checked) {
-              document.querySelector('#productInterestSE + span').click();
+            if (!document.querySelector('.the-form #productInterestSE').checked) {
+              document.querySelector('.the-form #productInterestSE + span').click();
               console.log('SE checkbox was not checked, checking it now');
-              // document.querySelector('#productInterestSE').checked = true;
+              // document.querySelector('.the-form #productInterestSE').checked = true;
             }
             item.classList.add('selected');
           }
@@ -576,7 +582,7 @@ function loadTestCode1004() {
         // If no businessType is found, add 'selected' class to the first .answer-item
         const firstItem = document.querySelector('.question-2 .answers-wrap .answer-item:first-child');
         if (firstItem) {
-          (document.querySelector('select#signupType').value = 'direct', document.querySelector('#signupType').dispatchEvent(new Event('change', { bubbles: true })));
+          (document.querySelector('.the-form select#signupType').value = 'direct', document.querySelector('.the-form #signupType').dispatchEvent(new Event('change', { bubbles: true })));
           firstItem.classList.add('selected');
         }
 
@@ -589,8 +595,8 @@ function loadTestCode1004() {
         item.addEventListener('click', (e) => {
           if (item.classList.contains('step_one')) {
             document.querySelector('body').classList.add('step_two');
-            if (!document.querySelector('#productInterestAP').checked &&
-              !document.querySelector('#productInterestSE').checked) {
+            if (!document.querySelector('.the-form #productInterestAP').checked &&
+              !document.querySelector('.the-form #productInterestSE').checked) {
               showError('Please select an option.', item);
               return;
             }

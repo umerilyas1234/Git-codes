@@ -28,7 +28,7 @@ const bodyInterval1016 = setInterval(function () {
     console.log("modify the body: "+getTimestamp())
     clearInterval(bodyInterval1016)
     document.querySelector('body').classList.add("spz-1016")
-    localStorage.setItem('bdcAbTest12', '1016-v1');
+    localStorage.setItem('bdcAbTest12', '1004-v2');
     //DEVELOPER - STEP 1 of 5 - Put your asana task URL here
     const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
     //DEVELOPER - STEP 2 of 5 - This adds content inside the box.
@@ -87,9 +87,10 @@ const bodyInterval1016 = setInterval(function () {
         document.querySelector('.spz-1016 .spz-input-wrapper.phone input').setAttribute("placeholder","Phone Number")
         document.querySelector('.spz-1016 .spz-input-wrapper.phone label').textContent="Phone Number"
         // change position
-         document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
+        //  document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
+        document.querySelector('.spz-1016 .spz-input-wrapper.email').insertAdjacentElement('afterend', document.querySelector('.spz-1016 .spz-input-wrapper.name'))
 
-         /
+         
         // adding Business Type
         /*
         document.querySelector('.spz-1016 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
@@ -279,7 +280,8 @@ const bodyInterval1016 = setInterval(function () {
     // This is the code to generate the form over UI section do no edit it
     function addForm(formData, formSelector) {
       const formTemplate = `
-            <div class="spz-form-wrap">
+        <div class="hero_right">
+          <div class="spz-form-wrap">
               <div class="form-section">
                 ${formData.customHTMLBefore.replace(/\s/g, "").length !== 0
           ? formData.customHTMLBefore
@@ -292,7 +294,8 @@ const bodyInterval1016 = setInterval(function () {
           : ""
         }
               </div>
-            </div>
+          </div>
+        </div>
             `;
       document.body.insertAdjacentHTML(
         "beforeend",
@@ -337,11 +340,7 @@ function loadTestCode1004() {
     var checkIcon = `
       <img src="//res.cloudinary.com/spiralyze/image/upload/v1726335109/netwrix/5001/checkmark.svg" alt="checkmark">
     `;
-    var listCheck = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
-        <path d="M10.0912 5.18726L4.46573 10.8127L1.90869 8.2557" stroke="#024DBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-      `;
+
     var currentCheckIcon = document.querySelectorAll('.call_to_action_products_text .cta_pt_icon');
     currentCheckIcon.forEach((icon) => {
       icon.innerHTML = checkIcon;
@@ -353,7 +352,7 @@ function loadTestCode1004() {
     const triageData = [
       //Question 1 start
       {
-        questionSuperHeading: "Start using BILL Today",
+        questionSuperHeading: "Start using BILL today",
         questionHeading: "What product(s) are you interested in?",
         answers: [
           {
@@ -362,9 +361,9 @@ function loadTestCode1004() {
             answerAlt: 'Accounts Payable & Receivable',
             answerList: [
               {
-                item1: 'Automate bills & invoicing',
-                item2: 'ACH, credit, wire, and more',
-                item3: '2-way accounting sync'
+                item1: 'Automate bills & invoicing;',
+                item2: 'ACH, credit, wire, and more;',
+                item3: '2-way accounting sync.'
               }
             ]
           },
@@ -374,9 +373,9 @@ function loadTestCode1004() {
             answerAlt: 'Spend & Expense',
             answerList: [
               {
-                item1: 'Physical & virtual cards',
-                item2: 'Spend controls',
-                item3: 'Transaction tracking'
+                item1: 'Physical & virtual cards;',
+                item2: 'Spend controls;',
+                item3: 'Transaction tracking.'
               }
             ]
           }
@@ -385,7 +384,7 @@ function loadTestCode1004() {
       //Question 1 end
       //Question 2 start
       {
-        questionSuperHeading: "Start using BILL Today",
+        questionSuperHeading: "Start using BILL today",
         questionHeading: "What type of business are you?",
         questionSubHeading: "",
         answers: [
@@ -432,7 +431,7 @@ function loadTestCode1004() {
                 <div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''}">
                   <a href="javascript:void(0);" class="go_back">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#1B0EB1" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#024DBD" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     Back
                   </a> 
@@ -450,9 +449,9 @@ function loadTestCode1004() {
                             <div class="answer-text">${itemm.answerText}</div>
                            ${itemm.answerList && itemm.answerList.length > 0 ? `
                               <ul>
-                                <li>${listCheck} ${itemm.answerList[0].item1 || ""}</li>
-                                <li>${listCheck} ${itemm.answerList[0].item2 || ""}</li>
-                                <li>${listCheck} ${itemm.answerList[0].item3 || ""}</li>
+                                <li>${itemm.answerList[0].item1 || ""}</li>
+                                <li>${itemm.answerList[0].item2 || ""}</li>
+                                <li>${itemm.answerList[0].item3 || ""}</li>
                               </ul>
                             ` : ''}
                             <div class="answer-checkbox"></div>
@@ -461,7 +460,12 @@ function loadTestCode1004() {
           }).join('')
             }
                     </div>
-                    <div class="next-question">Next <img src="//res.cloudinary.com/spiralyze/image/upload/v1728899617/bill/1004/arrow-right.svg" alt="arrow"></div>
+                    <div class="next-question">
+                      Next 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M10.5303 2.9696L17.5607 9.99993L10.5303 17.0303L9.46966 15.9696L14.6893 10.75L3.5 10.75V9.24999L14.6894 9.24999L9.46966 4.03026L10.5303 2.9696Z" fill="white"/>
+                      </svg>
+                    </div>
                 </div>
                 `
         }).join('')
@@ -469,7 +473,7 @@ function loadTestCode1004() {
             <div class="question-form spz-hidden">
               <a href="javascript:void(0);" class="go_back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#1B0EB1" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12.667 7.99979H3.33362M3.33362 7.99979L8.00034 3.33313M3.33362 7.99979L8.00034 12.6665" stroke="#024DBD" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 Back
               </a> 
@@ -525,25 +529,25 @@ function loadTestCode1004() {
 
           // First step: multi-select OS options
           if (answerText === "Accounts Payable & Receivable") {
-            document.querySelector('#productInterestAP').click();
-            document.querySelector('#productInterestAP').checked = isChecked;
+            document.querySelector('.the-form #productInterestAP').click();
+            document.querySelector('.the-form #productInterestAP').checked = isChecked;
             storeSelection('apChecked', isChecked);
           } else if (answerText === "Spend & Expense") {
-            document.querySelector('#productInterestSE').click();
-            document.querySelector('#productInterestSE').checked = isChecked;
+            document.querySelector('.the-form #productInterestSE').click();
+            document.querySelector('.the-form #productInterestSE').checked = isChecked;
             storeSelection('seChecked', isChecked);
           }
           
-          const businessTypeSelect = document.querySelector('select#signupType');
+          const businessTypeSelect = document.querySelector('.the-form select#signupType');
           if (answerText === "Financial operations for one business.") {
             businessTypeSelect.selectedIndex = 0;
-            document.querySelector('select#signupType').value = 'direct';
-            document.querySelector('select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
+            document.querySelector('.the-form select#signupType').value = 'direct';
+            document.querySelector('.the-form select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
             storeSelection('businessType', businessTypeSelect.value);
           } else if (answerText === "Accounting services for multiple clients.") {
             businessTypeSelect.selectedIndex = 1;
-            document.querySelector('select#signupType').value = 'console';
-            document.querySelector('select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
+            document.querySelector('.the-form select#signupType').value = 'console';
+            document.querySelector('.the-form select#signupType').dispatchEvent(new Event('change', { bubbles: true }));
             storeSelection('businessType', businessTypeSelect.value);
           }
 
@@ -560,20 +564,20 @@ function loadTestCode1004() {
           if (retrieveSelection('apChecked') === 'true' && answerText === "Accounts Payable & Receivable") {
             console.log('AP is checked');
          
-            if (!document.querySelector('#productInterestAP').checked) {
-              document.querySelector('#productInterestAP + span').click();
+            if (!document.querySelector('.the-form #productInterestAP').checked) {
+              document.querySelector('.the-form #productInterestAP + span').click();
               // console.log('AP checkbox was not checked, checking it now');
-              // document.querySelector('#productInterestAP').checked = true;
+              // document.querySelector('.the-form #productInterestAP').checked = true;
             }
             item.classList.add('selected');
           }
 
           // Check for SE
           if (retrieveSelection('seChecked') === 'true' && answerText === "Spend & Expense") {
-            if (!document.querySelector('#productInterestSE').checked) {
-              document.querySelector('#productInterestSE + span').click();
+            if (!document.querySelector('.the-form #productInterestSE').checked) {
+              document.querySelector('.the-form #productInterestSE + span').click();
               console.log('SE checkbox was not checked, checking it now');
-              // document.querySelector('#productInterestSE').checked = true;
+              // document.querySelector('.the-form #productInterestSE').checked = true;
             }
             item.classList.add('selected');
           }
@@ -601,7 +605,7 @@ function loadTestCode1004() {
         // If no businessType is found, add 'selected' class to the first .answer-item
         const firstItem = document.querySelector('.question-2 .answers-wrap .answer-item:first-child');
         if (firstItem) {
-          (document.querySelector('select#signupType').value = 'direct', document.querySelector('#signupType').dispatchEvent(new Event('change', { bubbles: true })));
+          (document.querySelector('.the-form select#signupType').value = 'direct', document.querySelector('.the-form #signupType').dispatchEvent(new Event('change', { bubbles: true })));
           // document.querySelectorAll('.spz-1002 #signupType .form-option-field')[0].querySelector('input').click();
           firstItem.classList.add('selected');
         }
@@ -615,8 +619,8 @@ function loadTestCode1004() {
         item.addEventListener('click', (e) => {
           if (item.classList.contains('step_one')) {
             document.querySelector('body').classList.add('step_two');
-            if (!document.querySelector('#productInterestAP').checked &&
-              !document.querySelector('#productInterestSE').checked) {
+            if (!document.querySelector('.the-form #productInterestAP').checked &&
+              !document.querySelector('.the-form #productInterestSE').checked) {
               showError('Please select an option.', item);
               return;
             }
@@ -635,7 +639,7 @@ function loadTestCode1004() {
         item.addEventListener('click', (e) => {
           if (item.parentElement.classList.contains('question-2')) {
             document.querySelector('body').classList.remove('step_two');
-          } else if (item.parentElement.classList.contains('question-2')) {
+          } else if (item.parentElement.classList.contains('question-form')) {
             document.querySelector('body').classList.remove('step_three');
             document.querySelector('body').classList.add('step_two');
           }
@@ -698,20 +702,20 @@ function loadTestCode1004() {
 
     document.querySelector('.spz-triage-wrap .questions-wrap').insertAdjacentElement('afterend', document.querySelector('.is-sub-wrapper'));
     // existiing account
-    document.querySelector('.spz_t1004 .button-disclaimer').insertAdjacentHTML("afterend", `
-      <div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login"
-      class="spz_1012_v1">Login</a></div>
-      <div class="disclaimer_2">
-        <p><a href="https://app-signup.us.bill.com/onboarding/flow/signup">Click here </a>if you’ve been invited to be paid by
-          a BILL customer, or if you only want to receive payments with a BILL account.</p>
-      </div> 
-    `);
+    // document.querySelector('.spz_t1004 .button-disclaimer').insertAdjacentHTML("afterend", `
+    //   <div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login"
+    //   class="spz_1012_v1">Login</a></div>
+    //   <div class="disclaimer_2">
+    //     <p><a href="https://app-signup.us.bill.com/onboarding/flow/signup">Click here </a>if you’ve been invited to be paid by
+    //       a BILL customer, or if you only want to receive payments with a BILL account.</p>
+    //   </div> 
+    // `);
   }
 }
 
 
 var bodyInterval5001 = setInterval(() => {
-  if (document.querySelectorAll("body").length > 0) {
+  if (document.querySelectorAll("body").length > 0 && document.querySelectorAll(".hero_right").length > 0) {
     clearInterval(bodyInterval5001);
     loadTestCode1004();
   }

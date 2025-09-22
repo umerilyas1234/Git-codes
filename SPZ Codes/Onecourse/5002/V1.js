@@ -1,20 +1,16 @@
-console.log('Time 1 > ' + [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds(), new Date().getMilliseconds()].map((v, i) => v.toString().padStart(i === 3 ? 3 : 2, '0')).join(':'));
-
 function spz1002Test() {
   if (!document.querySelector('body').classList.contains('spz_5002')) {
     document.querySelector('body').classList.add('spz_5002');
-    // Put your test code here
-    console.log('Time 2 > ' + [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds(), new Date().getMilliseconds()].map((v, i) => v.toString().padStart(i === 3 ? 3 : 2, '0')).join(':'));
   }
 }
 
-function isZipExcluded() {
-  const zipInput = document.querySelector('#zip-code');
+function isZipExcludedFilled() {
+  const zipInput = document.querySelector('.icon-text__selected-zip-code-label');
   if (!zipInput) return false;
 
-  const zip = parseInt(zipInput.value.trim(), 10);
+  const zip = parseInt(zipInput.textContent.trim(), 10);
 
-  return zip >= 20101 && zip <= 24658;
+  return 20101 <= zip && zip <= 24658;
 }
 
 function removeTest() {
@@ -30,41 +26,29 @@ var pageList = [
   "https://www.awrusa.com/plans/whole-home"
 ];
 
-function observerForLoadingBlock() {
-  var target = document.body;
-  if (!target) return;
 
-  const config = {
-    childList: true,
-    characterData: true,
-    subtree: true,
-    attributes: true,
-  };
+let previousUrl = location.href;
+// Run on initial load if URL matches
 
-  let running = false;
-
-  const callback = function (mutationsList, observer) {
-    const currentPage = window.location.href.split("?")[0].split("#")[0];
-
-    if (running) return;
-
-    if (pageList.includes(currentPage) && !isZipExcluded()) {
-      running = true;
-      console.log("Mutation detected: Run spz1002Test()");
-      spz1002Test();
-      setTimeout(() => {
-        running = false;
-      }, 100);
-    } else {
-      if (document.querySelector('body').classList.contains('spz_5002') ) {
-        console.log("URL not in list, running removeTest()");
-        removeTest();
-      }
-    }
-  };
-
-  const observer = new MutationObserver(callback);
-  observer.observe(target, config);
+if (pageList.includes(window.location.href.split("?")[0].split("#")[0]) && !isZipExcludedFilled()) {
+    spz1002Test();
 }
 
-observerForLoadingBlock();
+var running = false;
+const observer = new MutationObserver(() => {
+var currentPage = window.location.href.split("?")[0].split("#")[0];
+    if (pageList.includes(currentPage) && !isZipExcludedFilled()) {
+        if (running) return; // Prevent multiple executions
+        
+        running = true;
+        console.log("Mutation detected: Run 5002 test");
+        spz1002Test();
+        // running = false;
+        setTimeout(function(){running = false;}, 50);
+    } else {
+        removeTest();
+    }
+});
+
+const config = { subtree: true, childList: true };
+observer.observe(document.body, config);

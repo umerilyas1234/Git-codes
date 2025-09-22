@@ -6,7 +6,22 @@ const loadJS_SPZ = (url, implementationCode, location) => {
   location.appendChild(scriptTag);
 };
 const smoothScrollJSURL = "//res.cloudinary.com/spiralyze/raw/upload/v1710416831/assembly/script/smooth-scroll.min.js";
+const lottieAnimationURL = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.0/lottie.min.js";
 loadJS_SPZ(smoothScrollJSURL, function () { }, document.body);
+loadJS_SPZ(lottieAnimationURL, function () {
+  let waitforLottie = setInterval(() => {
+    if (document.querySelector('.spz_hero')) {
+      clearInterval(waitforLottie);
+      lottie.loadAnimation({
+        container: document.querySelector('.spz_hero'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://res.cloudinary.com/spiralyze/raw/upload/v1757074896/bamboohr/13004/assets/Animations/Background_Hero2.json'
+      });
+    }
+  }, 2);
+}, document.body);
 let autoAccordionInterval;
 let splide;
 let autoAccordionTimer = 0;
@@ -18,22 +33,9 @@ const bodyInterval13004 = setInterval(function () {
   if (document.querySelector('body') && !document.querySelector('.spz_13004_v2')) {
     clearInterval(bodyInterval13004)
     document.querySelector('body').classList.add("spz_13004_v2")
-    setTimeout(() => {
-      document.querySelector('.footer-wrapper .footer .links').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .legal'));
-      document.querySelector('.footer-wrapper .footer .brand').insertAdjacentHTML('beforebegin', `<div class="footer_left">
-        <div class="footer_logo">
-          <a href="javascript:void(0)"><img src="//res.cloudinary.com/spiralyze/image/upload/v1754579391/bamboohr/13004/bhr_logo_white.svg" alt="BambooHR Logo"></a>
-        </div>
-      </div>`);
-      document.querySelector('.footer_left').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .brand'));
-    }, 1800);
+
     document.querySelector('#base').insertAdjacentHTML('afterbegin', `
 <div class="spz_hero">
-  <video autoplay muted loop playsinline class="hero2_animation">
-    <source
-      src="https://res.cloudinary.com/spiralyze/video/upload/v1756210734/bamboohr/13004/assets/Animations/Background_Hero.mp4"
-      type="video/mp4" />
-  </video>
   <div class="auto_container">
     <div class="spz_heroInner">
       <div class="spz_heroDetail">
@@ -51,7 +53,7 @@ const bodyInterval13004 = setInterval(function () {
                 srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_8.webp"
                 type="image/webp" media="(max-width: 1023px)">
               <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_9.webp"
-                alt="Hero image">
+               class="blur" alt="Hero image">
             </picture>
           </div>
           <div class="hero_formContainer">
@@ -170,16 +172,6 @@ const bodyInterval13004 = setInterval(function () {
 </div>
 
 <div class="spz-1031-tabs-custom-container">
-  <video autoplay muted loop playsinline class="tab_rightAnimation">
-    <source
-      src="https://res.cloudinary.com/spiralyze/video/upload/v1756210732/bamboohr/13004/assets/Animations/Animation_3_Right.mp4"
-      type="video/mp4" />
-  </video>
-  <video autoplay muted loop playsinline class="tab_leftAnimation">
-    <source
-      src="https://res.cloudinary.com/spiralyze/video/upload/v1756210732/bamboohr/13004/assets/Animations/Animation_3_Left.mp4"
-      type="video/mp4" />
-  </video>
   <div class="title"><strong>150+</strong> businesses,<span class="tablet-break"></span> from startups to enterprises
   </div>
   <div class="tabs-custom-wrapper">
@@ -569,7 +561,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <a href="#" class="custom_cta outline">Get My Demo</a>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -603,11 +595,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Applicant Tracking</span>
+                      </li>
+                      <li>
+                        <span>Candidate Experience</span>
+                      </li>
+                      <li>
+                        <span>Onboarding Tasks</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Set budgets for departments, projects, vendors, purchase orders, spend categories, and more.
-                      Automated multi-level approval workflows.</p>
-                    <p>Get real-time spend insights. Identify opportunities to eliminate spend or switch to lower-cost
-                      alternatives.</p>
+                    <p>Find, hire, and onboard the best talent quickly. With the powerful BambooHR applicant tracking system and proactive onboarding tasks, you can create a compelling candidate experience and better first days for new hires.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -641,10 +647,26 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Time Tracking</span>
+                      </li>
+                      <li>
+                        <span>Benefits Enrollment</span>
+                      </li>
+                      <li>
+                        <span>Payroll Automation</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Auto-match purchase orders, vendor invoices, and receiving reports. No more digging through all
-                      your accounting platforms to compare POs and invoices.</p>
-                    <p>Sync purchasing data with ERPs. Reduce reconciliation time 90%.</p>
+                    <p>
+                    Track hours and manage multi-rate pay, simplify time off requests, streamline benefits enrollment, and run payroll all from a single platform. No more data double entry or manual approval processes—just easy, accurate payroll for you and your employees.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -678,9 +700,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Employee Satisfaction</span>
+                      </li>
+                      <li>
+                        <span>Performance Growth</span>
+                      </li>
+                      <li>
+                        <span>Recognition & Rewards</span>
+                      </li>
+                    </ul>
+                  </div>
                   <div class="text">
-                    <p>Manage purchasing, contracts, vendor relationships, and invoicing in one place. No more toggling
-                      between windows and double-entering data. Streamline financial operations. </p>
+                    <p>Build the kind of workplace where your people know you’re invested in their happiness and development. Get the tools you need to gather feedback, strengthen employee satisfaction, and grow your people.
+                    </p>
+                  </div>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -700,7 +738,7 @@ const bodyInterval13004 = setInterval(function () {
                 </div>
                 <div class="title">
                   <div class="text">
-                    <span>Integration Marketplace</span>
+                    <span>Compensation</span>
                   </div>
                   <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none">
@@ -714,47 +752,25 @@ const bodyInterval13004 = setInterval(function () {
                   </svg>
                 </div>
                 <div class="content">
-                  <div class="text">
-                    <p>Automate requests, approvals, and purchase orders. Let procurement teams, approvers, and
-                      suppliers communicate in real-time. Streamline vendor management with preferred vendors and
-                      pre-negotiated terms.</p>
+                  <div class="tag_list">
+                    <ul>
+                      <li>
+                        <span>Compensation Planning</span>
+                      </li>
+                      <li>
+                        <span>Benchmarking Data</span>
+                      </li>
+                      <li>
+                        <span>Streamlined Approvals</span>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-              </div>
-              <picture>
-                <source media="(max-width:767.98px)"
-                  srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_1.webp">
-                <source media="(max-width:1023.98px)"
-                  srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_2.webp">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace.webp"
-                  alt="Integration Marketplace" width="688" height="404" loading="lazy">
-              </picture>
-            </div>
-            <div class="child" data-index="5">
-              <div class="child_inner">
-                <div class="bar">
-                  <div class="line"></div>
-                </div>
-                <div class="title">
                   <div class="text">
-                    <span>Compliance</span>
+                    <p>Take the lead on compensation strategy with access to trusted benchmarking data and advanced planning tools. Create salary bands, streamline approvals, communicate total rewards, and ensure fair pay—all within one easy-to-use platform.
+                    </p>
                   </div>
-                  <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none">
-                    <path d="M20.0039 15.6001L11.8015 7.39769L3.60086 15.6001" stroke="#599D15" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                    fill="none">
-                    <path d="M16.6699 7L9.83458 13.8353L3.00072 7" stroke="#95918F" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="content">
-                  <div class="text">
-                    <p>Automate requests, approvals, and purchase orders. Let procurement teams, approvers, and
-                      suppliers communicate in real-time. Streamline vendor management with preferred vendors and
-                      pre-negotiated terms.</p>
+                  <div class="cta_outer">
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
                   </div>
                 </div>
               </div>
@@ -764,26 +780,24 @@ const bodyInterval13004 = setInterval(function () {
                 <source media="(max-width:1023.98px)"
                   srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_2.webp">
                 <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance.webp"
-                  alt="Compliance" width="688" height="404" loading="lazy">
+                  alt="Compensation" width="688" height="404" loading="lazy">
               </picture>
             </div>
           </div>
           <div class="image">
             <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_3.webp"
-              alt="HR Data & Reporting" width="616" height="616" loading="lazy">
+              alt="HR Data & Reporting" loading="lazy">
 
             <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_3.webp"
-              alt="HR Data & Reporting" width="616" height="616" loading="lazy">
+              alt="HR Data & Reporting" loading="lazy">
             <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding.webp"
-              alt="Hiring & Onboarding" width="616" height="616" loading="lazy">
+              alt="Hiring & Onboarding" loading="lazy">
             <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits.webp"
-              alt="Payroll, Time & Benefits" width="616" height="616" loading="lazy">
+              alt="Payroll, Time & Benefits" loading="lazy">
             <img class="hero" data-index="4" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance.webp"
-              alt="Employee Experience & Performance" width="616" height="616" loading="lazy">
-            <img class="hero" data-index="5" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace.webp"
-              alt="Integration Marketplace" width="616" height="616" loading="lazy">
-            <img class="hero" data-index="6" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance.webp"
-              alt="Compliance" width="616" height="616" loading="lazy">
+              alt="Employee Experience & Performance" loading="lazy">
+            <img class="hero" data-index="5" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance.webp"
+              alt="Compensation" loading="lazy">
           </div>
         </div>
       </div>
@@ -795,7 +809,7 @@ const bodyInterval13004 = setInterval(function () {
   <div class="auto_container">
     <div class="integration_inner">
       <div class="integration_data">
-        <h2>40+ pre-built integrations</h2>
+        <h2>150+ pre-built integrations</h2>
         <picture>
           <source media="(max-width:767.98px)"
             srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integrations_4.webp">
@@ -1316,9 +1330,8 @@ const bodyInterval13004 = setInterval(function () {
     // Add scroll event listener to run the code when "DevOne" is in view
     document.addEventListener('scroll', function () {
       const featureSection = document.querySelector('.section2_2003');
-      console.log(featureSection);
       if (featureSection && isInViewport(featureSection)) {
-        // runAutoAccordion();
+        runAutoAccordion();
         document.removeEventListener('scroll', arguments.callee);
       }
     });
@@ -1431,6 +1444,20 @@ const bodyInterval13004 = setInterval(function () {
       document.querySelector('body').classList.remove("hidden")
       document.querySelector('.hero-section-11002').classList.remove("hidden")
     })
+
+    let waitforFooter = setInterval(() => {
+      if (document.querySelector('.footer-wrapper .footer .links')) {
+        clearInterval(waitforFooter);
+        document.querySelector('.footer-wrapper .footer .links').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .legal'));
+        document.querySelector('.footer-wrapper .footer .brand').insertAdjacentHTML('beforebegin', `<div class="footer_left">
+          <div class="footer_logo">
+            <a href="javascript:void(0)"><img src="//res.cloudinary.com/spiralyze/image/upload/v1754579391/bamboohr/13004/bhr_logo_white.svg" alt="BambooHR Logo"></a>
+          </div>
+        </div>`);
+        document.querySelector('.footer_left').insertAdjacentElement('beforeend', document.querySelector('.footer-wrapper .footer .brand'));
+      }
+    }, 2);
+
     window.addEventListener('click', function (e) {
       if (document.cookie.includes('Data Security Posture Management')) {
         document.querySelector('#checkbox_item_1').click();

@@ -28,7 +28,7 @@ const bodyInterval1016 = setInterval(function () {
     console.log("modify the body: "+getTimestamp())
     clearInterval(bodyInterval1016)
     document.querySelector('body').classList.add("spz-1016")
-    localStorage.setItem('bdcAbTest12', '1016-v1');
+    localStorage.setItem('bdcAbTest12', '1004-con');
     //DEVELOPER - STEP 1 of 5 - Put your asana task URL here
     const asana_URL = `https://app.asana.com/0/1202262047779255/1207982584862002/f`
     //DEVELOPER - STEP 2 of 5 - This adds content inside the box.
@@ -89,7 +89,6 @@ const bodyInterval1016 = setInterval(function () {
         // change position
          document.querySelector('.spz-1016 .spz-input-wrapper.firstName').closest('.form-field-columns').insertAdjacentElement('beforebegin', document.querySelector('.spz-1016 .spz-input-wrapper.email'))
 
-         /
         // adding Business Type
         /*
         document.querySelector('.spz-1016 .spz-input-wrapper.numberOfEmployees').insertAdjacentHTML("beforebegin", `
