@@ -119,9 +119,13 @@ function spz1003() {
       const field16 = document.querySelector('.hero_section #field_3_16');
       const field2 = document.querySelector('.hero_section #field_3_2');
       const field9 = document.querySelector('.hero_section #field_3_9');
+      const field18 = document.querySelector('.hero_section #field_3_18');
+      const field23 = document.querySelector('.hero_section #field_3_23');
+      const field35 = document.querySelector('.hero_section #field_3_35');
       const footer = document.querySelector('.hero_section .gform_footer');
       field9.innerHTML = `Canoe Intelligence needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, check out our <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.`;
       if (field16 && field2) field16.after(field2);
+      if (field35 && field18) field18.after(field35);
       if (footer && field9) footer.after(field9);
 
       // Input/Select/Textarea focus/blur/change logic

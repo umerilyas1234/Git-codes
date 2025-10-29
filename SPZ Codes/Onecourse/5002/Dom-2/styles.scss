@@ -1,0 +1,258 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1233.98px;
+$tablet-pro: 923px;
+$tablet: 922.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_5002 {
+  .awr-button-bar {
+    a[href*="/plans/all-plans"] {
+      span {
+        font-size: 0;
+
+        &::after {
+          content: "Most Popular";
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .awr-products__container {
+    margin-bottom: 51px;
+
+    &:has(a[href*="/plans/all-plans"].bg-awr-blue-700) {
+
+      .awr-products__results {
+        padding-top: 34px;
+
+        @include tablet() {
+          padding-top: 0px;
+          margin-top: -1px;
+        }
+
+        @include mobile() {
+          padding-top: 0px;
+          margin-top: -0.5px;
+        }
+
+        .awr-product-card-plp-grid {
+          max-width: 1224.04px;
+          width: 100%;
+          margin: auto;
+
+          @include tablet() {
+            padding: 0 81px;
+          }
+        }
+
+        .infinite-scroll-component {
+          @include tablet-pro() {
+            max-width: 909px;
+            margin: auto;
+          }
+
+          @include tablet() {
+            max-width: 609px;
+            margin: auto;
+          }
+        }
+
+        .awr-infinite-scroll-grid__grid-container {
+          row-gap: 0;
+          column-gap: 0;
+          padding-left: 0;
+          margin: 0 -8px;
+
+          @include tablet-pro() {
+            margin: 0;
+            max-width: 907px;
+          }
+          @include tablet(){
+            max-width: 622px;
+          }
+          @include mobile() {
+            margin: 0;
+          }
+
+
+          .awr-infinite-scroll-grid__grid-item {
+            width: 25%;
+            padding: 0 8px 28px;
+
+            @include tablet-pro() {
+              width: 33.33%;
+              padding: 0 4px 28px;
+            }
+
+            @include tablet() {
+              width: 50%;
+              padding-bottom: 27.5px;
+            }
+
+            @include mobile() {
+              width: 100%;
+            }
+
+            .awr-product-card-plp {
+              width: 100%;
+              .awr-product-card-plp__badge{
+                width: 100%;
+              }
+              @include mobile() {
+                max-width: 342px;
+                margin: auto;
+              }
+            }
+
+            &:not(:has(a[href*="/water-line-protection-program"])):not(:has(a[href*="/sewer-line-protection-program"])):not(:has(a[href*="/in-home-plumbing-plus-program"])):not(:has(a[href*="/water-heater-repair-and-replacement-program"])):not(:has(a[href*="/water-line-and-sewer-line-protection-program"])):not(:has(a[href*="/electrical-essentials-program"])):not(:has(a[href*="/water-line-sewer-line-and-in-home-plumbing-emergency-program"])) {
+              display: none;
+            }
+
+            &:has(a[href*="/water-line-protection-program"]) {
+              order: 1;
+            }
+
+            &:has(a[href*="/sewer-line-protection-program"]) {
+              order: 2;
+            }
+
+            &:has(a[href*="/water-line-and-sewer-line-protection-program"]) {
+              order: 3;
+            }
+
+            &:has(a[href*="/in-home-plumbing-plus-program"]) {
+              order: 4;
+            }
+
+            &:has(a[href*="/water-line-sewer-line-and-in-home-plumbing-emergency-program"]) {
+              order: 5;
+            }
+            
+            &:has(a[href*="/electrical-essentials-program"]) {
+              order: 6;
+            }
+
+            &:has(a[href*="/water-heater-repair-and-replacement-program"]) {
+              order: 7;
+            }
+
+
+            .awr-product-card-plp__image,
+            .awr-product-card-plp__description,
+            .awr-product-card-plp__container {
+              max-width: 294px;
+              width: 100%;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+
+              @include tablet-pro() {
+                margin: auto;
+              }
+
+              @include tablet() {
+                max-width: 295px;
+                margin: auto;
+              }
+
+              @include mobile() {
+                max-width: 342px;
+                margin: auto;
+              }
+            }
+
+            .awr-product-card-plp__description {
+              padding: 23px;
+
+              @include tablet() {
+                padding: 23.5px 24px 22px;
+              }
+
+              @include mobile() {
+                padding: 23px 24px;
+              }
+            }
+
+            // .awr-rating__container,
+            // .awr-product-card-plp__no_ratings_placeholder {
+            //   display: none;
+            // }
+
+            .awr-product-card-plp__description-bottom-section {
+              padding-bottom: 1.5px;
+
+              .awr-product-card-plp__cta {
+                margin-top: 1px;
+              }
+            }
+
+            .awr-product-card-plp__product-name-container {
+              padding-bottom: 29px;
+              padding-top: 0.5px;
+
+              >p {
+                min-height: 81px;
+              }
+
+              @include mobile() {
+                padding-top: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include tablet() {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 17px;
+    }
+  }
+}

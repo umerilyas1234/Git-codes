@@ -10,6 +10,16 @@
 .spz_13004_v2.hidden {
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .spz_13004_v1.hidden,
+  .spz_13004_v2.hidden {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 .spz_13004_v1 > img[height="1"],
 .spz_13004_v2 > img[height="1"] {
   display: none;
@@ -351,7 +361,7 @@
 .spz_13004_v2 .qlf-form {
   border-radius: 24px;
   border: 1px solid #E8EBF2;
-  background: linear-gradient(180deg, #FFF 4.02%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(180deg, #FFF 100%, rgba(255, 255, 255, 0.1) 100%);
   box-shadow: 0 20px 40px 0 rgba(56, 49, 47, 0.2);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -2103,7 +2113,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 10000;
   background: rgba(72, 65, 63, 0.7);
   display: none;
   justify-content: center;
@@ -2544,6 +2554,7 @@
     padding-top: 136px;
     padding-bottom: 136px;
     margin-bottom: 45.5px;
+    margin-bottom: 0;
   }
   .spz_13004_v1 .spz-11002-popup-wrapper .popup-content,
   .spz_13004_v2 .spz-11002-popup-wrapper .popup-content {
@@ -2999,17 +3010,5 @@
 @media (max-width: 767px) {
   .spz_13004_v2 .get_started {
     padding: 19.5px 0 72px;
-  }
-}
-.spz_13004_v2 .section2_2003 .accordion-wrapper .image img {
-  border: none;
-  min-width: 756px;
-  margin-right: -140px;
-  max-height: 678px;
-}
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .spz_13004_v2 .section2_2003 .accordion-wrapper .image img {
-    min-width: 500px;
-    margin-right: 0;
   }
 }/*# sourceMappingURL=13004.css.map */

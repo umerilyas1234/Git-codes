@@ -1,0 +1,342 @@
+<script>
+  //DEV 1/3. Find the class or ID of the control hero section and place it below
+  const template_sectionSelector = `#__next > div > main > section:nth-child(4)`;
+
+  //DEV 2/3. Choose where your accordion should appear
+  const template_position = "beforebegin";
+
+  //DEV 3/3. Accordion content data
+  const template_sectionContent = {
+    sectionHeading: "Features",
+    accordionItems: [
+      {
+        title: 'Market price analytics',
+        content: 'See price data, occupancy, and average revenue for local listings. Current and historical prices, future projections, and seasonal trends.<br><br>Identify the most profitable short-term rental markets and submarkets around the world. Research specific regions, cities, zip codes, and neighborhoods.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Investing',
+        content: 'See types of properties that perform best near you. Get projected revenue, average daily rate, and occupancy.<br><br>Browse for-sale properties. Filter by real estate type, number of rooms, price tier, and more. Review property photos, descriptions, and key details.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Revenue calculator',
+        content: 'View the earning potential for any address including for-sale properties and competitors. Get projections for annual revenue, rates, occupancy, and seasonal impact.<br><br>See the potential revenue for your listings. Just enter your address, startup expenses, and operating costs. See profit, net operating income, and cap rate forecast.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Rate recommendations',
+        content: 'Auto-adjust listing price up to 4 months out to meet occupancy or rate goals. Rates update based on demand, peak weekends, seasons, and more.<br><br>Compare current rates against recommended rates for all properties. Identify rate adjustment opportunities Optimize your STR strategy based on booking trends.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Listing performance',
+        content: 'Track the performance of all your properties in one place. Identify your top-performing properties, opportunities to increase earnings, market trends, and more.<br><br>Compare your performance and amenities to your top competitors. Generate reports on performance, prices, tourism data, and more.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Competitor analysis',
+        content: 'Compare your listings or potential investments to similar competitors and other successful properties. Customize comp sets by location, house size, amenities, and more.<br><br>Compare rates, amenity impact, occupancy, projected revenue, booking lead time, and management styles.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      },
+      {
+        title: 'Integrations & API',
+        content: 'Sync and track your listing data from rental marketplace using our custom API. Includes Airbnb, Vrbo, and Guesty.',
+        image: [
+          {
+            breakPoint: 1024,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 768,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+          {
+            breakPoint: 320,
+            url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3004/market_price_insights-1440768360.webp",
+          },
+        ]
+      }
+    ]
+  };
+
+  // Main accordion function
+  function initAccordion(content, whereToPut, sectionSelector) {
+    const template = `
+    <div class="spz-bg-wrap">
+      <div class="features-heading">${content.sectionHeading}</div>
+      <div class="spz-features-accordion__wrapper">
+        <div class="spz-features-accordion">
+          <div class="spz-features-accordion__contents">
+            ${content.accordionItems.map(item => `
+              <div class="content">
+                <div class="spz-features-accordion__item">
+                  <div class="solution__image-inline">
+                    <picture>
+                      ${item.image.map(img => `<source media="(min-width:${img.breakPoint}px)" srcset="${img.url}" />`).join("")}
+                      <img src="${item.image[0].url}" alt="${item.title} visualization" />
+                    </picture>
+                  </div>
+                  <span>${item.title}</span>
+                  <div class="progress_bar"></div>
+                  <div class="accordion-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="solution__content">
+                  <p>${item.content}</p>
+                  <div class="spz-ctas-wrap">
+                    <a href="/data/us?welcome=true" class="spz-primary inner-accordion">Start for free</a>
+                  </div>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+        <div class="spz-features-accordion__image-panel">
+          ${content.accordionItems.map((item, index) => `
+            <div class="solution__image ${index === 0 ? 'active' : ''}" data-index="${index}">
+              <picture>
+                ${item.image.map(img => `<source media="(min-width:${img.breakPoint}px)" srcset="${img.url}" />`).join("")}
+                <img src="${item.image[0].url}" alt="${item.title} visualization" />
+              </picture>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    </div>`;
+
+    // Inject accordion
+    const hostSection = document.querySelector(sectionSelector);
+    if (hostSection) {
+      hostSection.classList.add('spz-features-accordion-host');
+      hostSection.insertAdjacentHTML(whereToPut, template);
+    }
+
+    // Accordion functionality
+    const DURATION = 8000;
+    const accordionContents = document.querySelector('.spz-features-accordion__contents');
+    const totalItems = content.accordionItems.length;
+    let currentActive = 0;
+    let progress = 0;
+    let autoSlide = false;
+    let progressVisible = true;
+    let userInteracted = false;
+    let slideInterval;
+    let inView = false;
+
+    // Initialize first item as active
+    accordionContents.children[currentActive].classList.add('active');
+
+    // Update arrows based on active state
+    function updateArrows() {
+      Array.from(accordionContents.children).forEach((item, index) => {
+        const arrow = item.querySelector('.accordion-arrow');
+        if (arrow) {
+          const svg = arrow.querySelector('svg path');
+          if (item.classList.contains('active')) {
+            // Up arrow
+            svg.setAttribute('d', 'M11 6.5L6 1.5L1 6.5');
+            arrow.classList.add('active');
+          } else {
+            // Down arrow
+            svg.setAttribute('d', 'M1 1.5L6 6.5L11 1.5');
+            arrow.classList.remove('active');
+          }
+        }
+      });
+    }
+    updateArrows();
+
+    // Scroll detection
+    function checkScroll() {
+      if (userInteracted) return;
+
+      const accordion = document.querySelector('.spz-features-accordion__wrapper');
+      if (!accordion) return;
+
+      const rect = accordion.getBoundingClientRect();
+      const shouldStart = rect.top <= window.innerHeight / 2;
+
+      if (shouldStart && !inView) {
+        inView = true;
+        autoSlide = true;
+        startAutoSlide();
+      } else if (!shouldStart && inView) {
+        inView = false;
+        autoSlide = false;
+        clearInterval(slideInterval);
+      }
+    }
+
+    // Auto slide functionality
+    function startAutoSlide() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        if (!autoSlide || userInteracted) return;
+
+        if (progress >= 100) {
+          currentActive = (currentActive + 1) % totalItems;
+          changeActive(currentActive);
+        } else {
+          progress += (100 * 200 / DURATION);
+          updateProgressBar(currentActive, progress);
+        }
+      }, 200);
+    }
+
+    // Progress bar animation
+    function updateProgressBar(index, width) {
+      if (!progressVisible) return;
+      const progressBar = accordionContents.children[index].querySelector('.progress_bar');
+      if (progressBar && progressBar.style.display !== 'none') {
+        progressBar.style.setProperty('--progress-width', `${width}%`);
+      }
+    }
+
+    // Change active accordion item
+    function changeActive(index) {
+      progress = 0;
+      currentActive = index;
+
+      // Update accordion items
+      Array.from(accordionContents.children).forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+        if (progressVisible) updateProgressBar(i, 0);
+      });
+
+      // Update arrows
+      updateArrows();
+
+      // Update images with fade effect
+      const allImages = document.querySelectorAll('.spz-features-accordion__image-panel .solution__image');
+      allImages.forEach(img => {
+        img.classList.remove('active');
+        img.style.opacity = '0';
+      });
+
+      setTimeout(() => {
+        const newImg = document.querySelector(`.spz-features-accordion__image-panel .solution__image[data-index="${index}"]`);
+        if (newImg) {
+          newImg.classList.add('active');
+          newImg.style.opacity = '1';
+        }
+      }, 250);
+    }
+
+    // Event listeners
+    Array.from(accordionContents.children).forEach((item, index) => {
+      // Click - stop auto progression permanently
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        userInteracted = true;
+        autoSlide = false;
+        progressVisible = false;
+        clearInterval(slideInterval);
+
+        // Hide all progress bars
+        document.querySelectorAll('.progress_bar').forEach(bar => {
+          bar.style.display = 'none';
+        });
+
+        if (currentActive !== index) changeActive(index);
+      });
+
+      // Hover - pause/resume if not user interacted
+      item.addEventListener('mouseenter', () => {
+        if (!userInteracted && currentActive === index) autoSlide = false;
+      });
+
+      item.addEventListener('mouseleave', () => {
+        if (!userInteracted && currentActive === index && inView) autoSlide = true;
+      });
+    });
+
+    // Initialize scroll detection
+    window.addEventListener('scroll', checkScroll);
+    setTimeout(checkScroll, 100);
+  }
+
+  // Initialize accordion
+  initAccordion(template_sectionContent, template_position, template_sectionSelector);
+</script>

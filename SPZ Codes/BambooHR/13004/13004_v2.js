@@ -169,7 +169,7 @@ const bodyInterval13004 = setInterval(function () {
 </div>
 
 <div class="spz-1031-tabs-custom-container">
-  <div class="title"><strong>150+</strong> businesses,<span class="tablet-break"></span> from startups to enterprises
+  <div class="title"><strong>34,000+</strong> businesses,<span class="tablet-break"></span> from startups to enterprises
   </div>
   <div class="tabs-custom-wrapper">
     <div class="tabs-custom-header">
@@ -557,16 +557,14 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v2 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
               <picture>
                 <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hero_image__mobile.webp">
-                <source media="(max-width:1023.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hero_image__desktop_1.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hero_image__desktop.webp"
+                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_6.webp">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_7.webp"
                   alt="HR Data & Reporting" width="688" height="404" loading="lazy">
               </picture>
             </div>
@@ -609,16 +607,14 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v2 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
               <picture>
                 <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding__-_mobile.webp">
-                <source media="(max-width:1023.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding__-_tablet.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding__-_desktop.webp"
+                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding_4.webp">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding_3.webp"
                   alt="Hiring & Onboarding" width="688" height="404" loading="lazy">
               </picture>
             </div>
@@ -662,16 +658,15 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v2 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
               <picture>
                 <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits_1.webp">
-                <source media="(max-width:1023.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits_2.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits.webp"
+                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits_4.webp">
+                <img
+                  src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits_3.webp"
                   alt="Payroll, Time & Benefits" width="688" height="404" loading="lazy">
               </picture>
             </div>
@@ -714,16 +709,15 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v2 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
               <picture>
                 <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance_1.webp">
-                <source media="(max-width:1023.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance_2.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance.webp"
+                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance_3.webp">
+                <img
+                  src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance_4.webp"
                   alt="Employee Experience & Performance" width="688" height="404" loading="lazy">
               </picture>
             </div>
@@ -766,32 +760,41 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v2 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
               <picture>
                 <source media="(max-width:767.98px)"
-                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_1.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance.webp"
+                  srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_3.webp">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_4.webp"
                   alt="Compensation" width="688" height="404" loading="lazy">
               </picture>
             </div>
           </div>
           <div class="image">
-            <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_3.webp"
-              alt="HR Data & Reporting" loading="lazy">
+            <img class="reference"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_7.webp"
+              alt="HR Data & Reporting" width="616" height="616" loading="lazy">
 
-            <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hero_image__desktop.webp"
-              alt="HR Data & Reporting" loading="lazy">
-            <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding__-_desktop.webp"
-              alt="Hiring & Onboarding" loading="lazy">
-            <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits.webp"
-              alt="Payroll, Time & Benefits" loading="lazy">
-            <img class="hero" data-index="4" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance.webp"
-              alt="Employee Experience & Performance" loading="lazy">
-            <img class="hero" data-index="5" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance.webp"
-              alt="Compensation" loading="lazy">
+            <img class="hero active" data-index="1"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hr_data__reporting_7.webp"
+              alt="HR Data & Reporting" width="616" height="616" loading="lazy">
+            <img class="hero" data-index="2"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/hiring__onboarding_3.webp"
+              alt="Hiring & Onboarding" width="616" height="616" loading="lazy">
+            <img class="hero" data-index="3"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/payroll_time__benefits_3.webp"
+              alt="Payroll, Time & Benefits" width="616" height="616" loading="lazy">
+            <img class="hero" data-index="4"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/employee_experience__performance_4.webp"
+              alt="Employee Experience & Performance" width="616" height="616" loading="lazy">
+            <img class="hero" data-index="5"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/integration_marketplace_3.webp"
+              alt="Integration Marketplace" width="616" height="616" loading="lazy">
+            <img class="hero" data-index="6"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bamboohr/13004/compliance_4.webp" alt="Compensation"
+              width="616" height="616" loading="lazy">
           </div>
         </div>
       </div>
@@ -815,7 +818,7 @@ const bodyInterval13004 = setInterval(function () {
         <div class="cta_list">
           <ul>
             <li>
-              <button href="javascript:void(0);" class="custom_cta get_demoCta spz13004_v1 outline">Get My Demo</button>
+              <button href="javascript:void(0);" class="custom_cta get_demoCta spz13004_v1 outline">Get a Demo</button>
             </li>
           </ul>
         </div>
@@ -885,7 +888,7 @@ const bodyInterval13004 = setInterval(function () {
     <div class="get_startedInner">
       <h2>Get Started with BambooHR® Today</h2>
       <div class="cta_outer">
-        <button href="javascript:void(0);" class="custom_cta spz13004_v1 get_demoCta">Get My Demo</button>
+        <button href="javascript:void(0);" class="custom_cta spz13004_v1 get_demoCta">Get a Demo</button>
       </div>
     </div>
   </div>
@@ -1482,7 +1485,9 @@ const bodyInterval13004 = setInterval(function () {
     document.querySelector('.spz-11002-popup-wrapper .popup-content .button-close-2').addEventListener("click", function () {
       document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
       document.querySelector('body').classList.remove("hidden")
-      document.querySelector('.hero-section-11002').classList.remove("hidden")
+      // if(document.querySelector('.hero-section-11002.hidden')){
+      //   document.querySelector('.hero-section-11002').classList.remove("hidden")
+      // }
     })
 
     let waitforFooter = setInterval(() => {
@@ -1528,7 +1533,7 @@ const bodyInterval13004 = setInterval(function () {
       if (e.target.classList.contains("button-close-2")) {
         document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
         document.querySelector('body').classList.remove("hidden")
-        document.querySelector('.hero-section-11002').classList.remove("hidden")
+        // document.querySelector('.hero-section-11002').classList.remove("hidden")
       }
     });
 

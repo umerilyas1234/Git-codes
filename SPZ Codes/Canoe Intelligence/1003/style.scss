@@ -1,7 +1,7 @@
 $desktop-lg: 1760px;
 $desktop: 1440px;
 $desktop-sm: 1366px;
-$tablet-lg: 1199.98px;
+$tablet-lg: 1303.98px;
 $tablet-pro: 992px;
 $tablet: 991.98px;
 $tablet-sm: 768px;
@@ -266,16 +266,46 @@ $mobile: 767.98px;
 
 .spz_1003 .footer-main .copy-rights p {
   flex: 1 0 auto;
+  order: 1;
+  a.web_logo{
+    display: none;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links {
-  order: 3;
+  order: 2;
   line-height: 22px;
-  margin-left: 46px;
+  margin-right: 45px;
+  ul{
+    margin: 0 -20px;
+  }
+  @include tablet(){
+    order: 3;
+    margin-right: 0;
+    margin-left: 24px;
+    ul{
+      margin: 0 -11px;
+    }
+  }
+  @include mobile(){
+    margin: 8.5px 0 0!important;
+    width: 100%;
+    ul{
+      display: flex;
+      justify-content: center;
+      margin: 0 -16px;
+    }
+  }
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links ul li {
-  padding: 0;
+  padding: 0 20px;
+  @include tablet(){
+    padding: 0 11px;
+  }
+  @include mobile(){
+    padding: 0 16px;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links ul li a:not(:hover) {
@@ -291,6 +321,14 @@ $mobile: 767.98px;
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
+  order: 3;
+  @include tablet(){
+    order: 2;
+    margin-right: 0;
+  }
+  @include mobile(){
+    margin: 9px auto 0!important;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights button#hs_show_banner_button:hover {
@@ -540,6 +578,14 @@ $mobile: 767.98px;
   padding-bottom: 0 !important;
 }
 
+.spz_1003 .hero_section .gform_fields:has(.gfield.gfield_visibility_visible#field_3_18 #input_3_18[disabled="disabled"]) {
+  .gfield.gfield_visibility_visible{
+    &#field_3_35{
+      max-width: 100%;
+    }
+  }
+}
+
 .spz_1003 .hero_section .gform_fields #field_3_7,
 .spz_1003 .hero_section .gform_fields #field_3_10,
 .spz_1003 .hero_section .gform_fields #field_3_25,
@@ -577,6 +623,12 @@ $mobile: 767.98px;
   left: 12px;
   padding: 0 5px;
   background-color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include tablet-pro(){
+    max-width: 97%;
+  }
 }
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible:has(select):not(.active) label {
@@ -657,7 +709,6 @@ $mobile: 767.98px;
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible#field_3_18 {
   flex: 1;
-  max-width: 100%;
 }
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible#field_3_8 {

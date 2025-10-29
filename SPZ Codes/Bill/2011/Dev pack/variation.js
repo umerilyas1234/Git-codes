@@ -1,0 +1,437 @@
+// Variant 2011
+const bodyInterval2011 = setInterval(function () {
+	if (document.querySelector('body') && !document.querySelector('.spz_2011')) {
+		clearInterval(bodyInterval2011)
+		document.querySelector('body').classList.add("spz_2011")
+		localStorage.setItem('bdcAbTest9', '2011-v1');
+
+		const loadJS = (url, implementationCode, location) => {
+			var scriptTag = document.createElement('script');
+			scriptTag.src = url;
+			scriptTag.onload = implementationCode;
+			scriptTag.onreadystatechange = implementationCode;
+
+			location.appendChild(scriptTag);
+		};
+		const gb_load_css = (path) => {
+			let css = document.createElement('link');
+			css.rel = 'stylesheet';
+			css.media = 'all';
+			css.href = path;
+
+			document.getElementsByTagName('head')[0].appendChild(css);
+		}
+		gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
+
+
+		document.querySelector('.testimonial-slider').closest('.background-color-grey-200').classList.add('spz_hidden');
+		document.querySelector('.is-stats').closest('section').classList.add('spz_hidden');
+		document.querySelector('.spz_hidden').insertAdjacentHTML('afterend', `
+      <div class="slider_wrapper">
+        <div class="slider_heading">
+          <h2>Customers succeed with BILL</h2>
+        </div>
+        <section class="splide splide2011 testimonial_slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-clif-family-winery.webp"
+                      alt="Linzi Gay">
+                  </div>
+                  <div class="slider_dataMain">
+                    <h3>Customer Story</h3>
+                    <p>“Overall, I would estimate that BILL has increased efficiency in our office by 20%, and personally
+                      saved me a significant amount of time.”</p>
+                    <strong>Linzi Gay, President</strong>
+                    <span>Clif Family Winery</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-case-study-clif-family" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1" 
+                          data-video="https://fast.wistia.net/embed/iframe/qsi0yzwcu7?autoplay=1&muted=1"
+                          data-bg="preview-clif-family-winery.webp"
+                          data-client="Clif Family Winery"
+                          data-percentage=" 20% efficiency increase"
+                          >
+                          <img src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"  alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-bear-robotics.webp"
+                      alt="Juan Higueros">
+                  </div>
+                  <div class="slider_dataMain">
+                    <h3>Customer Story</h3>
+                    <p>“Being able to see the detail behind each invoice and have the proper approvals in place has been a savior for us, for sure.”</p>
+                    <strong>Juan Higueros, Chief Operating Officer</strong>
+                    <span>Bear Robotics</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-success-story-bear-robotics" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2Fjwvge9s02n&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2Fjwvge9s02n%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F8c1d8537a46e34b95ba2e6e060d184519ab8dcc7.jpg%3Fimage_crop_resized%3D640x360&type=text%2Fhtml&schema=wistia&wvideo=jwvge9s02n"
+                            data-bg="preview-bear-robotics.webp"
+                            data-client="Bear Robotics"
+                            data-percentage="67% faster close"
+                          ><img
+                              src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
+                              alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-bare-bones.webp"
+                      alt="Ryan Harvey">
+                  </div>
+                  <div class="slider_dataMain">
+                    <h3>Customer Story</h3>
+                    <p>“Payables went from being my whole job, probably 30 hours a week just managing stacks of paper, to maybe 5 hours a week.”</p>
+                    <strong>Ryan Harvey, Co-founder</strong>
+                    <span>Bare Bones</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-success-story-bare-bones-broth" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2F3lt7m3bjs1&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2F3lt7m3bjs1%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Feef6794833bd32891a0a1f2c036e9b8ff5d81cd9.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=3lt7m3bjs1"
+                            data-bg="preview-bare-bones.webp"
+                            data-client="Bare Bones"
+                            data-percentage="significant time savings"
+                          ><img
+                              src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
+                              alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-golden-ratio.webp"
+                      alt="Clark Nowlin">
+                  </div>
+                  <div class="slider_dataMain wid_3">
+                    <h3>Customer Story</h3>
+                    <p>“My favorite part of BILL is its seamless integration of QuickBooks. Being a remote business, BILL is essential. It's the hub for our whole company.”</p>
+                    <strong>Clark Nowlin, Founder</strong>
+                    <span>Golden Ratio</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-case-study-golden-ratio" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
+                            data-video="https://fast.wistia.net/embed/iframe/ktnw1ol7mz?autoplay=1&muted=1"
+                            data-bg="preview-golden-ratio.webp"
+                            data-client="Golden Ratio"
+                            data-percentage="80% faster payables"
+                          ><img
+                              src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
+                              alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-wag.webp"
+                      alt="Alec Davidian">
+                  </div>
+                  <div class="slider_dataMain">
+                    <h3>Customer Story</h3>
+                    <p>“BILL is a great tool. Taking advantage of all its features became a key part of transforming the company.”</p>
+                    <strong>Alec Davidian, Chief Financial Officer</strong>
+                    <span>Wag</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-success-story-wag" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2Fhvvbvpx8lo&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2Fhvvbvpx8lo%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F23574dbc2669530a00f1a4e6aa2783d9dce8fdb6.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=hvvbvpx8lo"
+                            data-bg="preview-wag.webp"
+                            data-client="Wag"
+                            data-percentage="80% faster close"
+                          ><img
+                              src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
+                              alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="slider_data">
+                  <div class="slider_image">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/bg-generation-teach.webp"
+                      alt="Bee Nance">
+                  </div>
+                  <div class="slider_dataMain wid_2">
+                    <h3>Customer Story</h3>
+                    <p>“Generation Teach combines my skills in accounting with my love of community. For me it's <br> not just a job to make money but a way to bring people together to learn, grow, and develop.”</p>
+                    <strong>Bee Nance, Chief Operating Officer</strong>
+                    <span>Generation Teach</span>
+                    <div class="slider_btns">
+                      <ul>
+                        <li>
+                          <a href="https://www.bill.com/case-study/customer-success-story-generation-teach" class="slider_btn spz_2011_v1 read_story">Read Story</a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0);" class="slider_btn light video_btn spz_2011_v1"
+                            data-video="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Ffast.wistia.net%2Fembed%2Fiframe%2F1s8hkqa693&display_name=Wistia%2C%2BInc.&url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fmedias%2F1s8hkqa693%2Fswatch&image=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Fd16dfb3f68d424fb7e1b86147091817d42fcd626.jpg%3Fimage_crop_resized%3D960x540&type=text%2Fhtml&schema=wistia&wvideo=1s8hkqa693"
+                            data-bg="preview-generation-teach.webp"
+                            data-client="Generation Teach"
+                            data-percentage="90% faster payment processing"
+                          ><img
+                              src="//res.cloudinary.com/spiralyze/image/upload/v1741351828/bill/2011/icon-play-outline.svg"
+                              alt="Play icon"> Watch Video</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="join_us">
+        <div class="auto_container">
+          <div class="join_usInner">
+            <div class="join_left">
+              <h2>Join the growing number of businesses that trust BILL</h2>
+              <p><strong>* As of June 30, 2024.</strong> ** Based on a survey of 127 BILL Spend and Expense users conducted by UserEvidence in March 2022.</p>
+            </div>
+            <div class="join_right">
+              <div class="join_list">
+                <ul>
+                  <li>
+                    <div class="join_data">
+                      <strong>7.1M</strong>
+                      <p>Total network members <br> pay or get paid with BILL*</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="join_data">
+                      <strong>12 hrs</strong>
+                      <p>Average monthly time savings <br> by surveyed users**</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="join_data">
+                      <strong>$10K+</strong>
+                      <p>Average monthly savings <br> by surveyed users**</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="join_data">
+                      <strong>$300B+</strong>
+                      <p>In total payment volume <br> on an annual basis*</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <p><strong>* As of June 30, 2024.</strong> ** Based on a survey of 127 BILL Spend and Expense users conducted by UserEvidence in March 2022.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup_wrapper"> 
+        <div class="modal_inner">
+          <div class="video_container">
+            <a class="modal_close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#797C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <div class="play_button" id="videoWrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none">
+                <path d="M12 6.26795C13.3333 7.03775 13.3333 8.96225 12 9.73205L3 14.9282C1.66667 15.698 -7.31543e-07 14.7358 -6.64245e-07 13.1962L-2.09983e-07 2.80385C-1.42685e-07 1.26425 1.66667 0.301995 3 1.0718L12 6.26795Z" fill="#111111"></path>
+              </svg>
+            </div>
+            <iframe id="videoPlayer" allow="autoplay; fullscreen" autoplay="1" muted="1" frameborder="0" 
+            scrolling="no" playsinline">
+            </iframe>
+          </div>
+          <div class="modal_footer">
+            <p></p>
+            <a href="https://www.bill.com/signup" class="modal_footerBtn button is-cta-small w-inline-block spz_2011_v1">Get Started</a>
+          </div>
+        </div>
+      </div>
+    `);
+
+		const popup = document.querySelector(".popup_wrapper");
+		const popup_outer = document.querySelector(".video_container");
+		const modalFooter_text = document.querySelector(".modal_footer p");
+		var video = popup_outer.querySelector("iframe");
+		const playBtn = document.querySelector('.play_button');
+		let currentVideoId = "";
+
+		window.addEventListener('click', function (e) {
+			if (e.target.classList.contains('video_btn')) {
+				const videoId = e.target.getAttribute("data-video");
+				currentVideoId = videoId;
+				const bg = e.target.getAttribute("data-bg");
+				const client = e.target.getAttribute("data-client");
+				const percentage = e.target.getAttribute("data-percentage");
+
+				popup_outer.style.background = `url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bill/2011/${bg})`;
+				popup_outer.style.backgroundSize = "cover";
+				popup_outer.style.backgroundPosition = "center";
+
+				modalFooter_text.innerHTML = `${client} achieved <strong>${percentage}</strong> with BILL`;
+
+				// Show Popup
+				popup.classList.add("visible");
+				document.querySelector('body').classList.add('no_scroll');
+			}
+
+			if (e.target.classList.contains('play_button')) {
+				e.target.classList.add('hide');
+				video.style.display = 'flex';
+				video.src = `${currentVideoId}`;
+				video.play();
+			}
+
+			if (e.target.classList.contains('modal_close')) {
+				playBtn.classList.remove('hide');
+				video.style.display = 'none';
+				video.src = '';
+				document.querySelector('.popup_wrapper').classList.remove('visible');
+				document.querySelector('body').classList.remove('no_scroll');
+			}
+		});
+
+		loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
+
+			const slider = new Splide(".testimonial_slider", {
+				type: "loop",
+				rewind: true,
+				focus: "center",
+				perPage: 1.34795,
+				slidperMove: 1,
+				clones: 4,
+				gap: "32px",
+				breakpoints: {
+					2560: {
+						perPage: 1.9754,
+						gap: "32px",
+					},
+					1920: {
+						perPage: 1.48854,
+						gap: "32px",
+					},
+					1440: {
+						perPage: 1.34800,
+						gap: "32px",
+					},
+					1023: {
+						perPage: 1.10854,
+						gap: "16.4px",
+					},
+					767: {
+						perPage: 1,
+						gap: "18px",
+					},
+				},
+				autoWidth: false,
+				arrows: true,
+				pagination: false,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				interval: 5000,
+				speed: 1000,
+				easing: "linear",
+				pauseOnHover: false,
+				pauseOnFocus: false,
+				drag: true,
+				direction: 'ltr',
+			});
+
+			let userInteracted = false;
+
+			function stopAutoplay() {
+				userInteracted = true;
+				slider.Components.Autoplay.pause();
+			}
+
+			// Observer to detect when `.testimonial_slider` is in view
+			var observer = new IntersectionObserver(
+				function (entries) {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							slider.Components.Autoplay.play();
+						} else {
+							slider.Components.Autoplay.pause();
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			);
+
+			observer.observe(document.querySelector('.testimonial_slider'));
+
+			slider.mount();
+			// Stop autoplay when user interacts
+			window.addEventListener('click', function (e) {
+				if (e.target.closest("splide__slide") || e.target.classList.contains("splide__arrow") || e.target.closest('.testimonial_slider')) {
+					stopAutoplay();
+				}
+				if (e.target.classList.contains('read_story') || e.target.closest('.read_story')) {
+					localStorage.setItem("scrollToSlider", "true");
+				}
+			});
+
+			// Add drag event listeners to stop autoplay when user drags
+			slider.on('drag', function () {
+				stopAutoplay();
+			});
+
+			slider.on('dragged', function () {
+				stopAutoplay();
+			});
+
+			window.addEventListener("load", function () {
+				if (localStorage.getItem("scrollToSlider") === "true") {
+					const section = document.querySelector(".slider_wrapper");
+					if (section) {
+						section.scrollIntoView({ behavior: "smooth", block: "start" });
+					}
+					localStorage.removeItem("scrollToSlider");
+				}
+			});
+
+		}, document.body);
+
+	}
+}, 10)

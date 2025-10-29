@@ -63,6 +63,14 @@ $mobile: 767px;
       .card-0 {
         order: 3;
       }
+      @media only screen and (min-width: 960px) and (max-width: 1299px) {
+        display: flex;
+        flex-direction: row-reverse;
+        min-width: 1250px;
+        .card-0, .card-1, .card-2 {
+          order: initial;
+        }
+      }
     }
   }
 

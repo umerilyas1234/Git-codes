@@ -1,0 +1,679 @@
+@font-face {
+  font-family: "Sofia Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Sofia Pro Regular"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Regular_Az.woff") format("woff");
+}
+@font-face {
+  font-family: "Sofia Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Sofia Pro Light"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Light_Az.woff") format("woff");
+}
+@font-face {
+  font-family: "Sofia Pro Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Sofia Pro Medium"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Medium_Az.woff") format("woff");
+}
+@font-face {
+  font-family: "Sofia Pro SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Sofia Pro SemiBold"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Semi_Bold_Az.woff") format("woff");
+}
+@font-face {
+  font-family: "Sofia Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Sofia Pro Bold"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Sofia_Pro_Bold_Az.woff") format("woff");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-Light.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-ExtraLight.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/f_auto/oncourse/fonts/Manrope-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+.spz_1014_v1 .awr-home__render-components > .awr-stats-banner,
+.spz_1014_v1 .awr-home__render-components > .awr-partnership-carousel__container,
+.spz_1014_v1 .awr-home__render-components > .awr-jumbotron,
+.spz_1014_v1 .awr-home__render-components > .awr-rich-text-section,
+.spz_1014_v1 .awr-home__render-components > .awr-section-with-cards,
+.spz_1014_v1 .awr-home__render-components > .awr-flow,
+.spz_1014_v1 .awr-home__render-components > .awr-reviews-carousel,
+.spz_1014_v1 .awr-home__render-components > .flex {
+  display: none;
+}
+.spz_1014_v1 .spz_hero {
+  background-color: #fff;
+}
+.spz_1014_v1 .spz_heroInner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.spz_1014_v1 .hero_left {
+  width: 52.65%;
+  background: #0364D8;
+  padding: 47px 30px 117px 94.5px;
+}
+.spz_1014_v1 .spz_heroData {
+  max-width: 465px;
+  position: relative;
+  z-index: 1;
+}
+.spz_1014_v1 .spz_heroData figure {
+  display: block;
+  margin-bottom: 25px;
+}
+.spz_1014_v1 .spz_heroData figure img {
+  display: block;
+  width: 120px;
+}
+.spz_1014_v1 .spz_heroData h1 {
+  color: #FFF;
+  font-family: "Sofia Pro Regular";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  margin-bottom: 15.5px;
+}
+.spz_1014_v1 .spz_heroData h1 strong {
+  display: block;
+  font-family: "Sofia Pro Bold";
+  font-weight: 900;
+  letter-spacing: 0.22px;
+  margin-top: 1px;
+}
+.spz_1014_v1 .spz_heroData p {
+  color: #fff;
+  font-family: "Sofia Pro Regular";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .hero_right {
+  width: 47.35%;
+  position: relative;
+}
+.spz_1014_v1 .hero_right::after {
+  content: "";
+  position: absolute;
+  left: -331px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1760979005/oncourse/1014/roofline_3_b_5.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.spz_1014_v1 .hero_right figure {
+  display: block;
+}
+.spz_1014_v1 .hero_right figure img {
+  display: block;
+  width: 100%;
+}
+.spz_1014_v1 .hero_form {
+  max-width: 878px;
+  height: 126px;
+  margin: auto;
+  display: flex;
+  width: 878px;
+  padding: 30px 31px 31px;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(24, 24, 21, 0.15);
+  background: #F5F5F4;
+  box-shadow: 0 4px 16px 0 rgba(24, 24, 21, 0.1);
+  position: relative;
+  z-index: 2;
+  margin-top: -62px;
+}
+.spz_1014_v1 .form_heading {
+  margin-top: 6px;
+}
+.spz_1014_v1 .form_heading h3 {
+  color: #181815;
+  font-family: "Sofia Pro Light";
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 29px;
+  white-space: nowrap;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan {
+  border: none;
+  background: transparent;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__tabs-container {
+  display: none;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__zipcode-container > .w-full > .pointer-events-none {
+  padding-left: 16.5px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__zipcode-container > .w-full > .pointer-events-none svg.h-5 {
+  display: none;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper {
+  padding: 0;
+  border: none;
+  background: transparent;
+  gap: 24px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper input#zip-code {
+  width: 186px;
+  height: 63px;
+  border-radius: 8px;
+  padding: 16px 30px 14px 49px;
+  border: 1px solid #D3D4C5;
+  background: #FFF;
+  color: #5A5A4F;
+  font-family: "Sofia Pro Light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper .placeholder-awr-dark-gray-300::-moz-placeholder {
+  color: #5A5A4F !important;
+  font-family: "Sofia Pro Light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper .placeholder-awr-dark-gray-300::placeholder {
+  color: #5A5A4F !important;
+  font-family: "Sofia Pro Light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper .awr-find-your-protection-plan__input-error {
+  margin-top: -23.12px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] {
+  border-radius: 8px;
+  background: #0364D8;
+  height: 62px;
+  width: 165px;
+  padding: 20px 20px;
+  justify-content: space-between;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] > .flex {
+  padding: 0;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__call-to-action {
+  gap: 21px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__call-to-action p {
+  color: #F5F5F4;
+  text-align: center;
+  font-family: "Sofia Pro Medium";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__arrow-right svg {
+  width: 12px;
+  height: 12px;
+  fill: #FFE36C;
+}
+.spz_1014_v1 .zipCode_form .awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__arrow-right svg path {
+  fill: #FFE36C;
+  stroke: #FFE36C;
+}
+.spz_1014_v1 .our_journey {
+  padding: 54px 0 71.5px;
+  background: #fff;
+}
+.spz_1014_v1 .auto_container {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 20px;
+}
+.spz_1014_v1 .journey_list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.spz_1014_v1 .journey_list ul li {
+  width: auto;
+}
+.spz_1014_v1 .journery_data {
+  text-align: center;
+}
+.spz_1014_v1 .journery_data span {
+  display: block;
+  margin-bottom: 8px;
+}
+.spz_1014_v1 .journery_data span img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: auto;
+}
+.spz_1014_v1 .journery_data strong {
+  display: block;
+  color: #0364D8;
+  text-align: center;
+  font-family: "Sofia Pro Medium";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 5px;
+}
+.spz_1014_v1 .journery_data p {
+  color: #181815;
+  text-align: center;
+  font-family: "Sofia Pro Regular";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  max-width: 125px;
+  margin: auto;
+}
+.spz_1014_v1 .journery_data figure {
+  display: block;
+  width: 161.765625px;
+  height: 113px;
+}
+.spz_1014_v1 .journery_data figure img {
+  display: block;
+  width: 100%;
+}
+.spz_1014_v1 .spz_heading {
+  position: relative;
+}
+.spz_1014_v1 .spz_heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  height: 15px;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1761647384/oncourse/1014/visual.svg");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: right;
+}
+.spz_1014_v1 .spz_heading .auto_container {
+  position: relative;
+  z-index: 1;
+}
+.spz_1014_v1 .spz_plans {
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+.spz_1014_v1 .heading_content h2 {
+  color: #181815;
+  font-family: "Sofia Pro Light";
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 12px;
+  padding: 0 12px;
+  background-color: #fff;
+}
+.spz_1014_v1 .heading_content h2 strong {
+  display: contents;
+  color: #0364D8;
+  font-family: "Sofia Pro SemiBold";
+  font-weight: 600;
+}
+.spz_1014_v1 .heading_content p {
+  color: #181815;
+  font-family: "Sofia Pro Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .spz_1014_v1 .plan_slider {
+    visibility: visible;
+  }
+  .spz_1014_v1 .plan_slider .splide__track > ul {
+    display: flex;
+    margin: 0 -12.5px;
+  }
+  .spz_1014_v1 .plan_slider .splide__track > ul > li {
+    width: 33.33%;
+    padding: 0 12.5px;
+  }
+}
+.spz_1014_v1 .plan_listMain {
+  margin: 0 -39.5px;
+}
+.spz_1014_v1 .plans_list .splide__track {
+  padding: 131px 0 53px;
+}
+.spz_1014_v1 .plans_data {
+  position: relative;
+  padding: 70.5px 20px 41.4px 27px;
+  border-radius: 0 24px;
+  box-shadow: 0 4px 16px 0 rgba(24, 24, 21, 0.1);
+  background: var(--surface-surface-secondary, #F5F5F4);
+  border: 1px solid rgba(24, 24, 21, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.spz_1014_v1 .popular_plan {
+  position: absolute;
+  top: -42px;
+  right: 27.5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 99px;
+}
+.spz_1014_v1 .popular_plan span {
+  width: 81px;
+  height: 80px;
+  margin-bottom: 4.5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.spz_1014_v1 .popular_plan span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(24, 24, 21, 0.15);
+  z-index: 1;
+  border-radius: 50%;
+}
+.spz_1014_v1 .popular_plan span img {
+  display: inline-block;
+}
+.spz_1014_v1 .popular_plan strong {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #9F3B09;
+  font-family: "Sofia Pro Medium";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+.spz_1014_v1 .plan_dataTop h2 {
+  color: #393939;
+  font-family: "Sofia Pro Light";
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 34.2px;
+  margin-bottom: 24px;
+}
+.spz_1014_v1 .plan_dataTop > span {
+  display: block;
+  color: #181815;
+  font-family: "Sofia Pro Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 13px;
+}
+.spz_1014_v1 .plan_dataTop ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 15px;
+}
+.spz_1014_v1 .plan_dataTop ul li {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+.spz_1014_v1 .plan_dataTop ul li:last-child {
+  margin-bottom: 0;
+}
+.spz_1014_v1 .plan_dataTop ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -1.5px;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'><path d='M7.29324 13.5C7.0974 13.5008 6.90902 13.418 6.7684 13.2693L3.22646 9.51972C3.15587 9.44453 3.09954 9.3549 3.06069 9.25596C3.02184 9.15702 3.00124 9.0507 3.00005 8.94307C2.99766 8.7257 3.07452 8.5162 3.21372 8.36065C3.35291 8.2051 3.54305 8.11625 3.74229 8.11365C3.94154 8.11104 4.13357 8.19489 4.27615 8.34674L7.29624 11.5426L13.7233 4.73293C13.8661 4.58107 14.0583 4.4973 14.2577 4.50007C14.4571 4.50283 14.6473 4.59189 14.7865 4.74765C14.9257 4.90341 15.0025 5.11312 14.9999 5.33064C14.9974 5.54816 14.9158 5.75568 14.773 5.90754L7.81809 13.2693C7.67747 13.418 7.48909 13.5008 7.29324 13.5Z' fill='%23137DFC'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+}
+.spz_1014_v1 .plan_dataTop ul li p {
+  color: #181815;
+  font-family: "Sofia Pro Light";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+}
+.spz_1014_v1 .plan_dataTop strong {
+  display: block;
+  color: #181815;
+  font-family: "Sofia Pro Medium";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  padding-left: 27px;
+}
+.spz_1014_v1 .plan_dataBottom {
+  padding-left: 9px;
+}
+.spz_1014_v1 .plan_dataBottom a {
+  display: flex;
+  color: #0364D8;
+  font-family: "Sofia Pro Medium";
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.spz_1014_v1 .plan_dataBottom a img {
+  display: block;
+  width: 13px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 5px;
+}
+.spz_1014_v1 .plan_dataBottom a:hover {
+  color: #024FAB;
+}
+.spz_1014_v1 .plan_dataBottom a:hover img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(95%) saturate(3000%) hue-rotate(205deg);
+}
+.spz_1014_v1 .plan_dataBottom a:focus {
+  color: #02418D;
+}
+.spz_1014_v1 .plan_dataBottom a:focus img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(83%) saturate(3873%) hue-rotate(206deg) brightness(95%) contrast(101%);
+}
+.spz_1014_v1 .form_title {
+  padding-bottom: 24.5px;
+}
+.spz_1014_v1 .form_title h2 {
+  text-align: center;
+  color: #181815;
+  text-align: center;
+  font-family: "Sofia Pro Light";
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 29px;
+}
+.spz_1014_v1 .custom_formMain {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.spz_1014_v1 .custom_formMain input {
+  display: flex;
+  width: 186px;
+  height: 62px;
+  padding: 16px 16px 16px 47px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #D3D4C5;
+  background: #FFF;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1760979054/oncourse/1014/atomiconformlocation-dot.svg");
+  background-position: 15px;
+  background-repeat: no-repeat;
+  background-size: 16px 20px;
+  color: #393939;
+  font-family: "Sofia Pro Light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  transition: all 0.3s ease;
+}
+.spz_1014_v1 .custom_formMain input:hover, .spz_1014_v1 .custom_formMain input:active, .spz_1014_v1 .custom_formMain input:focus {
+  border-color: #393939;
+  outline: none;
+  box-shadow: none;
+}
+.spz_1014_v1 .custom_formMain input::-webkit-input-placeholder, .spz_1014_v1 .custom_formMain input::-moz-placeholder {
+  color: #5A5A4F !important;
+  font-family: "Sofia Pro Light";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .custom_formMain input::-webkit-inner-spin-button, .spz_1014_v1 .custom_formMain input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.spz_1014_v1 .custom_btn {
+  display: flex;
+  width: 165px;
+  height: 62px;
+  padding: 25px 20px;
+  justify-content: center;
+  align-items: center;
+  color: #F5F5F4;
+  text-align: center;
+  font-family: "Sofia Pro Medium";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  border-radius: 8px;
+  background: #0364D8;
+  gap: 21px;
+  transition: all 0.3s ease;
+}
+.spz_1014_v1 .custom_btn:hover {
+  background: #024FAB;
+}
+.spz_1014_v1 .custom_btn:active, .spz_1014_v1 .custom_btn:focus {
+  background: #02418D;
+}
+.spz_1014_v1 .custom_btn img {
+  width: 12px;
+  display: block;
+}
+.spz_1014_v1 .our_values {
+  background: #F5F4EC;
+  padding: 64px 0;
+}
+.spz_1014_v1 .our_values .heading_content {
+  padding-bottom: 64px;
+}
+.spz_1014_v1 .our_values .heading_content h2 {
+  background: #F5F4EC;
+}
+.spz_1014_v1 .our_values .heading_content p {
+  max-width: 600px;
+  margin: auto;
+}
+.spz_1014_v1 .values_list {
+  padding-bottom: 40px;
+}
+.spz_1014_v1 .values_list ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -32px;
+}
+.spz_1014_v1 .values_list ul li {
+  width: 50%;
+  padding: 0 32px 24px;
+}
+.spz_1014_v1 .value_data {
+  display: flex;
+  align-items: center;
+}
+.spz_1014_v1 .value_data span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.spz_1014_v1 .value_data span img {
+  width: auto;
+  display: inline-block;
+}
+.spz_1014_v1 .value_data small {
+  display: block;
+  padding-left: 24px;
+}
+.spz_1014_v1 .value_data small strong {
+  display: block;
+  color: #171A1F;
+  font-family: "Sofia Pro SemiBold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.spz_1014_v1 .value_data small p {
+  color: #171A1F;
+  font-family: "Sofia Pro Regular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.spz_1014_v1 .value_bottom {
+  text-align: center;
+}
+.spz_1014_v1 .value_bottom figure {
+  display: block;
+  margin: 0 auto 48px;
+}
+.spz_1014_v1 .value_bottom figure img {
+  width: 226px;
+  display: block;
+}
+.spz_1014_v1 .value_bottom span {
+  display: block;
+  color: #0364D8;
+  text-align: center;
+  font-family: "Sofia Pro Medium";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 64px;
+}/*# sourceMappingURL=styles.css.map */

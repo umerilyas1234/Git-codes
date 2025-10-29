@@ -179,7 +179,7 @@ const bodyInterval13004 = setInterval(function () {
       src="https://res.cloudinary.com/spiralyze/video/upload/v1756210732/bamboohr/13004/assets/Animations/Animation_3_Left.mp4"
       type="video/mp4" />
   </video>
-  <div class="title"><strong>150+</strong> businesses,<span class="tablet-break"></span> from startups to enterprises
+  <div class="title"><strong>34,000+</strong> businesses,<span class="tablet-break"></span> from startups to enterprises
   </div>
   <div class="tabs-custom-wrapper">
     <div class="tabs-custom-header">
@@ -567,7 +567,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
@@ -617,7 +617,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
@@ -668,7 +668,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
@@ -719,7 +719,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
@@ -770,7 +770,7 @@ const bodyInterval13004 = setInterval(function () {
                     </p>
                   </div>
                   <div class="cta_outer">
-                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get My Demo</button>
+                    <button class="custom_cta spz13004_v1 get_demoCta outline">Get a Demo</button>
                   </div>
                 </div>
               </div>
@@ -828,7 +828,7 @@ const bodyInterval13004 = setInterval(function () {
         <div class="cta_list">
           <ul>
             <li>
-              <button href="javascript:void(0);" class="custom_cta get_demoCta spz13004_v1 outline">Get My Demo</button>
+              <button href="javascript:void(0);" class="custom_cta get_demoCta spz13004_v1 outline">Get a Demo</button>
             </li>
           </ul>
         </div>
@@ -898,7 +898,7 @@ const bodyInterval13004 = setInterval(function () {
     <div class="get_startedInner">
       <h2>Get Started with BambooHR® Today</h2>
       <div class="cta_outer">
-        <button href="javascript:void(0);" class="custom_cta spz13004_v1 get_demoCta">Get My Demo</button>
+        <button href="javascript:void(0);" class="custom_cta spz13004_v1 get_demoCta">Get a Demo</button>
       </div>
     </div>
   </div>
@@ -1496,9 +1496,9 @@ const bodyInterval13004 = setInterval(function () {
         document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
       }
       document.querySelector('body').classList.remove("hidden")
-      if(document.querySelector('.hero-section-11002')){
-        document.querySelector('.hero-section-11002').classList.remove("hidden")
-      }
+      // if(document.querySelector('.hero-section-11002.hidden')){
+      //   document.querySelector('.hero-section-11002').classList.remove("hidden")
+      // }
     })
 
     let waitforFooter = setInterval(() => {
@@ -1544,7 +1544,7 @@ const bodyInterval13004 = setInterval(function () {
       if (e.target.classList.contains("button-close-2")) {
         document.querySelector('.spz-11002-popup-wrapper').classList.remove("show")
         document.querySelector('body').classList.remove("hidden")
-        document.querySelector('.hero-section-11002').classList.remove("hidden")
+        // document.querySelector('.hero-section-11002').classList.remove("hidden")
       }
     });
 

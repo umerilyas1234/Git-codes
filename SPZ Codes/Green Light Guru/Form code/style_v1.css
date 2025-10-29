@@ -1,0 +1,351 @@
+.spz_3007_v .container .left,
+.spz_3007_v .top-phone-number,
+.spz_3007_v .form-wrapper h2,
+.spz_3007_v div[id*=footer],
+iframe#q-messenger-frame {
+    display: none;
+}
+
+body.spz_3007_v {
+    margin: 0;
+    padding: 50px 12px;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/greenlightguru/2001/desktop.webp');
+    background-position: left top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.spz_3007_v main {
+    width: 100%;
+    margin: auto;
+}
+
+.spz_3007_v main section {
+    margin: 0;
+}
+
+.spz_3007_v main div.container { /* add separate to make strong selector */
+    max-width: 616px;
+	width: 100%;
+    padding: 0;
+}
+
+.spz_3007_v main .container .right {
+    background: linear-gradient(44.22deg, rgba(2, 181, 235, 0.4) 0%, rgba(122, 52, 232, 0.4) 100%);
+    border-radius: 20px;
+    width: 100%;
+    padding: 8px;
+}
+
+.spz_3007_v main .form-wrapper {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    transition: none !important;
+}
+
+.spz_3007_v .form-wrapper .form-title {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 800;
+    letter-spacing: 0.25px;
+    text-align: center;
+    margin-top: -1px;
+    margin-bottom: 25px;
+}
+
+/* Form CSS */
+.spz_3007_v main form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.spz_3007_v span.hs-form-required {
+    display: none;
+}
+
+.spz_3007_v main form fieldset {
+    max-width: 100%;
+    width: 100%;
+}
+
+.spz_3007_v main form fieldset:has(.hs_email) ul:has(label:not(.hs-error-msg)) {
+    display: none;
+}
+
+.spz_3007_v main form fieldset.form-columns-2 {
+    gap: 16px;
+}
+
+.spz_3007_v main form fieldset .input {
+    position: relative;
+    max-width: 100%;
+    margin: 0 !important;
+}
+
+.spz_3007_v main form input.hs-input, 
+.spz_3007_v main form select.hs-input {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: normal;
+    height: 48px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #89908E;
+    background-color: #fff;
+    width: 100% !important;
+    outline: none;
+    color: #303735;
+    margin-bottom: 16px !important;
+}
+
+.spz_3007_v main form input.hs-input:-webkit-autofill,
+.spz_3007_v main form input.hs-input:-webkit-autofill:hover, 
+.spz_3007_v main form input.hs-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset!important;
+    transition: background-color 5000s ease-in-out 0s!important;
+}
+
+.spz_3007_v main form select.hs-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M7.88725 12C7.7717 11.9995 7.6574 11.9761 7.55096 11.9311C7.44453 11.8861 7.34808 11.8204 7.26719 11.7378L1.08413 5.48778C0.920837 5.32434 0.829102 5.10266 0.829102 4.87152C0.829102 4.64038 0.920837 4.4187 1.08413 4.25526C1.24742 4.09182 1.46889 4 1.69981 4C1.93074 4 2.15221 4.09182 2.3155 4.25526L7.87851 9.87588L13.3367 4.29023C13.6773 3.94932 14.2275 3.94058 14.5681 4.27274C14.9087 4.61365 14.9174 5.16435 14.5856 5.50526L8.5073 11.7203C8.42642 11.8029 8.32997 11.8686 8.22353 11.9136C8.11709 11.9586 8.00279 11.982 7.88725 11.9825V12Z' fill='%235555E7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 11px top 15px;
+    background-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    padding-right: 30px;
+}
+
+.spz_3007_v main form .hs-fieldtype-intl-phone select {
+    max-width: 88px !important;
+    text-overflow: ellipsis;
+    flex: 1 0 auto;
+    padding-right: 30px;
+    margin-right: 8px !important;
+}
+
+.spz_3007_v main form fieldset.row-hidden {
+    display: none;
+}
+
+.spz_3007_v main form fieldset.row-hidden + fieldset:has(.hs_email) {
+    width: 100%;
+}
+
+.spz_3007_v main form fieldset .hs-form-field {
+    position: relative;
+}
+
+.spz_3007_v main form fieldset .hs-form-field > label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #6B7270;
+    letter-spacing: normal;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 50px);
+    transition: all 0.3s ease-in-out 0s;
+    z-index: 1;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.focus > label,
+.spz_3007_v main form fieldset .hs-form-field.hs_phone > label {
+    top: -8px;
+    background-color: #fff;
+    padding: 0 5px;
+    left: 8px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #303735;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.hs_phone:has(.hs-error-msgs) > label {
+    color: #303735;
+}
+
+.spz_3007_v main form input.hs-input:hover,
+.spz_3007_v main form select.hs-input:hover {
+    border-color: #6B7270;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.typing input,
+.spz_3007_v main form fieldset .hs-form-field.typing select {border-color: #9756FF;}
+
+.spz_3007_v main form .hs-error-msgs {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -13px;
+}
+
+.spz_3007_v main form .hs_phone .hs-error-msgs {
+    margin-left: 96px;
+}
+
+.spz_3007_v main form .hs-error-msgs li {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    border: none !important;
+    list-style: none;
+    margin: 0;
+    color: #F00;
+}
+
+.spz_3007_v main form fieldset .hs-form-field:has(.hs-error-msgs) > label {
+    color: #f00;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone:has(.hs-error-msgs) > label {
+    color: #303735;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone:has(.hs-error-msgs) select,
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone.focus select {
+    border-color: #89908E;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone:has(.hs-error-msgs) select:hover,
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone.focus select:hover {
+    border-color: #6B7270;
+}
+
+.spz_3007_v main form fieldset .hs-form-field.focus.hs_phone.focus select:focus {
+    border-color: #9756FF !important;
+}
+
+.spz_3007_v main form fieldset .hs-form-field:has(.hs-error-msgs) input,
+.spz_3007_v main form fieldset .hs-form-field:has(.hs-error-msgs) select:not([id^=phone_ext]) {
+    border-color: #F00;
+}
+
+.spz_3007_v main form .hs-richtext p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #6B7270;
+    letter-spacing: 0.25px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.spz_3007_v main form .hs-richtext p a {
+    font-weight: 400;
+    color: #9756FF;
+}
+
+.spz_3007_v main form .hs-richtext p a:hover {
+    text-decoration: underline;
+}
+
+.spz_3007_v main form .hs_submit {
+    margin: 0 auto;
+}
+
+.spz_3007_v main form .hs_submit .hs-button {
+    background-color: #9756FF;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    padding: 16px 20px 14px;
+}
+
+.spz_3007_v main form .hs_submit .actions .hs-button {
+    display: none;
+}
+
+.spz_3007_v main form .hs_submit .hs-button:hover {
+    background-color: #803EE9;
+}
+
+.spz_3007_v .hs_error_rollup {
+    width: 100%;
+}
+
+.spz_3007_v .hs_error_rollup ul li label {
+    font-size: 12px !important;
+    line-height: 15px !important;
+    font-weight: 400 !important;
+    text-transform: inherit !important;
+    color: #f00 !important;
+}
+
+@media (min-width: 768px) {
+    .spz_3007_v .form-columns-1:has(select[name="dropdown_country"]):not(.hbspt-hide-field),
+    .spz_3007_v form:has(select[name="dropdown_country"]:not(.hbspt-hide-field)) .form-columns-1:has(.hs-fieldtype-intl-phone) {
+        width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 1024px) {
+    body.spz_3007_v { 
+        background-size: 1683px 100%;
+    }
+    .spz_3007_v main div.container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    body.spz_3007_v { 
+        background-size: 1683px max(1024px, 100%);
+    }
+
+    .spz_3007_v main .form-wrapper {
+        padding: 24px;
+    }
+
+    .spz_3007_v .form-wrapper .form-title {
+        margin-top: 7px;
+    }
+
+    .spz_3007_v main form fieldset:has(.hs_what_describes_your_organization_best_),
+    .spz_3007_v main form fieldset:has(.hs_email) {
+        width: 100%;
+    }
+
+    .spz_3007_v main form .hs-fieldtype-intl-phone select {
+        max-width: 88px !important;
+        margin-right: 8px !important;
+    }
+
+    .spz_3007_v main form .hs-richtext p {
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.35px;
+    }
+
+    .spz_3007_v main form .hs_submit {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .spz_3007_v main form .hs_submit .hs-button {
+        width: 100%;
+    }
+}

@@ -913,8 +913,13 @@ $mobile: 767.98px;
     width: 125px;
     height: 40px;
     letter-spacing: 0.5px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     transition: all 0.3s ease;
 
     @include mobile() {

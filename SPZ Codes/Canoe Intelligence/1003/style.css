@@ -204,16 +204,54 @@
 
 .spz_1003 .footer-main .copy-rights p {
   flex: 1 0 auto;
+  order: 1;
+}
+.spz_1003 .footer-main .copy-rights p a.web_logo {
+  display: none;
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links {
-  order: 3;
+  order: 2;
   line-height: 22px;
-  margin-left: 46px;
+  margin-right: 45px;
+}
+.spz_1003 .footer-main .copy-rights .foot-links ul {
+  margin: 0 -20px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .spz_1003 .footer-main .copy-rights .foot-links {
+    order: 3;
+    margin-right: 0;
+    margin-left: 24px;
+  }
+  .spz_1003 .footer-main .copy-rights .foot-links ul {
+    margin: 0 -11px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_1003 .footer-main .copy-rights .foot-links {
+    margin: 8.5px 0 0 !important;
+    width: 100%;
+  }
+  .spz_1003 .footer-main .copy-rights .foot-links ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 -16px;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links ul li {
-  padding: 0;
+  padding: 0 20px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .spz_1003 .footer-main .copy-rights .foot-links ul li {
+    padding: 0 11px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_1003 .footer-main .copy-rights .foot-links ul li {
+    padding: 0 16px;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights .foot-links ul li a:not(:hover) {
@@ -229,6 +267,18 @@
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
+  order: 3;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .spz_1003 .footer-main .copy-rights button#hs_show_banner_button {
+    order: 2;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_1003 .footer-main .copy-rights button#hs_show_banner_button {
+    margin: 9px auto 0 !important;
+  }
 }
 
 .spz_1003 .footer-main .copy-rights button#hs_show_banner_button:hover {
@@ -425,6 +475,10 @@
   padding-bottom: 0 !important;
 }
 
+.spz_1003 .hero_section .gform_fields:has(.gfield.gfield_visibility_visible#field_3_18 #input_3_18[disabled=disabled]) .gfield.gfield_visibility_visible#field_3_35 {
+  max-width: 100%;
+}
+
 .spz_1003 .hero_section .gform_fields #field_3_7,
 .spz_1003 .hero_section .gform_fields #field_3_10,
 .spz_1003 .hero_section .gform_fields #field_3_25,
@@ -461,6 +515,14 @@
   left: 12px;
   padding: 0 5px;
   background-color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 992px) and (max-width: 1303.98px) {
+  .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible.active label {
+    max-width: 97%;
+  }
 }
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible:has(select):not(.active) label {
@@ -540,7 +602,6 @@
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible#field_3_18 {
   flex: 1;
-  max-width: 100%;
 }
 
 .spz_1003 .hero_section .gform_fields .gfield.gfield_visibility_visible#field_3_8 {
@@ -974,7 +1035,7 @@
 .spz_1003 .logo_list ul li::before {
   display: none;
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1303.98px) {
   .spz_1003 .logo_list ul {
     justify-content: flex-start;
     gap: 32px 48px;

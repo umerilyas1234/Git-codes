@@ -1,0 +1,926 @@
+@font-face {
+  font-family: "Aktiv Grotesk Corp";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403391/airdna/3004/fonts/AktivGroteskCorp-Light.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403391/airdna/3004/fonts/AktivGroteskCorp-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aktiv Grotesk Corp";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403391/airdna/3004/fonts/AktivGroteskCorp-Bold.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403392/airdna/3004/fonts/AktivGroteskCorp-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aktiv Grotesk Corp";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403392/airdna/3004/fonts/AktivGroteskCorp-Medium.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403392/airdna/3004/fonts/AktivGroteskCorp-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aktiv Grotesk Corp";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403393/airdna/3004/fonts/AktivGroteskCorp-Regular.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1759403393/airdna/3004/fonts/AktivGroteskCorp-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --container-width: 1140px;
+  --primary-color: #3d53b6;
+  --primary-hover: rgb(63, 81, 181);
+  --text-primary: #212121;
+  --text-secondary: #666666;
+  --surface-light: #eff1fd;
+  --surface-gray: #e7e9ec;
+  --border-color: #e5e5e5;
+}
+
+.spz_3004_v1 {
+  /* Hide original content in the target section */
+  /* Main Container */
+  /* Section Heading */
+  /* Accordion Wrapper */
+  /* Accordion Items */
+  /* Progress Bar */
+  /* Arrow Icons */
+  /* Accordion Content */
+  /* CTA Buttons */
+  /* Image Panel */
+  /* Media Queries */
+}
+.spz_3004_v1 .spz-features-accordion-host > *:not(.spz-bg-wrap) {
+  display: none !important;
+}
+.spz_3004_v1 .spz-bg-wrap {
+  background: #ffffff;
+  padding: 72px 134px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.spz_3004_v1 .spz-bg-wrap .features-heading {
+  font-family: "Aktiv Grotesk Corp";
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 56px;
+  color: #190729;
+  text-align: center;
+  margin-bottom: 47.5px;
+}
+.spz_3004_v1 .spz-features-accordion__wrapper {
+  position: relative;
+  max-width: var(--container-width);
+  margin: auto;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.spz_3004_v1 .spz-features-accordion {
+  flex: 0 0 464px;
+  max-width: 464px;
+}
+.spz_3004_v1 .spz-features-accordion__item {
+  display: block;
+  padding: 24px 24px 23px;
+  border-top: 1px solid var(--border-color);
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.spz_3004_v1 .spz-features-accordion__item span {
+  color: var(--text-primary);
+  font-family: "Aktiv Grotesk Corp";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  display: block;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content:first-child .spz-features-accordion__item {
+  border-top: none;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content:last-child .spz-features-accordion__item {
+  border-bottom: 1px solid var(--border-color);
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item {
+  background-color: var(--surface-light);
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+  padding-top: 30px;
+  padding-bottom: 12.5px;
+  border-top: none;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item {
+    padding-top: 15px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item .solution__image-inline img {
+    transform: translateY(13px);
+  }
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item span {
+  color: var(--primary-color);
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active + .content .spz-features-accordion__item {
+  border-top: none;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active:has(.progress_bar[style*="display: none"]) .spz-features-accordion__item {
+  pointer-events: none;
+}
+@media only screen and (min-width: 1024px) {
+  .spz_3004_v1 .spz-features-accordion__contents > .content:nth-child(3) .solution__content p {
+    padding-right: 10px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content:nth-child(4) .solution__content p {
+    margin-right: -1px;
+  }
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item .progress_bar {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: var(--surface-gray);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 12px 12px 0 0;
+  --progress-width: 0%;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item .progress_bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--progress-width, 0%);
+  background: var(--primary-color);
+  border-radius: 12px 0 0 0;
+  transition: width 0.2s linear;
+}
+.spz_3004_v1 .accordion-arrow {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  color: var(--text-primary);
+}
+@media (max-width: 767px) {
+  .spz_3004_v1 .accordion-arrow {
+    right: 20px;
+  }
+}
+.spz_3004_v1 .accordion-arrow.active {
+  bottom: 17.5px;
+  color: var(--primary-color);
+}
+@media (max-width: 767px) {
+  .spz_3004_v1 .accordion-arrow.active {
+    bottom: 17px;
+  }
+}
+.spz_3004_v1 .accordion-arrow svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.spz_3004_v1 .accordion-arrow svg path {
+  stroke: #212121;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content .solution__content {
+  max-height: 0px;
+  overflow: hidden;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content.active .solution__content {
+  max-height: 550px;
+  padding: 0 24px 24px;
+  background: var(--surface-light);
+  border-radius: 0 0 12px 12px;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content .solution__content p {
+  color: var(--text-primary);
+  font-family: "Aktiv Grotesk Corp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 20px;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content .solution__content p + p {
+  margin-top: 12px;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content .solution__content:has(p + p) p:first-child {
+  margin-bottom: 0;
+}
+.spz_3004_v1 .spz-features-accordion__contents > .content .solution__content:has(p + p) p:nth-of-type(2) {
+  margin-bottom: 19.5px;
+}
+.spz_3004_v1 .spz-bg-wrap .spz-ctas-wrap {
+  display: flex;
+  gap: 10px;
+}
+.spz_3004_v1 .spz-bg-wrap .spz-ctas-wrap .spz-primary {
+  width: 161px;
+  height: 56px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Aktiv Grotesk Corp";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  transition: 0.25s ease-in-out;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: 1px solid var(--primary-color);
+}
+.spz_3004_v1 .spz-bg-wrap .spz-ctas-wrap .spz-primary:hover {
+  background: #fff;
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+}
+.spz_3004_v1 .my_btn {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+.spz_3004_v1 .my_btn div {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 2s ease-out;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  /* Prevent the ripple from interfering with other events */
+}
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+.spz_3004_v1 .spz-features-accordion__image-panel {
+  flex: 1;
+  background: var(--surface-light);
+  border-radius: 12px;
+  position: relative;
+  align-self: stretch;
+}
+.spz_3004_v1 .spz-features-accordion__image-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1757939602/airdna/3004/blob.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: contain;
+  margin: auto 38px;
+}
+.spz_3004_v1 .spz-features-accordion__image-panel .solution__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity;
+  z-index: 2;
+  padding: 32px;
+}
+.spz_3004_v1 .spz-features-accordion__image-panel .solution__image.active {
+  opacity: 1;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.spz_3004_v1 .spz-features-accordion__image-panel .solution__image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateY(-2.5px);
+}
+.spz_3004_v1 .solution__image-inline {
+  display: none;
+}
+@media (max-width: 1439px) {
+  .spz_3004_v1 {
+    /* Make both columns resize proportionally in this range */
+  }
+  .spz_3004_v1 .spz-features-accordion__wrapper {
+    gap: 24px;
+  }
+  .spz_3004_v1 .spz-features-accordion {
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+  .spz_3004_v1 .spz-features-accordion__image-panel {
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+}
+@media (max-width: 1200px) {
+  .spz_3004_v1 .spz-bg-wrap {
+    padding: 72px 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .spz_3004_v1 .spz-bg-wrap {
+    padding: 64.5px 0px 63.5px;
+  }
+  .spz_3004_v1 .spz-bg-wrap .features-heading {
+    margin-bottom: 40px;
+  }
+  .spz_3004_v1 .spz-features-accordion__wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .spz_3004_v1 .spz-features-accordion {
+    flex: none;
+    max-width: 100%;
+  }
+  .spz_3004_v1 .spz-features-accordion__image-panel {
+    display: none;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content .solution__image-inline {
+    display: none;
+  }
+  .spz_3004_v1 .solution__image-inline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1757939602/airdna/3004/blob.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-size: contain;
+    margin: 30px 122px 40px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .solution__image-inline {
+    max-width: 529px;
+    margin: 0 auto 13.5px;
+    display: block;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .solution__image-inline img {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .spz_3004_v1 .spz-bg-wrap {
+    padding: 48px 0px 47.5px;
+  }
+  .spz_3004_v1 .spz-bg-wrap .features-heading {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .spz_3004_v1 .spz-features-accordion__item {
+    padding: 24px 16px 23px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .spz-features-accordion__item {
+    padding: 23px 16px 12px;
+  }
+  .spz_3004_v1 .spz-features-accordion__item span {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .solution__content {
+    padding: 0.5px 16px 24px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content .solution__content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .spz_3004_v1 .solution__image-inline::before {
+    margin: 26px 38px 58px;
+  }
+  .spz_3004_v1 .spz-features-accordion__contents > .content.active .solution__image-inline {
+    max-width: 257px;
+    margin: -1.5px auto 15px;
+  }
+}
+
+:root {
+  --font-family: "aktiv-grotesk", sans-serif;
+}
+
+/* Header CSS */
+.spz_3014 #header.normalHeader .header-logo-color + img {
+  display: none !important;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.spz_3014 #header.normalHeader > div {
+  border: 0;
+}
+
+.spz_3014 #header.normalHeader p:has(svg[shape-rendering=geometricPrecision]) span,
+.spz_3014 #header.normalHeader button[aria-label="Open menu"] > svg,
+.spz_3014 #header.normalHeader div[role=combobox] ~ svg {
+  color: #212121;
+}
+
+@media (min-width: 1120px) {
+  .spz_3014 #header.normalHeader > div > ul > div > span,
+  .spz_3014 #header.normalHeader > div > ul > a,
+  .spz_3014 #header.normalHeader a[href*="https://app.airdna.co/data/login"] button[aria-label="Log in"],
+  .spz_3014 #header.normalHeader div[role=combobox]:has(svg[shape-rendering=geometricPrecision]) ~ svg {
+    color: #212121;
+  }
+}
+.spz_3014 #header.normalHeader > div > ul > a:hover,
+.spz_3014 #header.normalHeader a[href*="https://app.airdna.co/data/login"] button[aria-label="Log in"]:hover {
+  color: #666;
+}
+
+.spz_3014 #header.normalHeader > div > div > a > img {
+  width: 143px;
+}
+
+@media (min-width: 1120px) {
+  .spz_3014 #header.normalHeader a[href*="https://app.airdna.co/data/us"] button[aria-label="Start for free"] {
+    color: #212121;
+    border: 1px solid #212121;
+    background-color: transparent;
+  }
+  .spz_3014 #header.normalHeader a[href*="https://app.airdna.co/data/us"] button[aria-label="Start for free"]:hover {
+    background-color: #212121;
+    color: #fff;
+    outline: none;
+  }
+}
+@media (max-width: 1024.98px) {
+  .spz_3014 #header.normalHeader > div {
+    padding: 28px 16px;
+  }
+  .spz_3014 #header.normalHeader > div > div > a > img {
+    width: 158px;
+  }
+  .spz_3014 #header.normalHeader div[role=combobox] {
+    padding-right: 40px;
+  }
+  .spz_3014 #header.normalHeader div[role=combobox] ~ svg {
+    right: 18px;
+  }
+}
+@media (max-width: 719.98px) {
+  .spz_3014 #header.normalHeader > div > div > a > img {
+    width: 124px;
+  }
+}
+/* Header CSS end */
+.spz_3014 main > section:first-of-type {
+  font-family: var(--font-family);
+  background-color: #eff1fe;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3014/bg-v1-1440_3.webp");
+  background-size: 1440px 734px;
+  background-position: top 16px center;
+  height: auto;
+  min-height: auto;
+  overflow: hidden;
+  padding: 191px 0 114px;
+  margin-bottom: 0;
+}
+
+.spz_3014 main > section:first-of-type:empty {
+  display: none;
+}
+
+.spz_3014 main > section:first-of-type > div {
+  display: flex;
+  align-items: flex-start;
+  max-height: inherit;
+  min-height: 445px;
+  max-width: 1440px;
+  gap: 19px;
+  padding: 0 80px;
+}
+
+.spz_3014 main > section:first-of-type h1 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #212121;
+  text-align: left;
+  text-shadow: none;
+}
+
+.spz_3014 main > section:first-of-type > div > div:last-child {
+  max-width: 600px;
+  box-shadow: 0px 7px 23.8px -6px rgba(92, 115, 218, 0.24);
+  border-radius: 12px;
+  padding: 0 32px 16px;
+}
+
+.spz_3014 main > section:first-of-type > div > div:last-child > div > div {
+  /* height: auto; */
+  max-width: 100%;
+  width: 100%;
+  border-bottom: 0;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] {
+  width: 100%;
+  gap: 0;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] + span {
+  background-color: #3D53B6;
+  height: 2px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #666;
+  border-bottom: 1px solid #E5E5E5;
+  flex-direction: row;
+  width: 50%;
+  min-height: inherit;
+  padding: 13px 0 11px;
+  margin-bottom: 0.5px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button.Mui-selected {
+  font-weight: 700;
+  color: #3D53B6;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button svg {
+  display: none;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button:first-child:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/airdna/3014/icon-compass-line.svg");
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button.Mui-selected:first-child:before {
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/airdna/3014/icon-compass-fill.svg");
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button:last-child:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/airdna/3014/icon-house-lone.svg");
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tablist] button.Mui-selected:last-child:before {
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/airdna/3014/icon-house-fill.svg");
+}
+
+/* First tab content */
+.spz_3014 main > section:first-of-type div[role=tabpanel] {
+  padding-top: 22px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiBox-root {
+  max-width: 100%;
+  padding: 0;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root {
+  min-height: auto;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #E5E5E5;
+  padding: 16px 14px 14px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root:hover {
+  border-color: #212121;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root:has(input:focus) {
+  border-color: #3D53B6;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root:before {
+  content: "";
+  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/airdna/3014/icon-address-line.svg");
+  width: 24px;
+  height: 24px;
+  margin-right: 11px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root .MuiInputAdornment-positionStart {
+  display: none;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root input {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  padding: 0;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] input + a {
+  display: none;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] input ~ fieldset {
+  border: none;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(input) button {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #3D53B6;
+  letter-spacing: normal;
+  text-underline-offset: 3px;
+  padding-top: 18px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(input) button:hover {
+  color: #212121;
+}
+
+/* Second tab content */
+.spz_3014 main > section:first-of-type div[role=tabpanel] h3 {
+  font-family: var(--font-family);
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel] p {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #212121;
+  letter-spacing: normal;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) > div > div > div {
+  justify-content: center;
+  gap: 30px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) > div > div > div > div:last-child {
+  max-width: 262px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) > div > div > div > div:first-child {
+  width: auto;
+  height: auto;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) a button {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: normal;
+  border: 1px solid rgb(63, 81, 181);
+  padding: 17px 17px 13px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) a:has(button) {
+  margin-bottom: 16px;
+}
+
+.spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) a button:hover {
+  outline: none;
+}
+
+@media (min-width: 2600px) {
+  .spz_3014 main > section:first-of-type {
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3014/bg-v1-4k_1.webp");
+    background-size: 100% 734px;
+  }
+  .spz_3014 main > section:first-of-type > div > div:last-child > div > div > div {
+    min-height: 42px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tablist] button {
+    padding: 6px 0 9px;
+  }
+}
+@media (max-width: 1024.98px) {
+  .spz_3014 main > section:first-of-type {
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3014/bg-v1-1024.webp");
+    background-size: cover;
+    background-position: top 4px center;
+    padding: 155px 0 335px;
+  }
+  .spz_3014 main > section:first-of-type h1 {
+    text-align: center;
+  }
+  .spz_3014 main > section:first-of-type > div {
+    align-items: center;
+  }
+}
+@media (max-width: 719.98px) {
+  .spz_3014 main > section:first-of-type {
+    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/airdna/3014/bg-v1-360.webp");
+    background-position: center bottom -3px;
+    padding: 130px 0 121px;
+  }
+  .spz_3014 main > section:first-of-type > div {
+    min-height: 470px;
+    max-width: 480px;
+    padding: 0 16px;
+    gap: 23px;
+  }
+  .spz_3014 main > section:first-of-type > div > div {
+    padding: 0;
+  }
+  .spz_3014 main > section:first-of-type > div > div:last-child {
+    padding: 0 16px 8px;
+  }
+  .spz_3014 main > section:first-of-type > div > div:last-child > div > div > div {
+    min-height: 40px;
+  }
+  .spz_3014 main > section:first-of-type h1 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+  }
+  .spz_3014 main > section:first-of-type h1 br {
+    display: none;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel] {
+    padding-top: 18px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tablist] button {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 9px 0 7px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tablist] button:first-child:before,
+  .spz_3014 main > section:first-of-type div[role=tablist] button:last-child:before {
+    width: 16px;
+    height: 16px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel]:has(input) button {
+    padding: 14px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel] .MuiOutlinedInput-root:before {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) > div > div > div > div:first-child {
+    max-width: 103px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel]:has(h3) > div > div > div {
+    margin-top: -8px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel] h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .spz_3014 main > section:first-of-type div[role=tabpanel] p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+/* Logo section */
+.spz_3014 .logo_section {
+  padding: 31px 0 20px;
+}
+.spz_3014 .logo_section + section {
+  display: none;
+}
+
+.spz_3014 .logo_section .container {
+  max-width: 1310px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spz_3014 .logo_section h2 {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  color: #212121;
+  margin-bottom: 31px;
+}
+
+.spz_3014 .logo_grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 2600px) {
+  .spz_3014 .logo_section {
+    padding-bottom: 28px;
+  }
+}
+@media (max-width: 1200.98px) {
+  .spz_3014 .logo_section .container {
+    max-width: 1000px;
+  }
+  .spz_3014 .logo_grid {
+    justify-content: center;
+    gap: 56px;
+  }
+}
+@media (max-width: 1024.98px) {
+  .spz_3014 .logo_section .container {
+    max-width: 768px;
+  }
+  .spz_3014 .logo_grid {
+    gap: 24px;
+  }
+  .spz_3014 .logo_section {
+    padding: 6px 0 39px;
+  }
+}
+@media (max-width: 719.98px) {
+  .spz_3014 .logo_section {
+    padding: 13px 0 0;
+  }
+  .spz_3014 .logo_section + section {
+    padding-top: 63px;
+  }
+  .spz_3014 .logo_section .container {
+    max-width: 600px;
+    padding: 0;
+  }
+  .spz_3014 .logo_section h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 23px;
+  }
+}
+/* Extra Section CSS */
+.spz_3014 .logo_section + section + div {
+  display: none;
+}
+
+.spz_3014 .logo_section + section {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .spz_3014 .logo_section + section {
+    padding-bottom: 0;
+    margin-bottom: -13px;
+  }
+}
+@media (max-width: 719.98px) {
+  .spz_3014 .logo_section + section {
+    margin-bottom: -17px;
+  }
+}
+.spz_3014 main > section:nth-of-type(4) {
+  display: none;
+}
+
+/* Extra Section CSS end *//*# sourceMappingURL=styles.css.map */

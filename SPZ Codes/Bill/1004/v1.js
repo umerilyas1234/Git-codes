@@ -680,14 +680,14 @@ function loadTestCode1004() {
     document.querySelector('.spz-triage-wrap .questions-wrap').insertAdjacentElement('afterend', document.querySelector('.is-sub-wrapper'));
 
     // existiing account
-    // document.querySelector('.spz_t1004 .button-disclaimer').insertAdjacentHTML("afterend", `
-    //   <div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login"
-    //   class="spz_1012_v1">Login</a></div>
-    //   <div class="disclaimer_2">
-    //     <p><a href="https://app-signup.us.bill.com/onboarding/flow/signup">Click here </a>if you’ve been invited to be paid by
-    //       a BILL customer, or if you only want to receive payments with a BILL account.</p>
-    //   </div> 
-    // `);
+    document.querySelector('.spz_t1004 .button-disclaimer').insertAdjacentHTML("afterend", `
+      <div class="existiing_account">Already have an account? <a href="https://login.us.bill.com/neo/login"
+      class="spz_1012_v1">Login</a></div>
+      <div class="disclaimer_2">
+        <p><a href="https://app-signup.us.bill.com/onboarding/flow/signup">Click here </a>if you’ve been invited to be paid by
+          a BILL customer, or if you only want to receive payments with a BILL account.</p>
+      </div> 
+    `);
 
 
   }

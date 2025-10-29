@@ -1,0 +1,18 @@
+Use Figma MCP to generate code for my current figma selection. And Browser to get the selector of the section.
+Pattern Name:  Bento grid
+
+Control URL(s): https://net-demo-client.netlify.app/en (staging website)
+
+Task Name: #1024 | Netwrix | Homepage | Bento grid
+Task Details: SPECS:
+• Overview: We're replacing https://www.figma.com/design/HliHHqrdTCEX9oZSPAMEhn/%F0%9F%9F%A2-1024-%7C-Netwrix-%7C-Homepage-%7C--Bento-grid?node-id=67-1678&t=FqT97ju1lXqZeSEp-4 from the control staging website. (the contect/copy might be changed as the client is actively editing it, please ignore it. We will update the copy at the end once the website is live)
+• For design/content/copy please follow mockup
+• Only "Learn more" text link is clickable. 
+• "Learn more" text link redirection in each tile will be as follows: (same as control)
+  • Data security Posture Management : https://net-demo-client.netlify.app/en/solutions/data-security-posture-management/ 
+  • Directory Management : https://net-demo-client.netlify.app/en/solutions/directory-management/
+  • Endpoint Management : https://net-demo-client.netlify.app/en/solutions/endpoint-management/
+  • Identity Management : https://net-demo-client.netlify.app/en/solutions/identity-management/ 
+  • Identity Threat detection and response : https://net-demo-client.netlify.app/en/solutions/identity-threat-detection-response/ 
+  • Privileged Access Management : https://net-demo-client.netlify.app/en/solutions/privileged-access-management/ 
+• The entire tile is clickable. 

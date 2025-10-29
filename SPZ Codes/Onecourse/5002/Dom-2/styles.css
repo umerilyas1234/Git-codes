@@ -1,0 +1,198 @@
+.spz_5002 .awr-button-bar a[href*="/plans/all-plans"] span {
+  font-size: 0;
+}
+.spz_5002 .awr-button-bar a[href*="/plans/all-plans"] span::after {
+  content: "Most Popular";
+  font-size: 14px;
+}
+.spz_5002 .awr-products__container {
+  margin-bottom: 51px;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results {
+  padding-top: 34px;
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results {
+    padding-top: 0px;
+    margin-top: -1px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results {
+    padding-top: 0px;
+    margin-top: -0.5px;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-product-card-plp-grid {
+  max-width: 1224.04px;
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-product-card-plp-grid {
+    padding: 0 81px;
+  }
+}
+@media (min-width: 923px) and (max-width: 1233.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .infinite-scroll-component {
+    max-width: 909px;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .infinite-scroll-component {
+    max-width: 609px;
+    margin: auto;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container {
+  row-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  padding-left: 0;
+  margin: 0 -8px;
+}
+@media (min-width: 923px) and (max-width: 1233.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container {
+    margin: 0;
+    max-width: 907px;
+  }
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container {
+    max-width: 622px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container {
+    margin: 0;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item {
+  width: 25%;
+  padding: 0 8px 28px;
+}
+@media (min-width: 923px) and (max-width: 1233.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item {
+    width: 33.33%;
+    padding: 0 4px 28px;
+  }
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item {
+    width: 50%;
+    padding-bottom: 27.5px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item {
+    width: 100%;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp {
+  width: 100%;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp .awr-product-card-plp__badge {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp {
+    max-width: 342px;
+    margin: auto;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:not(:has(a[href*="/water-line-protection-program"])):not(:has(a[href*="/sewer-line-protection-program"])):not(:has(a[href*="/in-home-plumbing-plus-program"])):not(:has(a[href*="/water-heater-repair-and-replacement-program"])):not(:has(a[href*="/water-line-and-sewer-line-protection-program"])):not(:has(a[href*="/electrical-essentials-program"])):not(:has(a[href*="/water-line-sewer-line-and-in-home-plumbing-emergency-program"])) {
+  display: none;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/water-line-protection-program"]) {
+  order: 1;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/sewer-line-protection-program"]) {
+  order: 2;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/water-line-and-sewer-line-protection-program"]) {
+  order: 3;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/in-home-plumbing-plus-program"]) {
+  order: 4;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/water-line-sewer-line-and-in-home-plumbing-emergency-program"]) {
+  order: 5;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/electrical-essentials-program"]) {
+  order: 6;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item:has(a[href*="/water-heater-repair-and-replacement-program"]) {
+  order: 7;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__image,
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description,
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__container {
+  max-width: 294px;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 923px) and (max-width: 1233.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__image,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__container {
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__image,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__container {
+    max-width: 295px;
+    margin: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__image,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description,
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__container {
+    max-width: 342px;
+    margin: auto;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description {
+  padding: 23px;
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description {
+    padding: 23.5px 24px 22px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description {
+    padding: 23px 24px;
+  }
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description-bottom-section {
+  padding-bottom: 1.5px;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__description-bottom-section .awr-product-card-plp__cta {
+  margin-top: 1px;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__product-name-container {
+  padding-bottom: 29px;
+  padding-top: 0.5px;
+}
+.spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__product-name-container > p {
+  min-height: 81px;
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container:has(a[href*="/plans/all-plans"].bg-awr-blue-700) .awr-products__results .awr-infinite-scroll-grid__grid-container .awr-infinite-scroll-grid__grid-item .awr-product-card-plp__product-name-container {
+    padding-top: 1px;
+  }
+}
+@media (min-width: 768px) and (max-width: 922.98px) {
+  .spz_5002 .awr-products__container {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_5002 .awr-products__container {
+    margin-bottom: 17px;
+  }
+}/*# sourceMappingURL=styles.css.map */
