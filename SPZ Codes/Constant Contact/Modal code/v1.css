@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.spz_2004_v1 header,
+.spz_2004_v1 main,
+.spz_2004_v1 footer {
+	display: none;
+}
+
+.spz_2004_v1 .main-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.spz_2004_v1 .spz_modal_wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	background: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/2004/bg_1440.webp') no-repeat top left / cover;
+}
+
+.spz_2004_v1 .spz_modal_inner {
+	padding: 50px 16px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: auto;
+}
+
+.spz_2004_v1 .spz_modal_inner .form_wrap {
+	max-width: 556px;
+	border-radius: 16px;
+	background: #FFF;
+	-webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.18);
+	box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.18);
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	margin: auto;
+	padding: 40px;
+}
+
+/* form css */
+.spz_2004_v1 .form.standard-form:not(.magic-funnel-signup-form):not(.magic-funnel-entry-point-form) {
+	border: none !important;
+	padding: 0 !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.spz_2004_v1 .MuiInputBase-root {
+	height: 56px !important;
+	max-height: 56px !important;
+	min-height: 56px !important;
+	padding: 0 !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root>.MuiInputAdornment-root {
+	position: absolute;
+	right: 8px;
+}
+
+.spz_2004_v1 .MuiInputBase-root>.MuiInputAdornment-root [aria-label="toggle password visibility"] {
+	padding: 8px !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root>.MuiInputAdornment-root svg {
+	width: 20px;
+	height: 20px;
+}
+
+.spz_2004_v1 .MuiInputBase-root>.MuiInputAdornment-root svg[data-testid="CheckCircleIcon"] {
+	display: none;
+}
+
+.spz_2004_v1 .MuiInputBase-root input {
+	height: 100%;
+	padding: 16px 15px;
+	border-radius: 12px !important;
+	border: 1px solid #E4E9F1 !important;
+	background: #FFF;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #0F141C;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: "Poppins", sans-serif !important;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: auto !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root input#new-password {
+	padding-right: 40px;
+}
+
+.spz_2004_v1 .MuiInputBase-root input#tel {
+	border-radius: 0 12px 12px 0 !important;
+	padding-left: 12px;
+}
+
+.spz_2004_v1 .MuiInputBase-root input:hover {
+	border-color: #D1D9E6 !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root.Mui-error input {
+	border-color: #E53935 !important;
+}
+
+.spz_2004_v1 .form__error-message {
+	border-color: #E53935;
+	width: 100%;
+}
+
+.spz_2004_v1 .form__error-message--alert-circle {
+	background: #E53935;
+}
+
+.spz_2004_v1 .form__error-message--messaging {
+	color: #E53935;
+}
+
+.spz_2004_v1 .MuiInputBase-root input~fieldset {
+	border: none !important;
+}
+
+.spz_2004_v1 .material-ui-gdpr-checkbox-field {
+	margin-bottom: 20px !important;
+}
+
+.spz_2004_v1 .form .material-ui-checkbox-field .text-block p {
+	color: #63708A;
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 16px;
+}
+
+.spz_2004_v1 .form .material-ui-checkbox-field .text-block p b {
+	font-weight: 700;
+}
+
+.spz_2004_v1 [data-qe-id="sign-up-form-gdpr-opt-out-eu-true"],
+.spz_2004_v1 [data-qe-id="buy-form-em-pwd-v2-pricing-gdpr-opt-out-eu-true"] {
+	width: 20px;
+	height: 20px;
+	display: block;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	padding: 0;
+	margin-right: 12px;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="0.75" y="0.75" width="18.5" height="18.5" rx="3.25" fill="white" stroke="%23D1D9E6" stroke-width="1.5"/></svg>');
+	background-size: cover;
+	border-radius: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.spz_2004_v1 .Mui-checked[data-qe-id="sign-up-form-gdpr-opt-out-eu-true"],
+.spz_2004_v1 .Mui-checked[data-qe-id="buy-form-em-pwd-v2-pricing-gdpr-opt-out-eu-true"] {
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="4" fill="%231856ED"/><path d="M5 10.3636L8.125 14L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.spz_2004_v1 [data-qe-id="sign-up-form-gdpr-opt-out-eu-true"] svg,
+.spz_2004_v1 [data-qe-id="buy-form-em-pwd-v2-pricing-gdpr-opt-out-eu-true"] svg {
+	display: none;
+}
+
+.spz_2004_v1 .material-ui-checkbox-label-gdpr-opt-out-eu-true .text-block {
+	padding-top: 0 !important;
+}
+
+.spz_2004_v1 .sign-up-form-legal-t-cs-gdpr-conditional-via-page-html,
+.spz_2004_v1 .material-ui-checkbox-label-gdpr-opt-out-eu-true {
+	margin: 0;
+}
+
+.spz_2004_v1 .sign-up-form-legal-t-cs-gdpr-conditional-via-page-html {
+	margin-top: 8px;
+}
+
+.spz_2004_v1 .sign-up-form-legal-t-cs-gdpr-conditional-via-page-html p {
+	color: #63708A;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.spz_2004_v1 input::-webkit-input-placeholder {
+	color: transparent !important;
+	opacity: 0 !important;
+}
+
+.spz_2004_v1 input::-moz-placeholder {
+	color: transparent !important;
+	opacity: 0 !important;
+}
+
+.spz_2004_v1 input:-ms-input-placeholder {
+	color: transparent !important;
+	opacity: 0 !important;
+}
+
+.spz_2004_v1 input::-ms-input-placeholder {
+	color: transparent !important;
+	opacity: 0 !important;
+}
+
+.spz_2004_v1 input::placeholder {
+	color: transparent !important;
+	opacity: 0 !important;
+}
+
+.spz_2004_v1 .field input:not([type=radio]):not([type=checkbox]):not(.MuiInputBase-input) {
+	height: 100% !important;
+}
+
+.spz_2004_v1 .field__select-wrapper {
+	max-height: 56px !important;
+}
+
+.spz_2004_v1 .field .country-code__select {
+	width: 116px !important;
+	border-radius: 12px 0 0 12px;
+	border: 1px solid #E4E9F1;
+	border-right: 0;
+	position: relative;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="%2363708A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+}
+
+.spz_2004_v1 .field .country-code__select::after {
+	content: '';
+	position: absolute;
+	top: 14px;
+	right: 0;
+	width: 1px;
+	height: 26px;
+	border: 1px solid #E4E9F1;
+}
+
+.spz_2004_v1 #siteContactCountryCode {
+	padding-left: 16px !important;
+}
+
+.spz_2004_v1 .field .country-code__select .MuiOutlinedInput-notchedOutline {
+	border-right: none;
+}
+
+.spz_2004_v1 .label-spz {
+	position: absolute;
+	top: 16px;
+	left: 10px;
+	padding: 0 6px;
+	background: #FFF;
+	color: #63708A;
+	pointer-events: none;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+.spz_2004_v1 .label-spz.label-spz-tel {
+	left: 5px;
+}
+
+.spz_2004_v1 .field__tel-wrapper:hover .country-code__select,
+.spz_2004_v1 .field__tel-wrapper:hover input {
+	border-color: #D1D9E6 !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root.Mui-focused input,
+.spz_2004_v1 .field__tel-wrapper:has(.MuiInputBase-root.Mui-focused) .country-code__select,
+.spz_2004_v1 .field__tel-wrapper:has(.country-code__select.Mui-focused) #tel {
+	border-color: #1856ED !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root.Mui-error input,
+.spz_2004_v1 .field__tel-wrapper:has(.MuiInputBase-root.Mui-error) .country-code__select,
+.spz_2004_v1 .field__tel-wrapper:has(.country-code__select.Mui-error) #tel {
+	border-color: #E53935 !important;
+}
+
+.spz_2004_v1 .MuiInputBase-root.Mui-focused .label-spz,
+.spz_2004_v1 .MuiFormLabel-filled+.MuiInputBase-root .label-spz {
+	font-size: 12px;
+	line-height: 16px;
+	top: -8px;
+	color: #0F141C;
+}
+
+.spz_2004_v1 .MuiInputBase-root.Mui-focused .label-spz.label-spz-tel,
+.spz_2004_v1 .MuiFormLabel-filled+.MuiInputBase-root .label-spz.label-spz-tel {
+	left: -106px;
+}
+
+.spz_2004_v1 .country-code__text {
+	display: none;
+}
+
+.spz_2004_v1 .field .country-code__label img {
+	margin-right: 8px;
+	margin-left: 4px;
+	max-width: 20px !important;
+}
+
+.spz_2004_v1 .field .country-code__value {
+	color: #63708A;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 0;
+}
+
+.spz_2004_v1 .field:has(.field__tel-wrapper>div:last-child label.MuiFormLabel-filled) .country-code__value,
+.spz_2004_v1 .field:has(.field__tel-wrapper>div:last-child label.Mui-focused) .country-code__value {
+	color: #0F141C;
+}
+
+.spz_2004_v1 [data-testid="ArrowDropDownIcon"] {
+	display: none !important;
+}
+
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs,
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing {
+	margin: 0;
+}
+
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing {
+	margin-top: 4px;
+}
+
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs p,
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing p {
+	color: #63708A;
+	text-align: center;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	font-family: "Poppins", sans-serif;
+}
+
+.spz_2004_v1.spz_firefox .sign-up-form-visible-legal-t-cs p {
+	font-size: 14px;
+}
+
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs p a,
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing p a {
+	text-decoration: none;
+	color: #1856ED;
+}
+
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs p a:hover,
+.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing p a:hover {
+	color: #FFFFFF;
+}
+
+/* error */
+.spz_2004_v1 .message.message--error p {
+	color: #E53935;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px !important;
+	padding-top: 3px;
+	font-family: "Poppins", sans-serif;
+}
+
+.spz_2004_v1 .form-headers {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.spz_2004_v1 .form-headers .company_logo {
+	display: block;
+	margin: 0 auto 24px;
+}
+
+.spz_2004_v1 .form-headers .form-headline {
+	color: #0F141C;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 48px;
+	margin-bottom: 8px;
+}
+
+.spz_2004_v1.spz_buynow_page .form-headers .form-headline {
+	margin-bottom: 0;
+}
+
+.spz_2004_v1 .form-headers .form-subheadline {
+	color: #63708A;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.spz_2004_v1 .form-headers>.text-block {
+	display: none;
+}
+
+.spz_2004_v1 .form .form-fields-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.spz_2004_v1 .field.material-ui-field {
+	max-width: calc(50% - 10px) !important;
+	width: 100% !important;
+	margin-bottom: 20px !important;
+}
+
+.spz_2004_v1 .field.material-ui-field[data-attr-form-field-id="tel"] {
+	max-width: 100% !important;
+}
+
+.spz_2004_v1 [type="submit"] {
+	width: 100%;
+	height: 56px;
+	font-size: 0;
+	margin-top: 24px !important;
+	background: #1856ED;
+	border-radius: 52px;
+	outline: none;
+}
+
+.spz_2004_v1 [type="submit"] .loading--small circle {
+	stroke: #FFF;
+}
+
+.spz_2004_v1 [type="submit"]::after {
+	content: 'Instant Access';
+	color: #FFF;
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 56px;
+}
+
+.spz_2004_v1.spz_buynow_page [type="submit"]::after {
+	content: 'Create my account';
+}
+
+.spz_2004_v1 [type="submit"] .cta-lock-icon {
+	display: none;
+}
+
+.spz_2004_v1 [type="submit"]:hover,
+.spz_2004_v1 [type="submit"]:active {
+	background: #1330BF;
+}
+
+.spz_2004_v1 .login_copy,
+.spz_2004_v1 .form__text-after-cta {
+	color: #63708A;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	margin-top: 16px;
+	width: 100%;
+}
+
+.spz_2004_v1.spz_buynow_page .login_copy {
+	display: none;
+}
+
+.spz_2004_v1 .login_copy a,
+.spz_2004_v1 .form__text-after-cta a {
+	color: #1856ED;
+	text-decoration: none !important;
+	outline: none;
+}
+
+.spz_2004_v1 .login_copy a:hover,
+.spz_2004_v1 .login_copy a:active,
+.spz_2004_v1 .form__text-after-cta a:hover,
+.spz_2004_v1 .form__text-after-cta a:active {
+	background: #1856ed;
+	color: #FFF;
+}
+
+@media(max-width: 991.98px) {
+	.spz_2004_v1 .spz_modal_wrap {
+		background: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/2004/bg_768.webp') no-repeat top left / cover;
+	}
+}
+
+@media(max-width: 767px) {
+	.spz_2004_v1 .spz_modal_wrap {
+		background: url('https://res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/2004/bg_360.webp') no-repeat top left / cover;
+	}
+
+	.spz_2004_v1 .spz_modal_inner {
+		padding: 16px;
+	}
+
+	.spz_2004_v1 .spz_modal_inner .form_wrap {
+		margin: 0 auto;
+		padding: 24px 16px;
+	}
+
+	.spz_2004_v1 .form-headers {
+		margin-bottom: 24px !important;
+	}
+
+	.spz_2004_v1 .form-headers .company_logo {
+		width: 111px;
+	}
+
+	.spz_2004_v1 .form-headers .form-headline {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 4px;
+	}
+
+	.spz_2004_v1 .form-headers .form-subheadline {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.spz_2004_v1 .spz_privacy_policy {
+		margin-top: 8px;
+	}
+
+	.spz_2004_v1 .sign-up-form-visible-legal-t-cs p {
+		padding: 0 2px;
+	}
+
+	.spz_2004_v1 .sign-up-form-visible-legal-t-cs-v-2-pricing {
+		margin-top: 8px;
+	}
+
+	.spz_2004_v1 .field.material-ui-field {
+		max-width: 100% !important;
+		margin-bottom: 16px !important;
+	}
+
+	.spz_2004_v1 [type="submit"] {
+		margin-top: 24px !important;
+	}
+
+	.spz_2004_v1 .login_copy,
+	.spz_2004_v1 .form__text-after-cta {
+		margin-top: 16px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.spz_2004_v1 .login_copy a,
+	.spz_2004_v1 .form__text-after-cta a {
+		display: block;
+	}
+}

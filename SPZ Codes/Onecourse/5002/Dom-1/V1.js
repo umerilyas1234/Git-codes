@@ -4,16 +4,6 @@ function spz5002Test() {
   }
 }
 
-function isZipExcludedInput() {
-  const zipInput = document.querySelector('#zip-code');
-  if (!zipInput) return false;
-
-  const zip = parseInt(zipInput.value.trim(), 10);
-
-  return 20101 <= zip && zip <= 24658;
-}
-
-
 function isZipExcludedFilled() {
   const zipInput = document.querySelector('.icon-text__selected-zip-code-label');
   if (!zipInput) return false;
@@ -47,7 +37,7 @@ if (pageList.includes(window.location.href.split("?")[0].split("#")[0]) && !isZi
 
 var running = false;
 const observer = new MutationObserver(() => {
-var currentPage = window.location.href.split("?")[0].split("#")[0];
+    var currentPage = window.location.href.split("?")[0].split("#")[0];
     if (pageList.includes(currentPage) && !isZipExcludedFilled()) {
         if (running) return; // Prevent multiple executions
         

@@ -195,4 +195,10 @@
   .spz_5002 .awr-products__container {
     margin-bottom: 17px;
   }
+}
+.spz_5002:not(:has(.vwo-notification-bar)) .awr-layout {
+  margin-top: -24px;
+}
+.spz_5002 .awr-product-info-modal__body .awr-product-info-modal__learn-more-button span {
+  white-space: nowrap;
 }/*# sourceMappingURL=styles.css.map */

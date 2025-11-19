@@ -3,18 +3,30 @@
     padding-left: 20px;
   }
 }
+.spz_t7001 #formjump .container-large-2-2 {
+  width: 100%;
+}
+
 .spz_t7001 form .ratings + .is-form,
 .spz_t7001 form .heading-style-h4 + .is-form {
   display: none;
 }
 
-.spz_t7001 #formjumplink {
+.spz_t7001 #formjumplink,
+.spz_t7001 #formjump {
   padding-top: 17px;
   padding-bottom: 37px;
   background: #F6F6F3;
 }
+@media only screen and (max-width: 767px) {
+  .spz_t7001 #formjumplink,
+  .spz_t7001 #formjump {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 
-body.spz_t7001.virtual-cards #formjumplink .text-image-hero > div .text-color-orange {
+body.spz_t7001.virtual-cards #formjumplink .text-image-hero > div .text-color-orange body.spz_t7001.virtual-cards #formjump .text-image-hero > div .text-color-orange {
   text-transform: uppercase;
   color: #FF5A0A;
   font-size: 14px;
@@ -34,6 +46,10 @@ body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:first-child .tex
   padding-right: 40px;
 }
 
+body.spz_t7001.virtual-cards #formjumplink .w-container .w-layout-grid div:first-child .text-color-orange {
+  text-transform: uppercase;
+}
+
 body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:last-child .heading-style-h4 {
   color: #2D2725;
   text-align: center;
@@ -42,7 +58,7 @@ body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:last-child .head
   font-weight: 500;
   line-height: 38.4px;
   letter-spacing: -0.64px;
-  padding-bottom: 22px;
+  padding-bottom: 23px;
 }
 
 @media (min-width: 992px) and (max-width: 1299px) {
@@ -55,7 +71,8 @@ body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:last-child .head
   }
 }
 @media (min-width: 992px) and (max-width: 1299px) {
-  .spz_t7001:not(.v2) > #formjumplink {
+  .spz_t7001:not(.v2) > #formjumplink,
+  .spz_t7001:not(.v2) > #formjump {
     padding-left: 20px;
   }
 }
@@ -67,7 +84,13 @@ body.spz_t7001.V1_2.spz_formProgressive #formjumplink .text-image-hero > div:fir
   padding-top: 57px;
 }
 
-body.spz_t7001.spend-and-expense #formjumplink .feature-paragraph-large {
+body.spz_t7001.spend-and-expense .hero_layout .formuniversal_component,
+body.spz_t7001.accounts-payable .hero_layout .formuniversal_component {
+  flex-flow: row;
+}
+
+body.spz_t7001.spend-and-expense #formjumplink .feature-paragraph-large,
+body.spz_t7001.spend-and-expense #formjump .text-size-medium {
   color: #2D2725;
   font-size: 20px;
   font-style: normal;
@@ -76,12 +99,20 @@ body.spz_t7001.spend-and-expense #formjumplink .feature-paragraph-large {
   padding-right: 40px;
 }
 
-body.spz_t7001.spend-and-expense #formjumplink .text-image-hero .margin-bottom.margin-small {
+body.spz_t7001.spend-and-expense #formjumplink .text-image-hero .margin-bottom.margin-small,
+body.spz_t7001.spend-and-expense #formjump .text-image-hero .margin-bottom.margin-small {
   margin-bottom: 24px;
 }
 
-body.spz_t7001.spend-and-expense #formjumplink {
+body.spz_t7001.spend-and-expense #formjumplink,
+body.spz_t7001.spend-and-expense #formjump {
   padding-top: 63px;
+}
+@media only screen and (max-width: 767px) {
+  body.spz_t7001.spend-and-expense #formjumplink,
+  body.spz_t7001.spend-and-expense #formjump {
+    padding-top: 0;
+  }
 }
 
 body.spz_t7001.virtual-cards #formjumplink {
@@ -133,11 +164,13 @@ body.spz_t7001.virtual-cards #formjumplink .margin-top.margin-xxsmall + .spacer-
 }
 
 body.spz_t7001.spend-and-expense #formjumplink .padding-global.padding-section-medium,
+body.spz_t7001.spend-and-expense #formjump .padding-global.padding-section-medium,
 body.spz_t7001.virtual-cards #formjumplink .padding-global.padding-section-medium {
   padding: 0 !important;
 }
 
-.spz_t7001 #formjumplink .text-image-hero {
+.spz_t7001 #formjumplink .text-image-hero,
+.spz_t7001 #formjump .text-image-hero {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -147,7 +180,8 @@ body.spz_t7001.virtual-cards #formjumplink .padding-global.padding-section-mediu
   grid-column-gap: 0;
 }
 
-.spz_t7001 #formjumplink .eyebrow {
+.spz_t7001 #formjumplink .eyebrow,
+.spz_t7001 #formjump .eyebrow {
   color: #FF5A0A;
   font-family: "Soehne Kraftig";
   font-size: 14px;
@@ -162,13 +196,15 @@ body.spz_t7001.V1_2.accounts-payable #formjumplink .eyebrow + .spacer-xsmall {
   display: none;
 }
 
-.spz_t7001 #formjumplink h1 {
+.spz_t7001 #formjumplink h1,
+.spz_t7001 #formjump h1 {
   margin-top: 16px;
   color: #2D2725;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
-  line-height: 48px; /* 48px */
+  line-height: 48px;
+  /* 48px */
   letter-spacing: -0.96px;
   max-width: 90%;
 }
@@ -204,7 +240,8 @@ body.spz_t7001.V1_2.accounts-payable #formjumplink .margin-top.margin-small .tex
 }
 
 body.spz_t7001.spend-and-expense.spz_formProgressive #se-form-button {
-  margin-top: -4px;
+  position: relative;
+  z-index: 1;
 }
 
 body.spz_t7001.spend-and-expense.spz_formProgressive #formjumplink {
@@ -342,19 +379,6 @@ body.spz_t7001.spend-and-expense #formjumplink .text-image-hero > div:last-child
   padding-top: 16px;
 }
 
-.spz_t7001.V1_2 form.form-wrapper h2.heading-style-h4,
-body.spz_t7001.spend-and-expense #formjumplink .text-image-hero > div:last-child .heading-style-h4 {
-  color: #2D2725;
-  text-align: center;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 38.4px;
-  letter-spacing: -0.84px;
-  padding: 0;
-  margin-bottom: 24px;
-}
-
 .spz_t7001.V1_2 form.form-wrapper h2.heading-style-h4 + .spacer-xsmall {
   display: none;
 }
@@ -389,6 +413,9 @@ body.spz_t7001.spend-and-expense #formjumplink .text-image-hero > div:last-child
   position: relative;
   width: calc((100% - 16px) / 2);
 }
+.spz_t7001 form.form-wrapper .form-field-wrap .form-field-wrap {
+  width: 100%;
+}
 
 .spz_t7001 form.form-wrapper h4.form_title {
   color: #111;
@@ -422,6 +449,7 @@ body.spz_t7001.spend-and-expense #formjumplink .text-image-hero > div:last-child
   line-height: 24px;
   width: 100%;
   height: 40px;
+  min-height: unset !important;
   display: block;
   margin-bottom: 14px;
   padding: 8px 12px;
@@ -571,7 +599,8 @@ body.spz_t7001.spend-and-expense #formjumplink .text-image-hero > div:last-child
 }
 
 body.spz_t7001.credit.spz_formProgressive #se-form-button {
-  margin-top: -4px;
+  position: relative;
+  z-index: 1;
 }
 
 .spz_t7001 .form-options:not(#form-panel-3) .form-option-title {
@@ -638,7 +667,8 @@ body.spz_t7001.accounts-payable.spz_formProgressive #formjumplink form.form-wrap
 }
 
 .spz_t7001 #se-form-button,
-.spz_t7001 form.form-wrapper .button-signup-2 {
+.spz_t7001 form.form-wrapper .button-signup-2,
+.spz_t7001 .form-wrapper a.button {
   color: #FFF;
   font-family: "Soehne kraftig", sans-serif;
   font-size: 16px;
@@ -648,6 +678,7 @@ body.spz_t7001.accounts-payable.spz_formProgressive #formjumplink form.form-wrap
   height: 50px;
   margin-top: 8px;
   margin-bottom: 9.5px;
+  width: 100%;
   padding: 12px 24px;
   border-radius: 12px;
   border: 1px solid #114A97;
@@ -656,7 +687,8 @@ body.spz_t7001.accounts-payable.spz_formProgressive #formjumplink form.form-wrap
 }
 
 .spz_t7001 #se-form-button:hover,
-.spz_t7001 form.form-wrapper .button-signup-2:hover {
+.spz_t7001 form.form-wrapper .button-signup-2:hover,
+.spz_t7001 .form-wrapper a.button:hover {
   background: #2C73DD;
   border: 1px solid #145AB8;
 }
@@ -774,6 +806,24 @@ body.spz_t7001.V1_2.accounts-payable #formjumplink {
   width: 100%;
 }
 
+.spz_t7001.accounts-payable form.form-wrapper #accountingSoftwareContainer {
+  width: calc((100% - 16px) / 2);
+  margin: 0;
+  margin-left: 0;
+}
+
+.spz_t7001.accounts-payable .form-fields-hide:has(.form-field-wrap.hide) #form-panel-3 {
+  display: none !important;
+}
+.spz_t7001.accounts-payable .form-fields-hide:has(#accountingSoftwareContainer:not(.hide)) #form-panel-3 {
+  width: calc((100% - 16px) / 2);
+}
+@media (max-width: 767.98px) {
+  .spz_t7001.accounts-payable .form-fields-hide:has(#accountingSoftwareContainer:not(.hide)) #form-panel-3 {
+    width: 100%;
+  }
+}
+
 .spz_t7001.V1_2 form.form-wrapper .button-disclaimer {
   margin-top: 12px;
   color: #2D2725;
@@ -785,22 +835,24 @@ body.spz_t7001.V1_2.accounts-payable #formjumplink {
   padding-bottom: 22px;
 }
 
-.spz_t7001 .heading-style-h4 {
-  color: #111;
+.spz_t7001 #formjump .heading-style-h4 {
   width: 100%;
+  color: #2D2725;
   text-align: center;
-  font-family: "Soehne Halbfett";
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 32px;
-  padding-bottom: 11px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.64px;
+  padding-bottom: 23px;
 }
 
 @media (max-width: 767px) {
-  .spz_t7001 .heading-style-h4 {
-    font-size: 24px;
-    line-height: 30px;
-    padding-bottom: 10.5px;
+  .spz_t7001 #formjump .heading-style-h4 {
+    font-size: 28px;
+    line-height: 33.6px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 .spz_t7001 .ratings {
@@ -942,7 +994,7 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
   body.spz_t7001.V1_2.spz_formProgressive #formjumplink .text-image-hero > div:first-child {
     padding-top: 0;
   }
-  .spz_t7001 #formjumplink h1 {
+  .spz_t7001 #formjumplink h1 .spz_t7001 #formjump h1 {
     max-width: 100%;
     margin-top: 14px;
   }
@@ -1066,7 +1118,8 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
     padding-top: 4px;
     padding-bottom: 0;
   }
-  .spz_t7001 #formjumplink h1 {
+  .spz_t7001 #formjumplink h1,
+  .spz_t7001 #formjump h1 {
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -0.72px;
@@ -1097,7 +1150,15 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
     padding-top: 17px;
     padding-bottom: 13px;
   }
-  .spz_t7001 #formjumplink h1 {
+}
+@media only screen and (max-width: 767.98px) and (max-width: 767px) {
+  body.spz_t7001.V1_2.accounts-payable #formjumplink {
+    padding-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz_t7001 #formjumplink h1,
+  .spz_t7001 #formjump h1 {
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -0.72px;
@@ -1112,9 +1173,7 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
   body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:last-child .heading-style-h4 {
     font-size: 28px;
     line-height: 33.6px;
-  }
-  body.spz_t7001.virtual-cards #formjumplink .text-image-hero div:last-child .heading-style-h4 {
-    padding-bottom: 18px;
+    padding-bottom: 20px;
   }
   body.spz_t7001.virtual-cards #formjumplink #se-form-button {
     margin-top: 5px;
@@ -1160,7 +1219,7 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
     top: -2px;
   }
   .spz_t7001.V1_2 form.form-wrapper h2.heading-style-h4 {
-    margin-bottom: 19px;
+    margin-bottom: 0;
   }
   body.spz_t7001.V1_2.accounts-payable #formjumplink form.form-wrapper input[type=submit] {
     top: 0px;
@@ -1255,4 +1314,49 @@ body.spz_t7001.credit.spz_formProgressive header #formjumplink {
     width: 320px;
     max-width: 320px;
   }
+}
+.spz_t7001 .form-wrapper > .form-fields-hide {
+  width: 100%;
+}
+.spz_t7001 .form-wrapper > .button {
+  display: none;
+}
+.spz_t7001 .form-wrapper > .form-fields-hide,
+.spz_t7001 .form-wrapper > .form-field-hide[style="display: block;"] {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  grid-column-gap: 12px;
+  grid-row-gap: 2px;
+}
+.spz_t7001 .form-wrapper > .form-fields-hide .business-type-text-field,
+.spz_t7001 .form-wrapper > .form-field-hide[style="display: block;"] .business-type-text-field {
+  display: none;
+}
+.spz_t7001 .form-wrapper > .form_field-wrapper > .button {
+  display: none;
+}
+.spz_t7001 .form-wrapper > .form_field-wrapper > .form-fields-hide > .spacer-xsmall {
+  display: none;
+}
+.spz_t7001 .form-wrapper > .form_field-wrapper > .form-fields-hide,
+.spz_t7001 .form-wrapper > .form_field-wrapper > .form-field-hide[style="display: block;"] {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  grid-column-gap: 12px;
+  grid-row-gap: 2px;
+}
+.spz_t7001 .form-wrapper > .form_field-wrapper > .form-fields-hide .business-type-text-field,
+.spz_t7001 .form-wrapper > .form_field-wrapper > .form-field-hide[style="display: block;"] .business-type-text-field {
+  display: none;
+}
+.spz_t7001.V1_2.accounts-payable .grid_img {
+  max-height: unset;
 }/*# sourceMappingURL=styles.css.map */

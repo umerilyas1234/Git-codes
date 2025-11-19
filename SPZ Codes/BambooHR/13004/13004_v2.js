@@ -1477,7 +1477,7 @@ const bodyInterval13004 = setInterval(function () {
           document.querySelector('[name="Employees_Text__c"]').tabIndex = 6;
           document.querySelector('[name="Phone"]').tabIndex = 7;
           document.querySelector('[name="Country"]').tabIndex = 8;
-          document.querySelector('[name="LPV1__c"]').value = "13004 Variant2"
+          // document.querySelector('[name="LPV1__c"]').value = "13004 Variant2"
         }
       }
     }, 20)

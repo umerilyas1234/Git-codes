@@ -113,9 +113,11 @@ $mobile: 767.98px;
             margin: 0;
             max-width: 907px;
           }
-          @include tablet(){
+
+          @include tablet() {
             max-width: 622px;
           }
+
           @include mobile() {
             margin: 0;
           }
@@ -141,9 +143,11 @@ $mobile: 767.98px;
 
             .awr-product-card-plp {
               width: 100%;
-              .awr-product-card-plp__badge{
+
+              .awr-product-card-plp__badge {
                 width: 100%;
               }
+
               @include mobile() {
                 max-width: 342px;
                 margin: auto;
@@ -254,5 +258,12 @@ $mobile: 767.98px;
     @include mobile {
       margin-bottom: 17px;
     }
+  }
+
+  &:not(:has(.vwo-notification-bar)) .awr-layout {
+    margin-top: -24px;
+  }
+  .awr-product-info-modal__body .awr-product-info-modal__learn-more-button span{
+    white-space: nowrap;
   }
 }

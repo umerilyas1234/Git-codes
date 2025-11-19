@@ -1,0 +1,176 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199px;
+$tablet-pro: 1024px;
+$tablet: 960.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url(https://res.cloudinary.com/spiralyze/raw/upload/v1581756675/Techsmith/Font/ProximaNova/ProximaNova-Bold.otf), url(https://res.cloudinary.com/spiralyze/raw/upload/v1581756675/Techsmith/Font/ProximaNova/ProximaNova-Bold.ttf), url(https://res.cloudinary.com/spiralyze/raw/upload/v1581756675/Techsmith/Font/ProximaNova/ProximaNova-Bold.eot), url(https://res.cloudinary.com/spiralyze/raw/upload/v1581756675/Techsmith/Font/ProximaNova/ProximaNova-Bold.woff);
+}
+
+.spz_228 .tsc-header>.global-nav-wrapper>.global-nav,
+.spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li:first-child {
+  display: none;
+}
+
+@media only screen and (min-width: 961px) {
+  .spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li.tsc-dropdown-menu-wrapper.profile.no-auth {
+    width: 78px;
+  }
+
+  .spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li.tsc-dropdown-menu-wrapper.profile.no-auth a {
+    height: 36px;
+    padding: 7px 12px;
+    margin-left: 0;
+    border-radius: 8px;
+    border: 2px solid #444;
+    background: rgba(255, 255, 255, 0.00);
+    margin-left: 0px !important;
+    margin-top: 6px !important;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li:nth-child(3) {
+  margin-right: 20.5px;
+}
+
+.spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li:nth-child(2) .glyph-chevron-down,
+.spz_228 .tsc-header>.global-nav-wrapper>.supplemental-buttons>li:nth-child(3) .glyph-chevron-down {
+  color: #fff;
+  display: inline-block;
+  transform: translateX(-1px) translateY(-0.5px);
+  font-size: 8px;
+}
+
+.spz_228 .tsc-header>.search.original>.search-input-wrapper {
+  display: none;
+}
+
+.spz_228 .tsc-header>.logo-wrapper .logo {
+  transform: translateX(-4px) translateY(-1px);
+}
+
+.spz_228 .tsc-header>.logo-wrapper .logo img {
+  width: 162.581px;
+  height: 20px;
+  padding: 0;
+}
+.spz_228 .tsc-header>.logo-wrapper .search-input-wrapper .search-submit::before {
+  content: "";
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30" fill="none"%3E%3Cpath d="M13.4766 7.65625C12.7344 6.91406 11.8913 6.35742 10.9473 5.98633C10.0033 5.61523 9.04297 5.42969 8.06641 5.42969C7.08984 5.42969 6.12956 5.61523 5.18555 5.98633C4.24154 6.35742 3.39844 6.91406 2.65625 7.65625C1.91406 8.41146 1.35417 9.25781 0.976562 10.1953C0.598958 11.1328 0.410156 12.0931 0.410156 13.0762C0.410156 14.0592 0.598958 15.0195 0.976562 15.957C1.35417 16.8945 1.91406 17.7409 2.65625 18.4961C3.29427 19.1211 4.00391 19.6191 4.78516 19.9902C5.56641 20.3613 6.37044 20.5924 7.19727 20.6836C8.02409 20.7747 8.85091 20.7324 9.67773 20.5566C10.5046 20.3809 11.2891 20.0716 12.0312 19.6289L16.5039 24.1016C16.8685 24.4661 17.3047 24.6484 17.8125 24.6484C18.3203 24.6484 18.75 24.4661 19.1016 24.1016C19.4661 23.75 19.6484 23.3203 19.6484 22.8125C19.6484 22.3047 19.4661 21.875 19.1016 21.5234L14.6289 17.0312C15.0716 16.3021 15.3809 15.5208 15.5566 14.6875C15.7324 13.8542 15.7715 13.0241 15.6738 12.1973C15.5762 11.3704 15.3451 10.5664 14.9805 9.78516C14.6159 9.00391 14.1146 8.29427 13.4766 7.65625ZM11.4258 16.4453C10.9701 16.901 10.4492 17.2461 9.86328 17.4805C9.27734 17.7148 8.67839 17.832 8.06641 17.832C7.45443 17.832 6.85872 17.7148 6.2793 17.4805C5.69987 17.2461 5.17578 16.901 4.70703 16.4453C4.23828 15.9766 3.88997 15.4492 3.66211 14.8633C3.43424 14.2773 3.32031 13.6816 3.32031 13.0762C3.32031 12.4707 3.43424 11.875 3.66211 11.2891C3.88997 10.7031 4.23828 10.1758 4.70703 9.70703C5.17578 9.2513 5.69987 8.90625 6.2793 8.67188C6.85872 8.4375 7.45443 8.32031 8.06641 8.32031C8.67839 8.32031 9.27734 8.4375 9.86328 8.67188C10.4492 8.90625 10.9701 9.2513 11.4258 9.70703C11.8945 10.1758 12.2428 10.7031 12.4707 11.2891C12.6986 11.875 12.8125 12.4707 12.8125 13.0762C12.8125 13.6816 12.6986 14.2773 12.4707 14.8633C12.2428 15.4492 11.8945 15.9766 11.4258 16.4453Z" fill="white"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 30px;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper {
+  background: #F3F2F1;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner>.g2-container {
+  display: none;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-banner-image-wrapper {
+  margin-top: 15px;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-banner-image {
+  height: 30px;
+}
+
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul {
+  margin-left: 31px;
+  transform: translateY(-1px);
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li {
+  margin-right: 40px;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li:last-child {
+  margin-right: 0;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li>a {
+  color: #191919;
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: all 0.3s ease;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li>a>img {
+  margin-left: 5px;
+  width: 12px;
+  transition: all 0.3s ease;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li>a:hover {
+  color: #99e500;
+  filter: none;
+}
+
+.spz_228 #wrapper .navigation-bar-wrapper .product-banner .product-navbar .product-navbar-desktop>ul>li>a:hover img {
+  filter: invert(69%) sepia(100%) saturate(1044%) hue-rotate(30deg) brightness(102%) contrast(103%);
+}
+
+
