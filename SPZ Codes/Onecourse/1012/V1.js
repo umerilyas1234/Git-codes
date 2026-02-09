@@ -1,0 +1,1244 @@
+console.log('SPZ 1014 V1');
+
+function spz1014Code() {
+  // Check both body class and HTML element
+  var hasBodyClass = document.querySelector('body').classList.contains('spz_1012_v1');
+  var hasSpzSections = document.querySelector('.spz_sections');
+
+  // Run if body class is missing OR HTML is missing (SPA may remove HTML but keep body class)
+  if (!hasBodyClass || !hasSpzSections) {
+    if (!hasBodyClass) {
+      document.querySelector('body').classList.add('spz_1012_v1');
+    }
+
+    const loadJS = (url, implementationCode, location) => {
+      var scriptTag = document.createElement('script');
+      scriptTag.src = url;
+      scriptTag.onload = implementationCode;
+      scriptTag.onreadystatechange = implementationCode;
+
+      location.appendChild(scriptTag);
+    };
+    const gb_load_css = (path) => {
+      let css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.media = 'all';
+      css.href = path;
+
+      document.getElementsByTagName('head')[0].appendChild(css);
+    }
+    gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
+
+    // Load Splide JS library
+    loadJS("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js", function () {
+
+      // Initialize partner slider (always runs)
+      partnerSlider();
+
+      // Initialize plan and testimonial sliders for mobile/tablet
+      if (window.innerWidth < 1024) {
+        setTimeout(() => {
+          plansSlider();
+          testimonialSlider();
+        }, 100);
+      }
+    }, document.body);
+
+    var locationMarker = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+      <path d="M8.42578 19.5C10.4297 16.9922 15 10.9141 15 7.5C15 3.35938 11.6406 0 7.5 0C3.35938 0 0 3.35938 0 7.5C0 10.9141 4.57031 16.9922 6.57422 19.5C7.05469 20.0977 7.94531 20.0977 8.42578 19.5ZM7.5 5C8.16304 5 8.79893 5.26339 9.26777 5.73223C9.73661 6.20107 10 6.83696 10 7.5C10 8.16304 9.73661 8.79893 9.26777 9.26777C8.79893 9.73661 8.16304 10 7.5 10C6.83696 10 6.20107 9.73661 5.73223 9.26777C5.26339 8.79893 5 8.16304 5 7.5C5 6.83696 5.26339 6.20107 5.73223 5.73223C6.20107 5.26339 6.83696 5 7.5 5Z" fill="#757567"></path>
+    </svg>`;
+
+    document.querySelector('.awr-home__render-components').insertAdjacentHTML('afterbegin', `
+<div class="spz_sections">
+  <div class="spz_hero">
+    <div class="spz_heroInner">
+      <div class="hero_left">
+        <div class="spz_heroData">
+          <picture>
+            <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1760978911/oncourse/1014/atomquote_3.svg"
+              media="(max-width: 1024px)">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1760978901/oncourse/1014/atomquote_2.svg"
+              alt="quote">
+          </picture>
+          <h1>Home protection that <strong>keeps life on track.</strong></h1>
+          <p>Discover home protection plans you can count on. Around the clock support, trusted technicians, and
+            <strong>coverage
+              for the systems you rely on most - HVAC, appliances, water, sewer, gas, and more.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="hero_right">
+        <picture>
+          <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/hero_image_375.webp"
+            media="(max-width: 767px)">
+          <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/hero_image_768.webp"
+            media="(max-width: 1024px)">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/home_1.webp" alt="hero image">
+        </picture>
+      </div>
+    </div>
+    <div class="hero_form">
+      <div class="form_heading">
+        <h3>See available plans in your area</h3>
+      </div>
+      <div class="zipCode_form">
+        <div class="custom_formMain">
+          <p class="error_msg">Please enter valid zip code.</p>
+          <input type="number" placeholder="Zip Code" maxlength="5" oninput="this.value = this.value.slice(0, 5)">
+          <a href="javascript:void(0);" class="custom_btn zipCode_btn spz1014_v1">Shop Plans <img
+              src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
+              alt="arrow right"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="our_journey">
+    <div class="auto_container">
+      <div class="journery_inner">
+        <div class="journey_list">
+          <ul>
+            <li>
+              <div class="journery_data">
+                <span><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/icon_1_webp_1.webp"
+                    alt="Protecting homes"></span>
+                <strong>30+ Years</strong>
+                <p>Protecting homes </p>
+              </div>
+            </li>
+            <li>
+              <div class="journery_data">
+                <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978461/oncourse/1014/icon_10.svg"
+                    alt="Customers and growing"></span>
+                <strong>1.9 M+</strong>
+                <p>Customers and growing</p>
+              </div>
+            </li>
+            <li>
+              <div class="journery_data">
+                <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978464/oncourse/1014/icon_11.svg"
+                    alt="Saved in repair costs annually"></span>
+                <strong>$100 M+</strong>
+                <p>Saved in repair costs annually</p>
+              </div>
+            </li>
+            <li>
+              <div class="journery_data">
+                <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978457/oncourse/1014/icon_8.svg"
+                    alt="Customer Satisfaction"></span>
+                <strong>96%</strong>
+                <p>Customer Satisfaction</p>
+              </div>
+            </li>
+            <li>
+              <div class="journery_data">
+                <figure>
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/bbb_logo.webp"
+                    alt="Accredited Business">
+                </figure>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spz_plans">
+    <div class="spz_heading">
+      <div class="auto_container">
+        <div class="heading_content">
+          <h2><strong>Home protection</strong> built for you.</h2>
+          <p>Personalized coverage that can protect every corner of your home.</p>
+        </div>
+      </div>
+    </div>
+    <div class="plans_list">
+      <div class="auto_container">
+        <div class="plan_listMain">
+          <div class="splide plan_slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="plans_data">
+                    <div class="plan_dataTop">
+                      <h2>Water Line Protection Program</h2>
+                      <span>What´s covered?</span>
+                      <ul>
+                        <li>
+                          <p>Backfilling Holes</p>
+                        </li>
+                        <li>
+                          <p>Burst Water Pipe</p>
+                        </li>
+                        <li>
+                          <p>Inspections</p>
+                        </li>
+                        <li>
+                          <p>Equipment</p>
+                        </li>
+                      </ul>
+                      <strong>Plus 5 more</strong>
+                    </div>
+                    <div class="plan_dataBottom">
+                      <a href="https://www.awrusa.com/plan/9/water-line-protection-program">Learn more
+                        <img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761660226/oncourse/1014/arrow-right_1.svg"
+                          alt="arrow right">
+                        <img class="hover"
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761737997/oncourse/1014/arrow-right_hov.svg"
+                          alt="arrow right">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="splide__slide">
+                  <div class="plans_data">
+                    <div class="popular_plan">
+                      <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1761660259/oncourse/1014/fire.svg"
+                          alt="Fire"></span>
+                      <strong>Most Popular</strong>
+                    </div>
+                    <div class="plan_dataTop">
+                      <h2>Water Line and Sewer Line Protection Program</h2>
+                      <span>What´s covered?</span>
+                      <ul>
+                        <li>
+                          <p>Sewer Line Clogs and Blockages </p>
+                        </li>
+                        <li>
+                          <p>Burst Water Pipe</p>
+                        </li>
+                        <li>
+                          <p>Excavating</p>
+                        </li>
+                        <li>
+                          <p>Normal Wear and Tear</p>
+                        </li>
+                      </ul>
+                      <strong>Plus 7 more</strong>
+                    </div>
+                    <div class="plan_dataBottom">
+                      <a href="https://www.awrusa.com/plan/45/water-line-and-sewer-line-protection-program">Learn more
+                        <img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761660226/oncourse/1014/arrow-right_1.svg"
+                          alt="arrow right">
+                        <img class="hover"
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761737997/oncourse/1014/arrow-right_hov.svg"
+                          alt="arrow right">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="splide__slide">
+                  <div class="plans_data">
+                    <div class="popular_plan">
+                      <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1761660259/oncourse/1014/fire.svg"
+                          alt="Fire"></span>
+                      <strong>Best Value</strong>
+                    </div>
+                    <div class="plan_dataTop">
+                      <h2>Water Line, Sewer Line, and In-Home Plumbing Emergency Program</h2>
+                      <span>What´s covered?</span>
+                      <ul>
+                        <li>
+                          <p>Backfilling Holes</p>
+                        </li>
+                        <li>
+                          <p>Blocked or Overflowing Toilet </p>
+                        </li>
+                        <li>
+                          <p>Burst Water Pipe</p>
+                        </li>
+                        <li>
+                          <p>Broken Water Pipe Hidden Behind Walls
+                            and Ceilings </p>
+                        </li>
+                      </ul>
+                      <strong>Plus 16 more</strong>
+                    </div>
+                    <div class="plan_dataBottom">
+                      <a
+                        href="https://www.awrusa.com/plan/46/water-line-sewer-line-and-in-home-plumbing-emergency-program">Learn
+                        more <img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761660226/oncourse/1014/arrow-right_1.svg"
+                          alt="arrow right">
+                        <img class="hover"
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1761737997/oncourse/1014/arrow-right_hov.svg"
+                          alt="arrow right">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="custom_form">
+          <div class="form_title">
+            <h2>See all available plans in your area.</h2>
+          </div>
+          <div class="custom_formOuter">
+            <div class="custom_formMain">
+              <p class="error_msg">Please enter valid zip code.</p>
+              <input type="number" placeholder="Zip Code" maxlength="5" oninput="this.value = this.value.slice(0, 5)">
+              <a href="javascript:void(0);" class="custom_btn zipCode_btn spz1014_v1">Shop Plans <img
+                  src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
+                  alt="arrow right"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="our_values">
+    <div class="spz_heading">
+      <div class="auto_container">
+        <div class="heading_content">
+          <h2>Simpler living starts with <strong>reliable home protection</strong>.</h2>
+          <p>With American Water Resources, an Oncourse Company, simpler living isn’t just a promise - it’s how we’re
+            built.</p>
+        </div>
+      </div>
+    </div>
+    <div class="values_main">
+      <div class="auto_container">
+        <div class="our_valuesInner">
+          <div class="values_list">
+            <ul>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978080/oncourse/1014/icon_1.svg"
+                      alt="Trusted by millions"></span>
+                  <small>
+                    <strong>Trusted by millions</strong>
+                    <p>1.9 million homes protected - saving $100M+ in repair costs yearly. </p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978081/oncourse/1014/icon_2.svg"
+                      alt="Decades of Experience"></span>
+                  <small>
+                    <strong>Decades of Experience</strong>
+                    <p>30+ years of protecting homes with licensed, local experts.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978081/oncourse/1014/icon_3.svg"
+                      alt="Hassle-Free Claims"></span>
+                  <small>
+                    <strong>Hassle-Free Claims</strong>
+                    <p>One call and we handle the rest – scheduling, permits, inspections and more.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978081/oncourse/1014/icon_4.svg"
+                      alt="Flexible Coverage"></span>
+                  <small>
+                    <strong>Flexible Coverage</strong>
+                    <p>Month-to-month protection with no long-term contracts. Cancel anytime.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978081/oncourse/1014/icon_2.svg"
+                      alt="Guaranteed Repairs"></span>
+                  <small>
+                    <strong>Guaranteed Repairs</strong>
+                    <p>Covered repairs backed by a 1-year guarantee.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978104/oncourse/1014/icon_5.svg"
+                      alt="Proven Partnerships"></span>
+                  <small>
+                    <strong>Proven Partnerships</strong>
+                    <p>The chosen partner of 25+ utilities and municipalities nationwide.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978105/oncourse/1014/icon_6.svg"
+                      alt="Always-On Support"></span>
+                  <small>
+                    <strong>Always-On Support</strong>
+                    <p>24/7/365 live phone support with real people, always ready to help.</p>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <div class="value_data">
+                  <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1760978105/oncourse/1014/icon_7.svg"
+                      alt="Fast Local Help"></span>
+                  <small>
+                    <strong>Fast Local Help</strong>
+                    <p>Support when you need it most - relief until repairs are complete.</p>
+                  </small>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="value_bottom">
+            <picture>
+              <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/badges_mobile3x.png" media="(max-width: 767px)">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1762260708/oncourse/1014/badges_icon.svg"
+                alt="badges"></picture>
+            <span>Protecting your money, time and peace of mind.</span>
+            <p><strong>Get started </strong>in minutes with easy online enrollment.</p>
+            <a href="javascript:void(0);" class="custom_btn shopPlan spz1014_v1">Shop Plans <img
+                src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
+                alt="arrow right"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trusted_partner">
+    <div class="spz_heading">
+      <div class="auto_container">
+        <div class="heading_content">
+          <h2><strong>We´re a trusted partner</strong> for utilities and municipalities nationwide.</h2>
+          <p>Our partnerships help homeowners save more - with protection supported by their local providers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="partner_outer">
+      <div class="auto_container">
+        <div class="partner_inner">
+          <div class="partner_sliderMain">
+            <div class="splide partner_slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_15.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_1.webp"
+                          alt="Philadelphia energy authority">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_16.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_2.webp"
+                          alt="OUC">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_14.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_3.webp"
+                          alt="City utilities">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_13.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_4.webp"
+                          alt="NYC environmental protection">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source
+                          srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/water__sewerage_logo_1.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img
+                          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/water__sewerage_logo.webp"
+                          alt="Detroit">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_11.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_6.webp"
+                          alt="Corporation of the city of yonkers">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_10.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/seal_of_the_city_of_wilmington.webp"
+                          alt="Delaware">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="partner_data">
+                      <picture>
+                        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/logo_9.webp"
+                          type="image/webp" media="(max-width: 767px)">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/oncourse/1014/brandon_m_scrott_mayor_logo.webp"
+                          alt="Brandon M. Scott Mayor">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="custom_form">
+            <div class="form_title">
+              <h2>See if you're in a partner region.</h2>
+            </div>
+            <div class="custom_formOuter">
+              <div class="custom_formMain">
+                <p class="error_msg">Please enter valid zip code.</p>
+                <input type="number" placeholder="Zip Code" maxlength="5" oninput="this.value = this.value.slice(0, 5)">
+                <a href="javascript:void(0);" class="custom_btn zipCode_btn spz1014_v1">Shop Plans <img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
+                    alt="arrow right"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spz_testimonials">
+    <div class="spz_heading">
+      <div class="auto_container">
+        <div class="heading_content">
+          <h2>Proof that <strong>home protection</strong> pays off.</h2>
+          <p>Here’s what real customers have to say about their experience with us.</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial_inner">
+      <div class="auto_container">
+        <div class="testimonial_sliderMain">
+          <div class="splide testimonial_slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="testimonial_data">
+                    <div class="testimonial_dataTop">
+                      <span><img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1760978034/oncourse/1014/atomquote_1.svg"
+                          alt="quote"></span>
+                      <p>Our <strong>sewer line backed up</strong> and we feared family from out of town would have to
+                        leave. <br> A <strong>knowledgeable technician </strong> arrived in <strong>24 hours</strong> on
+                        Christmas Day and <strong>resolved the problem.</strong></p>
+                    </div>
+                    <strong>Lynn G.</strong>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="testimonial_data v2">
+                    <div class="testimonial_dataTop">
+                      <span><img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1760978034/oncourse/1014/atomquote_1.svg"
+                          alt="quote"></span>
+                      <p>We <strong>were grateful for the service you provided us recently</strong> on a bitterly cold
+                        day.
+                        We got <strong>assistance with our water/sewer line backup in 30 minutes after after we filed a
+                          claim.</strong> Thank you for your speedy service.</p>
+                    </div>
+                    <strong>Rachel S.</strong>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="testimonial_data">
+                    <div class="testimonial_dataTop">
+                      <span><img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1760978034/oncourse/1014/atomquote_1.svg"
+                          alt="quote"></span>
+                      <p>I have sewer and water line protection and they were lifesavers when my sewer line clogged.
+                        What
+                        would have cost $500+ to fix was fully covered. <strong>And the plumber arrived in 2 hours!
+                          Highly
+                          recommend.</strong></p>
+                    </div>
+                    <strong>Kierra B.</strong>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="value_bottom">
+            <p><strong>Protect</strong> your home today and avoid costly repairs tomorrow.</p>
+            <h4>Discover the best protection plans to fit your home's needs.</h4>
+            <a href="javascript:void(0);" class="custom_btn shopPlan spz1014_v1">Shop Plans <img
+                src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
+                alt="arrow right"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    `);
+
+    // Configure the form
+    document.querySelector('.awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__call-to-action p').textContent = 'Shop Plans';
+    document.querySelector('.awr-find-your-protection-plan__wrapper input#zip-code').setAttribute('placeholder', 'Zip Code');
+    document.querySelector('.awr-find-your-protection-plan__zipcode-container > .w-full > .pointer-events-none svg').insertAdjacentHTML('afterend', locationMarker);
+
+    const zipInput = document.querySelector('#zip-code').value;
+    console.log('Zip Input:', zipInput);
+    function removePartnersSection() {
+      if (document.querySelector('.trusted_partner')) {
+        document.querySelector('.trusted_partner').remove();
+      }
+    }
+    function removeBestValueTag() {
+      if (document.querySelector('.popular_plan')) {
+        document.querySelectorAll('.popular_plan').forEach(function (tag) {
+          tag.remove();
+        });
+      }
+    }
+    function updatedPlan() {
+      removePartnersSection();
+      document.querySelector('.plan_slider .splide__list li.splide__slide:last-child').remove();
+      document.querySelector('.plan_slider .splide__list li.splide__slide:first-child').insertAdjacentHTML('afterend', `
+        <li class="splide__slide">
+          <div class="plans_data">
+            <div class="popular_plan">
+              <span><img src="//res.cloudinary.com/spiralyze/image/upload/v1761660259/oncourse/1014/fire.svg" alt="Fire"></span>
+              <strong>Most Popular</strong>
+            </div>
+            <div class="plan_dataTop">
+              <h2>Sewer Line Protection Program</h2>
+              <span>What´s covered?</span>
+              <ul>
+                <li>
+                  <p>Sewer Line Clogs and Blockages </p>
+                </li>
+                <li>
+                  <p>Backfilling Holes</p>
+                </li>
+                <li>
+                  <p>Excavating</p>
+                </li>
+                <li>
+                  <p>Equipment</p>
+                </li>
+              </ul>
+              <strong>Plus 2 more</strong>
+            </div>
+            <div class="plan_dataBottom">
+              <a href="https://www.awrusa.com/detroit/plan/71/sewer-line-protection-program">Learn more
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1761660226/oncourse/1014/arrow-right_1.svg" alt="arrow right">
+                <img class="hover" src="//res.cloudinary.com/spiralyze/image/upload/v1761737997/oncourse/1014/arrow-right_hov.svg" alt="arrow right">
+              </a>
+            </div>
+          </div>  
+    </li>
+      `);
+      document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .popular_plan strong').textContent = "Best Value";
+      var firstAnchorTwo = document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataBottom a');
+      var secondAnchorTwo = document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataBottom a');
+      var thirdAnchorTwo = document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataBottom a');
+      if (document.querySelector('.plan_slider').classList.contains('detroit')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/detroit/plan/70/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/detroit/plan/71/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/detroit/plan/72/water-line-and-sewer-line-protection-program';
+      } else if (document.querySelector('.plan_slider').classList.contains('fortwayne')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/12/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/27/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/43/water-line-and-sewer-line-protection-program';
+      } else if (document.querySelector('.plan_slider').classList.contains('nyc')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/82/water-service-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/83/sewer-service-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/208/water-and-sewer-service-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataTop h2').textContent = "Water Service Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataTop h2').textContent = "Sewer Service Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "Water and Sewer Service Line Protection Program";
+      } else if (document.querySelector('.plan_slider').classList.contains('orlando')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/73/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/74/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/75/in-home-plumbing-emergency-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "In-Home Plumbing Emergency Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:first-child p').textContent = "Blocked Or Overflowing Toilet";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:nth-child(2) p').textContent = "Blocked Or Slow Shower Drains";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:nth-child(3) p').textContent = "Burst Water Pipe Joint";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:last-child p').textContent = "Clogged Laundry Drain Line";
+      } else if (document.querySelector('.plan_slider').classList.contains('philadelphia')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/14/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/28/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/55/water-line-and-sewer-line-protection-program';
+      } else if (document.querySelector('.plan_slider').classList.contains('phoenix')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/98/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/99/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/100/water-line-and-sewer-line-protection-program';
+      } else if (document.querySelector('.plan_slider').classList.contains('wilmington')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/9/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/209/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/210/water-line-%26-sewer-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .popular_plan').remove();
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .popular_plan strong').textContent = "Most Popular";
+      } else if (document.querySelector('.plan_slider').classList.contains('yonkers')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/15/unlimited-water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/29/unlimited-sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/57/unlimited-water-line-and-sewer-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataTop h2').textContent = "Unlimited Water Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataTop h2').textContent = "Unlimited Sewer Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "Unlimited Water and Sewer Line Protection Program";
+      } else if (document.querySelector('.plan_slider').classList.contains('baltimore')) {
+        firstAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/108/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/109/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/110/water-and-sewer-line-protection-program';
+      }
+    }
+    var firstAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataBottom a');
+    var secondAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataBottom a');
+    var thirdAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataBottom a');
+    if (zipInput === "52722" || zipInput === "07039" || zipInput === "15106") {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/plan/11/water-line-protection-program';
+      secondAnchor.href = 'https://www.awrusa.com/plan/50/water-line-and-sewer-line-protection-program';
+      thirdAnchor.href = 'https://www.awrusa.com/plan/53/water-line-sewer-line-and-in-home-plumbing-emergency-program';
+    } else if (zipInput === "93924") {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/plan/7/water-line-protection-program';
+      secondAnchor.href = 'https://www.awrusa.com/plan/39/water-line-and-sewer-line-protection-program';
+      thirdAnchor.href = 'https://www.awrusa.com/plan/40/water-line-sewer-line-and-in-home-plumbing-emergency-program';
+    } else if (zipInput === "22520") {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/plan/6/water-line-insurance-policy';
+      secondAnchor.href = 'https://www.awrusa.com/plan/58/water-line-and-sewer-line-insurance-policy';
+      thirdAnchor.href = 'https://www.awrusa.com/plan/59/water-line-sewer-line-and-in-home-plumbing-insurance-policy';
+    }
+
+    if (window.location.href.includes('.com/ca')) {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/ca/plan/7/water-line-protection-program';
+      secondAnchor.href = 'https://www.awrusa.com/ca/plan/39/water-line-and-sewer-line-protection-program';
+      thirdAnchor.href = 'https://www.awrusa.com/ca/plan/40/water-line-sewer-line-and-in-home-plumbing-emergency-program';
+    } else if (window.location.href.includes('.com/fl')) {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/fl/plan/9/water-line-protection-program';
+      secondAnchor.href = 'https://www.awrusa.com/fl/plan/45/water-line-and-sewer-line-protection-program';
+      thirdAnchor.href = 'https://www.awrusa.com/fl/plan/46/water-line-sewer-line-and-in-home-plumbing-emergency-program';
+    } else if (window.location.href.includes('.com/tx')) {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/tx/plan/9/water-line-protection-program';
+      secondAnchor.href = 'https://www.awrusa.com/tx/plan/45/water-line-and-sewer-line-protection-program';
+      thirdAnchor.href = 'https://www.awrusa.com/tx/plan/46/water-line-sewer-line-and-in-home-plumbing-emergency-program';
+    } else if (window.location.href.includes('.com/va')) {
+      removePartnersSection();
+      firstAnchor.href = 'https://www.awrusa.com/va/plan/6/water-line-insurance-policy';
+      secondAnchor.href = 'https://www.awrusa.com/va/plan/58/water-line-and-sewer-line-insurance-policy';
+      thirdAnchor.href = 'https://www.awrusa.com/va/plan/59/water-line-sewer-line-and-in-home-plumbing-insurance-policy';
+    } else if (window.location.href.includes('.com/detroit')) {
+      document.querySelector('.plan_slider').classList.add('detroit');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/fortwayne')) {
+      document.querySelector('.plan_slider').classList.add('fortwayne');
+      updatedPlan();
+    } else if (window.location.href.includes('.com/nyc')) {
+      document.querySelector('.plan_slider').classList.add('nyc');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/orlando')) {
+      document.querySelector('.plan_slider').classList.add('orlando');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/philadelphia')) {
+      document.querySelector('.plan_slider').classList.add('philadelphia');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/phoenix')) {
+      document.querySelector('.plan_slider').classList.add('phoenix');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/wilmington')) {
+      document.querySelector('.plan_slider').classList.add('wilmington');
+      updatedPlan();
+    } else if (window.location.href.includes('.com/yonkers')) {
+      document.querySelector('.plan_slider').classList.add('yonkers');
+      updatedPlan();
+      removeBestValueTag();
+    } else if (window.location.href.includes('.com/lasvegas')) {
+      if (document.querySelector('.trusted_partner')) {
+        document.querySelector('.trusted_partner').remove();
+      }
+      firstAnchor.href = 'https://www.awrusa.com/lasvegas/plan/101/water-line-protection-program';
+      document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2)').remove();
+      document.querySelector('.plan_slider .splide__list li.splide__slide:last-child').remove();
+    } else if (window.location.href.includes('.com/baltimore')) {
+      document.querySelector('.plan_slider').classList.add('baltimore');
+      updatedPlan();
+      removeBestValueTag()
+    }
+
+    // Function to move form to the section currently in view
+    function moveFormToVisibleSection() {
+      var form = document.querySelector('.awr-find-your-protection-plan');
+      if (!form) return;
+
+      // Get all sections that can contain the form
+      var sections = [
+        document.querySelector('.hero_form .zipCode_form')
+      ];
+
+      var currentSection = null;
+      var maxVisibleArea = 0;
+
+      sections.forEach(function (section) {
+        if (section) {
+          var rect = section.getBoundingClientRect();
+          var visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+          var visibleArea = visibleHeight * rect.width;
+
+          if (visibleArea > maxVisibleArea && visibleHeight > 0) {
+            maxVisibleArea = visibleArea;
+            currentSection = section;
+          }
+        }
+      });
+
+      if (currentSection && !currentSection.contains(form)) {
+        currentSection.insertAdjacentElement('afterbegin', form);
+      }
+    }
+
+    // Initial placement
+    moveFormToVisibleSection();
+
+    // Move form on scroll
+    // window.addEventListener('scroll', function () {
+    //   clearTimeout(window.scrollTimeout);
+    //   window.scrollTimeout = setTimeout(moveFormToVisibleSection, 100);
+    // });
+
+    function plansSlider() {
+      const planSliderElement = document.querySelector(".plan_slider");
+      if (!planSliderElement) {
+        return;
+      }
+
+      // Check if slider is already initialized
+      if (planSliderElement.classList.contains('is-initialized')) {
+        return;
+      }
+
+      planSliderInstance = new Splide(".plan_slider", {
+        type: "loop",
+        rewind: true,
+        focus: "center",
+        perPage: 3,
+        perMove: 1,
+        clones: 4,
+        gap: "24px",
+        start: 1, // Start with the second slide (index 1) in center
+        breakpoints: {
+          1023: {
+            perPage: 3,
+            gap: "24px",
+            start: 1,
+          },
+          767: {
+            perPage: 1,
+            gap: "24px",
+            start: 1,
+          },
+        },
+        autoWidth: false,
+        arrows: true,
+        pagination: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        interval: 5000,
+        speed: 1000,
+        easing: "linear",
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        drag: true,
+        direction: 'ltr',
+      });
+      planSliderInstance.mount();
+      planSliderElement.classList.add('is-initialized');
+    }
+    function partnerSlider() {
+      const partnerSliderElement = document.querySelector(".partner_slider");
+      if (!partnerSliderElement) {
+        return;
+      }
+
+      // Check if slider is already initialized
+      if (partnerSliderElement.classList.contains('is-initialized')) {
+        return;
+      }
+
+      const partnerSlider = new Splide(".partner_slider", {
+        type: "loop",
+        rewind: true,
+        autoWidth: true,
+        gap: "48px",
+        arrows: true,
+        pagination: false,
+        autoplay: false,
+        speed: 600,
+        easing: "ease",
+        drag: true,
+        direction: 'ltr',
+        focus: 0,
+        trimSpace: true,
+        padding: { right: 0 },
+        updateOnMove: true,
+        perMove: 1,
+        wheel: false,
+      });
+      partnerSlider.mount();
+
+      partnerSliderElement.classList.add('is-initialized');
+    }
+    function testimonialSlider() {
+      const testimonialSliderElement = document.querySelector(".testimonial_slider");
+      if (!testimonialSliderElement) {
+        return;
+      }
+
+      // Check if slider is already initialized
+      if (testimonialSliderElement.classList.contains('is-initialized')) {
+        return;
+      }
+
+      testimonialSliderInstance = new Splide(".testimonial_slider", {
+        type: "slide",
+        autoWidth: true,
+        gap: "24px",
+        padding: "16px",
+        arrows: true,
+        pagination: false,
+        autoplay: false,
+        speed: 600,
+        easing: "ease",
+        drag: true,
+        rewind: false,
+        direction: 'ltr',
+        focus: 0,
+        trimSpace: true,
+        perPage: 3,           // show exactly 3 slides
+        perMove: 1,
+
+      });
+      testimonialSliderInstance.mount();
+      testimonialSliderElement.classList.add('is-initialized');
+    }
+
+
+    // sticky CTA code start
+
+
+    addStickyFooter();
+
+    var scrollPosition = window.innerHeight;
+    function hideShowStickyBar() {
+      var form = document.querySelector('.awr-find-your-protection-plan');
+      if (window.scrollY > scrollPosition) {
+        document.querySelector("body").classList.add("goUp");
+        document.querySelector(".stickyZipCode_form").insertAdjacentElement('afterbegin', form);
+      } else {
+        document.querySelector("body").classList.remove("goUp");
+        document.querySelector(".hero_form .zipCode_form").insertAdjacentElement('afterbegin', form);
+      }
+    }
+    document.addEventListener("click", function (e) {
+      if (
+        e.target.classList.contains("sticky_close") ||
+        e.target.classList.contains("footerBtn")
+      ) {
+        document.querySelector(".spz-sticky-footer").remove();
+        localStorage.setItem("footerHidden", "true");
+      }
+    });
+    window.addEventListener(
+      "scroll",
+      function () {
+        hideShowStickyBar();
+      },
+      true
+    );
+    function addStickyFooter() {
+      if (!document.querySelector('.spz-sticky-footer')) {
+        document.querySelector("body").insertAdjacentHTML('beforeend', `
+          <div class="spz-sticky-footer">
+    <div class="spz-footer-container">
+        <div class="stickyZipCode_form zipCode_form"></div>
+    </div>
+    <div class="close_wrapper">
+      <a href="javascript:;" class="sticky_close"></a>
+    </div>
+  </div>
+        `)
+      }
+    }
+    // sticky CTA code end
+
+
+
+
+    // Store slider instances globally
+    let planSliderInstance = null;
+    let testimonialSliderInstance = null;
+
+    window.addEventListener('click', function (e) {
+      if (e.target.classList.contains('shopPlan')) {
+        document.querySelector('.awr-header__right-section>.awr-header__button-panel a:last-child').click();
+      }
+      if (e.target.classList.contains('awr-header-logo')) {
+        setTimeout(function () {
+          if (!document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right>div>svg')) {
+            if (document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right')) {
+              document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right').insertAdjacentHTML('beforeend', `
+                <div><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white injected-svg" aria-hidden="true" fill="none" viewBox="0 0 14 10" data-src="/images/flowbite/arrow-right.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                  </svg></div>
+                `);
+            }
+          }
+        }, 500);
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      const planSliderElement = document.querySelector(".plan_slider");
+      const testimonialSliderElement = document.querySelector(".testimonial_slider");
+
+      if (window.innerWidth < 1024) {
+        // Only initialize sliders for mobile/tablet (width < 1024)
+        if (planSliderElement && !planSliderElement.classList.contains('is-initialized')) {
+          plansSlider();
+        }
+        if (testimonialSliderElement && !testimonialSliderElement.classList.contains('is-initialized')) {
+          testimonialSlider();
+        }
+      } else if (window.innerWidth >= 1024) {
+        // Destroy sliders when switching to desktop view
+        if (planSliderElement && planSliderElement.classList.contains('is-initialized')) {
+          if (planSliderInstance) {
+            planSliderInstance.destroy();
+            planSliderInstance = null;
+          }
+          planSliderElement.classList.remove('is-initialized');
+        }
+        if (testimonialSliderElement && testimonialSliderElement.classList.contains('is-initialized')) {
+          if (testimonialSliderInstance) {
+            testimonialSliderInstance.destroy();
+            testimonialSliderInstance = null;
+          }
+          testimonialSliderElement.classList.remove('is-initialized');
+        }
+      }
+    });
+
+    let userAgent = navigator.userAgent;
+    let browser;
+    if (userAgent.match(/edg/i)) {
+      browser = "edge";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+      browser = "firefox";
+    } else if (userAgent.match(/opr\//i)) {
+      browser = "opera";
+    } else if (userAgent.match(/chrome|chromium|crios/i)) {
+      browser = "chrome";
+    } else if (userAgent.match(/safari/i)) {
+      browser = "safari";
+    } else {
+      //alert("Other browser");
+    }
+    document.querySelector('body').classList.add(browser);
+  }
+}
+function spz1014Test() {
+  if (!document.querySelector('body').classList.contains('spz_1012_v1')) {
+    document.querySelector('body').classList.add('spz_1012_v1', "v2");
+  }
+}
+
+function removeTest() {
+  if (document.querySelector('.awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__call-to-action p')) {
+    document.querySelector('.awr-find-your-protection-plan__wrapper button[type=submit] .awr-find-your-protection-plan__call-to-action p').textContent = 'See Pricing';
+  }
+  if (document.querySelector('.awr-find-your-protection-plan__wrapper input#zip-code')) {
+    document.querySelector('.awr-find-your-protection-plan__wrapper input#zip-code').setAttribute('placeholder', 'Zip Code');
+  }
+  if (document.querySelector('.awr-find-your-protection-plan__zipcode-container > .w-full > .pointer-events-none svg+svg')) {
+    document.querySelector('.awr-find-your-protection-plan__zipcode-container > .w-full > .pointer-events-none svg+svg').remove();
+  }
+  if (document.querySelector('.spz_sections')) {
+    document.querySelector('.spz_sections').remove();
+  }
+  if (document.querySelector('.spz-sticky-footer')) {
+    document.querySelector('.spz-sticky-footer').remove();
+  }
+  document.querySelector('body').classList.remove('spz_1012_v1');
+  if (document.querySelector('body').classList.contains('v2')) {
+    document.querySelector('body').classList.remove('v2');
+  }
+}
+
+
+const selector1014 = '.awr-layout__main';
+const selectorHomepage = '.awr-home__render-components';
+
+function waitForElement(selector, timeout = 10000) {
+  return new Promise((resolve, reject) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      resolve(element);
+      return;
+    }
+
+    const interval = setInterval(() => {
+      const element = document.querySelector(selector);
+      if (element) {
+        clearInterval(interval);
+        resolve(element);
+      }
+    }, 50);
+
+    setTimeout(() => {
+      clearInterval(interval);
+      reject(new Error(`Element not found: ${selector}`));
+    }, timeout);
+  });
+}
+
+function executeTest() {
+  waitForElement(selectorHomepage)
+    .then((element) => {
+      if (element) {
+        spz1014Code();
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+function executeTest2() {
+  waitForElement(selector1014)
+    .then((element) => {
+      if (element) {
+        spz1014Test();
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+
+var pageList = [
+  "https://www.awrusa.com/",
+  "https://www.awrusa.com/lasvegas/",
+  "https://www.awrusa.com/phoenix/",
+  "https://www.awrusa.com/philadelphia/",
+  "https://www.awrusa.com/detroit/",
+  "https://www.awrusa.com/orlando/",
+  "https://www.awrusa.com/tx/",
+  "https://www.awrusa.com/wilmington/",
+  "https://www.awrusa.com/yonkers/",
+  "https://www.awrusa.com/baltimore/",
+  "https://www.awrusa.com/fortwayne/",
+  "https://www.awrusa.com/fl/",
+  "https://www.awrusa.com/nyc/",
+  "https://www.awrusa.com/ca/",
+  "https://www.awrusa.com/va/"
+];
+
+
+let previousUrl = location.href.split("?")[0].split("#")[0];
+var running = false;
+
+function runCodeBasedOnUrl() {
+  var currentPage = window.location.href.split("?")[0].split("#")[0];
+
+  if (pageList.some(function (url) { return currentPage === url || currentPage === url.replace(/\/$/, '') || currentPage + '/' === url; })) {
+    if (running) return; // Prevent multiple executions
+    running = true;
+    console.log("Running 1014 code for homepage");
+    executeTest();
+    setTimeout(function () { running = false; }, 50);
+  } else if (["/plans/all-plans", "/plans/water-sewer", "/plans/heating-cooling", "/plans/electrical-gas", "/plans/appliances", "/plans/whole-home", "/cart", "/cart/payment"].some(function (path) { return currentPage.endsWith(path); })) {
+    if (running) return; // Prevent multiple executions
+    running = true;
+    console.log("Running 1014 test for other page");
+    executeTest2();
+    setTimeout(function () { running = false; }, 50);
+  } else {
+    removeTest();
+  }
+}
+
+// Run on initial load
+runCodeBasedOnUrl();
+
+// Also run when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', runCodeBasedOnUrl);
+} else {
+  // DOM already loaded, run it
+  setTimeout(runCodeBasedOnUrl, 100);
+}
+
+const observer = new MutationObserver(() => {
+  var currentPage = window.location.href.split("?")[0].split("#")[0];
+
+  // Check if URL actually changed
+  if (currentPage === previousUrl) {
+    // URL hasn't changed, but check if we need to run code anyway (page refresh case)
+    var isHomepage = pageList.some(function (url) { return currentPage === url || currentPage === url.replace(/\/$/, '') || currentPage + '/' === url; });
+    var isInList = ["/plans/all-plans", "/plans/water-sewer", "/plans/heating-cooling", "/plans/electrical-gas", "/plans/appliances", "/plans/whole-home", "/cart", "/cart/payment"].some(function (path) { return currentPage.endsWith(path); });
+    var selectorToCheck = isHomepage ? selectorHomepage : selector1014;
+    var selectorElement = document.querySelector(selectorToCheck);
+
+    if (selectorElement) {
+      var hasSpzClass = document.querySelector('body').classList.contains('spz_1012_v1');
+      var hasSpzSections = document.querySelector('.spz_sections');
+      // Check body class for both conditions, and also check spz_sections for homepage
+      if (isHomepage && (!hasSpzClass || !hasSpzSections)) {
+        console.log("Home page?", isHomepage);
+        runCodeBasedOnUrl();
+      } else if (isInList && !isHomepage && !hasSpzClass) {
+        runCodeBasedOnUrl();
+      }
+    }
+    return;
+  }
+
+  // URL changed, so clean up previous test first
+  if (previousUrl && pageList.some(function (url) { return previousUrl === url || previousUrl === url.replace(/\/$/, '') || previousUrl + '/' === url; })) {
+    removeTest();
+  }
+
+  previousUrl = currentPage;
+  runCodeBasedOnUrl();
+});
+
+const config = { subtree: true, childList: true };
+observer.observe(document.body, config);

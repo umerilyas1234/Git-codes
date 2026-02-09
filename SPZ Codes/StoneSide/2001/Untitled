@@ -1,0 +1,4 @@
+window.addEventListener("locationchange", function () {
+    url_2001 = location.href;
+    urlCheck_2001(url_2001);
+});

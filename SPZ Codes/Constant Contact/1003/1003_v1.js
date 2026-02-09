@@ -1,0 +1,431 @@
+function hiddenValue(currentExperimentName, currentExperimentValue) {
+  function setCookie(name, value, days) {
+    var expires = ''
+    if (days) {
+      var date = new Date()
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+      expires = '; expires=' + date.toUTCString()
+    }
+    document.cookie = name + '=' + (value || '') + expires + '; path=/'
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + '='
+    var ca = document.cookie.split(';')
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i]
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length)
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
+  }
+
+  var ExistingExperimentName = getCookie('ExperimentName')
+  var ExistingExperimentValue = getCookie('ExperimentValue')
+
+  if (!ExistingExperimentName) {
+    setCookie('ExperimentName', currentExperimentName, 1)
+    setCookie('ExperimentValue', currentExperimentValue, 1)
+  } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
+    setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1)
+    setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1)
+  } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
+    var existingNames = ExistingExperimentName.split(',')
+    var existingValues = ExistingExperimentValue.split(',')
+    var index = existingNames.indexOf(currentExperimentName)
+    existingValues[index] = currentExperimentValue
+    setCookie('ExperimentName', existingNames.join(','), 1)
+    setCookie('ExperimentValue', existingValues.join(','), 1)
+  }
+}
+hiddenValue('#1003 | Constant Contact | Home | Features Accordion', 'SPZ_1003_V1')
+
+/***********************************
+************************************
+DO NOT TOUCH
+BEYOND THIS LINE
+******************************
+************************/
+//Helper function to animate labels for inputs
+
+// This is the code to generate the form over UI section do no edit it
+function addAccordion() {
+
+  document.body.classList.add('spz_1003_v1');
+
+  //DEV 2/5. Find the class or ID of the control hero section and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
+  const template_sectionSelector = `.main-grid #integrations-image`;
+
+  //DEV 3/5. Choose where your accordion should appear
+  const template_position = "afterend" //"beforebegin", "beforeend", "afterend"
+
+  //DEV 4/5. Headline & accordion section
+  const template_sectionContent = {
+    sectionHeading: "How We Help Your Business Grow",
+    sectionSubHeading: "",
+    accordionItems: [
+      {
+        title: 'Email marketing',
+        content: '<p>Create professional emails in minutes. Select from hundreds of templates and customize or create your own. Generate content with AI and schedule emails to send later.</p><p>Boost sales and engagement by sending automated welcome emails. Or send emails to customers who abandon their cart or register. Suggest upsells after purchase, and automatically resend emails to non-openers.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-email-marketing_1.webp",
+        imageAlt: "CTCT Email Marketing",
+        ctaUniqueClass: "spz1003_email_marketing_feature_cta"
+      },
+      {
+        title: 'Email templates',
+        content: '<p>Choose from 600+ high-converting, pro-designed templates. Perfect for newsletters, sales, fundraising, events, seasonal messages, and more.</p> <p>Edit with drag and drop. Add brand colors, logos, and images. All templates are designed to look good on desktop and mobile.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-email-templates_4.webp",
+        imageAlt: "CTCT Email Templates",
+        ctaUniqueClass: "spz1003_email_templates_feature_cta"
+      },
+      {
+        title: 'Social media management',
+        content: '<p>Generate social media posts with AI. Just enter a few keywords. Or turn emails into posts. </p> <p>Add hashtags, images, and videos. Post immediately to Instagram, Facebook, LinkedIn, and TikTok all at once, or schedule for later. </p><p>Easily launch Meta ads and reach ready-to-buy customers. Increase online visibility and capture more sales.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-social-media-management_3.webp",
+        imageAlt: "CTCT Social Media",
+        ctaUniqueClass: "spz1003_social_media_management_feature_cta"
+      },
+      {
+        title: 'Events & ticketing',
+        content: '<p>Send texts and emails promoting your event, or share on social media. Free, paid, online, and in-person events. Create registration or RSVP pages. Accept online payments. </p><p>Create and send scannable tickets. See who’s registering, how many tickets you’ve sold, and more. </p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-evants-ticketing_1.webp",
+        imageAlt: "CTCT Events Ticketing",
+        ctaUniqueClass: "spz1003_events_&_tracking_feature_cta"
+      },
+      {
+        title: 'SMS marketing',
+        content: '<p>Send texts that customers are excited to open and buy from.  Let new customers join your text list with Text to Join, or invite email subscribers to join. </p><p>Generate content with AI. Preview messages before sending. Get a dedicated local number to send texts from.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-text-marketing_1.webp",
+        imageAlt: "CTCT SMS marketing",
+        ctaUniqueClass: "spz1003_sms_marketing_feature_cta"
+      },
+      {
+        title: 'Multi-account management',
+        content: '<p>Streamline marketing across all your departments, teams, or locations with one convenient console managed by Constant Contact.</p><p>Manage users, budget email sends, and lock down brand templates all in a single interface.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-multi-account-management_5.webp",
+        imageAlt: "CTCT Multi Account Management",
+        ctaUniqueClass: "spz1003_multi-account_management_feature_cta"
+      },
+      {
+        title: 'Integrations',
+        content: '<p>Sync with Google, Canva, Shopify, Square, Wix, Stripe, Xero, and 300+ more.</p><p>Auto-pull contacts, purchases, and other key info to keep your marketing up to date. Reduce manual work. Save time. Use connected data from across your tools to understand what’s working and target more effectively.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-integrations_2.webp",
+        imageAlt: "CTCT Integrations",
+        ctaUniqueClass: "spz1003_integrations_feature_cta"
+      },
+      {
+        title: 'Reporting',
+        content: '<p>Get detailed, easy-to-read reports on who’s opening your emails, posts, and texts. See which content drives the most sales and revenue. Repeat what’s successful and grow sales even more.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-reporting_1.webp",
+        imageAlt: "CTCT Reporting",
+        ctaUniqueClass: "spz1003_reporting_feature_cta"
+      },
+    ],
+    ctaText: "Start trial",
+    ctaUrl: "https://www.constantcontact.com/signup"
+  };
+
+  const logos = [
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-the-ups-store_webp.webp", alt: "The UPS Store", width: "185px" },
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-cornell-engineering_webp.webp", alt: "Cornell Engineering", width: "108px" },
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-plam-beach-county_webp.webp", alt: "Palm Beach County", width: "56px" },
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-mathnasium_webp.webp", alt: "Mathnasium", width: "148px" },
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-techsoup_webp.webp", alt: "TechSoup", width: "113px" },
+    { url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/logo-dream-vacations_webp.webp", alt: "Dream Vacations", width: "119px" }
+  ];
+
+  /***********************************
+  DO NOT TOUCH BEYOND THIS LINE
+  ************************/
+
+  function addHorizontalAccordion(content, whereToPut, selector) {
+    const { sectionHeading, sectionSubHeading, accordionItems, ctaText, ctaUrl } = content;
+
+    const logosHTML = logos.map(logo =>
+      `<div class="spz-logo-item" style="width: ${logo.width}">
+      <img src="${logo.url}" alt="${logo.alt}" loading="lazy" />
+    </div>`
+    ).join('');
+
+    const accordionHTML = accordionItems.map(item =>
+      `<div class="content">
+      <div class="spz-features-accordion__item">
+        <span>${item.title}</span>
+        <div class="progress_bar"><i></i></div>
+      </div>
+      <div class="solution__content">
+        ${item.content}
+        <div class="spz-ctas-wrap">
+          <a href="${ctaUrl}" class="spz-primary spz1003_v1 ${item.ctaUniqueClass}">${ctaText}</a>
+        </div>
+      </div>
+      <div class="solution__image">
+        <img src="${item.imageUrl}" alt="${item.imageAlt}" loading="lazy" />
+      </div>
+    </div>`
+    ).join('');
+
+    const imagesHTML = accordionItems.map((item, index) =>
+      `<div class="solution__image-item ${index === 0 ? 'active' : ''}" data-index="${index}">
+      <img src="${item.imageUrl}" alt="${item.imageAlt}" loading="lazy" />
+    </div>`
+    ).join('');
+
+    const template = `
+  	<div class="spz-social-proof">
+      <div class="spz-logos-wrapper">${logosHTML}</div>
+    </div>
+    <div class="spz-bg-wrap">
+      ${sectionHeading ? `<div class="features-heading">${sectionHeading}</div>` : ''}
+      ${sectionSubHeading ? `<div class="features-subheading">${sectionSubHeading}</div>` : ''}
+      <div class="spz-features-accordion__wrapper">
+        <div class="spz-features-accordion__row">
+          <div class="spz-features-accordion">
+            <div class="spz-features-accordion__contents">${accordionHTML}</div>
+          </div>
+          <div class="spz-features-accordion__images">${imagesHTML}</div>
+        </div>
+      </div>
+    </div>`;
+
+    document.querySelector('.main-grid #integrations-image').insertAdjacentHTML(whereToPut, template);
+    initAccordion(accordionItems.length);
+
+  }
+
+  function initAccordion(totalItems) {
+    const DURATION = 8000;
+    const INTERVAL = 200;
+    const contents = document.querySelector('.spz-features-accordion__contents');
+    const items = Array.from(contents.children);
+    const imageContainer = document.querySelector('.spz-features-accordion__images');
+    const imageItems = imageContainer ? Array.from(imageContainer.children) : [];
+    const accordionWrapper = document.querySelector('.spz-bg-wrap');
+
+    // Check for saved accordion state from sessionStorage
+    const savedIndex = sessionStorage.getItem('spz_1003_v1_accordion_index');
+    let activeIndex = savedIndex !== null ? parseInt(savedIndex, 10) : 0;
+    // Ensure activeIndex is within valid range
+    if (activeIndex < 0 || activeIndex >= totalItems) {
+      activeIndex = 0;
+    }
+    
+    let progress = 0;
+    let autoPlay = true;
+    let stopped = false;
+    let intervalId = null;
+    let hasStarted = false;
+
+    // Set initial active state based on saved index
+    items.forEach((item, index) => {
+      item.classList.toggle('active', index === activeIndex);
+    });
+    
+    // Set initial image state
+    if (imageItems.length) {
+      imageItems.forEach((img, i) => img.classList.toggle('active', i === activeIndex));
+    }
+    
+    // If there's a saved state, scroll to accordion section on page load
+    if (savedIndex !== null && accordionWrapper) {
+      setTimeout(() => {
+        accordionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        stopped = true;
+        document.querySelectorAll('.progress_bar i').forEach(bar => bar.style.display = 'none');
+        if (activeIndex !== index) switchItem(index);
+        // Save current active index to sessionStorage
+        sessionStorage.setItem('spz_1003_v1_accordion_index', index.toString());
+      });
+
+      item.addEventListener('mouseenter', () => {
+        if (activeIndex === index && !stopped) autoPlay = false;
+      });
+
+      item.addEventListener('mouseleave', () => {
+        if (activeIndex === index && !stopped) autoPlay = true;
+      });
+    });
+
+    // Pause autoplay when hovering over the active image
+    imageItems.forEach((img, index) => {
+        img.addEventListener('mouseenter', () => {
+            if (activeIndex === index && !stopped) autoPlay = false;
+        });
+
+        img.addEventListener('mouseleave', () => {
+            if (activeIndex === index && !stopped) autoPlay = true;
+        });
+    });
+    
+    // Add click listeners to spz-primary buttons to save state before navigation
+    const primaryButtons = document.querySelectorAll('.spz-primary.spz1003_v1');
+    primaryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Save current active index before navigation
+        sessionStorage.setItem('spz_1003_v1_accordion_index', activeIndex.toString());
+      });
+    });
+
+    function startAccordion() {
+      if (hasStarted) return;
+      hasStarted = true;
+
+      intervalId = setInterval(() => {
+        if (!autoPlay || stopped) return;
+
+        if (progress >= 100) {
+          activeIndex = (activeIndex + 1) % totalItems;
+          switchItem(activeIndex);
+        } else {
+          progress += (100 * INTERVAL) / DURATION;
+          if (!stopped) {
+            items[activeIndex].querySelector('.progress_bar i').style.width = `${progress}%`;
+          }
+        }
+      }, INTERVAL);
+    }
+
+    function switchItem(index) {
+      progress = 0;
+      activeIndex = index;
+
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+        if (!stopped) item.querySelector('.progress_bar i').style.width = '0';
+      });
+
+      // Desktop images
+      if (imageItems.length) {
+        imageItems.forEach((img, i) => img.classList.toggle('active', i === index));
+        fadeImage(imageItems[index]);
+      }
+
+      // Mobile/tablet images
+      fadeImage(items[index].querySelector('.solution__image'));
+    }
+
+    function fadeImage(element) {
+      if (element) {
+        element.style.opacity = '0';
+        setTimeout(() => element.style.opacity = '1', 250);
+      }
+    }
+
+    // Intersection Observer to start accordion when in view
+    if (accordionWrapper) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startAccordion();
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      observer.observe(accordionWrapper);
+    } else {
+      // Fallback: start immediately if wrapper not found
+      startAccordion();
+    }
+    
+    // Handle browser back button - restore accordion state
+    // Use a flag to prevent multiple listeners
+    if (!window.__spz_1003_v1_popstate_listener) {
+      window.__spz_1003_v1_popstate_listener = true;
+      window.addEventListener('popstate', () => {
+        // Wait a bit for DOM to be ready
+        setTimeout(() => {
+          const savedIndex = sessionStorage.getItem('spz_1003_v1_accordion_index');
+          if (savedIndex !== null) {
+            const accordionWrapperCheck = document.querySelector('.spz-bg-wrap');
+            const contentsCheck = document.querySelector('.spz-features-accordion__contents');
+            if (accordionWrapperCheck && contentsCheck) {
+              const itemsCheck = Array.from(contentsCheck.children);
+              const index = parseInt(savedIndex, 10);
+              if (index >= 0 && index < itemsCheck.length) {
+                // Find the current active index
+                let currentActive = 0;
+                itemsCheck.forEach((item, i) => {
+                  if (item.classList.contains('active')) {
+                    currentActive = i;
+                  }
+                });
+                
+                if (index !== currentActive) {
+                  // Trigger click on the item to switch
+                  itemsCheck[index].click();
+                  // Scroll to accordion section
+                  setTimeout(() => {
+                    accordionWrapperCheck.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }
+            }
+          }
+        }, 100);
+      });
+    }
+  }
+
+  addHorizontalAccordion(template_sectionContent, template_position, template_sectionSelector);
+
+
+}
+
+
+function waitForElement(cssSelector, callback) {
+  var stop,
+    elementCached,
+    timeout,
+    check = function () {
+      try {
+        elementCached = document.querySelector(cssSelector)
+        if (stop) return
+        if (elementCached) {
+          callback(elementCached)
+          clearTimeout(timeout)
+        } else {
+          window.requestAnimationFrame(check)
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  window.requestAnimationFrame(check)
+  timeout = setTimeout(function () {
+    stop = true
+  }, 5000)
+}
+
+waitForElement('.main-grid #features-checkbox-section', () => {
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (document.querySelector('.main-grid #features-checkbox-section') && !document.querySelector('.spz-bg-wrap')) {
+        console.log('Adding accordion section');
+        addAccordion();
+      }
+    }
+  })
+  const config = {
+    childList: true,
+    attributes: true,
+    subtree: true,
+    characterData: true
+  };
+  observer.observe(document.body, config)
+})
+
+
+
+const formLoaded = setInterval(() => {
+  if (document.querySelector('.main-grid #main') && !document.querySelector('.spz-bg-wrap')) {
+    clearInterval(formLoaded);
+    addAccordion();
+  }
+});

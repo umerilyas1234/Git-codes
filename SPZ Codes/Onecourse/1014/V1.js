@@ -395,7 +395,7 @@ function spz1014Code() {
                 alt="badges"></picture>
             <span>Protecting your money, time and peace of mind.</span>
             <p><strong>Get started </strong>in minutes with easy online enrollment.</p>
-            <a href="https://www.awrusa.com/plans/all-plans" class="custom_btn spz1014_v1">Shop Plans <img
+            <a href="javascript:void(0);" class="custom_btn shopPlan spz1014_v1">Shop Plans <img
                 src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
                 alt="arrow right"></a>
           </div>
@@ -586,7 +586,7 @@ function spz1014Code() {
           <div class="value_bottom">
             <p><strong>Protect</strong> your home today and avoid costly repairs tomorrow.</p>
             <h4>Discover the best protection plans to fit your home's needs.</h4>
-            <a href="https://www.awrusa.com/plans/all-plans" class="custom_btn spz1014_v1">Shop Plans <img
+            <a href="javascript:void(0);" class="custom_btn shopPlan spz1014_v1">Shop Plans <img
                 src="//res.cloudinary.com/spiralyze/image/upload/v1761660142/oncourse/1014/atomiconbutton-arrow-right.svg"
                 alt="arrow right"></a>
           </div>
@@ -605,7 +605,20 @@ function spz1014Code() {
 
     const zipInput = document.querySelector('#zip-code').value;
     console.log('Zip Input:', zipInput);
+    function removePartnersSection() {
+      if (document.querySelector('.trusted_partner')) {
+        document.querySelector('.trusted_partner').remove();
+      }
+    }
+    function removeBestValueTag() {
+      if (document.querySelector('.popular_plan')) {
+        document.querySelectorAll('.popular_plan').forEach(function (tag) {
+          tag.remove();
+        });
+      }
+    }
     function updatedPlan() {
+      removePartnersSection();
       document.querySelector('.plan_slider .splide__list li.splide__slide:last-child').remove();
       document.querySelector('.plan_slider .splide__list li.splide__slide:first-child').insertAdjacentHTML('afterend', `
         <li class="splide__slide">
@@ -651,103 +664,133 @@ function spz1014Code() {
         secondAnchorTwo.href = 'https://www.awrusa.com/detroit/plan/71/sewer-line-protection-program';
         thirdAnchorTwo.href = 'https://www.awrusa.com/detroit/plan/72/water-line-and-sewer-line-protection-program';
       } else if (document.querySelector('.plan_slider').classList.contains('fortwayne')) {
-        firstAnchor.href = 'https://www.awrusa.com/fortwayne/plan/12/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/fortwayne/plan/27/sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/fortwayne/plan/43/water-line-and-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/12/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/27/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/fortwayne/plan/43/water-line-and-sewer-line-protection-program';
       } else if (document.querySelector('.plan_slider').classList.contains('nyc')) {
-        firstAnchor.href = 'https://www.awrusa.com/nyc/plan/82/water-service-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/nyc/plan/83/sewer-service-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/nyc/plan/208/water-and-sewer-service-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/82/water-service-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/83/sewer-service-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/nyc/plan/208/water-and-sewer-service-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataTop h2').textContent = "Water Service Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataTop h2').textContent = "Sewer Service Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "Water and Sewer Service Line Protection Program";
       } else if (document.querySelector('.plan_slider').classList.contains('orlando')) {
-        firstAnchor.href = 'https://www.awrusa.com/orlando/plan/73/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/orlando/plan/74/sewer-line-protection-program';
-        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child').remove();
+        firstAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/73/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/74/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/orlando/plan/75/in-home-plumbing-emergency-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "In-Home Plumbing Emergency Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:first-child p').textContent = "Blocked Or Overflowing Toilet";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:nth-child(2) p').textContent = "Blocked Or Slow Shower Drains";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:nth-child(3) p').textContent = "Burst Water Pipe Joint";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop ul li:last-child p').textContent = "Clogged Laundry Drain Line";
       } else if (document.querySelector('.plan_slider').classList.contains('philadelphia')) {
-        firstAnchor.href = 'https://www.awrusa.com/philadelphia/plan/14/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/philadelphia/plan/28/sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/philadelphia/plan/55/water-line-and-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/14/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/28/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/philadelphia/plan/55/water-line-and-sewer-line-protection-program';
       } else if (document.querySelector('.plan_slider').classList.contains('phoenix')) {
-        firstAnchor.href = 'https://www.awrusa.com/phoenix/plan/98/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/phoenix/plan/99/sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/phoenix/plan/100/water-line-and-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/98/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/99/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/phoenix/plan/100/water-line-and-sewer-line-protection-program';
       } else if (document.querySelector('.plan_slider').classList.contains('wilmington')) {
-        firstAnchor.href = 'https://www.awrusa.com/wilmington/plan/9/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/wilmington/plan/209/sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/wilmington/plan/210/water-line-%26-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/9/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/209/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/wilmington/plan/210/water-line-%26-sewer-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .popular_plan').remove();
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .popular_plan strong').textContent = "Most Popular";
       } else if (document.querySelector('.plan_slider').classList.contains('yonkers')) {
-        firstAnchor.href = 'https://www.awrusa.com/yonkers/plan/15/unlimited-water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/yonkers/plan/29/unlimited-sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/yonkers/plan/57/unlimited-water-line-and-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/15/unlimited-water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/29/unlimited-sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/yonkers/plan/57/unlimited-water-line-and-sewer-line-protection-program';
+        document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataTop h2').textContent = "Unlimited Water Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataTop h2').textContent = "Unlimited Sewer Line Protection Program";
+        document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataTop h2').textContent = "Unlimited Water and Sewer Line Protection Program";
       } else if (document.querySelector('.plan_slider').classList.contains('baltimore')) {
-        firstAnchor.href = 'https://www.awrusa.com/baltimore/plan/108/water-line-protection-program';
-        secondAnchor.href = 'https://www.awrusa.com/baltimore/plan/109/sewer-line-protection-program';
-        thirdAnchor.href = 'https://www.awrusa.com/baltimore/plan/110/water-and-sewer-line-protection-program';
+        firstAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/108/water-line-protection-program';
+        secondAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/109/sewer-line-protection-program';
+        thirdAnchorTwo.href = 'https://www.awrusa.com/baltimore/plan/110/water-and-sewer-line-protection-program';
       }
     }
     var firstAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:first-child .plan_dataBottom a');
     var secondAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2) .plan_dataBottom a');
     var thirdAnchor = document.querySelector('.plan_slider .splide__list li.splide__slide:last-child .plan_dataBottom a');
     if (zipInput === "52722" || zipInput === "07039" || zipInput === "15106") {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/plan/11/water-line-protection-program';
       secondAnchor.href = 'https://www.awrusa.com/plan/50/water-line-and-sewer-line-protection-program';
       thirdAnchor.href = 'https://www.awrusa.com/plan/53/water-line-sewer-line-and-in-home-plumbing-emergency-program';
     } else if (zipInput === "93924") {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/plan/7/water-line-protection-program';
       secondAnchor.href = 'https://www.awrusa.com/plan/39/water-line-and-sewer-line-protection-program';
       thirdAnchor.href = 'https://www.awrusa.com/plan/40/water-line-sewer-line-and-in-home-plumbing-emergency-program';
     } else if (zipInput === "22520") {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/plan/6/water-line-insurance-policy';
       secondAnchor.href = 'https://www.awrusa.com/plan/58/water-line-and-sewer-line-insurance-policy';
       thirdAnchor.href = 'https://www.awrusa.com/plan/59/water-line-sewer-line-and-in-home-plumbing-insurance-policy';
     }
 
     if (window.location.href.includes('.com/ca')) {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/ca/plan/7/water-line-protection-program';
       secondAnchor.href = 'https://www.awrusa.com/ca/plan/39/water-line-and-sewer-line-protection-program';
       thirdAnchor.href = 'https://www.awrusa.com/ca/plan/40/water-line-sewer-line-and-in-home-plumbing-emergency-program';
     } else if (window.location.href.includes('.com/fl')) {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/fl/plan/9/water-line-protection-program';
       secondAnchor.href = 'https://www.awrusa.com/fl/plan/45/water-line-and-sewer-line-protection-program';
       thirdAnchor.href = 'https://www.awrusa.com/fl/plan/46/water-line-sewer-line-and-in-home-plumbing-emergency-program';
     } else if (window.location.href.includes('.com/tx')) {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/tx/plan/9/water-line-protection-program';
       secondAnchor.href = 'https://www.awrusa.com/tx/plan/45/water-line-and-sewer-line-protection-program';
       thirdAnchor.href = 'https://www.awrusa.com/tx/plan/46/water-line-sewer-line-and-in-home-plumbing-emergency-program';
     } else if (window.location.href.includes('.com/va')) {
+      removePartnersSection();
       firstAnchor.href = 'https://www.awrusa.com/va/plan/6/water-line-insurance-policy';
       secondAnchor.href = 'https://www.awrusa.com/va/plan/58/water-line-and-sewer-line-insurance-policy';
       thirdAnchor.href = 'https://www.awrusa.com/va/plan/59/water-line-sewer-line-and-in-home-plumbing-insurance-policy';
     } else if (window.location.href.includes('.com/detroit')) {
       document.querySelector('.plan_slider').classList.add('detroit');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/fortwayne')) {
       document.querySelector('.plan_slider').classList.add('fortwayne');
       updatedPlan();
     } else if (window.location.href.includes('.com/nyc')) {
       document.querySelector('.plan_slider').classList.add('nyc');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/orlando')) {
       document.querySelector('.plan_slider').classList.add('orlando');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/philadelphia')) {
       document.querySelector('.plan_slider').classList.add('philadelphia');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/phoenix')) {
       document.querySelector('.plan_slider').classList.add('phoenix');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/wilmington')) {
       document.querySelector('.plan_slider').classList.add('wilmington');
       updatedPlan();
     } else if (window.location.href.includes('.com/yonkers')) {
       document.querySelector('.plan_slider').classList.add('yonkers');
       updatedPlan();
+      removeBestValueTag();
     } else if (window.location.href.includes('.com/lasvegas')) {
+      if (document.querySelector('.trusted_partner')) {
+        document.querySelector('.trusted_partner').remove();
+      }
       firstAnchor.href = 'https://www.awrusa.com/lasvegas/plan/101/water-line-protection-program';
       document.querySelector('.plan_slider .splide__list li.splide__slide:nth-child(2)').remove();
       document.querySelector('.plan_slider .splide__list li.splide__slide:last-child').remove();
     } else if (window.location.href.includes('.com/baltimore')) {
       document.querySelector('.plan_slider').classList.add('baltimore');
       updatedPlan();
+      removeBestValueTag()
     }
 
     // Function to move form to the section currently in view
@@ -912,6 +955,25 @@ function spz1014Code() {
     let planSliderInstance = null;
     let testimonialSliderInstance = null;
 
+    window.addEventListener('click', function (e) {
+      if (e.target.classList.contains('shopPlan')) {
+        document.querySelector('.awr-header__right-section>.awr-header__button-panel a:last-child').click();
+      }
+      if (e.target.classList.contains('awr-header-logo')){
+        setTimeout(function(){
+          if(!document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right>div>svg')){
+            if(document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right')){
+              document.querySelector('.zipCode_form .awr-find-your-protection-plan__arrow-right').insertAdjacentHTML('beforeend', `
+                <div><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white injected-svg" aria-hidden="true" fill="none" viewBox="0 0 14 10" data-src="/images/flowbite/arrow-right.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                  </svg></div>
+                `);
+            }
+          }
+        }, 500);
+      }
+    });
+
     window.addEventListener('resize', function () {
       const planSliderElement = document.querySelector(".plan_slider");
       const testimonialSliderElement = document.querySelector(".testimonial_slider");
@@ -1041,7 +1103,6 @@ function executeTest2() {
 var pageList = [
   "https://www.awrusa.com/",
   "https://www.awrusa.com/lasvegas/",
-  "https://www.awrusa.com/nyc/",
   "https://www.awrusa.com/phoenix/",
   "https://www.awrusa.com/philadelphia/",
   "https://www.awrusa.com/detroit/",
@@ -1051,7 +1112,10 @@ var pageList = [
   "https://www.awrusa.com/yonkers/",
   "https://www.awrusa.com/baltimore/",
   "https://www.awrusa.com/fortwayne/",
-  "https://www.awrusa.com/fl/"
+  "https://www.awrusa.com/fl/",
+  "https://www.awrusa.com/nyc/",
+  "https://www.awrusa.com/ca/",
+  "https://www.awrusa.com/va/"
 ];
 
 

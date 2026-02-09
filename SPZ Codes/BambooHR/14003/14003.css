@@ -469,7 +469,7 @@
 }
 @media (max-width: 767px) {
   .spz_14003_v1 .form_container .form .mktoForm .mktoErrorMsg {
-    margin-left: 0;
+    margin-left: 13px;
   }
 }
 .spz_14003_v1 .form_container .form .fname-parent {
@@ -515,11 +515,7 @@
   margin-top: 16px;
 }
 .spz_14003_v1 .form_container .form .form-checkbox-option > label::before {
-  border-color: var(--color-green-5);
   top: 1px;
-}
-.spz_14003_v1 .form_container .form input:checked + label::before {
-  background-color: var(--color-green-5);
 }
 .spz_14003_v1 .form_container .form .bhrForm__partnerDisclaimer {
   color: var(--color-gray-10);

@@ -1,0 +1,1327 @@
+body.spz_1007_v1:not(:has(.vwo-notification-bar)) .awr-layout {
+  margin-top: -23px;
+}
+.spz_1007_v1 .awr-rich-text h1,
+.spz_1007_v1 .spz_awz-hero__subHead {
+    display: block;
+}
+.spz_1007_v1 .awr-find-your-protection-plan__tabs-container,
+.spz_1007_v1 .awr-find-your-protection-plan__tabs-container:before {
+    display: none;
+}
+.spz_1007_v1 .awr-rich-text h2 {
+    color: #000000;
+    font-family: Manrope, Manrope Fallback;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0;
+    margin-top: 20px;
+    margin: 20px 0 24px;
+}
+.spz1008_testimonialSlider_v1 {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 64px 20px 0;
+    position: relative;
+}
+.spz1008_testimonialSlider_outer {
+    padding: 26px 30px 50px !important;
+    max-width: 1304px;
+    margin: 0 auto;
+}
+.spz1008_testimonialSlider_outer {
+    position: relative;
+}
+.spz1008_testimonialSlider_outer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #F0F9FF 50%);
+    z-index: 999;
+}
+.spz1008_testimonialSlider_outer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 160px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F0F9FF 80%);
+    z-index: 1;
+}
+.spz1008_testimonialSlider_v1 .testimonial-header .quote-icon {
+    position: relative;
+    top: -8px;
+    right: -2px;
+}
+.spz1008_testimonialSlider_v1 .googleRatings {
+    max-width: 1304px;
+    margin: 0 auto;
+    padding: 0;
+}
+.spz1008_testimonialSlider_v1 .googleRatings img {
+    width: 475px;
+    height: 42.4px;
+    object-fit: cover;
+}
+.spz1008_testimonialSlider_v1 .testimonial-card {
+    padding: 44px 36.267px 36px 38.267px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 286.60px;
+    border-radius: 22.664px;
+    background: #FFF;
+    box-shadow: 0 11.22px 37.4px 0 rgba(0, 102, 153, 0.20);
+}
+.spz1008_testimonialSlider_v1 .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.spz1008_testimonialSlider_v1 .stars img {
+    height: 24px;
+}
+.spz1008_testimonialSlider_v1 .quote-icon img {
+    height: 40.8px;
+    width: 40.8px;
+    object-fit: cover;
+}
+.spz1008_testimonialSlider_v1 .testimonial-text {
+  	margin: 10px 0 20px;
+    color: #000;
+    font-family: Manrope, Manrope Fallback;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+}
+.spz1008_testimonialSlider_v1 .testimonial-footer {
+     margin-top: auto;
+}
+.spz1008_testimonialSlider_v1 .testimonial-name {
+  	color: #000;
+    font-family: Manrope, Manrope Fallback;
+    font-size: 18.133px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27.2px;
+    letter-spacing: -0.15px;
+    position: relative;
+    top: -1px;
+}
+.spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M14.5 7.979L9.5 12.979L14.5 17.979" stroke="%23186699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+    background-size: 24px;
+    background-position: 42% 47%;
+    left: 3.6%;
+    top: 54%;
+    border-radius: 999px;
+    border: 1px solid #186699;
+    z-index: 1;
+}
+.spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+		position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M9.5 17.458L14.5 12.458L9.5 7.45801" stroke="%23186699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+    background-size: 24px;
+    background-position: 54% 48%;
+    top: 54%;
+    right: 3.6%;
+    border-radius: 999px;
+    border: 1px solid #186699;
+    z-index: 1;
+}
+.spz1008_testimonialSlider_v1 .swiper-button-prev-1:hover {
+    border-color: #004669;
+    background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 7.5L9.5 12.5L14.5 17.5" stroke="%23004669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+    background-size: 24px;
+    background-position: 42% 47%;
+}
+.spz1008_testimonialSlider_v1 .swiper-button-next-1:hover {
+    border-color: #004669;
+    background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 7.5L14.5 12.5L9.5 17.5" stroke="%23004669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+    background-size: 24px;
+    background-position: 54% 48%;
+}
+.spz1008_testimonialSlider_v1 .swiper-button-prev-1::after, 
+.spz1008_testimonialSlider_v1 .swiper-button-next-1::after{
+    font-size: 0;
+}
+.spz1008_testimonialSlider_v1 .swiper-pagination {
+    display: none;
+}
+.spz1008_testimonialSlider_outer.hide-gradient::before {
+  display: none !important;
+}
+@media only screen and (min-width: 1700px) {
+    .spz1008_testimonialSlider_v1 {
+        max-width: 1440px;
+    }
+}
+@media only screen and (min-width: 901px) {
+    body.spz_1007_v1 {
+        overflow-x: hidden;
+    }
+    body.spz_1007_v1 .awr-home__render-components {
+        overflow: hidden;
+    }
+    .spz-bg-awr-offWhite {
+        background: #F0F9FF;
+    }
+    .spz_1007_v1 .awr-hero__container {
+        position: relative;
+        left: 105px;
+    }
+    .spz_1007_v1 .awr-rich-text+div {
+        margin-top: 0;
+    }
+    .spz_1007_v1 .awr-hero.spz-bg-awr-offWhite>div {
+        padding: 0;
+    }
+    /* .spz_1007_v1 .awr-hero.spz-bg-awr-offWhite>div>div:first-child {
+        gap: 0;
+    } */
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left>div:first-child.flex.w-full {
+        display: none;
+    }
+    .spz-awr-toggle-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #f5f5f4;
+        gap: 8px;
+        font-size: 18px;
+    }
+    .spz-awr-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        padding: 2px;
+    }
+    .spz-awr-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .spz-awr-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #186699;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 12px;
+    }
+    .spz-awr-slider::before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+    .spz_1007_v1 .awr-hero__text-panel {
+        gap: unset;
+    }
+    .spz-awr-switch input:checked+.spz-awr-slider::before {
+        -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+    .spz_1007_v1 .awr-hero__find-protection-container {
+        border: none;
+        margin: 0;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan {
+        border: none;
+        background: transparent;
+        gap: unset;
+    }
+    .spz_1007_v1 .spz_awz-hero__subHead {
+        color: #186699;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.5px;
+        letter-spacing: 0.39px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    body.spz_1007_v1 .awr-rich-text h2 {
+        display: none;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_subheading_two {
+        color: #000000;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0;
+        margin-bottom: 24px;
+        display: inline-block;
+    }
+    .spz_1007_v1 .awr-rich-text h1 {
+        color: #000000;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 52.8px;
+        margin: 8px 0 24px;
+        padding-right: 0;
+        letter-spacing: 0px;
+        display: inline-block;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_animated_headline {
+        height: 56px;
+        overflow: hidden;
+        color: #069;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        font-family: Manrope, Manrope Fallback;
+    }
+    .spz-awr-toggle-container label[for="spz-awr-toggle"] {
+        border: none;
+        color: #00000099;
+        text-align: right;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+    }
+    .spz-awr-toggle-container label[for="spz-awr-toggle"].checked {
+        color: #000000;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper {
+        border-radius: 6px;
+        background: #FFFFFF;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 54px;
+        padding: 4px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 10px;
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+        border: 1px solid rgba(24, 102, 153, 0.40);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__zipcode-container>.relative.w-full>.pointer-events-none {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1748853323/oncourse/1001/frame_1171275736.svg) no-repeat;
+        background-size: 14px;
+        background-position: 14px 50%;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__arrow-right {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1748853347/oncourse/1001/arrow-left_1.svg) no-repeat;
+        background-size: contain;
+        background-position: 0px 0px;
+        width: 12.25px !important;
+        height: 14px !important;
+        position: relative;
+        left: 0;
+        top: 0.5px;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:hover,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:active,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:focus-within {
+        border: 1px solid rgba(24, 102, 153, 0.80);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code {
+        background: none;
+        border: none;
+        padding-left: 40px;
+        padding-top: 6px;
+        padding-bottom: 9px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: #000;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:active,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:focus {
+        color: #000;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-moz-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code:-ms-input-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-ms-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-moz-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:-ms-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-ms-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input[type=text]:focus-within,
+    form.awr-find-your-protection-plan__wrapper input[type=text]:active {
+        border: none;
+        outline: none;
+    }
+    form.awr-find-your-protection-plan__wrapper input[type=text]:focus {
+        --tw-ring-shadow: none;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input {
+        color: #00000099;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-webkit-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-webkit-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-moz-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-moz-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus:-ms-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active:-ms-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-ms-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-ms-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code:active::placeholder {
+        color: transparent !important;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left {
+        min-width: 450px;
+        max-width: 450px;
+        width: 50%;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__zipcode-container .inset-y-0 svg {
+        position: relative;
+        top: -1.5px !important;
+        left: 4.5px;
+        opacity: 0;
+        width: 17px;
+        height: 20px;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__arrow-right svg {
+        width: 9px;
+        height: 10.286px;
+        opacity: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button {
+        background: #186699;
+        border-radius: 4px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 46px;
+        padding: 19px 18px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: unset;
+        width: 148.25px;
+        -webkit-transform: translateX(1px);
+        -ms-transform: translateX(1px);
+        transform: translateX(1px);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button:hover {
+        background: #0A4C70;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button .awr-find-your-protection-plan__call-to-action p {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-right: 10px;
+        letter-spacing: 0;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__input-error {
+        position: absolute;
+        top: calc(100% + 4px);
+        color: #B83436;
+        font-family: Manrope, Manrope Fallback;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper.spz_invalid_zip {
+        border-color: rgba(184, 52, 54, 0.80);
+    }
+    .awr-find-your-protection-plan__call-to-action {
+        gap: unset;
+        position: relative;
+    }
+    .awr-find-your-protection-plan__arrow-right svg {
+        width: 9px;
+        height: 12.286px;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span {
+        padding: 0;
+        display: inline-block;
+        font-weight: 600;
+        border-radius: 0;
+    }
+    .spz_1007_v1 .awr-hero__image-panel {
+        width: 60.3%;
+        -webkit-transform: translate(-29px, 0);
+        -ms-transform: translate(-29px, 0);
+        transform: translate(-29px, 0);
+        height: 600px;
+    }
+    body.spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span[data-testid="spinner"] {
+        width: 13px !important;
+        height: 13px !important;
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        right: -10px;
+    }
+    body.spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span[data-testid="spinner"] svg {
+        width: 100%;
+        height: 100%;
+    }
+    .spz_1007_v1 .awr-hero__image-panel>img {
+        display: none;
+    }
+    .spz_1007_v1 .awr-hero__image-panel img.awr-hero__image {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media only screen and (min-width: 1441px) {
+	.spz1008_testimonialSlider_v1 {
+        max-width: 1304px;
+	}
+	.spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: 24px;
+	}
+	.spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: 24px;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: 3%;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: 3%;
+    }
+}
+@media (min-width: 1280px) {
+    .awr-carousel__swiper-desktop-buttons {
+        display: block;
+    }
+}
+@media only screen and (max-width: 1240px) and (min-width: 1201px) {
+    .spz_1007_v1 .awr-hero__image-panel {
+        height: 566px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .spz_1007_v1 .awr-hero__container {
+        left: 63px;
+    }
+}
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
+    .spz_1007_v1 .awr-hero__image-panel {
+        width: 50%;
+        transform: translate(43px, 0);
+    }
+    .spz_1007_v1 .awr-hero__image-panel img.awr-hero__image {
+        object-position: left;
+    }
+}
+@media only screen and (max-width: 1023.98px) {
+    body.spz_1007_v1 {
+        overflow-x: hidden;
+    }
+    body.spz_1007_v1 .awr-home__render-components {
+        overflow: hidden;
+    }
+    .spz-bg-awr-blue {
+        background: #F0F9FF;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left>div:first-child.flex.w-full {
+        display: none;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button .awr-find-your-protection-plan__call-to-action p {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-right: 10px;
+        letter-spacing: 0;
+    }
+    .spz-awr-toggle-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #f5f5f4;
+        gap: 8px;
+        font-size: 18px;
+    }
+    .spz-awr-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        padding: 2px;
+    }
+    .spz-awr-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .spz-awr-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #186699;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 12px;
+    }
+    .spz-awr-slider::before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+    .spz_1007_v1 .awr-hero__text-panel {
+        gap: unset;
+    }
+    .spz-awr-switch input:checked+.spz-awr-slider::before {
+        -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+    .spz_1007_v1 .awr-hero__find-protection-container {
+        border: none;
+        margin: 0;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan {
+        border: none;
+        background: transparent;
+        gap: unset;
+    }
+    .spz_1007_v1 .spz_awz-hero__subHead {
+        color: #186699;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19.5px;
+        letter-spacing: 0.39px;
+        text-transform: uppercase;
+    }
+    .spz_1007_v1 .awr-rich-text h1 {
+        color: #000000;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 52.8px;
+        margin: 8px 0 0;
+        padding-right: 0;
+        letter-spacing: 0px;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_animated_headline {
+        height: 56px;
+        overflow: hidden;
+        color: #069;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        font-family: Manrope, Manrope Fallback;
+    }
+    .spz_1007_v1 ul.spz-banner-tags {
+        list-style: none;
+        list-style-type: none;
+        margin: 0 0 48px;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 4px;
+        max-width: 100%;
+        -webkit-transform: translate(0px, -1px);
+        -ms-transform: translate(0px, -1px);
+        transform: translate(0px, -1px);
+    }
+    ul.spz-banner-tags li {
+        color: #006699;
+        text-align: center;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: -0.07px;
+        border-radius: 999px;
+        background: rgba(0, 102, 153, 0.10);
+        padding: 3.8px 10px;
+    }
+    ul.spz-banner-tags br+li {
+        letter-spacing: -0.1px;
+        position: relative;
+        left: -3px;
+        top: 1px;
+    }
+    .spz-awr-toggle-container label[for="spz-awr-toggle"] {
+        border: none;
+        color: #00000099;
+        text-align: right;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+    }
+    .spz-awr-toggle-container label[for="spz-awr-toggle"].checked {
+        color: #000000;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper {
+        border-radius: 6px;
+        background: #FFFFFF;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 54px;
+        padding: 4px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 10px;
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+        border: 1px solid rgba(24, 102, 153, 0.40);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__zipcode-container>.relative.w-full>.pointer-events-none.spz_input_focus {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1748523548/oncourse/1001/map_black.svg) no-repeat;
+        background-size: 11px;
+        background-position: 16px 50%;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code {
+        background: none;
+        border: none;
+        padding-left: 40px;
+        padding-top: 6px;
+        padding-bottom: 9px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.014em;
+        color: #000;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:active,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:focus {
+        color: #000;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-moz-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code:-ms-input-placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-ms-input-placeholder {
+        color: #00000099 !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-webkit-input-placeholder {
+        color: #00000099 !important;
+        -webkit-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-moz-placeholder {
+        color: #00000099 !important;
+        -moz-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:-ms-input-placeholder {
+        color: #00000099 !important;
+        -ms-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::-ms-input-placeholder {
+        color: #00000099 !important;
+        -ms-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code::placeholder {
+        color: #00000099 !important;
+        -webkit-transition: color 0.2s ease;
+        -o-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+    form.awr-find-your-protection-plan__wrapper input[type=text]:focus-within,
+    form.awr-find-your-protection-plan__wrapper input[type=text]:active {
+        border: none;
+        outline: none;
+    }
+    form.awr-find-your-protection-plan__wrapper input[type=text]:focus {
+        --tw-ring-shadow: none;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-webkit-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-webkit-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-moz-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-moz-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus:-ms-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active:-ms-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::-ms-input-placeholder, form.awr-find-your-protection-plan__wrapper input#zip-code:active::-ms-input-placeholder {
+        color: transparent !important;
+    }
+    form.awr-find-your-protection-plan__wrapper input#zip-code:focus::placeholder,
+    form.awr-find-your-protection-plan__wrapper input#zip-code:active::placeholder {
+        color: transparent !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code.spz-input-focusout::-webkit-input-placeholder {
+        color: #5A5A4F !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code.spz-input-focusout::-moz-placeholder {
+        color: #5A5A4F !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code.spz-input-focusout:-ms-input-placeholder {
+        color: #5A5A4F !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code.spz-input-focusout::-ms-input-placeholder {
+        color: #5A5A4F !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code.spz-input-focusout::placeholder {
+        color: #5A5A4F !important;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input {
+        color: #00000099;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left {
+        min-width: unset;
+        max-width: 450px;
+        width: 50%;
+        padding-top: 0;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__zipcode-container .inset-y-0 svg {
+        position: relative;
+        top: -1.4px !important;
+        left: 4.2px;
+        opacity: 0;
+        width: 17px;
+        height: 20px;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__zipcode-container>.relative.w-full>.pointer-events-none {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1748853323/oncourse/1001/frame_1171275736.svg) no-repeat;
+        background-size: 14px;
+        background-position: 14px 50%;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__arrow-right svg {
+        width: 9px;
+        height: 12.286px;
+        opacity: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button {
+        background: #186699;
+        border-radius: 4px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 46px;
+        padding: 19px 18px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: unset;
+        width: 148.25px;
+        -webkit-transform: translateX(1px);
+        -ms-transform: translateX(1px);
+        transform: translateX(1px);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button:hover {
+        background: #0A4C70;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button .awr-find-your-protection-plan__call-to-action p {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: Manrope, Manrope Fallback;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-right: 10px;
+        letter-spacing: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper.spz_invalid_zip {
+        border-color: rgba(184, 52, 54, 0.80) !important;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__input-error {
+        position: absolute;
+        top: calc(100% + 4px);
+        color: #B83436;
+        font-family: Manrope, Manrope Fallback;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__arrow-right {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1748853347/oncourse/1001/arrow-left_1.svg) no-repeat;
+        background-size: contain;
+        background-position: 0px 0px;
+        width: 12.25px !important;
+        height: 14px !important;
+        position: relative;
+        left: 0;
+        top: 0.5px;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:hover,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:active,
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper:focus-within {
+        border: 1px solid rgba(24, 102, 153, 0.80);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__call-to-action {
+        gap: unset;
+        position: relative;
+    }
+    .spz_1007_v1 .awr-find-your-protection-plan__arrow-right svg {
+        width: 9px;
+        height: 12.286px;
+        opacity: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span {
+        padding: 0;
+        display: inline-block;
+        font-weight: 600;
+        border-radius: 0;
+    }
+    .spz_1007_v1 .awr-hero__image-panel {
+        width: 50%;
+        -webkit-transform: translate(-12px, 0);
+        -ms-transform: translate(-12px, 0);
+        transform: translate(-12px, 0);
+        height: 600px;
+    }
+    .spz_1007_v1 .awr-hero__image-panel img.awr-hero__image {
+        object-fit: contain;
+    }
+    body.spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span[data-testid="spinner"] {
+        width: 13px !important;
+        height: 13px !important;
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        right: -10px;
+    }
+    body.spz_1007_v1 form.awr-find-your-protection-plan__wrapper button span[data-testid="spinner"] svg {
+        width: 100%;
+        height: 100%;
+    }
+    .spz_1007_v1 .awr-hero__container {
+        left: 0;
+    }
+    .spz_1007_v1 .awr-hero.spz-bg-awr-blue {
+        padding: 0;
+    }
+    .spz_1007_v1 .awr-hero__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 23px;
+        padding: 0;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left {
+        width: 100%;
+        max-width: 100%;
+        padding: 70px 72px 0;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left .awr-rich-text {
+        text-align: center;
+    }
+    .spz_1007_v1 .awr-rich-text h1 {
+        max-width: 100%;
+        margin: 8px auto 0;
+        padding-right: 0;
+    }
+    .spz_1007_v1 .awr-rich-text h2 {
+        max-width: 540px;
+        margin: 20px auto 26px;
+        display: none;
+    }
+    .spz_1007_v1 ul.spz-banner-tags {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        max-width: 100%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        margin-top: 17px;
+    }
+    .spz_1007_v1 ul.spz-banner-tags li {
+        padding: 3px 9.9px;
+    }
+    .spz_1007_v1 ul.spz-banner-tags br+li {
+        letter-spacing: -0.1px;
+        position: relative;
+        left: unset;
+        top: unset;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .spz_1007_v1 .awr-hero__image-panel {
+        display: block;
+        width: 100%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        height: auto;
+        margin-top: 25px;
+        display: block;
+    }
+    .spz_1007_v1 ul.spz-banner-tags br.desktop-break {
+        display: none;
+    }
+    .spz_1007_v1 .awr-hero__image-panel>img {
+        display: none;
+    }
+    .spz_1007_v1 .awr-hero__image-panel img.awr-hero__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left .awr-rich-text+div {
+        margin: 0;
+    }
+    .spz_1007_v1 .awr-hero__container>div {
+        gap: 22px;
+    }
+    .spz1008_testimonialSlider_v1 {
+        max-width: 100%;
+    }
+    .spz1008_testimonialSlider_outer {
+        padding: 41px 30px 50px !important;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: 2.7%;
+    }
+    .spz1008_testimonialSlider_v1 .googleRatings img {
+        width: 480px;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-card {
+        padding: 43px 34.267px 37px 36.267px;
+    }
+    .spz1008_testimonialSlider_v1 .stars img {
+        height: 24px;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-text {
+        margin: 11px 0 20px;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-header .quote-icon {
+        top: -7px;
+        right: 2px;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: 2.7%;
+        top: 55%;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: 2.7%;
+        top: 55%;
+    }
+    .spz1008_testimonialSlider_outer::after {
+        right: -10px;
+        width: 130px;
+    }
+    .spz1008_testimonialSlider_outer::before {
+        left: -13px;
+        width: 40px;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_subheading_two {
+        margin-bottom: 24px;
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .awr-partnership-carousel .awr-carousel__swiper {
+        max-width: 1034px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .spz_1007_v1 .awr-hero.spz-bg-awr-blue {
+        padding: 0;
+    }
+    body.spz_1007_v1 .awr-rich-text h2 {
+        display: none;
+    }
+    .spz_1007_v1 .awr-hero__text-panel.awr-hero__text-panel--left {
+        padding: 38px 16px 0;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_subheading_two {
+        display: none;
+    }
+    .spz_1007_v1 .awr-rich-text h1 {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40.8px;
+        padding-right: 0px;
+        padding-left: 0px;
+        letter-spacing: 0;
+        margin-top: 9px;
+        max-width: 100%;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_animated_headline {
+        font-size: 28px;
+        line-height: 120%;
+        height: 36px;
+    }
+    .spz_1007_v1 ul.spz-banner-tags li {
+        padding: 3.5px 10px;
+    }
+    .spz_1007_v1 .awr-rich-text h2 {
+        max-width: 100%;
+        margin: 14px auto 24px;
+        display: none;
+    }
+    .spz_1007_v1 .awr-hero__image-panel {
+        display: block;
+        margin-top: 0;
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper {
+        max-width: 328px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .spz_1007_v1 .spz_awz-hero__subHead {
+        letter-spacing: 0.39px;
+    }
+    .spz_1007_v1 ul.spz-banner-tags {
+        -webkit-transform: translate(0, -1px);
+        -ms-transform: translate(0, -1px);
+        transform: translate(0, -1px);
+    }
+    .spz_1007_v1 form.awr-find-your-protection-plan__wrapper input#zip-code {
+        padding-top: 6px;
+        padding-bottom: 11px;
+    }
+    .spz1008_testimonialSlider_v1 {
+        max-width: 100%;
+        padding: 64px 0 87px;
+        display: none;
+    }
+    .spz1008_testimonialSlider_v1 .googleRatings img {
+        width: 320px;
+        height: 74.1px;
+        margin: 0 auto;
+    }
+    .spz1008_testimonialSlider_outer::after {
+        display: none;
+    }
+    .spz1008_testimonialSlider_outer::before {
+        display: none;
+    }
+    .spz1008_testimonialSlider_outer {
+        padding: 39px 20px 40px !important;
+    }
+    .spz1008_testimonialSlider_v1 .googleRatings {
+        padding: 0 20px;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-pagination .swiper-pagination-bullet {
+        background: rgba(24, 102, 153, 0.30);
+        opacity: 1;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        margin: 0 4px;
+        border-radius: 50%;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: 27.7%;
+        top: calc(100% - 88px);
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 17.4175L14.5 12.4175L9.5 7.41748" stroke="%23186699" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+        background-size: 24px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-position: center;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 17.4175L9.5 12.4175L14.5 7.41748" stroke="%23186699" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+        background-size: 24px;
+        left: 28%;
+        top: calc(100% - 88px);
+        width: 24px;
+        height: 24px;
+        border: none;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1:hover, 
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1:active {
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 17.4175L14.5 12.4175L9.5 7.41748" stroke="%23186699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+        background-size: 24px;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1:hover, 
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1:active {
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.5 17.4175L9.5 12.4175L14.5 7.41748" stroke="%23186699" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat;
+        background-size: 24px;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-pagination {
+        bottom: 66px !important;
+        top: auto;
+        left: 0;
+        width: 100%;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-card {
+        padding: 47px 36px 37px 36px;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-text {
+        margin: 9px 0 18px;
+    }
+    .spz1008_testimonialSlider_v1 .testimonial-header .quote-icon {
+        top: -9px;
+        right: 0.5px;
+    }
+    .spz1008_testimonialSlider_v1 .swiper-pagination .swiper-pagination-bullet-active {
+        background: #186699 !important;
+    }
+    .spz_1007_v1 .awr-rich-text .spz_subheading_two {
+        display: none;
+    }
+}	
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: calc(50% - 80px);
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: calc(50% - 80px);
+    }
+}
+@media only screen and (max-width: 599.98px) and (min-width: 495px) {
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: calc(50% - 80px)
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: calc(50% - 80px)
+    }
+}
+@media only screen and (max-width: 494.98px) and (min-width: 360px) {
+    .spz1008_testimonialSlider_v1 .swiper-button-next-1 {
+        right: calc(50% - 80px);
+    }
+    .spz1008_testimonialSlider_v1 .swiper-button-prev-1 {
+        left: calc(50% - 80px);
+    }
+}

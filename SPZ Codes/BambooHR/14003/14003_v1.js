@@ -18,7 +18,7 @@ const bodyInterval14003 = setInterval(function () {
         <div class="auto_container">
           <div class="spz_heroInner">
             <div class="spz_heroDetail">
-              <h1><span>All-in-One HR Platform. Reduce Costs 40%</span></h1>
+              <h1><span>Get BambooHR <br> Plans and Pricing</span></h1>
             </div>
             <div class="hero_main">
               <div class="hero_imageContainer">
@@ -101,7 +101,7 @@ const bodyInterval14003 = setInterval(function () {
     }, 20)
 
     window.addEventListener('click', function (e) {
-      const link = e.target.closest('a[title="Get My Demo"]');
+      const link = e.target.closest('a[title="Get Quote"], a[title="Get a Free Price Quote"]');
       if (link) {
         e.preventDefault();
         const section = document.querySelector(".spz_hero");
@@ -110,6 +110,7 @@ const bodyInterval14003 = setInterval(function () {
         }
       }
     });
+    
 
     (function () {
       //Add the following code of experiment. This code will set the cookie with the experiment name and variant name.

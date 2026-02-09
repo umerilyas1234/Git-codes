@@ -1,0 +1,186 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1199.98px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_8001_v1 {
+  .spz_logos_section {
+    padding: 0 0 52px;
+    // margin-top: -48.5px;
+
+    @include tablet() {
+      margin-top: 0;
+      padding-top: 56.5px;
+      padding-bottom: 8px;
+    }
+
+    @include mobile() {
+      margin-top: 0;
+      padding-top: 51px;
+    }
+  }
+
+  .logo_title {
+    h3 {
+      color: #171717;
+      font-family: "Sharp Earth OL";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      margin-bottom: 31.5px;
+
+      @include tablet() {
+        text-align: center;
+      }
+
+      @include mobile() {
+        text-align: center;
+      }
+    }
+  }
+
+  .logo_main {
+    overflow: hidden;
+    max-width: 100%;
+    >figure{
+      display: none;
+      img{
+        display: block;
+      }
+      @include mobile(){
+        display: block;
+        margin: auto;
+      }
+    }
+    ul {
+      margin: 0 -10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include tablet(){
+        justify-content: center;
+        margin: 0 -45.5px;
+      }
+      @include mobile(){
+        justify-content: center;
+        margin: 0 -45.5px;
+      }
+      @include mobile(){
+        display: none;
+      }
+      li {
+        width: auto;
+        padding: 0 10px 20px;
+        text-align: center;
+
+        @include tablet {
+          padding: 0 45.5px 48px;
+          &:nth-child(3) {
+            order: 1;
+          }
+
+          &:nth-child(4) {
+            order: 2;
+          }
+
+          &:nth-child(1) {
+            order: 3;
+          }
+
+          &:nth-child(5) {
+            order: 4;
+          }
+
+          &:nth-child(2) {
+            order: 5;
+          }
+        }
+
+        @include mobile {
+          padding: 0 45.5px 48px;
+          &:nth-child(3) {
+            order: 1;
+          }
+
+          &:nth-child(4) {
+            order: 2;
+          }
+
+          &:nth-child(1) {
+            order: 3;
+          }
+
+          &:nth-child(5) {
+            order: 4;
+          }
+
+          &:nth-child(2) {
+            order: 5;
+          }
+        }
+
+        figure {
+          display: inline-block;
+
+          img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .auto_container {
+    max-width: 1134px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}

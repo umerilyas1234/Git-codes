@@ -1,0 +1,288 @@
+.spz_12004_v1.spz__lp-sharepoint-admin-toolkit .spz__sticky-bar {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_10.webp") no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1.spz__lp-sharepoint-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_5.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1.spz__lp-sharepoint-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_3.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+.spz_12004_v1.spz__lp-windows-server-admin-toolkit .spz__sticky-bar {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_11.webp") no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1.spz__lp-windows-server-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_6.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1.spz__lp-windows-server-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_2.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+.spz_12004_v1.spz__lp-microsoft-entra-id-security-toolkit .spz__sticky-bar {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_8.webp") no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1.spz__lp-microsoft-entra-id-security-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_9.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1.spz__lp-microsoft-entra-id-security-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_1.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+.spz_12004_v1.spz__lp-ntfs-permissions-management-toolkit .spz__sticky-bar {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_4.webp") no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1.spz__lp-ntfs-permissions-management-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta_7.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1.spz__lp-ntfs-permissions-management-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/sticky_cta.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+.spz_12004_v1.spz__lp-active-directory-admin-toolkit .spz__sticky-bar {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/section_1.webp") no-repeat center center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1.spz__lp-active-directory-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/section_2.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1.spz__lp-active-directory-admin-toolkit .spz__sticky-bar {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/netwrix/12004/section.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+.spz_12004_v1 .spz__disappeared {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.spz_12004_v1 .spz__hidden {
+  display: none !important;
+}
+.spz_12004_v1 .spz__sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #F5F5F4;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  transform: translateY(100%);
+}
+.spz_12004_v1 .spz__sticky-bar--visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1 .spz__sticky-bar {
+    height: 61px;
+  }
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 72px;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content {
+    padding: 0 35px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content {
+    padding: 0 64px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content {
+    padding: 0 44px 0 24px;
+  }
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__rating {
+  margin-top: 6px;
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__rating img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__text {
+  color: #FFF;
+  font-family: "Hubot Sans";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  padding: 0 8px;
+  text-align: center;
+}
+@media screen and (min-width: 1024.98px) and (max-width: 1299px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__text{
+    font-size: 18px;
+  }
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta{
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__text {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__text {
+    display: none;
+  }
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta {
+  padding: 10px 24px;
+  border-radius: 48px;
+  background: #5851DB;
+  box-shadow: 0 0 24px 0 rgba(27, 21, 54, 0.25);
+  color: #FCFAF5;
+  text-align: center;
+  font-family: "Syne";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  min-width: 173px;
+  overflow: clip;
+  z-index: 1;
+  position: relative;
+  overflow-clip-margin: 1px;
+  transition: color .3s cubic-bezier(.2, 0, .38, .9);
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta:hover {
+  color: #000;
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta::before{
+  position: absolute;
+  content: "";
+  bottom: calc((2rem + 1px) * -1);
+  left: 50%;
+  transform: translate(-50%);
+  background: #41f27c;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  z-index: -1;
+  transition: width .3s cubic-bezier(.2, 0, .38, .9), height .3s cubic-bezier(.2, 0, .38, .9);
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta:hover::before{
+  width: calc(150% + 2rem);
+  height: calc(200% + 2rem);
+}
+@media screen and (min-width: 768px) and (max-width: 1299.98px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta {
+    min-width: unset;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__ctas .spz__sticky-bar__cta {
+    font-size: 12px;
+    padding: 8px 16.5px;
+    min-width: unset;
+  }
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26.52px;
+  height: 26.52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1A1536;
+  transition: all 0.3s ease;
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__close:hover {
+  background: #41F27C;
+}
+.spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__close:hover svg path{
+  fill: #1A1536;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__close {
+    width: 20.52px;
+    height: 20.52px;
+    top: 8px;
+    right: 8px;
+  }
+  .spz_12004_v1 .spz__sticky-bar .spz__sticky-bar__content .spz__sticky-bar__close svg {
+    width: 8.14px;
+    height: 8.14px;
+  }
+}
+.spz_12004_v1 .c--header-a {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+.spz_12004_v1 #q-messenger-frame {
+  transition: all 0.3s ease;
+}
+
+.spz_12004_v1:has(.spz__sticky-bar--visible) .c--header-a {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+.spz_12004_v1:has(.spz__sticky-bar--visible) #q-messenger-frame {
+  bottom: 100px !important;
+}
+.spz_12004_v1:has(#modal-a.c--modal-a--is-active) .spz__sticky-bar{
+  z-index: 9;
+}
+@media screen and (max-width: 767.98px) {
+  .spz_12004_v1:has(.spz__sticky-bar--visible) #q-messenger-frame {
+    bottom: 61px !important;
+  }
+}
+
+/*# sourceMappingURL=var_1.css.map */

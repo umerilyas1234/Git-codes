@@ -1,0 +1,163 @@
+$desktop-lg: 1760px;
+$desktop: 1440px;
+$desktop-sm: 1366px;
+$tablet-lg: 1399px;
+$tablet-pro: 1024px;
+$tablet: 1023.98px;
+$tablet-sm: 768px;
+$mobile: 767.98px;
+
+@mixin desktop-lg {
+  @media (max-width: #{$desktop-lg}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: #{$desktop-sm}) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (min-width: #{$tablet-pro}) and (max-width: #{$tablet-lg}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-sm}) and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.spz_12002_v1 {
+
+  /* Netwrix Locked Hero Pattern */
+
+  /* Hide content when locked */
+  &.spz-locked-12002 .spz-learn-more-btn-12002~*,
+  &.spz-locked-12002 footer,
+  &.spz-locked-12002 .footer,
+  &.spz-locked-12002 [class*="footer"] {
+    display: none !important;
+  }
+
+  main {
+    >section.c--hero-f,
+    >section.c--hero-b  {
+      min-height: calc(100vh - 318px);
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .c--hero-f__ft-items,
+      .c--hero-b__bg-items {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Button Container */
+  .spz-learn-more-btn-12002 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 17px;
+    padding-top: 13.5px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+
+    @include tablet() {
+      padding-top: 2px;
+    }
+
+    @include mobile() {
+      padding-top: 8px;
+    }
+  }
+
+  /* Button */
+  .spz-btn-inner {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 20.5px 12px;
+    border-bottom: 4px solid #5851db;
+    cursor: pointer;
+    font-family: "Syne", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #000;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+    @include mobile() {
+      font-size: 16px;
+      line-height: 22.4px;
+      padding: 0 19.5px 12px;
+    }
+  }
+
+  .spz-btn-inner svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .spz-btn-inner:hover {
+    color: #4d4d4d;
+    padding: 0 29px 12px;
+
+    svg {
+      path {
+        stroke: #4d4d4d;
+      }
+    }
+  }
+
+  .spz-hidden-12002 {
+    display: none !important;
+  }
+
+  @media (max-width: 991px) {
+    .spz-learn-more-btn-12002 {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .spz-learn-more-btn-12002 {
+      margin-bottom: 12px;
+    }
+  }
+
+}

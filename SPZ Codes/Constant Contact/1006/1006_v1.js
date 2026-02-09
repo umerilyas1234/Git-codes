@@ -51,77 +51,64 @@ BEYOND THIS LINE
 // This is the code to generate the form over UI section do no edit it
 function addAccordion() {
 
-  // Firefox
-  function isFirefox() {
-    return /firefox/i.test(navigator.userAgent);
-  }
-
-  // Usage
-  if (isFirefox()) {
-    document.body.classList.add('spz_firefox');
-  }
   document.body.classList.add('spz_1003_v1');
 
-
-  //DEV 1/5. Put your asana task URL here
-  const asana_URL = `https://app.asana.com/1/77217210692853/project/1206002187116436/task/1211457713388012?focus=true`
-
   //DEV 2/5. Find the class or ID of the control hero section and place it below in "#change_me".  e.g. "#form_123456" or ".form_123456"
-  const template_sectionSelector = `#section-grow-your-business-with-email-marketing-and-more`;
+  const template_sectionSelector = `.main-grid #integrations-image`;
 
   //DEV 3/5. Choose where your accordion should appear
   const template_position = "afterend" //"beforebegin", "beforeend", "afterend"
 
   //DEV 4/5. Headline & accordion section
   const template_sectionContent = {
-    sectionHeading: "Features",
+    sectionHeading: "How We Help Your Business Grow",
     sectionSubHeading: "",
     accordionItems: [
       {
         title: 'Email marketing',
-        content: '<p>Create professional emails in minutes. Select from hundreds of templates and customize or create your own. Generate content with AI. Pre-schedule sending.</p><p> Send emails to customers who abandon their cart or add items to their wish list. Suggest upsells after purchases. Auto-resend emails to non-openers. Boost sales & engagement.</p>',
+        content: '<p>Create professional emails in minutes. Select from hundreds of templates and customize or create your own. Generate content with AI and schedule emails to send later.</p><p>Boost sales and engagement by sending automated welcome emails. Or send emails to customers who abandon their cart or register. Suggest upsells after purchase, and automatically resend emails to non-openers.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-email-marketing_1.webp",
         imageAlt: "CTCT Email Marketing"
       },
       {
         title: 'Email templates',
-        content: '<p>Choose from 200+ high-converting, professionally-designed templates. Newsletters, sales & fundraising, welcome emails, events, seasonal, real estate, nonprofit, and more.</p> <p>Edit with drag & drop. Add brand colors, logos, & images. Automatically adjust layouts for mobile devices.</p>',
+        content: '<p>Choose from 600+ high-converting, pro-designed templates. Perfect for newsletters, sales, fundraising, events, seasonal messages, and more.</p> <p>Edit with drag and drop. Add brand colors, logos, and images. All templates are designed to look good on desktop and mobile.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-email-templates_4.webp",
         imageAlt: "CTCT Email Templates"
       },
       {
         title: 'Social media management',
-        content: '<p>Generate all your social media posts at once with AI. Just enter a few keywords. Or turn emails into posts. See which days & times to post.</p> <p>Post to Instagram, Facebook, LinkedIn, and TikTok all at once. Add hashtags, images, and videos. Reply to comments & mentions.</p><p>Easily launch social ads & reach ready-to-buy customers. Increase online visibility & capture more sales.</p>',
+        content: '<p>Generate social media posts with AI. Just enter a few keywords. Or turn emails into posts. </p> <p>Add hashtags, images, and videos. Post immediately to Instagram, Facebook, LinkedIn, and TikTok all at once, or schedule for later. </p><p>Easily launch Meta ads and reach ready-to-buy customers. Increase online visibility and capture more sales.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-social-media-management_3.webp",
         imageAlt: "CTCT Social Media"
       },
       {
         title: 'Events & ticketing',
-        content: '<p>Send texts & emails promoting your event, or share on social media. Free, paid, online, and in-person events. Create registration or RSVP pages. Accept online payments.</p><p>Create & send scannable tickets. See who\'s registering, how many tickets you\'ve sold, and more.</p>',
+        content: '<p>Send texts and emails promoting your event, or share on social media. Free, paid, online, and in-person events. Create registration or RSVP pages. Accept online payments. </p><p>Create and send scannable tickets. See who’s registering, how many tickets you’ve sold, and more. </p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-evants-ticketing_1.webp",
         imageAlt: "CTCT Events Ticketing"
       },
       {
-        title: 'Text marketing',
-        content: '<p>Send texts that customers are excited to open & buy from. Let new customers join your text list with Text-to-Join, or invite email subscribers to join.</p><p>Generate content with AI. Preview messages before sending. Get a dedicated local number to send texts from.</p>',
+        title: 'SMS marketing',
+        content: '<p>Send texts that customers are excited to open and buy from.  Let new customers join your text list with Text to Join, or invite email subscribers to join. </p><p>Generate content with AI. Preview messages before sending. Get a dedicated local number to send texts from.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-text-marketing_1.webp",
-        imageAlt: "CTCT Text Marketing"
+        imageAlt: "CTCT SMS marketing"
       },
       {
         title: 'Multi-account management',
-        content: '<p>Manage marketing across all your departments, teams, or locations.</p><p>Set permission levels so only approved team members can create or edit marketing materials. Create brand templates with colors, images, & styling that auto-apply in new campaigns. Report on all your accounts & platforms at once.</p>',
-        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-multi-account-management_1.webp",
+        content: '<p>Streamline marketing across all your departments, teams, or locations with one convenient console managed by Constant Contact.</p><p>Manage users, budget email sends, and lock down brand templates all in a single interface.</p>',
+        imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-multi-account-management_5.webp",
         imageAlt: "CTCT Multi Account Management"
       },
       {
         title: 'Integrations',
-        content: '<p>Sync with Google, Canva, Shopify, Square, Wix, Stripe, Xero, and 300+ more.</p><p>Auto-send messages to your website visitors based on pages they\'re visiting, purchases, etc. Capture new email contacts & customers via website forms. Sync customer contact info across platforms.</p>',
+        content: '<p>Sync with Google, Canva, Shopify, Square, Wix, Stripe, Xero, and 300+ more.</p><p>Auto-pull contacts, purchases, and other key info to keep your marketing up to date. Reduce manual work. Save time. Use connected data from across your tools to understand what’s working and target more effectively.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-integrations_2.webp",
         imageAlt: "CTCT Integrations"
       },
       {
         title: 'Reporting',
-        content: '<p>Get detailed, easy-to-read reports on who\'s opening your emails, posts, and texts. See which content drives the most sales & revenue. Repeat what\'s successful & grow sales even more.</p>',
+        content: '<p>Get detailed, easy-to-read reports on who’s opening your emails, posts, and texts. See which content drives the most sales and revenue. Repeat what’s successful and grow sales even more.</p>',
         imageUrl: "//res.cloudinary.com/spiralyze/image/upload/f_auto/constantcontact/1003/ui-reporting_1.webp",
         imageAlt: "CTCT Reporting"
       },
@@ -193,8 +180,9 @@ function addAccordion() {
       </div>
     </div>`;
 
-    document.querySelector(selector).insertAdjacentHTML(whereToPut, template);
+    document.querySelector('.main-grid #integrations-image').insertAdjacentHTML(whereToPut, template);
     initAccordion(accordionItems.length);
+
   }
 
   function initAccordion(totalItems) {
@@ -206,20 +194,44 @@ function addAccordion() {
     const imageItems = imageContainer ? Array.from(imageContainer.children) : [];
     const accordionWrapper = document.querySelector('.spz-bg-wrap');
 
-    let activeIndex = 0;
+    // Check for saved accordion state from sessionStorage
+    const savedIndex = sessionStorage.getItem('spz_1003_v1_accordion_index');
+    let activeIndex = savedIndex !== null ? parseInt(savedIndex, 10) : 0;
+    // Ensure activeIndex is within valid range
+    if (activeIndex < 0 || activeIndex >= totalItems) {
+      activeIndex = 0;
+    }
+    
     let progress = 0;
     let autoPlay = true;
     let stopped = false;
     let intervalId = null;
     let hasStarted = false;
 
-    items[0].classList.add('active');
+    // Set initial active state based on saved index
+    items.forEach((item, index) => {
+      item.classList.toggle('active', index === activeIndex);
+    });
+    
+    // Set initial image state
+    if (imageItems.length) {
+      imageItems.forEach((img, i) => img.classList.toggle('active', i === activeIndex));
+    }
+    
+    // If there's a saved state, scroll to accordion section on page load
+    if (savedIndex !== null && accordionWrapper) {
+      setTimeout(() => {
+        accordionWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
 
     items.forEach((item, index) => {
       item.addEventListener('click', () => {
         stopped = true;
         document.querySelectorAll('.progress_bar i').forEach(bar => bar.style.display = 'none');
         if (activeIndex !== index) switchItem(index);
+        // Save current active index to sessionStorage
+        sessionStorage.setItem('spz_1003_v1_accordion_index', index.toString());
       });
 
       item.addEventListener('mouseenter', () => {
@@ -228,6 +240,26 @@ function addAccordion() {
 
       item.addEventListener('mouseleave', () => {
         if (activeIndex === index && !stopped) autoPlay = true;
+      });
+    });
+
+    // Pause autoplay when hovering over the active image
+    imageItems.forEach((img, index) => {
+        img.addEventListener('mouseenter', () => {
+            if (activeIndex === index && !stopped) autoPlay = false;
+        });
+
+        img.addEventListener('mouseleave', () => {
+            if (activeIndex === index && !stopped) autoPlay = true;
+        });
+    });
+    
+    // Add click listeners to spz-primary buttons to save state before navigation
+    const primaryButtons = document.querySelectorAll('.spz-primary.spz1003_v1');
+    primaryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Save current active index before navigation
+        sessionStorage.setItem('spz_1003_v1_accordion_index', activeIndex.toString());
       });
     });
 
@@ -293,6 +325,44 @@ function addAccordion() {
       // Fallback: start immediately if wrapper not found
       startAccordion();
     }
+    
+    // Handle browser back button - restore accordion state
+    // Use a flag to prevent multiple listeners
+    if (!window.__spz_1003_v1_popstate_listener) {
+      window.__spz_1003_v1_popstate_listener = true;
+      window.addEventListener('popstate', () => {
+        // Wait a bit for DOM to be ready
+        setTimeout(() => {
+          const savedIndex = sessionStorage.getItem('spz_1003_v1_accordion_index');
+          if (savedIndex !== null) {
+            const accordionWrapperCheck = document.querySelector('.spz-bg-wrap');
+            const contentsCheck = document.querySelector('.spz-features-accordion__contents');
+            if (accordionWrapperCheck && contentsCheck) {
+              const itemsCheck = Array.from(contentsCheck.children);
+              const index = parseInt(savedIndex, 10);
+              if (index >= 0 && index < itemsCheck.length) {
+                // Find the current active index
+                let currentActive = 0;
+                itemsCheck.forEach((item, i) => {
+                  if (item.classList.contains('active')) {
+                    currentActive = i;
+                  }
+                });
+                
+                if (index !== currentActive) {
+                  // Trigger click on the item to switch
+                  itemsCheck[index].click();
+                  // Scroll to accordion section
+                  setTimeout(() => {
+                    accordionWrapperCheck.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }
+            }
+          }
+        }, 100);
+      });
+    }
   }
 
   addHorizontalAccordion(template_sectionContent, template_position, template_sectionSelector);
@@ -301,34 +371,48 @@ function addAccordion() {
 }
 
 
-const targetNode = document.querySelector('.main-grid #main');
-
-const config = {
-  childList: true,
-  subtree: true
-};
-
-let debounceTimer;  // timeout holder
-
-const callback = function(mutationsList, observer) {
-
-  clearTimeout(debounceTimer);
-
-  debounceTimer = setTimeout(() => {
-    // Run only AFTER mutations stop for 200ms
-    console.log('Running after debounce');
-
-    if (document.querySelector('.main-grid #main') && !document.querySelector('.spz-bg-wrap')) {
-      console.log('Adding accordion section');
-      addAccordion();
+function waitForElement(cssSelector, callback) {
+  var stop,
+    elementCached,
+    timeout,
+    check = function () {
+      try {
+        elementCached = document.querySelector(cssSelector)
+        if (stop) return
+        if (elementCached) {
+          callback(elementCached)
+          clearTimeout(timeout)
+        } else {
+          window.requestAnimationFrame(check)
+        }
+      } catch (err) {
+        console.log(err)
+      }
     }
+  window.requestAnimationFrame(check)
+  timeout = setTimeout(function () {
+    stop = true
+  }, 5000)
+}
 
-  }, 1000); // adjust delay if needed
-};
+waitForElement('.main-grid #features-checkbox-section', () => {
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (document.querySelector('.main-grid #features-checkbox-section') && !document.querySelector('.spz-bg-wrap')) {
+        console.log('Adding accordion section');
+        addAccordion();
+      }
+    }
+  })
+  const config = {
+    childList: true,
+    attributes: true,
+    subtree: true,
+    characterData: true
+  };
+  observer.observe(document.body, config)
+})
 
-const observer = new MutationObserver(callback);
-
-observer.observe(targetNode, config);
 
 
 const formLoaded = setInterval(() => {
